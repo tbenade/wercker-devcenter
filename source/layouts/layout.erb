@@ -49,15 +49,17 @@
       <ul class="title-area">
         <!-- Title Area -->
         <li class="name">
-          <h1><a href="#">Logo</a></h1>
+          <h1><a href="#">wercker dev center</a></h1>
         </li>
       </ul>
     </nav>
   </div>
 
   <div class="row page-content">
+
+    <!-- SIDE NAV -->
     <div class="small-12 large-3 columns">
-      <div class="side-nav">
+      <div class="page-content__nav">
         <div class="section-container accordion" data-section="accordion" data-options="deep_linking: true">
           <section<%= sidebar_current("overview") %>>
             <p class="title" data-section-title><a href="/articles/index.html">Overview</a></p>
@@ -100,10 +102,12 @@
       </div>
     </div>
 
+    <!-- ARTICLES -->
     <div class="small-12 large-9 columns">
-    <%= yield %>
+      <div class="page-content__articles">
+        <%= yield %>
+      </div>
     </div>
-
   </div>
 
 </body>

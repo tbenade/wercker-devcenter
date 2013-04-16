@@ -1,15 +1,38 @@
-.side-nav {
+.top-bar {
+
+	.name {
+		font-size: 2.5*$base-font-size;
+
+	}
+
+}
+
+
+.page-content__nav {
+
+	padding: 0;
+	border-right: 1px solid $section-title-bg-active;
 
 	.section-container {
 		border: none;
 
-		.title.a {
-			text-decoration: uppercase;
+		section {
+			border: none;
+
+			.content {
+				margin-left: .5*$column-gutter;
+			}
+
+			.title a {
+				font-size: $base-font-size;
+			    font-weight: 600;
+			    text-transform: uppercase;
+			}
+
 		}
-
-
 	}
 
-
-
+	.side-nav li a:hover{
+		color: $side-nav-link-color-active;
+	}
 }

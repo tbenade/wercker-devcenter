@@ -12,13 +12,14 @@
 //
 
 // This is the default html and body font-size for the base em value.
-// $em-base: 16px;
+$em-base: 18px;
 
 // We use these to control various global styles
 $body-bg: #f3f3f3;
-// $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-// $body-font-weight: normal;
+$base-font-size: emCalc($em-base);
+$body-font-color: #2f2f2f;
+$body-font-family: "Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+$body-font-weight: 400;
 // $body-font-style: normal;
 
 // We use this to control font-smoothing
@@ -28,10 +29,10 @@ $body-bg: #f3f3f3;
 // $text-direction: ltr;
 
 // We use these as default colors throughout
-// $primary-color: #2ba6cb;
-// $secondary-color: #e9e9e9;
-// $alert-color: #c60f13;
-// $success-color: #5da423;
+$primary-color: #5586B4;
+$secondary-color: #00AD73;
+$alert-color: #ec3d1a;
+$success-color: #77bc38;
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 3px;
@@ -65,7 +66,7 @@ $body-bg: #f3f3f3;
 // Grid Variables
 //
 
-// $row-width: 62.5em;
+$row-width: 80em;
 $column-gutter: 1.875em;
 // $total-columns: 12;
 
@@ -85,7 +86,7 @@ $column-gutter: 1.875em;
 //
 
 // We use these to control header font styles
-// $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-family: $body-font-family;
 // $header-font-weight: bold;
 // $header-font-style: normal;
 // $header-font-color: #222;
@@ -794,12 +795,12 @@ $column-gutter: 1.875em;
 
 // We use these to set padding and hover factor
 $section-padding: emCalc(20px);
-// $section-function-factor: 10%;
+$section-function-factor: 10%;
 
 // These style the titles
 // $section-title-color: #333;
-// $section-title-bg: #efefef;
-// $section-title-bg-active: darken($section-title-bg, $section-function-factor);
+$section-title-bg: $body-bg;
+$section-title-bg-active: darken($section-title-bg, $section-function-factor);
 // $section-title-bg-active-tabs: #fff;
 
 // Want to control border size, here ya go!
@@ -808,8 +809,8 @@ $section-padding: emCalc(20px);
 // $section-border-color: #ccc;
 
 // Control the color of the background and some size options
-// $section-content-bg: #fff;
-// $section-vertical-nav-min-width: emCalc(200px);
+$section-content-bg: $body-bg;
+$section-vertical-nav-min-width: emCalc(300px);
 // $section-bottom-margin: emCalc(20px);
 
 //
@@ -817,7 +818,7 @@ $section-padding: emCalc(20px);
 //
 
 // We use this to control padding.
-// $side-nav-padding: emCalc(14px) 0;
+$side-nav-padding: $base-font-size 0;
 
 // We use these to control list styles.
 // $side-nav-list-type: none;
@@ -826,9 +827,9 @@ $section-padding: emCalc(20px);
 
 // We use these to control link styles.
 // $side-nav-link-color: $primary-color;
-// $side-nav-link-color-active: lighten(#000, 30%);
-// $side-nav-font-size: emCalc(14px);
-// $side-nav-font-weight: bold;
+$side-nav-link-color-active: darken($primary-color, 30%);
+$side-nav-font-size: 1.1*$base-font-size;
+$side-nav-font-weight: 600;
 
 // We use these to control border styles
 // $side-nav-divider-size: 1px;
@@ -971,19 +972,19 @@ $section-padding: emCalc(20px);
 $topbar-bg: #d9e8e9;
 
 // Height and margin
-$topbar-height: 50px;
+$topbar-height: 80px;
 $topbar-margin-bottom: 0;
 
 // Control Input height for top bar
 // $topbar-input-height: 2.45em;
 
 // Controlling the styles for the title in the top bar
-// $topbar-title-weight: bold;
-// $topbar-title-font-size: emCalc(17px);
+$topbar-title-weight: 200;
+$topbar-title-font-size: 1.6*$base-font-size;
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: #fff;
-// $topbar-link-weight: bold;
+$topbar-link-color: #313030;
+$topbar-link-weight: 600;
 // $topbar-link-font-size: emCalc(13px);
 
 // Style the top bar dropdown elements
