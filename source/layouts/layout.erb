@@ -55,37 +55,42 @@
     </nav>
   </div>
 
-  <div class="row">
+  <div class="row page-content">
     <div class="small-12 large-3 columns">
-      <div class="section-container accordion" data-section="accordion" data-options="deep_linking: true">
-        <section class="active">
-          <p class="title" data-section-title><a href="#">Section 1</a></p>
-          <div class="content" data-section-content>
-            <ul class="side-nav">
-              <li><a class="active" href="#">Link 1</a></li>
-              <li><a href="#">Link 2</a></li>
-              <li><a href="#">Link 3</a></li>
-              <li><a href="#">Link 4</a></li>
-            </ul>
-          </div>
-        </section>
-        <section>
-          <p class="title" data-section-title><a href="#panel2">Section 2</a></p>
-          <div class="content" data-section-content>
-            <ul class="side-nav">
-              <li><a href="#">Link 1</a></li>
-              <li><a href="#">Link 2</a></li>
-              <li><a href="#">Link 3</a></li>
-              <li><a href="#">Link 4</a></li>
-            </ul>
-          </div>
-        </section>
+      <div class="navigation">
+        <div class="section-container accordion" data-section="accordion" data-options="deep_linking: true">
+          <section class="active">
+            <p class="title" data-section-title><a href="#">Section 1</a></p>
+            <div class="content" data-section-content>
+              <ul class="side-nav">
+                <li><a class="active" href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <p class="title" data-section-title><a href="#panel2">Section 2</a></p>
+            <div class="content" data-section-content>
+              <ul class="side-nav">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+              </ul>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
+
     <div class="small-12 large-9 columns">
     <%= yield %>
     </div>
+
   </div>
+
 </body>
 </html>
 

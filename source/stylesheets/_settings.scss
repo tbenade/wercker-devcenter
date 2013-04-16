@@ -66,7 +66,7 @@ $body-bg: #f3f3f3;
 //
 
 // $row-width: 62.5em;
-// $column-gutter: 1.875em;
+$column-gutter: 1.875em;
 // $total-columns: 12;
 
 //
@@ -793,7 +793,7 @@ $body-bg: #f3f3f3;
 //
 
 // We use these to set padding and hover factor
-// $section-padding: emCalc(15px);
+$section-padding: emCalc(20px);
 // $section-function-factor: 10%;
 
 // These style the titles
