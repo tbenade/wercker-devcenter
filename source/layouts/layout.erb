@@ -54,32 +54,49 @@
       </ul>
     </nav>
   </div>
-
+<h1><%= sidebar_section %></h1>
   <div class="row">
     <div class="small-12 large-3 columns">
       <div class="section-container accordion" data-section="accordion" data-options="deep_linking: true">
-        <section class="active">
-          <p class="title" data-section-title><a href="#">Section 1</a></p>
+
+        <section<%= sidebar_current("overview") %>>
+          <p class="title" data-section-title><a href="/articles/index.html">Overview</a></p>
           <div class="content" data-section-content>
+            <% if sidebar_section == "overview" %>
             <ul class="side-nav">
-              <li><a class="active" href="#">Link 1</a></li>
-              <li><a href="#">Link 2</a></li>
+              <li<%= sidebar_current("overview-faq") %>><a href="/articles/faq.html">FAQ</a></li>
+              <li<%= sidebar_current("overview-concepts") %>><a href="/articles/concepts.html">Concepts</a></li>
               <li><a href="#">Link 3</a></li>
               <li><a href="#">Link 4</a></li>
             </ul>
+            <% end %>
           </div>
         </section>
-        <section>
-          <p class="title" data-section-title><a href="#panel2">Section 2</a></p>
+
+        <section<%= sidebar_current("werckerjson") %>>
+          <p class="title" data-section-title><a href="/articles/werckerjson/index.html">Wercker.json</a></p>
           <div class="content" data-section-content>
+            <% if sidebar_section == "werckerjson" %>
             <ul class="side-nav">
-              <li><a href="#">Link 1</a></li>
-              <li><a href="#">Link 2</a></li>
-              <li><a href="#">Link 3</a></li>
-              <li><a href="#">Link 4</a></li>
+              <li<%= sidebar_current("werckerjson-advanced") %>><a href="/articles/werckerjson/advanced.html">Advanced</a></li>
+              <li<%= sidebar_current("werckerjson-other") %>><a href="/articles/werckerjson/other.html">Other</a></li>
             </ul>
+            <% end %>
           </div>
         </section>
+
+        <section<%= sidebar_current("deployment") %>>
+          <p class="title" data-section-title><a href="/articles/deployment/overview.html">Deployment</a></p>
+          <div class="content" data-section-content>
+            <% if sidebar_section == "advanced" %>
+            <ul class="side-nav">
+              <li<%= sidebar_current("advanced-faq") %>><a href="/articles/faq.html">FAQ</a></li>
+              <li<%= sidebar_current("advanced-concepts") %>><a href="/articles/concepts.html">Concepts</a></li>
+            </ul>
+            <% end %>
+          </div>
+        </section>
+
       </div>
     </div>
     <div class="small-12 large-9 columns">
