@@ -1,5 +1,5 @@
 ---
-sidebar_current: "advanced"
+sidebar_current: "overview"
 ---
 
 # FAQ

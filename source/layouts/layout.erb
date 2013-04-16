@@ -26,7 +26,7 @@
   <link rel="apple-touch-icon" sizes="144x144" href="/images/touch-icon-ipad-144.png" />
 
   <!-- Included CSS Files -->
-  <link rel="stylesheet" href="stylesheets/site.css" media="all">
+  <link rel="stylesheet" href="/stylesheets/site.css" media="all">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,600' rel='stylesheet' type='text/css'>
 
@@ -54,7 +54,6 @@
       </ul>
     </nav>
   </div>
-<h1><%= sidebar_section %></h1>
   <div class="row">
     <div class="small-12 large-3 columns">
       <div class="section-container accordion" data-section="accordion" data-options="deep_linking: true">
@@ -88,10 +87,10 @@
         <section<%= sidebar_current("deployment") %>>
           <p class="title" data-section-title><a href="/articles/deployment/overview.html">Deployment</a></p>
           <div class="content" data-section-content>
-            <% if sidebar_section == "advanced" %>
+            <% if sidebar_section == "deployment" %>
             <ul class="side-nav">
-              <li<%= sidebar_current("advanced-faq") %>><a href="/articles/faq.html">FAQ</a></li>
-              <li<%= sidebar_current("advanced-concepts") %>><a href="/articles/concepts.html">Concepts</a></li>
+              <li<%= sidebar_current("deployment-faq") %>><a href="/articles/faq.html">FAQ</a></li>
+              <li<%= sidebar_current("deployment-concepts") %>><a href="/articles/concepts.html">Concepts</a></li>
             </ul>
             <% end %>
           </div>
