@@ -33,6 +33,7 @@ $primary-color: #5586B4;
 $secondary-color: #00AD73;
 $alert-color: #ec3d1a;
 $success-color: #77bc38;
+$black: #313030;
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 3px;
@@ -87,20 +88,20 @@ $column-gutter: 1.875em;
 
 // We use these to control header font styles
 $header-font-family: $body-font-family;
-// $header-font-weight: bold;
+$header-font-weight: 600;
 // $header-font-style: normal;
-// $header-font-color: #222;
+$header-font-color: $black;
 // $header-line-height: 1.4;
 // $header-top-margin: .2em;
 // $header-bottom-margin: .5em;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: emCalc(44px);
-// $h2-font-size: emCalc(37px);
-// $h3-font-size: emCalc(27px);
-// $h4-font-size: emCalc(23px);
-// $h5-font-size: emCalc(18px);
+$h1-font-size: emCalc(40px);
+$h2-font-size: emCalc(33px);
+$h3-font-size: emCalc(23px);
+$h4-font-size: emCalc(19px);
+$h5-font-size: emCalc(14px);
 // $h6-font-size: 1em;
 
 // These control how subheaders are styled.
@@ -118,7 +119,7 @@ $header-font-family: $body-font-family;
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: normal;
 // $paragraph-font-size: 1em;
-// $paragraph-line-height: 1.6;
+$paragraph-line-height: emCalc(32px);
 // $paragraph-margin-bottom: emCalc(20px);
 // $paragraph-aside-font-size: emCalc(14px);
 // $paragraph-aside-line-height: 1.35;

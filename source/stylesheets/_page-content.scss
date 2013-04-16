@@ -7,3 +7,14 @@
 		padding: $column-gutter;
 	}
 }
+
+
+.page-content__articles{
+
+
+
+	ul {
+		list-style-position:inside;
+		margin-left: .5*$column-gutter;
+	}
+}
