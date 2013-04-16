@@ -63,6 +63,9 @@ configure :build do
   # Minify Javascript on build
   activate :minify_javascript
 
+  # Live Reload
+  activate :livereload
+
   # Enable cache buster
   # activate :cache_buster
 
