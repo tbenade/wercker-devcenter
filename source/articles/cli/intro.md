@@ -1,16 +1,20 @@
+---
+sidebar_current: "cli"
+---
+
 # wercker CLI
 
 Wercker has a command line interface. It is written in python and on Linux/Mac OSX can be installed by running:
 
 	pip install wercker
-	
+
 Depending on your operating systems you may have to run this with superuser privileges (i.e. use `sudo pip install wercker`). You should now be able to run:
 
 	$ wercker
 	-----------------------
 	welcome to wercker-cli
 	-----------------------
-	
+
 	Usage:
 	    wercker create
 	    wercker status
