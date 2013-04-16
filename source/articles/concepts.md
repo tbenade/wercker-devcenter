@@ -1,3 +1,7 @@
+---
+sidebar_current: "current"
+---
+
 # Wercker concepts
 
 This page explains some of the core concepts of wercker:

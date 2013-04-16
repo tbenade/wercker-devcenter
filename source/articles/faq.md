@@ -1,3 +1,7 @@
+---
+sidebar_current: "overview"
+---
+
 # FAQ
 
 ### Why can't I add any public repository to wercker?
