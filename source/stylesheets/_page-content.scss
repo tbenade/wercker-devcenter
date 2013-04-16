@@ -1,4 +1,9 @@
 .page-content {
-	margin: 10px;
-	padding: 10px;
+	padding {
+		top: $column-gutter;
+	}
+
+	.page-content__articles {
+		padding: $column-gutter;
+	}
 }
