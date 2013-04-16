@@ -1,5 +1,5 @@
 ---
-sidebar_current: "overview"
+sidebar_current: "overview-faq"
 ---
 
 # FAQ
