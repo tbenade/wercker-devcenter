@@ -1,3 +1,7 @@
+---
+sidebar_current: "gettingstarted-build"
+---
+
 # Build
 
 To know the quality of your code, it is inpected every time you push out new code.

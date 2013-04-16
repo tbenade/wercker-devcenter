@@ -73,6 +73,18 @@
             </div>
           </section>
 
+          <section<%= sidebar_current("gettingstarted") %>>
+            <p class="title" data-section-title><a href="/articles/gettingstarted/index.html">Getting Started</a></p>
+            <div class="content" data-section-content>
+              <% if sidebar_section == "gettingstarted" %>
+              <ul class="side-nav">
+                <li<%= sidebar_current("gettingstarted-concepts") %>><a href="/articles/gettingstarted/concepts.html">Concepts</a></li>
+                <li<%= sidebar_current("gettingstarted-build") %>><a href="/articles/gettingstarted/build.html">Build</a></li>
+              </ul>
+              <% end %>
+            </div>
+          </section>
+
           <section<%= sidebar_current("werckerjson") %>>
             <p class="title" data-section-title><a href="/articles/werckerjson/index.html">Wercker.json</a></p>
             <div class="content" data-section-content>
