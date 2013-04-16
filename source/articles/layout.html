@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+  <head>
+
+    <title>Wercker Dev Center - Main</title>
+
+    <link rel="stylesheet" href="/public/styles/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="/public/styles/highlight.css"></link>
+    <style type="text/css">
+
+    </style>
+    <link rel="stylesheet" href="/public/styles/style.css"></link>
+    <script src="/public/scripts/modernizr.js"></script>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28568056-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+mixpanel.init("c5c43fb828e02676b2592d7dd7f7ee99");</script><!-- end Mixpanel -->
+  </head>
+  <body>
+  <div class="top-bar">
+    <ul>
+      <li><a href="http://wercker.com" class="logo"><img src="/public/images/logo.png" alt="wercker" height="13" width="95"/></a></li>
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+
+        <div class="span2">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+  <li><a href="/">Home</a></li>
+  <li class="nav-header">Getting Started</li>
+  <li class=""><a href="/articles/werckerjson">wercker.json</a></li>
+  <li class=""><a href="/articles/concepts">Concepts</a></li>
+  <li class=""><a href="/articles/best-practices">Best practices</a></li>
+  <li class=""><a href="/articles/cli">CLI</a></li>
+  <li class=""><a href="/articles/faq">FAQ</a></li>
+  <li class="nav-header">Language Support</li>
+  <li class=""><a href="/articles/python">Python</a></li>
+  <li class=""><a href="/articles/ruby">Ruby</a></li>
+  <li class=""><a href="/articles/nodejs">Node.js</a></li>
+  <li class="nav-header">Services</li>
+  <li class=""><a href="/articles/available-services">Available Services</a></li>
+  <li class="nav-header">Deployment</li>
+  <li class=""><a href="/articles/deployment">Deployment</a></li>
+  <li class=""><a href="/articles/heroku">Heroku</a></li>
+  <li class="nav-header">Advanced</li>
+  <li class=""><a href="/articles/advanced">Advanced Concepts</a></li>
+</ul>
+</div><!--/.well -->
+</div><!--/span-->
+<div class="span10">
+
+
+        {{content}}
+
+      </br>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'werckerdevcenter'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+
+
+        </div>
+
+
+      <hr>
+
+
+
+      <div id="footer">
+
+        &copy; Copyright 2012 by <a href="http://wercker.com/">wercker</a>.
+
+      </div>
+<script data-dojo-config="async: 1" src="//ajax.googleapis.com/ajax/libs/dojo/1.8.2/dojo/dojo.js"></script>
+<script type="text/javascript">
+
+require([
+    'dojo/query',
+    'dojo/_base/array',
+    "dojo/dom-geometry",
+    "dojo/dom-style",
+    'dojo/NodeList-traverse',
+    'dojo/NodeList-dom',
+    'dojo/domReady!',
+    ], function(dQuery, array, dGeom, dStyle){
+      var steps = dQuery(".steps");
+
+      steps.forEach(function(step){
+        var liSteps = dQuery("li", step);
+
+        liSteps.even().addClass("even");
+
+        array.forEach(liSteps.children("a"), function(elm, index) {
+          var mBox = dGeom.getMarginBox(elm);
+
+          dStyle.set(elm,  {
+            left: "50%",
+            marginLeft: (-mBox.w*0.5)+"px"
+          })
+
+        });
+      });
+    });
+</script>
+    </div>
+
+  </body>
+</html>

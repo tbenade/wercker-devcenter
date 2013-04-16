@@ -4,20 +4,20 @@ You can find the code for this tutorial on [Github](https://github.com/mies/werc
 
 ### Table of Contents
 * Prerequisites
-* Add project to wercker
 * Write the API
 * Declare dependencies through a `package.json` file
 * Create a test folder and add a Mocha unit test
 * Initiate your Git repository and push your changes to Github
+* Setting up the wercker add-on for Heroku
+* Installing the wercker command line interface
+* Deploying to Heroku
 
 ## Prerequisites
 * Basic knowledge on node.js, and Express
+* Have a Heroku account
 * Have the Mocha testing framework installed (`npm install -g mocha`).
 * A wercker account and a GitHub repository for the code you will write
-
-## Add project to wercker
-Add your GitHub project to wercker
-
+* Have Python installed if you wish to use the wercker command line interface and utilize pip for third-party libraries.
 
 ## Write the API
 Create an Express application with the following code:
@@ -107,3 +107,41 @@ Next, run `npm install` to set up your local environment.
   $ git commit -m 'init'
   $ git push origin master
 ```
+
+## Setting up the wercker add-on for Heroku
+
+First we create a Heroku application: 
+
+	$ heroku create
+
+Now we are ready to provision the add-on to our appliction:
+
+	$ heroku addons:add wercker
+
+You can now open up the wercker dashboard that will guide you through the next steps:
+
+	$ heroku addons:open wercker
+
+This launches your default browser and opens up the dashboard. As you can see it recommends us to install the wercker command line interface.
+
+## Installing the wercker command line interface
+
+As said, wercker comes with a command line interface (written in Python) that you can install via `pip`:
+
+	$ pip install wercker
+	
+The CLI has several handy commands that you can leverage. First we will add our application to wercker via this CLI:
+
+	$ wercker create
+	
+This will couple your application to wercker and automatically sets up your Heroku app as a deployment option. This command will also trigger an initial build.
+
+## Deploying to Heroku
+
+Launching the dashboard will showcase the latest build result (which should be green), that you can deploy either via the `deploy` button or through the CLI. We will do the latter:
+
+	$ wercker deploy
+	
+The CLI will ask us which build and which deploy target we want to deploy to. It automatically defaults to the latest build, which is fine as we have only one build.
+
+
