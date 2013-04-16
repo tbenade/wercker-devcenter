@@ -111,6 +111,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  compass
   middleman
   rack-contrib
   redcarpet
