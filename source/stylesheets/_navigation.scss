@@ -24,7 +24,7 @@
 
 		section {
 			border-color: darken(#fff,70%);
-			@include box-shadow(6px -7px 6px -8px #222);
+			// @include box-shadow(6px -7px 6px -8px #222);
 
 			.content {
 				margin-left: .5*$column-gutter;
@@ -38,14 +38,15 @@
 
 			.title a:hover {
 				color: white;
+				background: darken($section-title-bg, 5%);
 			}
-
 
 		}
 
-		.section__offset-1 {@include section-offset(-1px, 1%)}
-		.section__offset-2 {@include section-offset(-3px, 2%)}
-		.section__offset-3 {@include section-offset(-5px, 3%)}
+		.section__offset-1 {@include section-offset(-3px, 1%)}
+		.section__offset-2 {@include section-offset(-6px, 2%)}
+		.section__offset-3 {@include section-offset(-9px, 3%)}
+		.section__offset-4 {@include section-offset(-12px, 4%)}
 
 
 		section :first-child {

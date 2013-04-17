@@ -59,7 +59,7 @@
       <div class="row">
         <div class="small-12 large-8 columns right">
           <div class="section-container accordion" data-section="accordion" data-options="deep_linking: true">
-            <section<%= sidebar_current("overview") %>>
+            <section class="section__offset-1"<%= sidebar_current("overview") %>>
               <p class="title" data-section-title><a href="/articles/overview/intro.html">Overview</a></p>
               <div class="content" data-section-content>
                 <% if sidebar_section == "overview" %>
@@ -72,7 +72,7 @@
               </div>
             </section>
 
-            <section<%= sidebar_current("gettingstarted") %>>
+            <section <%= sidebar_current("gettingstarted") %>>
               <p class="title" data-section-title><a href="/articles/gettingstarted/intro.html">Getting Started</a></p>
               <div class="content" data-section-content>
                 <% if sidebar_section == "gettingstarted" %>
@@ -93,7 +93,7 @@
               </div>
             </section>
 
-            <section class="section__offset-3" <%= sidebar_current("werckerjson") %>>
+            <section class="section__offset-2" <%= sidebar_current("werckerjson") %>>
               <p class="title" data-section-title><a href="/articles/werckerjson/intro.html">Wercker.json</a></p>
               <div class="content" data-section-content>
                 <% if sidebar_section == "werckerjson" %>
@@ -105,7 +105,7 @@
               </div>
             </section>
 
-            <section class="section__offset-2" <%= sidebar_current("deployment") %>>
+            <section class="section__offset-1" <%= sidebar_current("deployment") %>>
               <p class="title" data-section-title><a href="/articles/deployment/overview.html">Deployment</a></p>
               <div class="content" data-section-content>
                 <% if sidebar_section == "deployment" %>
@@ -117,7 +117,7 @@
               </div>
             </section>
 
-            <section class="section__offset-1" <%= sidebar_current("languages") %>>
+            <section <%= sidebar_current("languages") %>>
               <p class="title" data-section-title><a href="/articles/languages/intro.html">Languages</a></p>
               <div class="content" data-section-content>
                 <% if sidebar_section == "languages" %>
