@@ -108,6 +108,19 @@
                 <% end %>
               </div>
             </section>
+
+            <section<%= sidebar_current("languages") %>>
+              <p class="title" data-section-title><a href="/articles/languages/intro.html">Languages</a></p>
+              <div class="content" data-section-content>
+                <% if sidebar_section == "languages" %>
+                <ul class="side-nav">
+                  <li<%= sidebar_current("languages-flask") %>><a href="/articles/languages/flask.html">Flask</a></li>
+                  <li<%= sidebar_current("languages-django-postgres") %>><a href="/articles/languages/django-postgres.html">Django and Postgres</a></li>
+                </ul>
+                <% end %>
+              </div>
+            </section>
+
           </div>
         </div>
       </div>
