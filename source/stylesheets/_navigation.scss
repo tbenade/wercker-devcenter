@@ -1,4 +1,5 @@
 @import "compass/css3/box-shadow";
+@import "mixins/section-offset";
 
 .top-bar {
 	.name {
@@ -39,7 +40,13 @@
 				color: white;
 			}
 
+
 		}
+
+		.section__offset-1 {@include section-offset(-1px, 1%)}
+		.section__offset-2 {@include section-offset(-3px, 2%)}
+		.section__offset-3 {@include section-offset(-5px, 3%)}
+
 
 		section :first-child {
 			box-shadow: none;
