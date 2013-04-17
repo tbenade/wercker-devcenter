@@ -1,3 +1,5 @@
+@import "compass/css3/box-shadow";
+
 .top-bar {
 
 	.name {
@@ -9,15 +11,21 @@
 
 
 .page-content__nav {
-
+	min-height: 100%;
+	background: $black;
 	padding: 0;
 	border-right: 1px solid $section-title-bg-active;
+	@include box-shadow(1px 1px 1px 0px rgba(255,255,255,1));
+
+	.row .columns {
+		padding: 0;
+	}
 
 	.section-container {
 		border: none;
 
 		section {
-			border: none;
+			border-color: darken(#fff,70%);
 
 			.content {
 				margin-left: .5*$column-gutter;
@@ -27,6 +35,10 @@
 				font-size: $base-font-size;
 			    font-weight: 600;
 			    text-transform: uppercase;
+			}
+
+			.title a:hover {
+				color: white;
 			}
 
 		}
