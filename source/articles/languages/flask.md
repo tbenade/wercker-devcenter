@@ -1,3 +1,7 @@
+---
+sidebar_current: "languages-flask"
+---
+
 # Getting Started with Flask
 
 You can find the code for this tutorial on [Github](https://github.com/mies/wercker-flask-api)
