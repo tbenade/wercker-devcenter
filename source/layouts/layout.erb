@@ -60,12 +60,13 @@
         <div class="small-12 large-8 columns right">
           <div class="section-container accordion" data-section="accordion" data-options="deep_linking: true">
             <section<%= sidebar_current("overview") %>>
-              <p class="title" data-section-title><a href="/articles/index.html">Overview</a></p>
+              <p class="title" data-section-title><a href="/articles/overview/intro.html">Overview</a></p>
               <div class="content" data-section-content>
                 <% if sidebar_section == "overview" %>
                 <ul class="side-nav">
-                  <li<%= sidebar_current("overview-faq") %>><a href="/articles/faq.html">FAQ</a></li>
-                  <li<%= sidebar_current("overview-concepts") %>><a href="/articles/concepts.html">Concepts</a></li>
+                  <li<%= sidebar_current("overview-concepts") %>><a href="/articles/overview/concepts.html">Concepts</a></li>
+                  <li<%= sidebar_current("overview-build") %>><a href="/articles/overview/builds.html">Builds</a></li>
+                  <li<%= sidebar_current("overview-faq") %>><a href="/articles/overview/faq.html">FAQ</a></li>
                 </ul>
                 <% end %>
               </div>
@@ -80,8 +81,7 @@
                   <li<%= sidebar_current("gettingstarted-ruby") %>><a href="/articles/gettingstarted/ruby.html">Ruby</a></li>
                   <li<%= sidebar_current("gettingstarted-python") %>><a href="/articles/gettingstarted/python.html">Python</a></li>
                   <li<%= sidebar_current("gettingstarted-golang") %>><a href="/articles/gettingstarted/golang.html">Golang</a></li>
-                  <li<%= sidebar_current("gettingstarted-concepts") %>><a href="/articles/gettingstarted/concepts.html">Concepts</a></li>
-                  <li<%= sidebar_current("gettingstarted-build") %>><a href="/articles/gettingstarted/build.html">Build</a></li>
+
                 </ul>
                 <% end %>
               </div>
