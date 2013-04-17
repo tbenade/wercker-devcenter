@@ -8,7 +8,6 @@
 
 
 .page-content__nav {
-	min-height: 100%;
 	background: $black;
 	padding: 0;
 	border-right: 1px solid $section-title-bg-active;
@@ -20,16 +19,18 @@
 
 	.section-container {
 		border: none;
+		margin-bottom: 0;
 
 		section {
 			border-color: darken(#fff,70%);
+			@include box-shadow(6px -7px 6px -8px #222);
 
 			.content {
 				margin-left: .5*$column-gutter;
 			}
 
 			.title a {
-				font-size: $base-font-size;
+				font-size: .9*$base-font-size;
 			    font-weight: 600;
 			    text-transform: uppercase;
 			}
@@ -39,12 +40,28 @@
 			}
 
 		}
+
+		section :first-child {
+			box-shadow: none;
+		}
 	}
+
 	.side-nav li {
 		font-weight: 200;
 	}
 
 	.side-nav li a:hover{
 		color: $side-nav-link-color-active;
+	}
+
+
+	@media #{$small} {
+		min-height: 100%;
+		.row .columns {width: gridCalc(12, 12);}
+	}
+
+	@media #{$medium} {
+		.row .columns {width: gridCalc(8, 12);}
+		.section-container section .title a {font-size: $base-font-size;}
 	}
 }
