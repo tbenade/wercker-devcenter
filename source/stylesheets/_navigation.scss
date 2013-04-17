@@ -1,12 +1,9 @@
 @import "compass/css3/box-shadow";
 
 .top-bar {
-
 	.name {
 		font-size: 2.5*$base-font-size;
-
 	}
-
 }
 
 
@@ -42,6 +39,9 @@
 			}
 
 		}
+	}
+	.side-nav li {
+		font-weight: 200;
 	}
 
 	.side-nav li a:hover{
