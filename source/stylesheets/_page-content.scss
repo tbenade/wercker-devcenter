@@ -18,7 +18,7 @@
 .page-content__articles{
 
 	max-width: 750px;
-	padding: $column-gutter;
+	padding: 1.5*$column-gutter;
 
 	ul {
 		@extend %list-styling;
@@ -31,4 +31,51 @@
 	h1{
 		color: $success-color;
 	}
+
+	h1 + p {
+		font-weight: 500;
+		font-size: 1.2*$base-font-size;
+		line-height: 1.8*$base-font-size;
+		color: darken($body-font-color, 10%);
+	}
+
+	h2 {
+		color: darken($body-font-color, 30%);
+	}
+
+	h3 {
+		color: darken($body-font-color, 20%);
+	}
+
+	h4 {
+		color: darken($body-font-color, 10%);
+		text-transform: uppercase;
+	}
+
+	p em {
+		font-weight: 400;
+		font-size: 0.9*$base-font-size;
+		line-height: 0.7*$base-font-size !important;
+		color: darken($body-font-color, 20%);
+		background: lighten($body-bg, 25%);
+	}
+
+	hr {
+		margin-top: $column-gutter;
+		margin-bottom: 1.5*$column-gutter;
+	}
+
+	.button-group li {
+		margin-left: -9px;
+	}
+
+
+	pre code {
+		background: white;
+		padding: 1.5*$column-gutter;
+		border: 1px solid $contentBorderColor;
+		font-family: "Courier New", Courier, monospace;
+		line-height: 1.4*$base-font-size;
+	}
+
 }
