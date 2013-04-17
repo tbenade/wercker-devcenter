@@ -17,7 +17,7 @@ $em-base: 18px;
 // We use these to control various global styles
 $body-bg: #f3f3f3;
 $base-font-size: emCalc($em-base);
-$body-font-color: #2f2f2f;
+$body-font-color: #636664;
 $body-font-family: "Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
 $body-font-weight: 400;
 // $body-font-style: normal;
@@ -35,12 +35,15 @@ $alert-color: #ec3d1a;
 $success-color: #77bc38;
 $black: #313030;
 
+$contentBorderColor: #E6E6E6;
+
+
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 3px;
 // $global-rounded: 1000px;
 
 // We use these to control inset shadow shiny edges and depressions.
-// $shiny-edge-size: 0 1px 0;
+$shiny-edge-size: 0 0 0;
 // $shiny-edge-color: rgba(#fff, .5);
 // $shiny-edge-active-color: rgba(#000, .2);
 
@@ -99,7 +102,7 @@ $header-font-color: $black;
 // We use these to control header font sizes
 $h1-font-size: emCalc(40px);
 $h2-font-size: emCalc(33px);
-$h3-font-size: emCalc(23px);
+$h3-font-size: emCalc(26px);
 $h4-font-size: emCalc(19px);
 $h5-font-size: emCalc(14px);
 // $h6-font-size: 1em;
@@ -261,7 +264,7 @@ $paragraph-line-height: emCalc(32px);
 // $button-function-factor: 10%;
 
 // We use these to control button border styles.
-// $button-border-width: 1px;
+$button-border-width: 0;
 // $button-border-style: solid;
 // $button-border-color: darken($primary-color, $button-function-factor);
 
@@ -824,12 +827,12 @@ $side-nav-padding: $base-font-size 0;
 // We use these to control list styles.
 // $side-nav-list-type: none;
 // $side-nav-list-position: inside;
-// $side-nav-list-margin: 0 0 emCalc(7px) 0;
+$side-nav-list-margin: 0 0 emCalc(10px) 0;
 
 // We use these to control link styles.
 $side-nav-link-color: darken(white, 30%);
 $side-nav-link-color-active: white;
-$side-nav-font-size: 1.1*$base-font-size;
+$side-nav-font-size: $base-font-size;
 $side-nav-font-weight: 200;
 
 // We use these to control border styles
