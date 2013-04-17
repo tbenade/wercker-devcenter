@@ -29,7 +29,7 @@ Depending on your operating systems you may have to run this with superuser priv
 	    wercker targets add
 	    wercker targets list
 	    wercker targets details
-      wercker update
+      	wercker update
 	    wercker --version
 	    wercker --help
 
@@ -71,3 +71,7 @@ Gets a list of all deploy targets for the current application.
 
 ### targets details
 Alias for open targets
+
+### update
+Checks if there is new version of the CLI available
+
