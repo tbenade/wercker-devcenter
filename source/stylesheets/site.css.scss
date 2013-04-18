@@ -13,8 +13,13 @@
 
 // Comment out this import if you are customizing you imports below
 
+html {
+	height: 100%;
+}
 
 body {
+	height: 100%;
+
 	@media #{$small} {
 		@include background-image(linear-gradient(left, $black 25%, $body-bg 25%));
 	}

@@ -1,6 +1,5 @@
 .footer {
 
-	height: 100%;
 	border-top: 1px solid $contentBorderColor;
 	background: white;
 
@@ -8,6 +7,9 @@
 
 	@media #{$small} {
 		text-align: left;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
 	}
 
 	.footer__block {
@@ -23,7 +25,7 @@
 		ul li {
 			display: inline;
 			margin-left: 10px;
-			font-size: .6*$base-font-size;
+			font-size: .7*$base-font-size;
 			text-transform: uppercase;
 		}
 	}

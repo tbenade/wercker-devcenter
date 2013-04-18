@@ -85,7 +85,7 @@ If you are looking for specific support for programming languages, there are gui
 		<li class="authorCredits__name">
 			<h4>Lindsey Bateman</h4>
 			<i>
-				Product designer <a href="http://beta.wercker.com" target="_blank">@wercker &rarr;</a>
+				Product designer <a href="http://beta.wercker.com" target="_blank">wercker &rarr;</a>
 			</i>
 		</li>
 		<!-- find me on twitter -->
