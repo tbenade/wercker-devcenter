@@ -4,6 +4,12 @@
 	border-top: 1px solid $contentBorderColor;
 	background: white;
 
+	text-align: center;
+
+	@media #{$small} {
+		text-align: left;
+	}
+
 	.footer__block {
 		h5 {text-transform: uppercase;}
 		p {font-size: .8*$base-font-size;}

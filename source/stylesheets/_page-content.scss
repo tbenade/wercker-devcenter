@@ -23,17 +23,31 @@
 .page-content__articles{
 	height: 100%;
 	max-width: 750px;
-	padding: 1.5*$column-gutter;
+	padding: 0.5*$column-gutter;
+
+	@media #{$small} {
+		padding: 1.5*$column-gutter;
+	}
 
 	.authorCredits {
+		margin-left: 0.5*$column-gutter;
 		.profile-picture {
 			@include makeImageHolderRound(100px, 4px, true);
 			position: absolute;
+			margin-top: 0.3*$column-gutter;
 		}
 
 		.authorCredits {
 			list-style: none;
 			margin-left: 120px;
+			padding-top: 0.5*$column-gutter;
+
+			.authorCredits__name {
+				line-height: 0;
+				margin-bottom: 0.5*$column-gutter;
+				h4 {margin-bottom: 8px;}
+			}
+
 		}
 	}
 
@@ -91,6 +105,7 @@
 
 
 	pre code {
+		overflow: auto;
 		background: white;
 		padding: 1.5*$column-gutter;
 		border: 1px solid $contentBorderColor;
