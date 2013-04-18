@@ -77,15 +77,16 @@ If you are looking for specific support for programming languages, there are gui
 
 -------
 
-<div class="profile-picture">
-	<img src="https://secure.gravatar.com/avatar/e1c82876f21cdafafd2b01a1e625f587?d=identicon&amp;s=192" alt="Lindsey Bateman"/>
-</div>
-<div>
-	<ul>
+<div class="authorCredits">
+	<span class="profile-picture">
+		<img src="https://secure.gravatar.com/avatar/e1c82876f21cdafafd2b01a1e625f587?d=identicon&amp;s=192" alt="Lindsey Bateman"/>
+	</span>
+	<ul class="authorCredits">
 		<li><h4>Lindsey Bateman</h4></li>
 		<li>Product designer</li>
 		<li>Find me on twitter</li>
 	</ul>
 </div>
+
 
 -------

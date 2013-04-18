@@ -25,10 +25,18 @@
 	max-width: 750px;
 	padding: 1.5*$column-gutter;
 
-	.profile-picture {
-		@include makeImageHolderRound(100px, 4px, true);
-		margin-top: 0.8*$column-gutter;
+	.authorCredits {
+		.profile-picture {
+			@include makeImageHolderRound(100px, 4px, true);
+			position: absolute;
+		}
+
+		.authorCredits {
+			list-style: none;
+			margin-left: 120px;
+		}
 	}
+
 
 	ul {
 		@extend %list-styling;
