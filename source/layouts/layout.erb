@@ -44,121 +44,137 @@
     $(document).foundation();
   </script>
 
-  <nav class="top-bar">
-    <ul class="title-area">
-      <!-- Title Area -->
-      <li class="name">
-        <h1><a href="/#">wercker dev center</a></h1>
-      </li>
-    </ul>
-  </nav>
+  <div id="root">
 
-  <div class="row page-content">
+    <nav class="top-bar">
+      <ul class="title-area">
+        <!-- Title Area -->
+        <li class="name">
+          <h1><a href="/#">wercker dev center</a></h1>
+        </li>
+      </ul>
+    </nav>
 
-    <!-- SIDE NAV -->
-    <div class="small-12 large-3 columns page-content__nav">
-      <div class="row">
-        <div class="small-12 large-8 columns right">
-          <div class="section-container accordion" data-section="accordion" data-options="deep_linking: true">
-            <section class="section__offset-1"<%= sidebar_current("overview") %>>
-              <p class="title" data-section-title><a href="/articles/overview/intro.html">Overview</a></p>
-              <div class="content" data-section-content>
-                <% if sidebar_section == "overview" %>
-                <ul class="side-nav">
-                  <li<%= sidebar_current("overview-concepts") %>><a href="/articles/overview/concepts.html">Concepts</a></li>
-                  <li<%= sidebar_current("overview-build") %>><a href="/articles/overview/builds.html">Builds</a></li>
-                  <li<%= sidebar_current("overview-faq") %>><a href="/articles/overview/faq.html">FAQ</a></li>
-                </ul>
-                <% end %>
-              </div>
-            </section>
+    <div class="row page-content">
 
-            <section <%= sidebar_current("gettingstarted") %>>
-              <p class="title" data-section-title><a href="/articles/gettingstarted/intro.html">Getting Started</a></p>
-              <div class="content" data-section-content>
-                <% if sidebar_section == "gettingstarted" %>
-                <ul class="side-nav">
-                  <li<%= sidebar_current("gettingstarted-nodejs") %>><a href="/articles/gettingstarted/nodejs.html">Node.js</a></li>
-                  <li<%= sidebar_current("gettingstarted-ruby") %>><a href="/articles/gettingstarted/ruby.html">Ruby</a></li>
-                  <li<%= sidebar_current("gettingstarted-python") %>><a href="/articles/gettingstarted/python.html">Python</a></li>
-                  <li<%= sidebar_current("gettingstarted-golang") %>><a href="/articles/gettingstarted/golang.html">Golang</a></li>
+      <!-- SIDE NAV -->
+      <div class="small-12 large-3 columns page-content__nav">
+        <div class="row">
+          <div class="small-12 large-8 columns right">
+            <div class="section-container accordion" data-section="accordion" data-options="deep_linking: true">
+              <section class="section__offset-1"<%= sidebar_current("overview") %>>
+                <p class="title" data-section-title><a href="/articles/overview/intro.html">Overview</a></p>
+                <div class="content" data-section-content>
+                  <% if sidebar_section == "overview" %>
+                  <ul class="side-nav">
+                    <li<%= sidebar_current("overview-concepts") %>><a href="/articles/overview/concepts.html">Concepts</a></li>
+                    <li<%= sidebar_current("overview-build") %>><a href="/articles/overview/builds.html">Builds</a></li>
+                    <li<%= sidebar_current("overview-faq") %>><a href="/articles/overview/faq.html">FAQ</a></li>
+                  </ul>
+                  <% end %>
+                </div>
+              </section>
 
-                </ul>
-                <% end %>
-              </div>
-            </section>
+              <section <%= sidebar_current("gettingstarted") %>>
+                <p class="title" data-section-title><a href="/articles/gettingstarted/intro.html">Getting Started</a></p>
+                <div class="content" data-section-content>
+                  <% if sidebar_section == "gettingstarted" %>
+                  <ul class="side-nav">
+                    <li<%= sidebar_current("gettingstarted-nodejs") %>><a href="/articles/gettingstarted/nodejs.html">Node.js</a></li>
+                    <li<%= sidebar_current("gettingstarted-ruby") %>><a href="/articles/gettingstarted/ruby.html">Ruby</a></li>
+                    <li<%= sidebar_current("gettingstarted-python") %>><a href="/articles/gettingstarted/python.html">Python</a></li>
+                    <li<%= sidebar_current("gettingstarted-golang") %>><a href="/articles/gettingstarted/golang.html">Golang</a></li>
 
-            <section class="section__divider">
-              <p class="title" data-section-title><p></p></p>
-              <div class="content" data-section-content>
-              </div>
-            </section>
+                  </ul>
+                  <% end %>
+                </div>
+              </section>
 
-            <section class="section__offset-2" <%= sidebar_current("werckerjson") %>>
-              <p class="title" data-section-title><a href="/articles/werckerjson/intro.html">Wercker.json</a></p>
-              <div class="content" data-section-content>
-                <% if sidebar_section == "werckerjson" %>
-                <ul class="side-nav">
-                  <li<%= sidebar_current("werckerjson-advanced") %>><a href="/articles/werckerjson/advanced.html">Advanced</a></li>
-                  <li<%= sidebar_current("werckerjson-other") %>><a href="/articles/werckerjson/other.html">Other</a></li>
-                </ul>
-                <% end %>
-              </div>
-            </section>
+              <section class="section__divider">
+                <p class="title" data-section-title><p></p></p>
+                <div class="content" data-section-content>
+                </div>
+              </section>
 
-            <section class="section__offset-1" <%= sidebar_current("deployment") %>>
-              <p class="title" data-section-title><a href="/articles/deployment/overview.html">Deployment</a></p>
-              <div class="content" data-section-content>
-                <% if sidebar_section == "deployment" %>
-                <ul class="side-nav">
-                  <li<%= sidebar_current("deployment-faq") %>><a href="/articles/deployment/heroku.html">FAQ</a></li>
-                  <li<%= sidebar_current("deployment-concepts") %>><a href="/articles/deployment/concepts.html">Concepts</a></li>
-                </ul>
-                <% end %>
-              </div>
-            </section>
+              <section class="section__offset-2" <%= sidebar_current("werckerjson") %>>
+                <p class="title" data-section-title><a href="/articles/werckerjson/intro.html">Wercker.json</a></p>
+                <div class="content" data-section-content>
+                  <% if sidebar_section == "werckerjson" %>
+                  <ul class="side-nav">
+                    <li<%= sidebar_current("werckerjson-advanced") %>><a href="/articles/werckerjson/advanced.html">Advanced</a></li>
+                    <li<%= sidebar_current("werckerjson-other") %>><a href="/articles/werckerjson/other.html">Other</a></li>
+                  </ul>
+                  <% end %>
+                </div>
+              </section>
 
-            <section <%= sidebar_current("languages") %>>
-              <p class="title" data-section-title><a href="/articles/languages/intro.html">Languages</a></p>
-              <div class="content" data-section-content>
-                <% if sidebar_section == "languages" %>
-                <ul class="side-nav">
-                  <li<%= sidebar_current("languages-flask") %>><a href="/articles/languages/flask.html">Flask</a></li>
-                  <li<%= sidebar_current("languages-django-postgres") %>><a href="/articles/languages/django-postgres.html">Django and Postgres</a></li>
-                </ul>
-                <% end %>
-              </div>
-            </section>
+              <section class="section__offset-1" <%= sidebar_current("deployment") %>>
+                <p class="title" data-section-title><a href="/articles/deployment/overview.html">Deployment</a></p>
+                <div class="content" data-section-content>
+                  <% if sidebar_section == "deployment" %>
+                  <ul class="side-nav">
+                    <li<%= sidebar_current("deployment-faq") %>><a href="/articles/deployment/heroku.html">FAQ</a></li>
+                    <li<%= sidebar_current("deployment-concepts") %>><a href="/articles/deployment/concepts.html">Concepts</a></li>
+                  </ul>
+                  <% end %>
+                </div>
+              </section>
 
-            <section class="section__divider">
-              <p class="title" data-section-title><p></p></p>
-              <div class="content" data-section-content>
-              </div>
-            </section>
+              <section <%= sidebar_current("languages") %>>
+                <p class="title" data-section-title><a href="/articles/languages/intro.html">Languages</a></p>
+                <div class="content" data-section-content>
+                  <% if sidebar_section == "languages" %>
+                  <ul class="side-nav">
+                    <li<%= sidebar_current("languages-flask") %>><a href="/articles/languages/flask.html">Flask</a></li>
+                    <li<%= sidebar_current("languages-django-postgres") %>><a href="/articles/languages/django-postgres.html">Django and Postgres</a></li>
+                  </ul>
+                  <% end %>
+                </div>
+              </section>
 
+              <section class="section__divider">
+                <p class="title" data-section-title><p></p></p>
+                <div class="content" data-section-content>
+                </div>
+              </section>
+
+            </div>
           </div>
+        </div>
+      </div>
+
+      <!-- ARTICLES -->
+      <div class="small-12 large-9 columns">
+        <div class="page-content__articles">
+          <%= yield %>
         </div>
       </div>
     </div>
 
-    <!-- ARTICLES -->
-    <div class="small-12 large-9 columns">
-      <div class="page-content__articles">
-        <%= yield %>
-      </div>
+    <div id="root_footer" class="hide-for-small"></div>
+
+    <div class="row footer__bar hide-for-medium-up">
+      <ul>
+        <li>copyright &copy;2013 wercker</li>
+        <li><a href="http://beta.wercker.com">home</a></li>
+        <li><a href="http://beta.wercker.com/about">about</a></li>
+        <li><a href="http://beta.wercker.com/jobs">jobs</a></li>
+        <li><a href="http://mailto:pleasemailus@wercker.com">contact&amp;support</a></li>
+      </ul>
     </div>
   </div>
-  <div class="footer">
+
+  <div id="footer" class="show-for-medium-up">
     <div class="row">
       <div class="small-12 large-6 columns footer__block">
-        <h5>Footer blokje 1</h5>
+        <h5>Sign up now</h5>
         <hr></hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, quibusdam, voluptatem, unde.</p>
+        <p>Signing up for wercker is free and easy. Create your account <a href="https://app.wercker.com/users/new">here</a></p>
       </div>
       <div class="small-12 large-6 columns footer__block">
-        <h5>Footer blokje 1</h5>
+        <h5>Join the Conversation</h5>
         <hr></hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, quibusdam, voluptatem, unde.</p>
+        <p>Feel free to email us with any questions or feedback at <a href="mailto:pleasemailus@wercker.com">pleasemailus@wercker.com</a></p>
       </div>
       <div class="small-12 large-12 columns footer__bar">
         <ul>
@@ -171,6 +187,8 @@
       </div>
     </div>
   </div>
+
+
 </body>
 </html>
 

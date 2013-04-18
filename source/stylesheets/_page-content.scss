@@ -18,12 +18,10 @@
 }
 
 
-
-
 .page-content__articles{
 	height: 100%;
 	max-width: 750px;
-	padding: 0.5*$column-gutter;
+	padding: $column-gutter;
 
 	@media #{$small} {
 		padding: 1.5*$column-gutter;

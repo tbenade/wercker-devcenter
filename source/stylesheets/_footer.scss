@@ -1,14 +1,29 @@
-.footer {
+@import "compass/layout/sticky-footer";
 
+@include sticky-footer(210px);
+
+
+.footer__bar {
+	text-align: center;
+	background: white;
+	border-top: 1px solid $contentBorderColor;
+	padding-top: 0.25*$column-gutter;
+
+	ul li {
+		display: inline;
+		margin-left: 10px;
+		font-size: .7*$base-font-size;
+		text-transform: uppercase;
+	}
+}
+
+.footer {
 	border-top: 1px solid $contentBorderColor;
 	background: white;
-
 	text-align: center;
 
 	@media #{$small} {
 		text-align: left;
-		position: fixed;
-		bottom: 0;
 		width: 100%;
 	}
 
@@ -17,17 +32,9 @@
 		p {font-size: .8*$base-font-size;}
 		padding: 20px;
 	}
+	@extend .footer__bar;
+}
 
-	.footer__bar {
-
-		border-top: 1px solid $contentBorderColor;
-
-		ul li {
-			display: inline;
-			margin-left: 10px;
-			font-size: .7*$base-font-size;
-			text-transform: uppercase;
-		}
-	}
-
+#footer {
+	@extend .footer;
 }
