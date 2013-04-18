@@ -8,10 +8,6 @@ sidebar_current: "overview"
 Welcome to the wercker devcenter! Here you will find various articles and guides to help you get up to speed with wercker.
 
 If you are new to wercker, it is recommended you first read the [getting started guide](/articles/gettingstarted/intro.html).
-***
-If you are looking for specific support for programming languages, there are guides for [Node.js](/articles/languages/nodejs.html), [Python](/articles/languages/python.html), [Ruby](/articles/languages/ruby.html) and [Go](/articles/languages/go.html).
-=======
-If you are new to wercker, it is recommended you first read the [getting started guide](/articles/getting-started.html).
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, odit, facilis architecto quam dicta aspernatur quia quibusdam illo blanditiis alias. Itaque eos iure nulla quam perferendis expedita sunt reprehenderit quo.
 
@@ -30,6 +26,13 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, odit, facil
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, quibusdam, voluptates, eum, commodi modi facere aspernatur repellat nihil rem itaque enim nulla pariatur consequuntur esse ea repudiandae optio deleniti saepe.
 
 *Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, eligendi, cum, numquam, ducimus*
+
+
+****
+##### Header in a bar
+****
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, consequuntur, hic ea officiis incidunt eius harum accusantium facere odit. Eaque, magnam, quidem reprehenderit voluptate aliquid quia quo qui nesciunt maxime. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, consequuntur, hic ea officiis incidunt eius harum accusantium facere odit. Eaque, magnam, quidem reprehenderit voluptate aliquid quia quo qui nesciunt maxime.
 
 -------
 
@@ -70,10 +73,19 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, porro odit b
 
 -------
 
-
-
-
-
 If you are looking for specific support for programming languages, there are guides for [Node.js](/articles/languages/nodejs.html), [Python](/articles/languages/python.html), [Ruby](/articles/languages/ruby.html) and [Go](/articles/languages/go.html).
 
+-------
 
+<div class="profile-picture">
+	<img src="https://secure.gravatar.com/avatar/e1c82876f21cdafafd2b01a1e625f587?d=identicon&amp;s=192" alt="Lindsey Bateman"/>
+</div>
+<div>
+	<ul>
+		<li><h4>Lindsey Bateman</h4></li>
+		<li>Product designer</li>
+		<li>Find me on twitter</li>
+	</ul>
+</div>
+
+-------

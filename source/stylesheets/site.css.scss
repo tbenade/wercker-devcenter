@@ -1,4 +1,5 @@
 // Global Foundation Settings
+@import "compass";
 @import "settings";
 
 @import "foundation";
@@ -7,14 +8,16 @@
 @import "page-content";
 @import "navigation";
 @import "highlight";
+@import "footer";
 
 
 // Comment out this import if you are customizing you imports below
 
 
-html,body {
-	height: 100%;
-	width: 100%;
+body {
+	@media #{$small} {
+		@include background-image(linear-gradient(left, $black 25%, $body-bg 25%));
+	}
 }
 
 

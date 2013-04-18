@@ -1,0 +1,25 @@
+.footer {
+
+	height: 100%;
+	border-top: 1px solid $contentBorderColor;
+	background: white;
+
+	.footer__block {
+		h5 {text-transform: uppercase;}
+		p {font-size: .8*$base-font-size;}
+		padding: 20px;
+	}
+
+	.footer__bar {
+
+		border-top: 1px solid $contentBorderColor;
+
+		ul li {
+			display: inline;
+			margin-left: 10px;
+			font-size: .6*$base-font-size;
+			text-transform: uppercase;
+		}
+	}
+
+}
