@@ -38,10 +38,10 @@
 		.authorCredits {
 			list-style: none;
 			margin-left: 120px;
-			padding-top: 0.5*$column-gutter;
+			padding-top: 0.3*$column-gutter;
 
 			.authorCredits__name {
-				line-height: 0;
+				line-height: 0.4*$base-font-size;
 				margin-bottom: 0.5*$column-gutter;
 				h4 {margin-bottom: 8px;}
 			}
