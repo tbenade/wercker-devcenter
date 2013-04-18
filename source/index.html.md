@@ -86,25 +86,22 @@ If you are looking for specific support for programming languages, there are gui
         <!-- author info -->
         <li class="authorCredits__name">
 			<h4>Lindsey Bateman</h4>
-			<i>
+			<em>
 				Lindsey is a product designer at wercker where creates beautiful things.
-			</i>
+			</em>
 		</li>
 
-        <!-- company url -->
+        <!-- info -->
         <li>
             <a href="http://beta.wercker.com" target="_blank">
-                <img src="/images/.png" width="15px" height="11px">
-                <em>wercker</em>
+                <i class="icon-company"></i> <em>wercker</em>
             </a>
-        </li>
-		<!-- find me on twitter -->
-		<li>
-			<a href="http://twitter.com/lindseybateman" target="_blank">
-				<img src="/images/twitter.png" width="15px" height="11px">
+            <a href="http://twitter.com/lindseybateman" target="_blank">
+				<i class="icon-twitter"></i>
 				<em> lindseybateman</em>
 			</a>
-		</li>
+        </li>
+
 	</ul>
 </div>
 

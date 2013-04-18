@@ -32,6 +32,10 @@
 		p {font-size: .8*$base-font-size;}
 		padding: 20px;
 	}
+
+	.badge img {
+		margin-top: 2*$column-gutter;
+	}
 	@extend .footer__bar;
 }
 
