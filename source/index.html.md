@@ -92,7 +92,7 @@ If you are looking for specific support for programming languages, there are gui
 		<li>
 			<a href="http://twitter.com/lindseybateman" target="_blank">
 				<img src="/images/twitter.png" width="15px" height="11px">
-				<em> Find me on twitter &rarr;</em>
+				<em> lindseybateman</em>
 			</a>
 		</li>
 	</ul>
