@@ -1,0 +1,7 @@
+{
+  "custom steps": {
+    "middleman build": [
+      "middleman build"
+    ]
+  }
+}
