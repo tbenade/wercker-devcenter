@@ -44,6 +44,12 @@
     $(document).foundation();
   </script>
 
+  <script type="text/javascript">var switchTo5x=true;</script>
+  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "00bacff4-9758-400f-b937-50cae880fa74", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+
+
   <div id="root">
 
 <iframe src="http://ghbtns.com/github-btn.html?user=wercker&repo=wercker-cli&type=fork&count=true&size=large"
@@ -151,10 +157,19 @@
       <div class="small-12 large-9 columns">
         <div class="page-content__articles">
           <%= yield %>
+
+          <div class="small-12 large-12 columns sharing-options">
+            <span class='st_twitter' displayText='Tweet'></span>
+            <span class='st_linkedin' displayText='LinkedIn'></span>
+            <span class='st_googleplus' displayText='Google +'></span>
+            <span class='st_email' displayText='Email'></span>
+          </div>
         </div>
       </div>
     </div>
 
+
+    <!-- FOOTER -->
     <div id="root_footer" class="hide-for-small"></div>
 
     <div class="row footer__bar hide-for-medium-up">
@@ -170,15 +185,15 @@
 
   <div id="footer" class="show-for-medium-up">
     <div class="row">
-      <div class="large-5 columns footer__block">
+      <div class="large-4 columns footer__block">
         <h5>Sign up now</h5>
         <hr></hr>
         <p>Signing up for wercker is free and easy. Create your account <a href="https://app.wercker.com/users/new">here</a></p>
       </div>
-      <div class="large-5 columns footer__block">
+      <div class="large-6 columns footer__block">
         <h5>Join the Conversation</h5>
         <hr></hr>
-        <p>Feel free to email us with any questions or feedback at <a href="mailto:pleasemailus@wercker.com">pleasemailus@wercker.com</a> Contribute your own Dev Center articles by <a href="#">forking</a> our repository on GitHub.</p>
+        <p>Feel free to email us with any questions or feedback at <a href="mailto:pleasemailus@wercker.com">pleasemailus@wercker.com</a>. Contribute your own Dev Center articles by <a href="#">forking</a> our repository on GitHub.</p>
 
       </div>
       <div class="large-2 columns">
