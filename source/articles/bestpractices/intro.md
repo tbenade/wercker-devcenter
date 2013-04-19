@@ -1,4 +1,8 @@
-# Best practices
+---
+sidebar_current: "introduction-bestpractices"
+---
+
+# Best Practices
 
 <a id="deployment"></a>
 ## Deployment
