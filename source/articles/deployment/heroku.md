@@ -1,3 +1,6 @@
+---
+sidebar_current: "deployment-heroku"
+---
 
 ### last updated: April 16 2013
 

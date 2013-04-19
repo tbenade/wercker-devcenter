@@ -2,7 +2,7 @@
 sidebar_current: "cli"
 ---
 
-# wercker CLI
+# The wercker command
 
 Wercker has a command line interface. It is written in python and on Linux/Mac OSX can be installed by running:
 

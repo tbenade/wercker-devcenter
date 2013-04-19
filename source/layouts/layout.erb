@@ -81,6 +81,7 @@
                   <ul class="side-nav">
                     <li<%= sidebar_current("introduction-concepts") %>><a href="/articles/introduction/concepts.html">Concepts</a></li>
                     <li<%= sidebar_current("introduction-builds") %>><a href="/articles/introduction/builds.html">Builds</a></li>
+                    <li<%= sidebar_current("introduction-deployment") %>><a href="/articles/introduction/deployment.html">Deployment</a></li>
                     <li<%= sidebar_current("introduction-bestpractices") %>><a href="/articles/introduction/bestpractices.html">Best Practices</a></li>
                   </ul>
                   <% end %>
@@ -97,6 +98,23 @@
                     <li<%= sidebar_current("gettingstarted-python") %>><a href="/articles/gettingstarted/python.html">Python</a></li>
                     <li<%= sidebar_current("gettingstarted-golang") %>><a href="/articles/gettingstarted/golang.html">Golang</a></li>
 
+                  </ul>
+                  <% end %>
+                </div>
+              </section>
+
+              <section class="section__divider">
+                <p class="title" data-section-title><p></p></p>
+                <div class="content" data-section-content>
+                </div>
+              </section>
+
+              <section <%= sidebar_current("cli") %>>
+                <p class="title" data-section-title><a href="/articles/cli/intro.html">Command Line Interface</a></p>
+                <div class="content" data-section-content>
+                  <% if sidebar_section == "cli" %>
+                  <ul class="side-nav">
+                    <li<%= sidebar_current("cli-installation") %>><a href="/articles/cli/installation.html">Installation</a></li>
                   </ul>
                   <% end %>
                 </div>
@@ -130,6 +148,10 @@
                   </ul>
                   <% end %>
                 </div>
+              </section>
+
+              <section <%= sidebar_current("services") %>>
+                <p class="title" data-section-title><a href="/articles/services/intro.html">Services</a></p>
               </section>
 
               <section <%= sidebar_current("deployment") %>>
