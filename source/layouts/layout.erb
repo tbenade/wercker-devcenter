@@ -73,13 +73,14 @@
           <div class="small-12 large-8 columns right">
             <div class="section-container accordion" data-section="accordion" data-options="deep_linking: true">
               <section class="section__offset-1"<%= sidebar_current("overview") %>>
-                <p class="title" data-section-title><a href="/articles/overview/intro.html">Overview</a></p>
+                <p class="title" data-section-title><a href="/articles/introduction/intro.html">Introduction</a></p>
                 <div class="content" data-section-content>
-                  <% if sidebar_section == "overview" %>
+                  <% if sidebar_section == "introduction" %>
                   <ul class="side-nav">
-                    <li<%= sidebar_current("overview-concepts") %>><a href="/articles/overview/concepts.html">Concepts</a></li>
-                    <li<%= sidebar_current("overview-build") %>><a href="/articles/overview/builds.html">Builds</a></li>
-                    <li<%= sidebar_current("overview-faq") %>><a href="/articles/overview/faq.html">FAQ</a></li>
+                    <li<%= sidebar_current("introduction-concepts") %>><a href="/articles/introduction/concepts.html">Concepts</a></li>
+                    <li<%= sidebar_current("introduction-builds") %>><a href="/articles/introduction/builds.html">Builds</a></li>
+                    <li<%= sidebar_current("introduction-bestpractices") %>><a href="/articles/introduction/bestpractices.html">Builds</a></li>
+                    <li<%= sidebar_current("introduction-faq") %>><a href="/articles/introduction/faq.html">FAQ</a></li>
                   </ul>
                   <% end %>
                 </div>
