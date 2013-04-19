@@ -109,6 +109,24 @@
                 </div>
               </section>
 
+              <section class="section__offset-2" <%= sidebar_current("cli") %>>
+                <p class="title" data-section-title><a href="/articles/cli/intro.html">Command Line Interface</a></p>
+                <div class="content" data-section-content>
+                  <% if sidebar_section == "werckerjson" %>
+                  <ul class="side-nav">
+                    <li<%= sidebar_current("werckerjson-advanced") %>><a href="/articles/cli/installation.html">Installation</a></li>
+                    <li<%= sidebar_current("werckerjson-other") %>><a href="/articles/werckerjson/other.html">Other</a></li>
+                  </ul>
+                  <% end %>
+                </div>
+              </section>
+
+              <section class="section__divider">
+                <p class="title" data-section-title><p></p></p>
+                <div class="content" data-section-content>
+                </div>
+              </section>
+
               <section class="section__offset-2" <%= sidebar_current("werckerjson") %>>
                 <p class="title" data-section-title><a href="/articles/werckerjson/intro.html">Wercker.json</a></p>
                 <div class="content" data-section-content>
