@@ -33,8 +33,12 @@
 		padding: 20px;
 	}
 
+	.footer__block + .footer__block {
+		margin-left: -10px;
+	}
+
 	.badge img {
-		margin-top: 2*$column-gutter;
+		margin-top: 1.5*$column-gutter;
 	}
 	@extend .footer__bar;
 }
