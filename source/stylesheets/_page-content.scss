@@ -36,7 +36,13 @@
 	}
 
 	.authorCredits {
-		margin-left: 0.5*$column-gutter;
+		padding: {
+			top: $column-gutter;
+			left: $column-gutter;
+			right: $column-gutter;
+			bottom: 0.5*$column-gutter;
+		}
+
 		.profile-picture {
 			@include makeImageHolderRound(100px, 4px, true);
 			position: absolute;
@@ -62,6 +68,7 @@
 		}
 	}
 
+	.authorCredits + hr {margin-top: 0;}
 	.sharing-options {
 		text-align: right;
 		top: -32px;

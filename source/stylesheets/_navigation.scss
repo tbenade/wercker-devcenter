@@ -1,12 +1,6 @@
 @import "compass/css3/box-shadow";
 @import "mixins/section-offset";
 
-.top-bar {
-	.name {
-		// font-size: 2.5*$base-font-size;
-	}
-}
-
 
 .page-content__nav {
 	min-height: 100%;
@@ -67,6 +61,10 @@
 
 	.side-nav li a:hover{
 		color: $side-nav-link-color-active;
+	}
+
+	.side-nav li.active a {
+		font-weight: 600;
 	}
 
 
