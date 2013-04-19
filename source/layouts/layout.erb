@@ -70,9 +70,8 @@
       <!-- SIDE NAV -->
       <div class="small-12 large-3 columns page-content__nav">
         <div class="row">
-          <div class="small-12 large-8 columns right">
+          <div class="small-12 large-10 columns right">
             <div class="section-container accordion" data-section="accordion" data-options="deep_linking: true">
-
 
                 <section <%= sidebar_current("introduction") %> >
                 <p class="title" data-section-title><a href="/articles/introduction/intro.html">Introduction</a></p>
@@ -120,12 +119,6 @@
                 </div>
               </section>
 
-              <section class="section__divider">
-                <p class="title" data-section-title><p></p></p>
-                <div class="content" data-section-content>
-                </div>
-              </section>
-
               <section <%= sidebar_current("werckerjson") %>>
                 <p class="title" data-section-title><a href="/articles/werckerjson/intro.html">Wercker.json</a></p>
                 <div class="content" data-section-content>
@@ -135,6 +128,12 @@
                     <li<%= sidebar_current("werckerjson-other") %>><a href="/articles/werckerjson/other.html">Other</a></li>
                   </ul>
                   <% end %>
+                </div>
+              </section>
+
+              <section class="section__divider">
+                <p class="title" data-section-title><p></p></p>
+                <div class="content" data-section-content>
                 </div>
               </section>
 
@@ -206,7 +205,6 @@
       </div>
     </div>
 
-
     <!-- FOOTER -->
     <div id="root_footer" class="hide-for-small"></div>
 
@@ -236,7 +234,7 @@
       </div>
       <div class="large-2 columns">
         <div class="badge">
-<a href="https://app.wercker.com/project/bykey/f4e3abea942404e5d2af934b4e7eef56"><img alt="Wercker status" src="https://app.wercker.com/status/f4e3abea942404e5d2af934b4e7eef56/m"></a>
+<a href="https://app.wercker.com/project/bykey/fe9267629e430d21dcdeb9baf2deebea"><img alt="Wercker status" src="https://app.wercker.com/status/fe9267629e430d21dcdeb9baf2deebea/m"></a>
         </div>
       </div>
       <div class="large-12 columns footer__bar">
