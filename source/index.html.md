@@ -1,7 +1,3 @@
----
-sidebar_current: "overview"
----
-
 # Wercker Devcenter
 
 
