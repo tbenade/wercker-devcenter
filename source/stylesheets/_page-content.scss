@@ -41,12 +41,22 @@
 			padding-top: 0.3*$column-gutter;
 
 			.authorCredits__name {
-				line-height: 0.4*$base-font-size;
+				line-height: 1.2*$base-font-size;
 				margin-bottom: 0.5*$column-gutter;
-				h4 {margin-bottom: 8px;}
+				h4 {margin-bottom: 5px;}
+				em { font-size: 0.9*$base-font-size;}
+			}
+
+			li {
+				a + a { margin-left: 10px;}
 			}
 
 		}
+	}
+
+	.sharing-options {
+		text-align: right;
+		top: -32px;
 	}
 
 
