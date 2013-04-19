@@ -1,5 +1,5 @@
 ---
-sidebar_current: "introduction-bestpractices"
+sidebar_current: "bestpractices"
 ---
 
 # Best Practices
