@@ -76,7 +76,7 @@
 	}
 
 	@media #{$medium} {
-		.row .columns {width: gridCalc(8, 12);}
+		.row .columns {width: gridCalc(9, 12);}
 		.section-container section .title a {font-size: $base-font-size;}
 	}
 }
