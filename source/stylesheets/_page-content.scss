@@ -17,6 +17,9 @@
 	font-size: .9*$base-font-size;
 }
 
+.page-content__articles {
+	margin-bottom: $column-gutter;
+}
 
 .page-content__articles{
 	height: 100%;
@@ -26,6 +29,8 @@
 	@media #{$small} {
 		padding: 1.5*$column-gutter;
 	}
+
+
 
 	.authorCredits {
 		margin-left: 0.5*$column-gutter;

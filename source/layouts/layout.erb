@@ -52,7 +52,7 @@
 
   <div id="root">
 
-<iframe src="http://ghbtns.com/github-btn.html?user=wercker&repo=wercker-cli&type=fork&count=true&size=large"
+<iframe src="http://ghbtns.com/github-btn.html?user=wercker&repo=wercker-devcenter&type=fork&count=true&size=large"
   allowtransparency="true" frameborder="0" scrolling="0" width="160" height="30"></iframe>
 
     <nav class="top-bar">
@@ -74,7 +74,7 @@
             <div class="section-container accordion" data-section="accordion" data-options="deep_linking: true">
 
 
-                <section <%= sidebar_current("introduction") %>>
+                <section <%= sidebar_current("introduction") %> >
                 <p class="title" data-section-title><a href="/articles/introduction/intro.html">Introduction</a></p>
                 <div class="content" data-section-content>
                   <% if sidebar_section == "introduction" %>
@@ -83,13 +83,12 @@
                     <li<%= sidebar_current("introduction-builds") %>><a href="/articles/introduction/builds.html">Builds</a></li>
                     <li<%= sidebar_current("introduction-deployment") %>><a href="/articles/introduction/deployment.html">Deployment</a></li>
                     <li<%= sidebar_current("introduction-bestpractices") %>><a href="/articles/introduction/bestpractices.html">Best Practices</a></li>
-                    <li<%= sidebar_current("introduction-faq") %>><a href="/articles/introduction/faq.html">FAQ</a></li>
                   </ul>
                   <% end %>
                 </div>
               </section>
 
-              <section class="section__offset-1"<%= sidebar_current("gettingstarted") %>>
+              <section <%= sidebar_current("gettingstarted") %>>
                 <p class="title" data-section-title><a href="/articles/gettingstarted/intro.html">Getting Started</a></p>
                 <div class="content" data-section-content>
                   <% if sidebar_section == "gettingstarted" %>
@@ -110,7 +109,7 @@
                 </div>
               </section>
 
-              <section class="section__offset-2" <%= sidebar_current("cli") %>>
+              <section <%= sidebar_current("cli") %>>
                 <p class="title" data-section-title><a href="/articles/cli/intro.html">Command Line Interface</a></p>
                 <div class="content" data-section-content>
                   <% if sidebar_section == "cli" %>
@@ -127,7 +126,7 @@
                 </div>
               </section>
 
-              <section class="section__offset-2" <%= sidebar_current("werckerjson") %>>
+              <section <%= sidebar_current("werckerjson") %>>
                 <p class="title" data-section-title><a href="/articles/werckerjson/intro.html">Wercker.json</a></p>
                 <div class="content" data-section-content>
                   <% if sidebar_section == "werckerjson" %>
@@ -155,7 +154,7 @@
                 <p class="title" data-section-title><a href="/articles/services/intro.html">Services</a></p>
               </section>
 
-              <section class="section__offset-1" <%= sidebar_current("deployment") %>>
+              <section <%= sidebar_current("deployment") %>>
                 <p class="title" data-section-title><a href="/articles/deployment/overview.html">Deployment</a></p>
                 <div class="content" data-section-content>
                   <% if sidebar_section == "deployment" %>
@@ -164,6 +163,20 @@
                     <li<%= sidebar_current("deployment-concepts") %>><a href="/articles/deployment/concepts.html">Concepts</a></li>
                   </ul>
                   <% end %>
+                </div>
+              </section>
+
+
+              <section class="section__divider">
+                <p class="title" data-section-title><p></p></p>
+                <div class="content" data-section-content>
+                </div>
+              </section>
+
+
+              <section <%= sidebar_current("faq") %>>
+                <p class="title" data-section-title><a href="/articles/faq/intro.html">FAQ</a></p>
+                <div class="content" data-section-content>
                 </div>
               </section>
 
@@ -223,7 +236,7 @@
       </div>
       <div class="large-2 columns">
         <div class="badge">
-          <a href="https://app.wercker.com/project/bykey/9340c55d04d180e02a9f543935c0a0c4"><img alt="Wercker status" src="https://app.wercker.com/status/9340c55d04d180e02a9f543935c0a0c4/m"></a>
+<a href="https://app.wercker.com/project/bykey/f4e3abea942404e5d2af934b4e7eef56"><img alt="Wercker status" src="https://app.wercker.com/status/f4e3abea942404e5d2af934b4e7eef56/m"></a>
         </div>
       </div>
       <div class="large-12 columns footer__bar">
