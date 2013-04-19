@@ -1,4 +1,3 @@
-
 ---
 sidebar_current: "introduction-bestpractices"
 ---
