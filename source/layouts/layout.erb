@@ -73,21 +73,22 @@
           <div class="small-12 large-8 columns right">
             <div class="section-container accordion" data-section="accordion" data-options="deep_linking: true">
 
-              <section class="section__offset-1"<%= sidebar_current("introduction") %>>
+
+                <section <%= sidebar_current("introduction") %>>
                 <p class="title" data-section-title><a href="/articles/introduction/intro.html">Introduction</a></p>
                 <div class="content" data-section-content>
                   <% if sidebar_section == "introduction" %>
                   <ul class="side-nav">
                     <li<%= sidebar_current("introduction-concepts") %>><a href="/articles/introduction/concepts.html">Concepts</a></li>
                     <li<%= sidebar_current("introduction-builds") %>><a href="/articles/introduction/builds.html">Builds</a></li>
-                    <li<%= sidebar_current("introduction-bestpractices") %>><a href="/articles/introduction/bestpractices.html">Builds</a></li>
+                    <li<%= sidebar_current("introduction-bestpractices") %>><a href="/articles/introduction/bestpractices.html">Best Practices</a></li>
                     <li<%= sidebar_current("introduction-faq") %>><a href="/articles/introduction/faq.html">FAQ</a></li>
                   </ul>
                   <% end %>
                 </div>
               </section>
 
-              <section <%= sidebar_current("gettingstarted") %>>
+              <section class="section__offset-1"<%= sidebar_current("gettingstarted") %>>
                 <p class="title" data-section-title><a href="/articles/gettingstarted/intro.html">Getting Started</a></p>
                 <div class="content" data-section-content>
                   <% if sidebar_section == "gettingstarted" %>
@@ -120,18 +121,6 @@
                 </div>
               </section>
 
-              <section class="section__offset-1" <%= sidebar_current("deployment") %>>
-                <p class="title" data-section-title><a href="/articles/deployment/overview.html">Deployment</a></p>
-                <div class="content" data-section-content>
-                  <% if sidebar_section == "deployment" %>
-                  <ul class="side-nav">
-                    <li<%= sidebar_current("deployment-faq") %>><a href="/articles/deployment/heroku.html">FAQ</a></li>
-                    <li<%= sidebar_current("deployment-concepts") %>><a href="/articles/deployment/concepts.html">Concepts</a></li>
-                  </ul>
-                  <% end %>
-                </div>
-              </section>
-
               <section <%= sidebar_current("languages") %>>
                 <p class="title" data-section-title><a href="/articles/languages/intro.html">Languages</a></p>
                 <div class="content" data-section-content>
@@ -139,6 +128,18 @@
                   <ul class="side-nav">
                     <li<%= sidebar_current("languages-flask") %>><a href="/articles/languages/flask.html">Flask</a></li>
                     <li<%= sidebar_current("languages-django-postgres") %>><a href="/articles/languages/django-postgres.html">Django and Postgres</a></li>
+                  </ul>
+                  <% end %>
+                </div>
+              </section>
+
+              <section class="section__offset-1" <%= sidebar_current("deployment") %>>
+                <p class="title" data-section-title><a href="/articles/deployment/overview.html">Deployment</a></p>
+                <div class="content" data-section-content>
+                  <% if sidebar_section == "deployment" %>
+                  <ul class="side-nav">
+                    <li<%= sidebar_current("deployment-faq") %>><a href="/articles/deployment/heroku.html">FAQ</a></li>
+                    <li<%= sidebar_current("deployment-concepts") %>><a href="/articles/deployment/concepts.html">Concepts</a></li>
                   </ul>
                   <% end %>
                 </div>
