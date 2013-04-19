@@ -1,3 +1,8 @@
+---
+sidebar_current: "deployment-pypi"
+---
+
+
 # Deploying to PyPi
 
 In this article we will showcase how you can deploy your application, in this case a library, to a repository.
