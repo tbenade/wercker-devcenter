@@ -22,7 +22,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, quam, comm
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, nostrum, odio, dolor, suscipit iusto quae vero consequatur repudiandae facere reiciendis cumque doloremque illum pariatur quasi perferendis eveniet animi unde. Iure?
 
-**wercker.json**
+<h6>wercker.json</h6>
 
 ``` json
 {
