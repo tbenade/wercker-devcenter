@@ -6,7 +6,7 @@ sidebar_current: "introduction"
 
 Wercker is a continuous delivery platform that allows developers to test and deploy their code often. By embracing continuous delivery, developers reduce risk and eliminate waste while developing software.
 
-In this chapter we will discuss the benefits of using wercker but also introduce you to the [concepts](/articles/introduction/concepts.html) and principles of wercker and continuous delivery.
+In this chapter we will discuss the [benefits](/articles/introduction/benefits.html) of using wercker but also introduce you to the [concepts](/articles/introduction/concepts.html) and principles of wercker and continuous delivery.
 
 You can also check out the different flows for the [Build](/articles/introduction/build.html), [Deployment](/articles/introduction/deployment.html) and [Provisioning](/articles/introduction/provisioning.html) processes.
 
