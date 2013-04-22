@@ -17,7 +17,6 @@
 	font-size: .9*$base-font-size;
 }
 
-
 .page-content__articles{
 	height: 100%;
 	max-width: 750px;
@@ -27,8 +26,23 @@
 		padding: 1.5*$column-gutter;
 	}
 
+	.button.radius {
+		margin-top: $column-gutter;
+		margin-bottom: $column-gutter;
+
+		i {
+			color: lighten($primary-color, 30%);
+		}
+	}
+
 	.authorCredits {
-		margin-left: 0.5*$column-gutter;
+		padding: {
+			top: $column-gutter;
+			left: $column-gutter;
+			right: $column-gutter;
+			bottom: 0.5*$column-gutter;
+		}
+
 		.profile-picture {
 			@include makeImageHolderRound(100px, 4px, true);
 			position: absolute;
@@ -54,6 +68,7 @@
 		}
 	}
 
+	.authorCredits + hr {margin-top: 0;}
 	.sharing-options {
 		text-align: right;
 		top: -32px;
@@ -92,6 +107,7 @@
 	h4 {
 		color: darken($body-font-color, 10%);
 		text-transform: uppercase;
+		font-weight: 400;
 	}
 
 	p em {
@@ -123,5 +139,6 @@
 
 	hr + h5 {  text-transform: uppercase	}
 	h5 + hr { margin-top: 0;	}
-	hr + p { font-size: 0.8*$base-font-size;}
+	h4 + p { font-size: 0.9*$base-font-size;}
+	// hr + p { font-size: 0.8*$base-font-size;}
 }

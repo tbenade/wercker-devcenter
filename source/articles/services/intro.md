@@ -1,3 +1,7 @@
+---
+sidebar_current: "services"
+---
+
 # Available Services
 
 Most applications use a database to store data or a message queue to handle jobs asynchronously. With wercker you can specify which services you require and wercker will provision them for you.

@@ -52,7 +52,7 @@
 
   <div id="root">
 
-<iframe src="http://ghbtns.com/github-btn.html?user=wercker&repo=wercker-cli&type=fork&count=true&size=large"
+<iframe class="show-for-medium-up" src="http://ghbtns.com/github-btn.html?user=wercker&repo=wercker-devcenter&type=fork&count=true&size=large"
   allowtransparency="true" frameborder="0" scrolling="0" width="160" height="30"></iframe>
 
     <nav class="top-bar">
@@ -60,7 +60,7 @@
         <!-- Title Area -->
         <li class="name">
           <h1><a href="/#">wercker dev center</a></h1>
-        </li right>
+        </li>
       </ul>
     </nav>
 
@@ -72,14 +72,15 @@
         <div class="row">
           <div class="small-12 large-8 columns right">
             <div class="section-container accordion" data-section="accordion" data-options="deep_linking: true">
-              <section class="section__offset-1"<%= sidebar_current("overview") %>>
-                <p class="title" data-section-title><a href="/articles/overview/intro.html">Overview</a></p>
+
+                <section <%= sidebar_current("introduction") %> >
+                <p class="title" data-section-title><a href="/articles/introduction/intro.html">Introduction</a></p>
                 <div class="content" data-section-content>
-                  <% if sidebar_section == "overview" %>
+                  <% if sidebar_section == "introduction" %>
                   <ul class="side-nav">
-                    <li<%= sidebar_current("overview-concepts") %>><a href="/articles/overview/concepts.html">Concepts</a></li>
-                    <li<%= sidebar_current("overview-build") %>><a href="/articles/overview/builds.html">Builds</a></li>
-                    <li<%= sidebar_current("overview-faq") %>><a href="/articles/overview/faq.html">FAQ</a></li>
+                    <li<%= sidebar_current("introduction-concepts") %>><a href="/articles/introduction/concepts.html">Concepts</a></li>
+                    <li<%= sidebar_current("introduction-builds") %>><a href="/articles/introduction/builds.html">Builds</a></li>
+                    <li<%= sidebar_current("introduction-deployment") %>><a href="/articles/introduction/deployment.html">Deployment</a></li>
                   </ul>
                   <% end %>
                 </div>
@@ -100,13 +101,24 @@
                 </div>
               </section>
 
-              <section class="section__divider">
+              <section class="section__divider show-for-medium-up">
                 <p class="title" data-section-title><p></p></p>
                 <div class="content" data-section-content>
                 </div>
               </section>
 
-              <section class="section__offset-2" <%= sidebar_current("werckerjson") %>>
+              <section <%= sidebar_current("cli") %>>
+                <p class="title" data-section-title><a href="/articles/cli/intro.html">The wercker command</a></p>
+                <div class="content" data-section-content>
+                  <% if sidebar_section == "cli" %>
+                  <ul class="side-nav">
+                    <li<%= sidebar_current("cli-installation") %>><a href="/articles/cli/installation.html">Installation</a></li>
+                  </ul>
+                  <% end %>
+                </div>
+              </section>
+
+              <section <%= sidebar_current("werckerjson") %>>
                 <p class="title" data-section-title><a href="/articles/werckerjson/intro.html">Wercker.json</a></p>
                 <div class="content" data-section-content>
                   <% if sidebar_section == "werckerjson" %>
@@ -118,15 +130,9 @@
                 </div>
               </section>
 
-              <section class="section__offset-1" <%= sidebar_current("deployment") %>>
-                <p class="title" data-section-title><a href="/articles/deployment/overview.html">Deployment</a></p>
+              <section class="section__divider show-for-medium-up">
+                <p class="title" data-section-title><p></p></p>
                 <div class="content" data-section-content>
-                  <% if sidebar_section == "deployment" %>
-                  <ul class="side-nav">
-                    <li<%= sidebar_current("deployment-faq") %>><a href="/articles/deployment/heroku.html">FAQ</a></li>
-                    <li<%= sidebar_current("deployment-concepts") %>><a href="/articles/deployment/concepts.html">Concepts</a></li>
-                  </ul>
-                  <% end %>
                 </div>
               </section>
 
@@ -142,7 +148,48 @@
                 </div>
               </section>
 
-              <section class="section__divider">
+              <section <%= sidebar_current("services") %>>
+                <p class="title" data-section-title><a href="/articles/services/intro.html">Services</a></p>
+              </section>
+
+              <section <%= sidebar_current("deployment") %>>
+                <p class="title" data-section-title><a href="/articles/deployment/intro.html">Deployment</a></p>
+                <div class="content" data-section-content>
+                  <% if sidebar_section == "deployment" %>
+                  <ul class="side-nav">
+                    <li<%= sidebar_current("deployment-faq") %>><a href="/articles/deployment/heroku.html">FAQ</a></li>
+                    <li<%= sidebar_current("deployment-concepts") %>><a href="/articles/deployment/concepts.html">Concepts</a></li>
+                  </ul>
+                  <% end %>
+                </div>
+              </section>
+
+
+              <section class="section__divider show-for-medium-up">
+                <p class="title" data-section-title><p></p></p>
+                <div class="content" data-section-content>
+                </div>
+              </section>
+
+              <section <%= sidebar_current("bestpractices") %>>
+                <p class="title" data-section-title><a href="/articles/bestpractices/intro.html">Best Practices</a></p>
+                <div class="content" data-section-content>
+                </div>
+              </section>
+
+              <section class="section__divider show-for-medium-up">
+                <p class="title" data-section-title><p></p></p>
+                <div class="content" data-section-content>
+                </div>
+              </section>
+
+              <section <%= sidebar_current("faq") %>>
+                <p class="title" data-section-title><a href="/articles/faq/faq.html">FAQ</a></p>
+                <div class="content" data-section-content>
+                </div>
+              </section>
+
+              <section class="section__divider show-for-medium-up">
                 <p class="title" data-section-title><p></p></p>
                 <div class="content" data-section-content>
                 </div>
@@ -167,7 +214,6 @@
         </div>
       </div>
     </div>
-
 
     <!-- FOOTER -->
     <div id="root_footer" class="hide-for-small"></div>
@@ -198,7 +244,7 @@
       </div>
       <div class="large-2 columns">
         <div class="badge">
-          <a href="https://app.wercker.com/project/bykey/9340c55d04d180e02a9f543935c0a0c4"><img alt="Wercker status" src="https://app.wercker.com/status/9340c55d04d180e02a9f543935c0a0c4/m"></a>
+<a href="https://app.wercker.com/project/bykey/fe9267629e430d21dcdeb9baf2deebea"><img alt="Wercker status" src="https://app.wercker.com/status/fe9267629e430d21dcdeb9baf2deebea/m"></a>
         </div>
       </div>
       <div class="large-12 columns footer__bar">

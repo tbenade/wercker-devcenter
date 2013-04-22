@@ -1,3 +1,7 @@
+---
+sidebar_current: "introduction-deployment"
+---
+
 # Deployment
 
 The main benefit of using wercker is that you can Deploy Continuously.

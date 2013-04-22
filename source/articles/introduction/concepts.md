@@ -1,5 +1,5 @@
 ---
-sidebar_current: "gettingstarted-concepts"
+sidebar_current: "introduction-concepts"
 ---
 
 # Wercker concepts
