@@ -4,74 +4,38 @@ sidebar_current: "cli"
 
 # The wercker command
 
-Wercker has a command line interface. It is written in python and on Linux/Mac OSX can be installed by running:
+The wercker command or command line interface allows you to interfact with the wercker platform from the comfort of your terminal.
 
-	pip install wercker
+-------
 
-Depending on your operating systems you may have to run this with superuser privileges (i.e. use `sudo pip install wercker`). You should now be able to run:
+<div class="authorCredits">
+    <span class="profile-picture">
+        <img src="https://secure.gravatar.com/avatar/7d9ef3d3f6911e6e4f9c51f6d99c48f8?d=identicon&s=192" alt="Jacco Flenter"/>
+    </span>
+    <ul class="authorCredits">
 
-	$ wercker
-	-----------------------
-	welcome to wercker-cli
-	-----------------------
+        <!-- author info -->
+        <li class="authorCredits__name">
+            <h4>Jacco Flenter</h4>
+            <em>
+                Jacco is an interaction engineer at wercker.
+            </em>
+        </li>
 
-	Usage:
-	    wercker create
-	    wercker status
-	    wercker deploy
-	    wercker builds
-	    wercker open targets
-	    wercker queue
-	    wercker apps
-	    wercker link
-	    wercker login
-	    wercker logout
-	    wercker targets add
-	    wercker targets list
-	    wercker targets details
-      	wercker update
-	    wercker --version
-	    wercker --help
+        <!-- info -->
+        <li>
+            <a href="http://beta.wercker.com" target="_blank">
+                <i class="icon-company"></i> <em>wercker</em>
+            </a>
+            <a href="http://twitter.com/flenter" target="_blank">
+                <i class="icon-twitter"></i>
+                <em> flenter</em>
+            </a>
+        </li>
 
-## Commands
-Wercker supports the following commands:
+    </ul>
+</div>
 
-### create
-Adds an application to wercker. This will create a `.wercker` file in
-your repository.
-
-### status
-Show the status of the most recent build.
-
-### deploy
-Deploy a build to a deploy target
-
-### login
-Logs the user in and stores the token on the machine
-
-### logout
-Removes the login token from the machine
-
-### open targets
-Opens a webpage showing a deploy target's details
-### apps
-List apps the user has access to
-
-### link
-Link a repository back up to an application on wercker. Useful if a repository does not contain the .wercker file.
-
-### builds
-Shows a list of the most recent builds and the results.
-
-### targets add
-Add a heroku application as a deploy target.
-
-### targets list
-Gets a list of all deploy targets for the current application.
-
-### targets details
-Alias for open targets
-
-### update
-Checks if there is new version of the CLI available
-
+-------
+##### April 19, 2013
+-------
