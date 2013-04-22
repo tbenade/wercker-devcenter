@@ -78,6 +78,7 @@
                 <div class="content" data-section-content>
                   <% if sidebar_section == "introduction" %>
                   <ul class="side-nav">
+                    <li<%= sidebar_current("introduction-benefits") %>><a href="/articles/introduction/benefits.html">Benefits</a></li>
                     <li<%= sidebar_current("introduction-concepts") %>><a href="/articles/introduction/concepts.html">Concepts</a></li>
                     <li<%= sidebar_current("introduction-builds") %>><a href="/articles/introduction/builds.html">Builds</a></li>
                     <li<%= sidebar_current("introduction-deployment") %>><a href="/articles/introduction/deployment.html">Deployment</a></li>
@@ -157,7 +158,7 @@
                 <div class="content" data-section-content>
                   <% if sidebar_section == "deployment" %>
                   <ul class="side-nav">
-                    <li<%= sidebar_current("deployment-faq") %>><a href="/articles/deployment/heroku.html">FAQ</a></li>
+                    <li<%= sidebar_current("deployment-heroku") %>><a href="/articles/deployment/heroku.html">FAQ</a></li>
                     <li<%= sidebar_current("deployment-concepts") %>><a href="/articles/deployment/concepts.html">Concepts</a></li>
                   </ul>
                   <% end %>
@@ -184,7 +185,7 @@
               </section>
 
               <section <%= sidebar_current("faq") %>>
-                <p class="title" data-section-title><a href="/articles/faq/faq.html">FAQ</a></p>
+                <p class="title" data-section-title><a href="/articles/faq/intro.html">FAQ</a></p>
                 <div class="content" data-section-content>
                 </div>
               </section>
