@@ -2,6 +2,9 @@
 sidebar_current: "deployment-heroku"
 ---
 
+# Heroku
+This article deals with the wercker Heroku add-on, available on their [Marketplace](https://addons.heroku.com/wercker). The documentation for this add-on can also be found on [Heroku's Devcenter](https://devcenter.heroku.com/articles/wercker?preview=1).
+
 - How does it work?
 - Requirements
 - Provisioning the add-on
@@ -9,9 +12,6 @@ sidebar_current: "deployment-heroku"
 - Supported Languages and Services
 - Removing the add-on
 - Additional Resources and Support
-
-# Heroku
-This article deals with the wercker Heroku add-on, available on their [Marketplace](https://addons.heroku.com/wercker). The documentation for this add-on can also be found on [Heroku's Devcenter](https://devcenter.heroku.com/articles/wercker?preview=1).
 
 ## How does it work?
 
@@ -92,7 +92,7 @@ You are now ready to deploy your build to Heroku, if it passed of course. You ca
 
 ## Supported Languages and Services
 
-Wercker currently supports Node.js, Python and Ruby. In terms of services like databases and queues, wercker has support for Postgres, MySQL, MongoDB, RabbitMQ, and Redis. See the wercker [devcenter](https://devcenter.wercker.com) on how to specify any of these.
+Wercker currently supports Node.js, Python and Ruby. In terms of services like databases and queues, wercker has support for Postgres, MySQL, MongoDB, RabbitMQ, and Redis. See the [services section](/articles/services/intro.html) on how to specify any of these.
 
 ## Removing the add-on
 
@@ -104,10 +104,6 @@ Wercker can be removed via the  CLI.
     -----> Removing wercker from sharp-mountain-4005... done, v1 (free)
 
 This removes both the wercker addon from your Heroku application and the Heroku deploy target on wercker.
-
-## Additional Resources and Support
-
-You can find more information at wercker's [devcenter](https://devcenter.wercker.com) and our [blog](https://blog.wercker.com). Feel free to contact us with feedback or questions via email at pleasemailus@wercker.com
 
 
 -------
