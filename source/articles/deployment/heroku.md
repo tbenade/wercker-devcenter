@@ -2,8 +2,6 @@
 sidebar_current: "deployment-heroku"
 ---
 
-### last updated: April 16 2013
-
 - How does it work?
 - Requirements
 - Provisioning the add-on
@@ -13,7 +11,7 @@ sidebar_current: "deployment-heroku"
 - Additional Resources and Support
 
 # Heroku
-Wercker is a collaborative continuous delivery platform, that helps developers reduce risk and eliminate waste when developing web applications by enabling them to test and deploy their code often.
+This article deals with the wercker Heroku add-on, available on their [Marketplace](https://addons.heroku.com/wercker). The documentation for this add-on can also be found on [Heroku's Devcenter](https://devcenter.heroku.com/articles/wercker?preview=1).
 
 ## How does it work?
 
@@ -37,7 +35,6 @@ Wercker connects with your GitHub or Bitbucket repository. Each time you do a `g
 ## Provisioning the add-on
 Wercker can be added to your application using the Heroku CLI:
 
-    :::term
     $ heroku addons:add wercker
     Adding wercker on sharp-mountain-4005... done, v7 (free)
     Use `heroku addons:open wercker` to get started.
@@ -45,7 +42,6 @@ Wercker can be added to your application using the Heroku CLI:
 
 Next, open the wercker wizard by running the following command:
 
-    :::term
     $ heroku addons:open wercker
 
 This wizard will guide you through the steps needed to run your first build on wercker.
@@ -54,19 +50,16 @@ This wizard will guide you through the steps needed to run your first build on w
 
 Wercker comes with a command line interface that you can install by running:
 
-    :::term
     $ pip install wercker
 
 **NOTE**: Wercker assumes that you already have a repository on GitHub or Bitbucket with pushed code and have created a Heroku application.
 
 The CLI helps you interact with the wercker platform. Run the following command to link your application with wercker:
 
-    :::term
     $ wercker create
 
 You will receive the following response
 
-    :::term
     -----------------------
     welcome to wercker-cli
     -----------------------
@@ -107,7 +100,6 @@ Wercker can be removed via the  CLI.
 
 <div class="warning" markdown="1">This will delete the Heroku deploy target data on wercker and cannot be undone!</div>
 
-    :::term
     $ heroku addons:remove wercker
     -----> Removing wercker from sharp-mountain-4005... done, v1 (free)
 
@@ -116,3 +108,38 @@ This removes both the wercker addon from your Heroku application and the Heroku 
 ## Additional Resources and Support
 
 You can find more information at wercker's [devcenter](https://devcenter.wercker.com) and our [blog](https://blog.wercker.com). Feel free to contact us with feedback or questions via email at pleasemailus@wercker.com
+
+
+-------
+
+<div class="authorCredits">
+    <span class="profile-picture">
+        <img src="https://secure.gravatar.com/avatar/d4b19718f9748779d7cf18c6303dc17f?d=identicon&s=192" alt="Micha Hernandez van Leuffen"/>
+    </span>
+    <ul class="authorCredits">
+
+        <!-- author info -->
+        <li class="authorCredits__name">
+            <h4>Micha Hernandez van Leuffen</h4>
+            <em>
+                Micha is cofounder and CEO at wercker.
+            </em>
+        </li>
+
+        <!-- info -->
+        <li>
+            <a href="http://beta.wercker.com" target="_blank">
+                <i class="icon-company"></i> <em>wercker</em>
+            </a>
+            <a href="http://twitter.com/mies" target="_blank">
+                <i class="icon-twitter"></i>
+                <em> mies</em>
+            </a>
+        </li>
+
+    </ul>
+</div>
+
+-------
+##### April 19, 2013
+-------

@@ -10,8 +10,6 @@ The wercker command line interface is written in python and on Linux/Mac OSX can
 
 Depending on your operating systems you may have to run this with superuser privileges (i.e. use `sudo pip install wercker`).
 
-It is open source so feel free to [fork](https://github.com/wercker/wercker-cli) it and improve upon it. We'd also welcome any ports to other programming languages such as Ruby.
-
 -------
 
 <div class="authorCredits">
