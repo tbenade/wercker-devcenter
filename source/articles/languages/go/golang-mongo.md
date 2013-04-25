@@ -31,58 +31,58 @@ Add an empty .godir file to your repository. This file is used when deploying to
 We define our `Decepticon` struct which has a name and a date field, that we can store into MongoDB.
 
 **main.go**
-```go
-package main
 
-import (
-  "time"
-)
+    package main
 
-type Decepticon struct {
-  Name string
-  Date time.Time
-}
-```
+    import (
+      "time"
+    )
+
+    type Decepticon struct {
+      Name string
+      Date time.Time
+    }
+
 
 ## Create a Unit Test
 
 Our unit test will create two decepticons and will check if one of them can be retrieved from MongoDB.
 
 **main_test.go**
-```go
 
-package main
 
-import (
-  "os"
-  "testing"
+    package main
 
-  "labix.org/v2/mgo"
-  "labix.org/v2/mgo/bson"
-)
+    import (
+      "os"
+      "testing"
 
-func Test_StoreAndFind(t *testing.T) {
-  session, err := mgo.Dial(os.Getenv("WERCKER_MONGODB_HOST"))
-  if err != nil {
-    panic(err)
-  }
-  defer session.Close()
+      "labix.org/v2/mgo"
+      "labix.org/v2/mgo/bson"
+    )
 
-  conn := session.DB("test").C("decepticons")
-  err = conn.Insert(&Decepticon{"Shockwave", time.Now()}, &Decepticon{"Starscream", time.Now()})
-  if err != nil {
-    t.Error("Could not insert a Decepticon")
-  }
+    func Test_StoreAndFind(t *testing.T) {
+      session, err := mgo.Dial(os.Getenv("WERCKER_MONGODB_HOST"))
+      if err != nil {
+        panic(err)
+      }
+      defer session.Close()
 
-  result := Decepticon{}
-  err = conn.Find(bson.M{"name": "Shockwave"}).One(&result)
-  if err != nil {
-    t.Error("Could not find a Decepticon")
-  }
-  t.Log("Test Passed")
-}
+      conn := session.DB("test").C("decepticons")
+      err = conn.Insert(&Decepticon{"Shockwave", time.Now()}, &Decepticon{"Starscream", time.Now()})
+      if err != nil {
+        t.Error("Could not insert a Decepticon")
+      }
 
-```
+      result := Decepticon{}
+      err = conn.Find(bson.M{"name": "Shockwave"}).One(&result)
+      if err != nil {
+        t.Error("Could not find a Decepticon")
+      }
+      t.Log("Test Passed")
+    }
+
+
 
 ## Create a wercker.json file
 
@@ -90,13 +90,13 @@ Through `wercker.json` we define that we want a MongoDB service on wercker. That
 
 **wercker.json**
 
-```json
-{
-  "services" : {
-    "mongodb" : true
-  }
-}
-```
+
+    {
+      "services" : {
+        "mongodb" : true
+      }
+    }
+
 
 ## Push your changes to GitHub
 Push your changes to GitHub and see the build results on wercker.
