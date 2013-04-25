@@ -3,6 +3,7 @@ sidebar_current: "deployment-cloudfoundry"
 ---
 
 # Cloud Foundry
+In this subsection we will discuss how you can deploy your application to [CloudFoundry](http://cloudfoundry.com), the OpenSource Platform-as-a-Service developed by VMware.
 
 ## Requirements
 
