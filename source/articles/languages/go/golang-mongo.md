@@ -1,3 +1,7 @@
+---
+sidebar_current: "languages-go"
+---
+
 # Getting stated with Go and MongoDB on wercker
 You can find the code for this tutorial on [Github](https://github.com/mies/wercker-golang-mongo)
 
