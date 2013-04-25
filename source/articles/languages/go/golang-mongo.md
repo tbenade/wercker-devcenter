@@ -86,17 +86,21 @@ Our unit test will create two decepticons and will check if one of them can be r
 
 ## Create a wercker.json file
 
-Through `wercker.json` we define that we want a MongoDB service on wercker. That is all...
+Through `wercker.json` we define that we want a MongoDB service on wercker:
 
 **wercker.json**
 
 
     {
-      "services" : {
-        "mongodb" : true
-      }
+        "services" : {
+          "mongodb" : true
+        },
+        "packages" : ["bzr"]
     }
 
+****
+##### Note we add the 'bzr' package as the go mongodb driver 'mgo' depends on it
+****
 
 ## Push your changes to GitHub
 Push your changes to GitHub and see the build results on wercker.
