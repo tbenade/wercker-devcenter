@@ -110,24 +110,32 @@ Push your changes to GitHub and see the build results on wercker.
 
 <div class="authorCredits">
     <span class="profile-picture">
-        <img src="https://secure.gravatar.com/avatar/d4b19718f9748779d7cf18c6303dc17f?d=identicon&s=192" alt="Micha Hernández van Leuffen"/>
+        <img src="https://secure.gravatar.com/avatar/d4b19718f9748779d7cf18c6303dc17f?d=identicon&s=192" alt="Micha Hernandez van Leuffen"/>
     </span>
     <ul class="authorCredits">
+
+        <!-- author info -->
         <li class="authorCredits__name">
-            <h4>Micha Hernández van Leuffen</h4>
-            <i>
-                Cofounder and CEO <a href="http://beta.wercker.com" target="_blank">@wercker &rarr;</a>
-            </i>
+            <h4>Micha Hernandez van Leuffen</h4>
+            <em>
+                Micha is cofounder and CEO at wercker.
+            </em>
         </li>
-        <!-- find me on twitter -->
+
+        <!-- info -->
         <li>
+            <a href="http://beta.wercker.com" target="_blank">
+                <i class="icon-company"></i> <em>wercker</em>
+            </a>
             <a href="http://twitter.com/mies" target="_blank">
-                <img src="/images/twitter.png" width="15px" height="11px">
-                <em> Find me on twitter &rarr;</em>
+                <i class="icon-twitter"></i>
+                <em> mies</em>
             </a>
         </li>
+
     </ul>
 </div>
 
-
+-------
+##### April 19, 2013
 -------
