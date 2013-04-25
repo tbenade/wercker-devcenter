@@ -1,5 +1,5 @@
 ---
-sidebar_current: "languages-django-postgres"
+sidebar_current: "languages-python"
 ---
 
 # Getting Started with Django and Postgres

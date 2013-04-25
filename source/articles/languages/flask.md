@@ -1,12 +1,13 @@
 ---
-sidebar_current: "languages-flask"
+sidebar_current: "languages-python"
 ---
 
 # Getting Started with Flask
 
 You can find the code for this tutorial on [Github](https://github.com/mies/wercker-flask-api)
 
-### Table of Contents
+#### Table of Contents
+
 * Prerequisites
 * Set up virtualenv
 * Declare dependencies through `requirements.txt`
@@ -28,24 +29,24 @@ You can find the code for this tutorial on [Github](https://github.com/mies/werc
 
 Within your project folder:
 
-``` bash
+
 	$ virtualenv venv --distribute
 	New python executable in venv/bin/python
 	Installing distribute...............done.
 	Installing pip...............done.
-```
+
 
 And now activate your newly created environment:
 
-``` bash
+
 	$ source venv/bin/activate
-```
+
 ## Declare dependencies in a `requirements.txt` file
 
-``` bash
+
 	$ pip install flask
 	$ pip freeze > requirements.txt
-```
+
 
 ## Add project to wercker
 Add your GitHub project to wercker using the wercker dashboard
@@ -58,7 +59,7 @@ Create a simple Flask API
 
 **app.py**
 
-```python
+
 
 	import os
 	from flask import Flask
@@ -81,7 +82,7 @@ Create a simple Flask API
 	  port = int(os.environ.get('PORT', 5000))
 	  app.debug = True
 	  app.run(host='0.0.0.0', port=port)
-```
+
 
 ## Create a simple Unit Test
 
@@ -89,23 +90,23 @@ We're now ready to write a simple unit test for our API. We're going to leverage
 
 **app_test.py**
 
-``` python
-from app import app
 
-import unittest
-import json
+    from app import app
 
-class StunticonTestCase(unittest.TestCase):
+    import unittest
+    import json
 
-  def test_index(self):
-    tester = app.test_client(self)
-    response = tester.get('/stunticons.json', content_type='application/json')
-    self.assertEqual(response.status_code, 200)
-    self.assertEqual(response.data, json.dumps(["Motormaster", "Dead End", "Breakdown", "Wildrider", "Drag Strip"]))
+    class StunticonTestCase(unittest.TestCase):
 
-if __name__ == '__main__':
-    unittest.main()
-```
+      def test_index(self):
+        tester = app.test_client(self)
+        response = tester.get('/stunticons.json', content_type='application/json')
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.data, json.dumps(["Motormaster", "Dead End", "Breakdown", "Wildrider", "Drag Strip"]))
+
+    if __name__ == '__main__':
+        unittest.main()
+
 
 ## Create a wercker.json file
 
@@ -113,25 +114,24 @@ Now that we have our unit test we need to let wercker know it should run it, we 
 
 **werkcer.json**
 
-``` json
-{
-  "custom steps" : {
-    "setup_environment" : {
-      "commands": [
-        "export LANG=en_US.UTF-8",
-        "export LC_ALL=en_US.UTF-8",
-        "export WERCKER=true",
-        "export VIRTUALENV_DISTRIBUTE=true"
-      ]
-    },
-    "flask_test" : {
-      "commands" : [
-        "python app_test.py"
-      ]
+
+    {
+      "custom steps" : {
+        "setup_environment" : {
+          "commands": [
+            "export LANG=en_US.UTF-8",
+            "export LC_ALL=en_US.UTF-8",
+            "export WERCKER=true",
+            "export VIRTUALENV_DISTRIBUTE=true"
+          ]
+        },
+        "flask_test" : {
+          "commands" : [
+            "python app_test.py"
+          ]
+        }
+      }
     }
-  }
-}
-```
 
 Here you ca see we added a custom step called `flask_test` that will run `python app_test.py` as a separate buildstep.
 
@@ -141,19 +141,19 @@ We are going to deploy our simple API to Heroku, which expects a Procfile that d
 
 **Procfile**
 
-``` bash
-	web: python app.py
-```
 
-From the wercker dashboard select the deployment tab and create a Heroku deploy target by adding your Heroku API key.from your [account page on Heroku](https://dashboard.heroku.com/account)
+	web: python app.py
+
+
+From the wercker dashboard select the deployment tab and create a Heroku deploy target by adding your Heroku API key.from your [account page on Heroku](https://dashboard.heroku.com/account) or use the [add-on](http://addons.heroku.com/wercker).
 
 ## Push your code to GitHub
 
-``` bash
+
 	git add .
 	git commit -m 'init'
 	git push origin master
-```
+
 
 As you have previously added this repository to wercker, your push gets automatically picked up and triggers a build.
 
