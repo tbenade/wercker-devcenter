@@ -1,3 +1,7 @@
+---
+sidebar_current: "languages-ruby"
+---
+
 # Getting Started with a Sinatra API
 
 You can find the code for this tutorial on [Github](https://github.com/mies/wercker-ruby-api)

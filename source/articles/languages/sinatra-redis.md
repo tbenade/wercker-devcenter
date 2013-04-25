@@ -1,3 +1,7 @@
+---
+sidebar_current: "languages-ruby"
+---
+
 # Getting started with Sinatra and Redis on wercker
 
 ### Table of Contents

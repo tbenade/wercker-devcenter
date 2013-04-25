@@ -1,4 +1,9 @@
+---
+sidebar_current: "languages-ruby"
+---
+
 # Getting stated with Rails and MongoDB on wercker
+
 You can find the code for this tutorial on [Github](https://github.com/mies/mongodb-demo)
 
 ### Table of Contents

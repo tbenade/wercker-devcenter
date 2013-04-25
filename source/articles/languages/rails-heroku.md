@@ -1,3 +1,7 @@
+---
+sidebar_current: "languages-ruby"
+---
+
 # Getting started with Rails and Heroku
 
 * Prerequisites
@@ -26,7 +30,7 @@ Next we replace the sqlite gem in your Gemfile with `pg`; the Postgres gem for R
 ## Set up Heroku
 
 	$ heroku create
-	
+
 ## Create your Procfile
 
 We will be using Unicorn as our web server, so we will add it to our Gemfile:
@@ -60,9 +64,9 @@ You will now have access to several environment variables including:
 	WERCKER_POSTGRESQL_USERNAME
 	WERCKER_POSTGRESQL_PASSWORD
 	WERCKER_POSTGRESQL_DATABASE
-	
+
 and the convenience url in the form of `postgres://postgres:wercker@10.0.3.223:5432/werckerdb1` that you can access via the environment variable:
-	
+
 	WERCKER_POSTGRESQL_URL
 
 Commit and push this file to your git repository.
@@ -96,7 +100,7 @@ This command will also trigger an initial build. If this build is green you are 
 You can now deploy your green build to Heroku. You can do so via the dashboard that you can invoke by running `heroku addons:open wercker` and hit deploy next to a green build or by executing the following command through the command line interface:
 
 	$ wercker deploy
-	
+
 	-----------------------
 	welcome to wercker-cli
 	-----------------------
