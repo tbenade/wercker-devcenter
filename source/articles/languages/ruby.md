@@ -42,4 +42,5 @@ Ruby Articles:
 </div>
 
 -------
-##### Apr
+##### April 19, 2013
+-------
