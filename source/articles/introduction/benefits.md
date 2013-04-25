@@ -26,5 +26,5 @@ wercker also allows you to test your code and interact with popular services suc
 
 ## Guidance
 
-Throughout wercker nudges and tips help you get the most out of Wercker and aid you in keeping your code green.
+Throughout wercker, nudges and tips help you get the most out of wercker and aid you in keeping your code green.
 This devcenter is the place where you can get up to speed on specific programming languages, services and concepts around continuous delivery.

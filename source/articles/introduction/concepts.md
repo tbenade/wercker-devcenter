@@ -4,12 +4,12 @@ sidebar_current: "introduction-concepts"
 
 # Wercker concepts
 
-This page explains some of the core concepts of wercker:
+In this section we explain some of the core concepts that you will encounter throughout wercker. By explaining these concepts you will be able to make better use of wercker.
 
 * [builds](#builds)
 * [tests](#tests)
 * [provisioning](#provisioning)
-* [Deploy targets](#deploy-targets)
+* [deploy targets](#deploy-targets)
 * [deploys](#deploys)
 * [collaborators](#collaborators)
 * [Google Chrome extension](#google-chrome-extension)

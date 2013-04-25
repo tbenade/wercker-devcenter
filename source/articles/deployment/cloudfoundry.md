@@ -1,3 +1,7 @@
+---
+sidebar_current: "deployment-cloudfoundry"
+---
+
 # Cloud Foundry
 
 ## Requirements
