@@ -21,15 +21,15 @@ The first step is to fork one of the above mentioned repositories and clone it t
 
 Next you can add this application to wercker. Log into wercker and push the `add application` button.
 
-<a href="https://s3.amazonaws.com/wercker.static.assets/step2.png" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/step2.png" width="100%"></a>
+<a href="https://s3.amazonaws.com/wercker.static.assets/step2.png" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/step2.png" ></a>
 
 Next, select the repository that you have forked in the previous step.
 
-<a href="https://s3.amazonaws.com/wercker.static.assets/step3.png" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/step3.png" width="100%"></a>
+<a href="https://s3.amazonaws.com/wercker.static.assets/step3.png" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/step3.png" ></a>
 
 Wercker needs read permissions to run your tests each time you do a `git push`. For this to work you have to give the `werckerbot` user read permissions to your repository as indicated in the step below.
 
-<a href="https://s3.amazonaws.com/wercker.static.assets/step3.png" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/step3.png" width="100%"></a>
+<a href="https://s3.amazonaws.com/wercker.static.assets/step4.png" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/step4.png" ></a>
 
 
 ### Step 3. Code and create your first Build
