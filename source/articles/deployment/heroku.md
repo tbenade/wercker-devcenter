@@ -5,6 +5,11 @@ sidebar_current: "deployment-heroku"
 # Heroku
 This article deals with the wercker Heroku add-on, available on their [Marketplace](https://addons.heroku.com/wercker). The documentation for this add-on can also be found on [Heroku's Devcenter](https://devcenter.heroku.com/articles/wercker?preview=1).
 
+****
+##### note: you are also able to deploy to Heroku from wercker without the add-on
+****
+<br />
+
 - How does it work?
 - Requirements
 - Provisioning the add-on
