@@ -13,12 +13,19 @@ Now, you are ready to get started with wercker. For your convenience we have cre
 
 ### Step 1. Fork the Repository
 
+The first step is to fork one of the above mentioned repositories and clone it to your local machine.
+
 ### Step 2. Add Project
 
-### Step 3. First Build
+Next you can add this application to wercker. Log into wercker and push the `add application` button.
+
+### Step 3. Code and create your first Build
+
+Make a modification to the application's code. A simple update to the `README.md` will suffice but you can also create new functionality.
 
 ### Step 4. Deploy
 
+You are now ready to deploy this application to the Cloud. For this guide we will walk you through a deploy on [Heroku](http://heroku.com) a popular platform-as-a-service provider.
 
 -------
 
