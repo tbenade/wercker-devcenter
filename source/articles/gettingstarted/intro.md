@@ -15,17 +15,34 @@ Now, you are ready to get started with wercker. For your convenience we have cre
 
 The first step is to fork one of the above mentioned repositories and clone it to your local machine.
 
+<a href="https://s3.amazonaws.com/wercker.static.assets/step1.png" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/step1.png" width="100%"></a>
+
 ### Step 2. Add Project
 
 Next you can add this application to wercker. Log into wercker and push the `add application` button.
+
+<a href="https://s3.amazonaws.com/wercker.static.assets/step2.png" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/step2.png" width="100%"></a>
+
+Next, select the repository that you have forked in the previous step.
+
+<a href="https://s3.amazonaws.com/wercker.static.assets/step3.png" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/step3.png" width="100%"></a>
+
+Wercker needs read permissions to run your tests each time you do a `git push`. For this to work you have to give the `werckerbot` user read permissions to your repository as indicated in the step below.
+
+<a href="https://s3.amazonaws.com/wercker.static.assets/step3.png" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/step3.png" width="100%"></a>
+
 
 ### Step 3. Code and create your first Build
 
 Make a modification to the application's code. A simple update to the `README.md` will suffice but you can also create new functionality.
 
+<a href="https://s3.amazonaws.com/wercker.static.assets/step3.png" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/step3.png" width="100%"></a>
+
 ### Step 4. Deploy
 
 You are now ready to deploy this application to the Cloud. For this guide we will walk you through a deploy on [Heroku](http://heroku.com) a popular platform-as-a-service provider.
+
+<a href="" target="_blank"><img src="" width="100%"></a>
 
 -------
 
