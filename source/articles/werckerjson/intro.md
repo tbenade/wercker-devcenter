@@ -10,18 +10,17 @@ Below we see a `wercker.json` sample file:
 
 ** wercker.json **
 
-``` json
-{
-"custom steps" : {
-    "setup locale" : [
-      "export LANG=en_US.UTF-8",
-      "export LC_ALL=en_US.UTF-8",
-    ],
-    "less" : "node_modules/less/bin/lessc public/style/site.less public/style/site.css"
-  },
-  "post-deploy test" : ["curl $BASE_URL| grep home"]
-}
-```
+    {
+    "custom steps" : {
+        "setup locale" : [
+          "export LANG=en_US.UTF-8",
+          "export LC_ALL=en_US.UTF-8",
+        ],
+        "less" : "node_modules/less/bin/lessc public/style/site.less public/style/site.css"
+      },
+      "post-deploy test" : ["curl $BASE_URL| grep home"]
+    }
+
 
 By utilizing the `custom steps` directive we can add any build steps we might like, in this case exporting some language settings and compiling our `less` stylesheets.
 
@@ -29,43 +28,45 @@ We also add a `post-deploy test` directive to see if our application is running 
 
 Other clauses available in `wercker.json`:
 
-``` json
-{
-  "lang" : "python",
-  "version" : "2.7",
-  "packages" : ["nano", "vim"],
-  "stepname" : false,
-  "services" : { "servicename" : true },
-  "pre-install" : ["echo my-pre-install-script.sh"],
-  "pre-test" : ["echo my-pre-test-script.sh"],
-  "post-test" : ["echo my-post-install-script.sh"],
-  "pre-deploy" : ["echo my-pre-deploy-script.sh"],
-  "deploy" : ["echo my-deploy-script.sh"],
-  "post-deploy" : ["echo my-post-deploy-script.sh"],
-  "pre-provision" : ["echo my-pre-provision-script.sh"],
-  "provision" : ["echo my-provision-script.sh"],
-  "post-provision" : ["echo my-post-provision-script.sh"]
-}
-```
+
+    {
+      "lang" : "python",
+      "version" : "2.7",
+      "packages" : ["nano", "vim"],
+      "stepname" : false,
+      "services" : { "servicename" : true },
+      "pre-install" : ["echo my-pre-install-script.sh"],
+      "pre-test" : ["echo my-pre-test-script.sh"],
+      "post-test" : ["echo my-post-install-script.sh"],
+      "pre-deploy" : ["echo my-pre-deploy-script.sh"],
+      "deploy" : ["echo my-deploy-script.sh"],
+      "post-deploy" : ["echo my-post-deploy-script.sh"],
+      "pre-provision" : ["echo my-pre-provision-script.sh"],
+      "provision" : ["echo my-provision-script.sh"],
+      "post-provision" : ["echo my-post-provision-script.sh"]
+    }
+
 
 All commands are logged by default. If you have sensitive information, it is possible to hide commands from the log.
 In stead of the command, use an object and set log to false:
 
-``` json
-{
-  "pre-install" : [{ "cmd" : "echo my-pre-install-script.sh", "log" : false }]
-}
-```
+
+    {
+      "pre-install" : [{ "cmd" : "echo my-pre-install-script.sh", "log" : false }]
+    }
+
 
 You can combine commands that should be logged and that shouldn't be logged:
 
-``` json
-{
-  "pre-install" : ["echo 1", { "cmd" : "echo my-pre-install-script.sh", "log" : false }, "echo 2"]
-}
-```
+
+    {
+      "pre-install" : ["echo 1", { "cmd" : "echo my-pre-install-script.sh", "log" : false }, "echo 2"]
+    }
+
 
 ### lang
+
+With the `lang` directive you are able to explicitely set the programming language that your applications uses.
 
 Possible values:
 
@@ -73,8 +74,11 @@ Possible values:
 * nodejs
 * python
 * ruby
+* go
 
 ### services
+
+The `services` directive allows you to specify any service such as a database or queue. See the [services](/articles/services/intro.html) section for more information.
 
 Possible values:
 
@@ -86,9 +90,8 @@ Possible values:
 
 ### packages
 
-You can use the packages element to install (apt-get) packages which are not already installed.
-``` json
-{
-  "packages" : ["nano", "vim"]
-}
-```
+You can use the `packages` directive to install (apt-get) packages which are not already installed.
+
+    {
+      "packages" : ["nano", "vim"]
+    }

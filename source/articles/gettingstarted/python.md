@@ -23,7 +23,7 @@ Please make sure you have the following:
 
 * * *
 
-#### clone the repo
+#### fork the repo
 
 You can find the source code for this sample project on GitHub. Clone it
 
