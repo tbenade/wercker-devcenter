@@ -17,6 +17,8 @@ Now, you are ready to get started with wercker. For your convenience we have cre
 
 ### Step 3. First Build
 
+### Step 4. Deploy
+
 
 -------
 
