@@ -37,39 +37,40 @@ Adds an application to wercker. This will create a `.wercker` file in
 your repository.
 
 ### status
-Show the status of the most recent build.
+Shows the status of the most recent build.
 
 ### deploy
-Deploy a build to a deploy target
+Deploy a build to a deploy target.
 
 ### login
-Logs the user in and stores the token on the machine
+Logs the user in and stores the token on the machine.
 
 ### logout
-Removes the login token from the machine
+Removes the login token from the machine.
 
 ### open targets
-Opens a webpage showing a deploy target's details
+Opens a webpage showing a deploy target's details.
+
 ### apps
-List apps the user has access to
+List applications the user has access to.
 
 ### link
 Link a repository back up to an application on wercker. Useful if a repository does not contain the .wercker file.
 
 ### builds
-Shows a list of the most recent builds and the results.
+Shows a list of the most recent builds and their results.
 
 ### targets add
 Add a heroku application as a deploy target.
 
 ### targets list
-Gets a list of all deploy targets for the current application.
+Retrieves a list of all deploy targets for the current application.
 
 ### targets details
-Alias for open targets
+Alias for open targets.
 
 ### update
-Checks if there is new version of the CLI available
+Checks if there is a new version of the CLI available.
 
 
 -------

@@ -36,13 +36,34 @@ Wercker needs read permissions to run your tests each time you do a `git push`. 
 
 Make a modification to the application's code. A simple update to the `README.md` will suffice but you can also create new functionality.
 
-<a href="https://s3.amazonaws.com/wercker.static.assets/step3.png" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/step3.png" width="100%"></a>
+    $ git commit -m "modified the README"
+    $ git push origin master
 
-### Step 4. Deploy
+Commit your changes to your git repository and push them. This will trigger a new build on wercker, depicted in the activity feed, as you can see below.
+
+<a href="https://s3.amazonaws.com/wercker.static.assets/build_progress.png" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/build_progress.png" ></a>
+
+### Step 4. Add a deploy target
 
 You are now ready to deploy this application to the Cloud. For this guide we will walk you through a deploy on [Heroku](http://heroku.com) a popular platform-as-a-service provider.
 
-<a href="" target="_blank"><img src="" width="100%"></a>
+***
+##### note: Wercker has an add-on on the Heroku marketplace that makes deployment even easier. See the [Heroku guide](/articles/deployment/heroku.html) in the deployment section.
+***
+
+From the deployment tab on wercker select the `add deploy target` button and pick Heroku from the list. You will be asked to enter your Heroku API key which you can find on your [Heroku account page](https://dashboard.heroku/com/account).
+
+<a href="https://s3.amazonaws.com/wercker.static.assets/deploy_target.png" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/deploy_target.png" width="100%"></a>
+
+You can now either choose an existing application on Heroku that you want to deploy to, or create a new application. You can add a label to this deploy target, such as `production` or `staging`.
+
+### Step 5. Deploy your build
+
+Now you are ready to deploy your build to Heroku. Select your green build from the list of builds and hit deploy:
+
+<a href="https://s3.amazonaws.com/wercker.static.assets/deploy_build.png" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/deploy_build.png" width="100%"></a>
+
+Wercker will now deploy your application!
 
 -------
 
