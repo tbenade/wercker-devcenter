@@ -25,6 +25,8 @@ Please make sure you have the following:
 
 #### fork the repo
 
+For our repository that contains the Python
+
 You can find the source code for this sample project on GitHub. Clone it
 
     $ git clone git://github.com/wercker/flask-sample.git

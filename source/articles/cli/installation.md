@@ -5,6 +5,12 @@ sidebar_current: "cli-installation"
 # Requirements
 We assume and [recommend](http://www.pip-installer.org/en/latest/other-tools.html#pip-compared-to-easy-install) that Python dependencies and libraries are managed through [pip](http://www.pip-installer.org/en/latest/) which you can install via `sudo easy_install pip`.
 
+****
+##### The short version: `pip install wercker`
+****
+
+## Installation instructions
+
 Depending on how Python is installed on your system you will have to make sure your `PATH` is set correctly so you can globally run the `wercker` command.
 
 ****
