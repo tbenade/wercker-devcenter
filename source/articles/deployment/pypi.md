@@ -8,7 +8,7 @@ sidebar_current: "deployment-pypi"
 In this article we will showcase how you can deploy your application, in this case a library, to a repository.
 
 ## Introduction
-Wercker comes with a command line interface (CLI) that is written in Python. You can install this CLI via the `pip` package manager:
+Wercker comes with a command line interface (CLI) that is written in Python. See the section on the [CLI](/articles/cli/intro.html) for more information. Briefly, you can install this CLI via the `pip` package manager:
 
     $ pip install wercker
 
@@ -20,26 +20,12 @@ You can imagine the same scenarion for other libraries or projects that you want
 Wercker manages a any steps it needs to execute through a simple javascript-based DSL file called `wercker.json`. For more information see the wercker.json devcenter article.
 
 	{
-	    "custom steps" : {
-	        "install test dependencies": [
-	            "pip install coverage",
-	            "pip install httpretty",
-	            "pip install mock",
-	            "pip install pep8"
-	        ],
-	        "pep8": "pep8 .",
-	        "unittest": [
-	            "coverage run  --timid --source=. -m unittest discover -v",
-	            "coverage report -m --omit=*/tests/*,setup*"
-	        ]
-	    },
-	    "package": false,
 	    "deploy": [
 	        "./deploy.sh"
 	    ]
 	}
 
-We have defined five steps in this `wercker.json` file. First, we install any Python dependencies we need for unit testing but which we do not want to include in our `requirements.txt` as these are not part of our core application. Second and third we run the [PEP8](http://www.python.org/dev/peps/pep-0008/) Python stylechecker, followed by our unit tests executed through [coverage](http://nedbatchelder.com/code/coverage/), such that we get code coverage output. Fourth we declare that we no do want any packaging done of our application as we're not deploying this library in a traditional sense. Finally we execute the `deploy.sh` script through the `deploy` clause in `wercker.json`, which we will cover next.
+We have defined a single directive in this `wercker.json` file. After a deploy is triggered, the `deploy.sh` script will be executed.
 
 ## Creating your deploy script.
 
