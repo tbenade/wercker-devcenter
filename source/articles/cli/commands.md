@@ -13,13 +13,13 @@ Assuming you have succesfully installed the wercker command line interface, you 
 
     Usage:
         wercker create
+        wercker link
         wercker status
         wercker deploy
         wercker builds
         wercker open targets
         wercker queue
         wercker apps
-        wercker link
         wercker login
         wercker logout
         wercker targets add
@@ -35,6 +35,9 @@ Wercker supports the following commands:
 ### create
 Adds an application to wercker. This will create a `.wercker` file in
 your repository.
+
+### link
+Link a repository back up to an application on wercker. Useful if a repository does not contain the .wercker file.
 
 ### status
 Shows the status of the most recent build.
@@ -53,9 +56,6 @@ Opens a webpage showing a deploy target's details.
 
 ### apps
 List applications the user has access to.
-
-### link
-Link a repository back up to an application on wercker. Useful if a repository does not contain the .wercker file.
 
 ### builds
 Shows a list of the most recent builds and their results.
