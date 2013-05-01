@@ -11,8 +11,6 @@ In this section we explain some of the core concepts that you will encounter thr
 * [provisioning](#provisioning)
 * [deploy targets](#deploy-targets)
 * [deploys](#deploys)
-* [collaborators](#collaborators)
-* [Google Chrome extension](#google-chrome-extension)
 
 <a id="builds"></a>
 ## Builds
@@ -69,23 +67,4 @@ When a [Build](#builds) is passed, it can be deployed to a [Deploy Target](#depl
 This can be done from the [Build](#builds) overview
 
 More information: [Deployment](deployment)
-
-<a id="collaborators"></a>
-## Collaborators
-
-*Under construction*
-
-
-<a id="google-chrome-extension"></a>
-## Google Chrome extension
-
-You can get real-time notifications of what is happining with your projects, using
-<a href="https://chrome.google.com/webstore/detail/wercker-build-notificatio/hdbipaohmcaebblpcioidpgkeijnikch" target="_blank">the wercker Google Chrome extension</a>.
-You will get notified when the following events occur:
-
-*   [Build](#builds) failed
-*   [Deploy](#deploys) passed or failed
-*   Provisioning passed or failed
-
-You can find <a href="https://chrome.google.com/webstore/detail/wercker-build-notificatio/hdbipaohmcaebblpcioidpgkeijnikch" target="_blank">the extension</a> in the Chrome web store.
 
