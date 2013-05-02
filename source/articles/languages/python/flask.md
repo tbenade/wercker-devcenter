@@ -50,6 +50,7 @@ And now activate your newly created environment:
 
 ## Add project to wercker
 Add your GitHub project to wercker using the wercker dashboard
+
 * Goto `Add project`
 * Pick GitHub and select your repository for this project
 
