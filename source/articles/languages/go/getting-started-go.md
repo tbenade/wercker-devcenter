@@ -1,9 +1,12 @@
 # Getting started with Go and Heroku
-For this tutorial we will be developing an application in Google's Go and deploy this on Heroku
+
+For this tutorial we will be developing an application in Google's Go and deploy this on Heroku. The code for this tutorial can be found on [GitHub](https://github.com/wercker/getting-started-golang).
 
 ## Prerequisites
+* A wercker account, sign up is [free and easy](https://app.wercker.com/users/new/), but note we're still in private beta.
+* The wercker [command line interface](/articles/cli/intro.html)
 * The [Go](http://golang.org/) programming language
-* You have correctly set up your [$GOROOT](http://golang.org/doc/install) and [$GOPATH](http://golang.org/doc/code.html#tmp_2)environment variables
+* You have correctly set up your [$GOROOT](http://golang.org/doc/install) and [$GOPATH](http://golang.org/doc/code.html#tmp_2) environment variables
 * A Heroku account
 
 ## Creating our Application
