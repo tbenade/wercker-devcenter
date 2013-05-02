@@ -128,10 +128,10 @@
 	}
 
 
-	pre code {
+	.highlight pre {
 		overflow: auto;
 		background: white;
-		padding: 1.5*$column-gutter;
+		padding: 0.5*$column-gutter;
 		border: 1px solid $contentBorderColor;
 		font-family: 'Ubuntu',"Courier New", Courier, monospace;
 		line-height: 1.4*$base-font-size;
