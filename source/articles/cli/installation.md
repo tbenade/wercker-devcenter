@@ -35,13 +35,16 @@ For Windows we recommend installing [Cygwin](http://www.cygwin.com/) with the fo
 * web/wget
 
 Next, download and install `easy_install` with the following commands
-
-    wget http://peak.telecommunity.com/dist/ez_setup.py
-    python ez_setup.py
+```bash
+$ wget http://peak.telecommunity.com/dist/ez_setup.py
+$ python ez_setup.py
+```
 
 We will now install `pip` through easy_install:
 
-    easy_install pip
+```bash
+$ easy_install pip
+```
 
 After which you can continue to install the `wercker` command line interface.
 
@@ -49,7 +52,9 @@ After which you can continue to install the `wercker` command line interface.
 
 The wercker command line interface is written in python and on Linux/Mac OSX can be installed by running:
 
-    pip install wercker
+```bash
+$ pip install wercker
+```
 
 Depending on your operating systems you may have to run this with superuser privileges (i.e. use `sudo pip install wercker`).
 

@@ -25,8 +25,8 @@ The first step is to fork one of the above mentioned repositories and clone it t
 
 Go to the repository on your machine and run `wercker create`. This should result in an output similar to this:
 
-<div class="highlight">
-    <pre>-----------------------
+```bash
+-----------------------
 welcome to wercker-cli
 -----------------------
 
@@ -45,13 +45,11 @@ Found 1 repository location(s)...
 Please choose one of the following options:
  (1) git@github.com:flenter/getting-started-python.git
 Make your choice (1=default):
-    </pre>
-</div>
+```
 
 The wercker create wizard will pause here, to allow you to catch up with what it is about to do. Since my repository has only one remote location (github), pressing enter or input 1 will suffice. After which the wizard will continue:
 
-<div class="highlight">
-    <pre>
+```bash
 github repository detected...
 Selected repository url is git@github.com:flenter/getting-started-python.git
 
@@ -80,8 +78,7 @@ You are all set up to for using wercker. You can trigger new builds by
 committing and pushing your latest changes.
 
 Happy coding!
-    </pre>
-</div>
+```
 
 Note: wercker will check if you have linked your github or bitbucket account with your account and check for permissions on the repository. If either of them is not done yet, the wizard will guide you through some additional steps.
 
@@ -89,8 +86,8 @@ Note: wercker will check if you have linked your github or bitbucket account wit
 
 This all that's needed to add a application to wercker. But there are some handy commands we can do while we are waiting for the build to complete (or go to the website). The first one is `wercker queue`, which lists all jobs that still need to be done for this application. This can be both builds as well as deploys.
 
-<div class="highlight">
-    <pre>$ wercker queue
+```bash
+$ wercker queue
 -----------------------
 welcome to wercker-cli
 -----------------------
@@ -108,13 +105,11 @@ Found 1 result(s)...
 Retreiving list of deploy targets...
 
 No deploy targets found.
-    </pre>
-</div>
+```
 
 The second command is `wercker builds` which lists the 5 latest builds (including both finished and unfinished ones).
 
-<div class="highlight">
-    <pre>
+```bash
 -----------------------
 welcome to wercker-cli
 -----------------------
@@ -129,8 +124,7 @@ Found 2 result(s)...
 ├────────┼──────────┼────────┼──────────┼───────────────────┼─────────────────┤
 │ passed │ 100.0%   │ master │ 3de45ff9 │ 05/02/13 13:17:10 │ added badge     │
 ├────────┼──────────┼────────┼──────────┼───────────────────┼─────────────────┤
-    </pre>
-</div>
+```
 
 ### Add a deploy target
 
@@ -142,18 +136,15 @@ note: See the [Heroku guide](/articles/deployment/heroku.html) in the deployment
 
 We first create a new app on heroku, by running `heroku create`
 
-<div class="highlight">
-    <pre>
+```bash
 Creating secret-bastion-2817... done, region is us
 http://secret-bastion-2817.herokuapp.com/ | git@heroku.com:secret-bastion-2817.git
 Git remote heroku added
-    </pre>
-</div>
+```
 
 Add the wercker addon to your new heroku application and run `wercker targets add`
 
-<div class="highlight">
-    <pre>
+```bash
 $ heroku addons:add wercker
 Adding wercker on secret-bastion-2817... done, v2 (free)
 Use `heroku addons:open wercker` to get started.
@@ -165,8 +156,8 @@ welcome to wercker-cli
 
 Heroku remote git@heroku.com:secret-bastion-2817.git selected.
 Heroku deploy target secret-bastion-2817 successfully added to the wercker applicaiton
-    </pre>
-</div>
+```
+
 
 ### Deploy
 
