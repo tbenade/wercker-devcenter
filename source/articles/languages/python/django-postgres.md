@@ -8,7 +8,7 @@ You can find the code for this tutorial on [Github](https://github.com/mies/werc
 
 ### Table of Contents
 * Prerequisites
-* Set up virtualenv
+* Set up  virtualenv
 * Declare dependencies through `requirements.txt`
 * TODO: Run heroku create
 * Add project to wercker
@@ -95,9 +95,9 @@ DATABASES = {
 ## Push your changes
 
 ``` bash
-git add .
-git commit -am 'init'
-git push origin master
+$ git add .
+$ git commit -am 'init'
+$ git push origin master
 ```
 
 ## Deploy

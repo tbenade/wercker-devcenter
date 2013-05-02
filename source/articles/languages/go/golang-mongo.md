@@ -13,9 +13,9 @@ You can find the code for this tutorial on [Github](https://github.com/mies/werc
 * Create a Unit Test
 * Create a wercker.json file
 * Push your changes to Github
-<!--TODO: Create a Procfile and Heroku deploy target
+TODO: Create a Procfile and Heroku deploy target
 TODO: Add Mongolab
-TODO: Deploy to Heroku -->
+TODO: Deploy to Heroku
 
 ## Prerequisites
 For this tutorial you need to have knowledge of [Go](http://golang.org) and MongoDB.

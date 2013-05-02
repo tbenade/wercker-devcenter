@@ -4,7 +4,14 @@ sidebar_current: "languages"
 
 # Language Support
 
-Wercker has support for the following languages...
+Wercker has support for several programming languages. Please pick your language of choice from the list below for more information and in-depth articles on how to use your favoritre programming environment and wercker.
+
+* [Node.js](/articles/languages/nodejs.html)
+* [Ruby](/articles/languages/ruby.html)
+* [Python](/articles/languages/python.html)
+* [Go](/articles/languages/go.html)
+
+If you would like support for more programming environments, don't hesitate to [contact us](mailto:pleasemailus@wercker.com).
 
 -------
 

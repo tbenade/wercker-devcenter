@@ -50,6 +50,7 @@ And now activate your newly created environment:
 
 ## Add project to wercker
 Add your GitHub project to wercker using the wercker dashboard
+
 * Goto `Add project`
 * Pick GitHub and select your repository for this project
 
@@ -59,7 +60,7 @@ Create a simple Flask API
 
 **app.py**
 
-```python
+``` python
 
 
 import os
@@ -102,6 +103,7 @@ We're now ready to write a simple unit test for our API. We're going to leverage
       def test_index(self):
 
         tester = app.test_client(self)
+
         response = tester.get('/stunticons.json', content_type='application/json')
 
         self.assertEqual(response.status_code, 200)
@@ -161,11 +163,11 @@ From the wercker dashboard select the deployment tab and create a Heroku deploy 
 
 ## Push your code to GitHub
 
-
-	git add .
-	git commit -m 'init'
-	git push origin master
-
+```bash
+$ git add .
+$ git commit -m 'init'
+$ git push origin master
+```
 
 As you have previously added this repository to wercker, your push gets automatically picked up and triggers a build.
 

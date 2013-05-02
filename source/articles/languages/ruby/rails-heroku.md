@@ -23,6 +23,7 @@ sidebar_current: "languages-ruby"
 
 We will start with a clean Rails project which we will set up with a Postgres database. In your terminal run the following command:
 
+
 	$ rails new rails-sample
 
 Next we replace the sqlite gem in your Gemfile with `pg`; the Postgres gem for Ruby.

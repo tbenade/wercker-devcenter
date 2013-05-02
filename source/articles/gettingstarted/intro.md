@@ -8,6 +8,10 @@ This guide will walk you through your first project with wercker and showcase th
 
 Before we start with developing our first application, make sure you have registered for a [wercker account](https://app.wercker.com/users/new).
 
+***
+##### NOTE: at this moment we are in closed beta, you can sign up for an invite at [http://beta.wercker.com](http://beta.wercker.com) or send us an [email](mailto:pleasemailus@wercker.com).
+***
+
 Now, you are ready to get started with wercker. For your convenience we have created four separate Getting Started repositories in
 [Ruby](https://github.com/wercker/getting-started-ruby), [Python](https://github.com/wercker/getting-started-python), [Node.js](https://github.com/wercker/getting-started-nodejs) and [Go](https://github.com/wercker/getting-started-golang).
 
