@@ -6,8 +6,11 @@ sidebar_current: "gettingstarted-web"
 
 This guide will walk you through creating your first application on wercker via the web interface.
 
-Now, you are ready to get started with wercker. For your convenience we have created four separate Getting Started repositories in
+As mentioned, we have created four separate Getting Started repositories in
 [Ruby](https://github.com/wercker/getting-started-ruby), [Python](https://github.com/wercker/getting-started-python), [Node.js](https://github.com/wercker/getting-started-nodejs) and [Go](https://github.com/wercker/getting-started-golang).
+
+We assume you have registered for a [wercker account](https://app.wercker.com/users/new).
+
 
 ### Step 1. Fork the Repository
 
