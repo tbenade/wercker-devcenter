@@ -75,8 +75,6 @@ Also we need to inform Heroku which folder the application runs in. This is done
     $ git commit -am 'my go app on wercker'
     $ git push origin master
 
-
-
 ## Adding your application to wercker
 
 We assume you have installed the wercker [command line interface](/artiles/cli/intro.html). Now run the following command:
