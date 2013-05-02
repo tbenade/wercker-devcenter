@@ -163,11 +163,11 @@ From the wercker dashboard select the deployment tab and create a Heroku deploy 
 
 ## Push your code to GitHub
 
-
-	$ git add .
-	$ git commit -m 'init'
-	$ git push origin master
-
+```bash
+$ git add .
+$ git commit -m 'init'
+$ git push origin master
+```
 
 As you have previously added this repository to wercker, your push gets automatically picked up and triggers a build.
 
