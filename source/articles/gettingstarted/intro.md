@@ -6,7 +6,7 @@ sidebar_current: "gettingstarted"
 
 This guide will walk you through your first project with wercker and showcase the primary features wercker has to offer.
 
-Before we start with developing our first application, make sure you have registered for a [wercker account](https://app.wercker.com/users/new) and installed the [command line interface](/articles/cli/intro.html).
+Before we start with developing our first application, make sure you have registered for a [wercker account](https://app.wercker.com/users/new).
 
 Now, you are ready to get started with wercker. For your convenience we have created four separate Getting Started repositories in
 [Ruby](https://github.com/wercker/getting-started-ruby), [Python](https://github.com/wercker/getting-started-python), [Node.js](https://github.com/wercker/getting-started-nodejs) and [Go](https://github.com/wercker/getting-started-golang).
