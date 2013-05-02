@@ -1,0 +1,6 @@
+Gemfile
+
+sinatra
+capistrano
+
+capify .
