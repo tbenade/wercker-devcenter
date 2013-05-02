@@ -4,7 +4,7 @@ sidebar_current: "languages-nodejs"
 
 # Node.js
 
-Node.js Articles:
+Wercker supports node.js. See our articles below to get started with node and wercker.
 
 * [Getting Started with Express and Mocha](/articles/getting-started-express-and-mocha/)
 * [Getting Started with Node.js and Redis](/articles/nodejs-redis/)
