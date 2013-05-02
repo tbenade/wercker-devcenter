@@ -4,7 +4,7 @@ sidebar_current: "werckerjson"
 
 # wercker.json
 
-The `wercker.json` file allows you to set up your test environment, ranging from any services you might need to custom test commands. The [services](http://devcenter.wercker.com/articles/available-services/) section describes how to use different databases and other backend services. In this article we'll go into detail on how to get initially started with the `wercker.json` file. The article assumes you know what steps there are for each build as described on the [build](build) page.
+The `wercker.json` file allows you to set up your test environment, ranging from any services you might need to custom test commands. The [services](/articles/services/intr.html) section describes how to use different databases and other backend services. In this article we'll go into detail on how to get initially started with the `wercker.json` file. The article assumes you know what steps there are for each build as described on the [build](build) page.
 
 Below we see a `wercker.json` sample file:
 

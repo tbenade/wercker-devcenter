@@ -71,9 +71,10 @@ There is also a convencience environment variable in the form of `postgres://use
 #### redis version 2.4.14
 
 
-
+    ```bash
     Host: WERCKER_REDIS_HOST
     Port: WERCKER_REDIS_PORT
+    ```
 
 
 More information on language and services:
