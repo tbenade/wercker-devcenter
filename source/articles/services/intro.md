@@ -8,7 +8,7 @@ Most applications use a database to store data or a message queue to handle jobs
 
 This is done by specifying the required services in your [wercker.json](/articles/werckerjson/intro.html) file. Through environment variables you will then be able to access these services.
 
-wercker.json
+## wercker.json
 
 To be able to use services you must first specify them in the service property in the `wercker.json` file. You simply specify the name as the key and use 'true' as the value:
 
@@ -33,8 +33,8 @@ These are the services which are supported by wercker. The list also includes th
     Username: WERCKER_MYSQL_USERNAME
     Password: WERCKER_MYSQL_PASSWORD
 
-There is also a convencience environment variable in the form of `mysql://username:password@hostname:port/databasename`: `WERCKER_MYSQL_URL`
-
+****
+##### Note there is also a convencience environment variable in the form of `mysql://username:password@hostname:port/databasename`: `WERCKER_MYSQL_URL`
 ****
 
 #### postgresql
@@ -45,13 +45,12 @@ There is also a convencience environment variable in the form of `mysql://userna
     Username: WERCKER_POSTGRESQL_USERNAME
     Password: WERCKER_POSTGRESQL_PASSWORD
 
-There is also a convencience environment variable in the form of `postgres://username:password@hostname:port/databasename`: `WERCKER_POSTGRESQL_URL`
 
-
+****
+##### Note there is also a convencience environment variable in the form of `postgres://username:password@hostname:port/databasename`: `WERCKER_POSTGRESQL_URL`
 ****
 
 #### mongodb
-
 
       Host: WERCKER_MONGODB_HOST
       Port: WERCKER_MONGODB_PORT
@@ -61,7 +60,6 @@ There is also a convencience environment variable in the form of `postgres://use
 
 #### rabbitmq
 
-
       Host: WERCKER_RABBITMQ_HOST
       Port: WERCKER_RABBITMQ_PORT
 
@@ -70,20 +68,19 @@ There is also a convencience environment variable in the form of `postgres://use
 
 #### redis version 2.4.14
 
-
-    ```bash
     Host: WERCKER_REDIS_HOST
     Port: WERCKER_REDIS_PORT
-    ```
+
+****
 
 
-More information on language and services:
+#### More information on language and services:
 
 * [Getting Started with Node.js and Redis](/articles/languages/nodejs/nodejs-redis.html)
 * [Getting Started with Rails and Mongodb](/articles/languages/ruby/rails-mongoid.html)
 * [Getting Started with Sinatra and Redis](/articles/languages/ruby/sinatra-redis.html)
-* [Getting Started with Django and Postgres](/articles/languages/django-postgres.html)
-* [Getting Started with Go and MongoDB](/articles/languages/golang-mongo.html)
+* [Getting Started with Django and Postgres](/articles/languages/python/django-postgres.html)
+* [Getting Started with Go and MongoDB](/articles/languages/go/golang-mongo.html)
 
 
 -------
