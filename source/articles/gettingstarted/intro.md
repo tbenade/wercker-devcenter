@@ -11,7 +11,7 @@ Before we start with developing our first application, make sure you have regist
 Now, you are ready to get started with wercker. For your convenience we have created four separate Getting Started repositories in
 [Ruby](https://github.com/wercker/getting-started-ruby), [Python](https://github.com/wercker/getting-started-python), [Node.js](https://github.com/wercker/getting-started-nodejs) and [Go](https://github.com/wercker/getting-started-golang).
 
-You can follow along with this guide in two ways. First [web](/articles/gettingstarted/web.html). Second [CLI](/articles/gettingstarted/cli.html).
+You can follow along with this section in two ways. First, we have a [guided tour](/articles/gettingstarted/web.html) of the wercker web interface. Second, you there is a [specific guide](/articles/gettingstarted/cli.html) that helps you get up to speed with the wercker [command line interface](/articles/cli/intro.html).
 
 -------
 

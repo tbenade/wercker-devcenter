@@ -4,7 +4,7 @@ sidebar_current: "languages-ruby"
 
 # Ruby
 
-Ruby Articles:
+Below you'll find several articles on developer Ruby applications with wercker:
 
 * [Getting Started with a Sinatra API](/articles/languages/ruby/getting-started-sinatra-api.html "Getting Started with a Sinatra API ").
 * [Getting Started with Rails and Heroku](/articles/languages/ruby/rails-heroku.html "Getting Started with Rails and Heroku").
