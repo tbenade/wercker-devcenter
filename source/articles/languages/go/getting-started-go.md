@@ -2,16 +2,87 @@
 For this tutorial we will be developing an application in Google's Go and deploy this on Heroku
 
 ## Prerequisites
-* Go
+* The [Go](http://golang.org/) programming language
+* You have correctly set up your [$GOROOT](http://golang.org/doc/install) and [$GOPATH](http://golang.org/doc/code.html#tmp_2)environment variables
 * A Heroku account
 
 ## Creating our Application
 
-Go snippet
+For this application we will create a simple API that return several cities as JSON. We will use the excellent [Mux](http://github.com/gorilla/mux) HTTP router from the [Gorilla Web Toolkit](http://www.gorillatoolkit.org/pkg/mux). You can install this library by running the following command in your project folder:
 
-	heroku create
-	
-	heroku addons:add wercker
+    $ go get github.com/gorilla/mux
 
-	wercker create
+Now we are ready to write our actual application:
 
+**main.go**
+
+    package main
+
+    import (
+        "encoding/json"
+        "github.com/gorilla/mux"
+        "log"
+        "net/http"
+        "os"
+    )
+
+    func CityHandler(res http.ResponseWriter, req *http.Request) {
+        data, _ := json.Marshal("{'cities':'San Francisco, Amsterdam, Berlin, New York'}")
+        res.Header().Set("Content-Type", "application/json; charset=utf-8")
+        res.Write(data)
+    }
+
+    func main() {
+        r := mux.NewRouter()
+        r.HandleFunc("/cities.json", CityHandler)
+        http.Handle("/", r)
+        err := http.ListenAndServe(":"+os.Getenv("PORT"), r)
+        if err != nil {
+            log.Fatal("ListenAndServe: ", err)
+        }
+    }
+
+
+## Deployment
+
+We will deploy our application on Heroku, a popular platform-as-a-service provider that supports the Go programming language via a buildpack.
+
+$ heroku create -b https://github.com/kr/heroku-buildpack-go.git
+
+heroku addons:add wercker
+
+wercker create
+
+-------
+
+<div class="authorCredits">
+    <span class="profile-picture">
+        <img src="https://secure.gravatar.com/avatar/d4b19718f9748779d7cf18c6303dc17f?d=identicon&s=192" alt="Micha Hernandez van Leuffen"/>
+    </span>
+    <ul class="authorCredits">
+
+        <!-- author info -->
+        <li class="authorCredits__name">
+            <h4>Micha Hernandez van Leuffen</h4>
+            <em>
+                Micha is cofounder and CEO at wercker.
+            </em>
+        </li>
+
+        <!-- info -->
+        <li>
+            <a href="http://beta.wercker.com" target="_blank">
+                <i class="icon-company"></i> <em>wercker</em>
+            </a>
+            <a href="http://twitter.com/mies" target="_blank">
+                <i class="icon-twitter"></i>
+                <em> mies</em>
+            </a>
+        </li>
+
+    </ul>
+</div>
+
+-------
+##### April 19, 2013
+-------
