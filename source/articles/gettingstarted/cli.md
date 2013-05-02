@@ -141,13 +141,19 @@ note: See the [Heroku guide](/articles/deployment/heroku.html) in the deployment
 ***
 
 We first create a new app on heroku, by running `heroku create`
-```
+
+<div class="highlight">
+    <pre>
 Creating secret-bastion-2817... done, region is us
 http://secret-bastion-2817.herokuapp.com/ | git@heroku.com:secret-bastion-2817.git
 Git remote heroku added
-```
+    </pre>
+</div>
+
 Add the wercker addon to your new heroku application and run `wercker targets add`
-```
+
+<div class="highlight">
+    <pre>
 $ heroku addons:add wercker
 Adding wercker on secret-bastion-2817... done, v2 (free)
 Use `heroku addons:open wercker` to get started.
@@ -159,7 +165,8 @@ welcome to wercker-cli
 
 Heroku remote git@heroku.com:secret-bastion-2817.git selected.
 Heroku deploy target secret-bastion-2817 successfully added to the wercker applicaiton
-```
+    </pre>
+</div>
 
 ### Deploy
 

@@ -134,11 +134,7 @@
 		font-size: 0.9em;
 		padding: 0.5*$column-gutter;
 		border: 1px solid $contentBorderColor;
-<<<<<<< HEAD
-		font-family: 'Ubuntu mono',"Courier New", Courier, monospace;
-=======
-		font-family: 'Droid Sans Mono', sans-serif, "Courier New", Courier, monospace;
->>>>>>> eaf2276b6385c586dcc232209f041f2d0a7355a4
+		font-family: 'Droid Sans Mono', "ubuntu mono", "Courier New", Courier, monospace;
 		line-height: 1.4*$base-font-size;
 	}
 
