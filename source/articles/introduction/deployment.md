@@ -8,7 +8,7 @@ The main benefit of using wercker is that you can Deploy Continuously.
 
 Wercker support deploying to Heroku and to your own servers (Custom).
 
-In [wercker.json](werckerjson) you can specify which scripts need to be run.
+In [wercker.json](/articles/werckerjson/intro.html) you can specify which scripts need to be run.
 
 For Custom the best practice is to create a folder named `deploy` in the root of your project and put everything related to deployment in this folder.
 
@@ -43,7 +43,7 @@ Environment variables needed during deployment can be set by the administrator.
 
 Before deploying, a build needs be to be created of which all tests have passed.
 
-More information: [Build](build)
+More information: [Build](/articles/introduction/builds.html)
 
 ## <a id="start"></a>Start
 
@@ -97,7 +97,7 @@ During pre-deploy you can run scripts needed to run before the deployment itself
 
 For Heroku, these script are run on the server of Heroku (`heroku run`)
 
-The script or scripts in [wercker.json](werckerjson) in `pre-deploy` are performed.
+The script or scripts in [wercker.json](/articles/werckerjson/intro.html) in `pre-deploy` are performed.
 
 ## <a id="deploy"></a>Deploy
 
@@ -109,7 +109,7 @@ The code is pushed to Heroku: `git push -f git@heroku.com:$HEROKU_APP_NAME.git m
 
 ### <a id="custom"></a>Custom
 
-The script or scripts in [wercker.json](werckerjson) in `deploy` are run.
+The script or scripts in [wercker.json](/articles/werckerjson/intro.html) in `deploy` are run.
 
 ## <a id="postdeploy_custom"></a>Post-deploy custom
 
@@ -117,7 +117,7 @@ During post-deploy you can execute scripts needed to run after the deployment it
 
 For Heroku, these script are performed on the server of Heroku (`heroku run`)
 
-The script or scripts in [wercker.json](werckerjson) in `post-deploy` are run.
+The script or scripts in [wercker.json](/articles/werckerjson/intro.html) in `post-deploy` are run.
 
 
 ## <a id="postdeploy"></a>Post-deploy
@@ -137,14 +137,11 @@ For example, you can try to download the homepage and check if a specfic word ex
 ```
 
 
-The script or scripts in [wercker.json](werckerjson) in `post-deploy test` are run.
+The script or scripts in [wercker.json](/articles/werckerjson/intro.html) in `post-deploy test` are run.
 
 ## Report
 
 After the provisioning ends, the log can be retrieved in the provisioning tab of the project.
-
-When using [the Google Chrome extension](concepts#google-chrome-extension) a notification is shown whether is passed or failed.
-
 
 ## <a id="postdeploy_log_test"></a>Post-deploy log test
 
