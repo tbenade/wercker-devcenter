@@ -43,15 +43,32 @@ Now we are ready to write our actual application:
     }
 
 
-## Deployment
+## Setting up our deployment environment
 
 We will deploy our application on Heroku, a popular platform-as-a-service provider that supports the Go programming language via a buildpack.
 
-$ heroku create -b https://github.com/kr/heroku-buildpack-go.git
+    $ heroku create -b https://github.com/kr/heroku-buildpack-go.git
 
-heroku addons:add wercker
+Wercker has an add-on on the Heroku Marketplace that allows you to interact with wercker in an easy to use way.
 
-wercker create
+    $ heroku addons:add wercker
+
+Heroku needs a `Procfile` that defines which process we want to run for our application. In this case we want to execute the binary that is the result of the `go build` command as as web process. In your project folder create the following Procfile:
+
+**Procfile**
+
+    web: getting-started-golang
+
+Also we need to inform Heroku which folder the application runs in. This is done through a `.godir` file in your project folder that should look as followed:
+
+**.godir**
+getting-started-golang
+
+## Adding your application to wercker
+
+We assume you have installed the wercker [command line interface](/artiles/cli/intro.html)
+
+    $ wercker create
 
 -------
 
