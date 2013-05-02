@@ -2,7 +2,7 @@
 sidebar_current: "cli-installation"
 ---
 
-# Requirements
+# Installation
 We assume and [recommend](http://www.pip-installer.org/en/latest/other-tools.html#pip-compared-to-easy-install) that Python dependencies and libraries are managed through [pip](http://www.pip-installer.org/en/latest/) which you can install via `sudo easy_install pip`.
 
 ****
