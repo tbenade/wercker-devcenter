@@ -34,7 +34,7 @@ If you feel we should support a certain service (for instance memcached) or lang
 We are currently working on our api and are planning to release an api with documentation as soon as we are ready.
 
 ### I have collaborators on Heroku but they don't have access?
-We are working on that.
+We are working on that and hope to release it soon.
 
 -------
 
