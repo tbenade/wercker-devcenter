@@ -25,3 +25,25 @@ In this article we will add one for OpenShift. You find the describtive steps be
 First we need to sign in at wercker and navigate to the application we like to deploy to OpenShift.
 
 ![image](/assets/deployment-openshift/step1-open-application.png)
+
+### Add OpenShift deploy target
+To start the process to add an OpenShift deployment target, do the following:
+
+* Click on the `Deployment` tab to open it
+* Click the `Add deploy target` dropdown
+* Click `OpenShift`
+
+![image](/assets/deployment-openshift/step2-open-deployment-tab.png)
+
+### Create OpenShift authentication token
+_note: you can skip this step if you already have an OpenShift authentication token._
+
+OpenShift allows other services, like wercker, to access information via a secret token. OpenShift has three different scopes: `session`, `read` and `userinfo`. Wercker needs only read access. Although you can use an existing authentication token we strongly advice to create one per service. You can create a `read` authentication key at the [add authorization](https://openshift.redhat.com/app/account/authorizations/new) page at OpenShift. Give it a meaningful name like `wercker`.
+
+![image](/assets/deployment-openshift/step3-openshift-auth-token.png)
+
+### Authorize wercker
+
+Enter the OpenShift authorization token and click `connect`.
+
+![image](/assets/deployment-openshift/step4-authenticate.png)
