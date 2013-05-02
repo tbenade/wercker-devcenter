@@ -60,7 +60,7 @@ Create a simple Flask API
 
 **app.py**
 
-```python
+``` python
 
 
 import os

@@ -25,7 +25,8 @@ The first step is to fork one of the above mentioned repositories and clone it t
 
 Go to the repository on your machine and run `wercker create`. This should result in an output similar to this:
 
-```bash
+``` bash
+$ wercker create
 -----------------------
 welcome to wercker-cli
 -----------------------
@@ -86,7 +87,7 @@ Note: wercker will check if you have linked your github or bitbucket account wit
 
 This all that's needed to add a application to wercker. But there are some handy commands we can do while we are waiting for the build to complete (or go to the website). The first one is `wercker queue`, which lists all jobs that still need to be done for this application. This can be both builds as well as deploys.
 
-```bash
+``` bash
 $ wercker queue
 -----------------------
 welcome to wercker-cli
@@ -109,7 +110,8 @@ No deploy targets found.
 
 The second command is `wercker builds` which lists the 5 latest builds (including both finished and unfinished ones).
 
-```bash
+``` bash
+$ wercker builds
 -----------------------
 welcome to wercker-cli
 -----------------------
@@ -136,7 +138,8 @@ note: See the [Heroku guide](/articles/deployment/heroku.html) in the deployment
 
 We first create a new app on heroku, by running `heroku create`
 
-```bash
+``` bash
+$ heroku create
 Creating secret-bastion-2817... done, region is us
 http://secret-bastion-2817.herokuapp.com/ | git@heroku.com:secret-bastion-2817.git
 Git remote heroku added
@@ -149,6 +152,7 @@ $ heroku addons:add wercker
 Adding wercker on secret-bastion-2817... done, v2 (free)
 Use `heroku addons:open wercker` to get started.
 Use `heroku addons:docs wercker` to view documentation.
+
 $ wercker targets add
 -----------------------
 welcome to wercker-cli

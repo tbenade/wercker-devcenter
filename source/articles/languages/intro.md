@@ -4,7 +4,14 @@ sidebar_current: "languages"
 
 # Language Support
 
-Wercker has support for the following languages...
+Wercker has support for the following languages:
+
+* [Python](python.html)
+* [Ruby](ruby.html)
+* [Node.js](nodejs.html)
+* [Go](go.html)
+
+Is your favorite language missing? Feel free to <a href="mailto:pleasemailus@wercker.com">contact</a> us
 
 -------
 

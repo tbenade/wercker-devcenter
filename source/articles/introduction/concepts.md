@@ -22,7 +22,7 @@ each seperate push leads to one Build.
 
 In the project overview there is a list of the latest builds.
 
-More information: [Build](build)
+More information: [Build](builds.html)
 
 <a id="tests"></a>
 ## Tests
@@ -30,14 +30,7 @@ More information: [Build](build)
 During a [Build](#builds) tests can be run. By default wercker tries to run the tests. For example in a Node.js environment
 ```npm test``` is executed.
 
-To add custom tests, use the `custom steps` property in [wercker.json](werckerjson).
-
-<a id="provisioning"></a>
-## Provisioning
-
-Before deploying a [Build](#builds) to a [Deploy Target](#deploy-targets), you first have to create this environment. This process is called provisioning, if you want to deploy to Heroku, Heroku takes care of provisioning.
-
-More information: [Provisioning](provisioning)
+To add custom tests, use the `custom steps` property in [wercker.json](/articles/werckerjson/intro).
 
 <a id="deploy-targets"></a>
 ## Deploy targets
@@ -58,7 +51,7 @@ It's possible to set environment variables that can be used in your custom deplo
     }
 
 
-More information: [Deployment](deployment)
+More information: [Deployment](deployment.html)
 
 <a id="deploys"></a>
 ## Deploys
@@ -66,5 +59,5 @@ More information: [Deployment](deployment)
 When a [Build](#builds) is passed, it can be deployed to a [Deploy Target](#deploy-targets).
 This can be done from the [Build](#builds) overview
 
-More information: [Deployment](deployment)
+More information: [Deployment](deployment.html)
 
