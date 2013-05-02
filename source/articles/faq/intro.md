@@ -25,7 +25,7 @@ Simplified we:
 5. Teardown and destroy the sanboxed environment.
 6. remove your code.
 
-For more details see the [build](/articles/build) page
+For more details see the [build](/articles/introduction/builds.html) page
 
 ### Can you add support for X?
 If you feel we should support a certain service (for instance memcached) or language, feel free to [contact](mailto:pleasemailus@wercker.com) us.
@@ -34,7 +34,7 @@ If you feel we should support a certain service (for instance memcached) or lang
 We are currently working on our api and are planning to release an api with documentation as soon as we are ready.
 
 ### I have collaborators on Heroku but they don't have access?
---
+We are working on that.
 
 -------
 
