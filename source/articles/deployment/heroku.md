@@ -10,14 +10,15 @@ This article deals with the wercker Heroku add-on, available on their [Marketpla
 ****
 <br />
 
-- How does it work?
-- Requirements
-- Provisioning the add-on
-- Local Setup
-- Supported Languages and Services
-- Removing the add-on
-- Additional Resources and Support
+- [How does it work?](#how)
+- [Requirements](#requirements)
+- [Provisioning the add-on](#provisioning)
+- [Local Setup](#localSetup)
+- [Your first build and deploy](#buildAndDeploy)
+- [Supported Languages and Services](#supportedLanguages)
+- [Removing the add-on](#removing)
 
+<a id="how"></a>
 ## How does it work?
 
 Visually, the flow for wercker is as follows:
@@ -31,12 +32,14 @@ Wercker connects with your GitHub or Bitbucket repository. Each time you do a `g
 
 **NOTE**: Having a separate repository on a version control platform such as GitHub is a requirement of using wercker.
 
+<a id="requirements"></a>
 ## Requirements
 
 - A Heroku account and application.
 - A remote git repository for your application. Wercker supports GitHub and Bitbucket.
 - Python and pip to install the wercker command-line interface
 
+<a id="provisioning"></a>
 ## Provisioning the add-on
 Wercker can be added to your application using the Heroku CLI:
 
@@ -51,6 +54,7 @@ Next, open the wercker wizard by running the following command:
 
 This wizard will guide you through the steps needed to run your first build on wercker.
 
+<a id="localSetup"></a>
 ## Local Setup
 
 Wercker comes with a command line interface that you can install by running:
@@ -80,6 +84,7 @@ As mentioned above, if you now run `heroku addons:open wercker` or go to the Her
 
 **NOTE**: In order to run your tests `werckerbot` needs read permisson on either GitHub or Bitbucket
 
+<a id="buildAndDeploy"></a>
 ## Your first build and deploy
 
 If all went well your first build is triggered after you've succesfully run `wercker create`. Upon any subsequent `git push` commands wercker gets triggered and will run your a build.
@@ -95,10 +100,12 @@ You are now ready to deploy your build to Heroku, if it passed of course. You ca
 </a>
 </p>
 
+<a id="supportedLanguages"></a>
 ## Supported Languages and Services
 
 Wercker currently supports Node.js, Python and Ruby. In terms of services like databases and queues, wercker has support for Postgres, MySQL, MongoDB, RabbitMQ, and Redis. See the [services section](/articles/services/intro.html) on how to specify any of these.
 
+<a id="removing"></a>
 ## Removing the add-on
 
 Wercker can be removed via the  CLI.

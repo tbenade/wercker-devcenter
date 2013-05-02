@@ -59,30 +59,31 @@ Create a simple Flask API
 
 **app.py**
 
+```python
 
 
-	import os
-	from flask import Flask
-	from flask import Response
-	from flask import json
+import os
+from flask import Flask
+from flask import Response
+from flask import json
 
-	app = Flask(__name__)
+app = Flask(__name__)
 
-	@app.route('/')
-	def hello():
-	  return 'Hello Cybertron!'
+@app.route('/')
+def hello():
+  return 'Hello Cybertron!'
 
-	@app.route('/stunticons.json')
-	def stunticons():
-	  data = ["Motormaster", "Dead End", "Breakdown", "Wildrider", "Drag Strip"]
-	  resp = Response(json.dumps(data), status=200, mimetype='application/json')
-	  return resp
+@app.route('/stunticons.json')
+def stunticons():
+  data = ["Motormaster", "Dead End", "Breakdown", "Wildrider", "Drag Strip"]
+  resp = Response(json.dumps(data), status=200, mimetype='application/json')
+  return resp
 
-	if __name__ == '__main__':
-	  port = int(os.environ.get('PORT', 5000))
-	  app.debug = True
-	  app.run(host='0.0.0.0', port=port)
-
+if __name__ == '__main__':
+  port = int(os.environ.get('PORT', 5000))
+  app.debug = True
+  app.run(host='0.0.0.0', port=port)
+```
 
 ## Create a simple Unit Test
 
@@ -99,10 +100,21 @@ We're now ready to write a simple unit test for our API. We're going to leverage
     class StunticonTestCase(unittest.TestCase):
 
       def test_index(self):
+
         tester = app.test_client(self)
         response = tester.get('/stunticons.json', content_type='application/json')
+
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.data, json.dumps(["Motormaster", "Dead End", "Breakdown", "Wildrider", "Drag Strip"]))
+        self.assertEqual(
+            response.data,
+            json.dumps([
+                "Motormaster",
+                "Dead End",
+                "Breakdown",
+                "Wildrider",
+                "Drag Strip"
+            ])
+        )
 
     if __name__ == '__main__':
         unittest.main()
