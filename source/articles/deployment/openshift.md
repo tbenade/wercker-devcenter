@@ -47,3 +47,5 @@ OpenShift allows other services, like wercker, to access information via a secre
 Enter the OpenShift authorization token and click `connect`.
 
 ![image](/assets/deployment-openshift/step4-authenticate.png)
+
+### 
