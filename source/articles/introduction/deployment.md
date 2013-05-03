@@ -23,7 +23,7 @@ Deploy targets is a name and a collection of settings inside wercker. It often r
 But there are more to come. So let's zoom in on what happend during deployment via wercker.
 
 <ol class="steps steps--four">
-    <li><span>1</span><a >Create environment</a></li>
+    <li><span>1</span><a>Create environment</a></li>
     <li><span>2</span><a>Deploy</a></li>
     <li><span>3</span><a>Report</a></li>
     <li><span>4</span><a>Post deploy</a></li>
@@ -58,3 +58,7 @@ But there are more to come. So let's zoom in on what happend during deployment v
 
     </ul>
 </div>
+
+-------
+##### April 19, 2013
+-------
