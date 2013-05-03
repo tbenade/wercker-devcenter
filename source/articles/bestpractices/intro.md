@@ -4,6 +4,18 @@ sidebar_current: "bestpractices"
 
 # Best Practices
 
+* development
+* deployment
+
+<a id="development"></a>
+## Development
+
+During development wercker offers several key benefits.
+
+### Pull Request status
+
+On GitHub you can check the build status of your pull request.
+
 <a id="deployment"></a>
 ## Deployment
 
@@ -17,6 +29,8 @@ Production is where your users go to and staging is the place where you can vali
 To do this within wercker, create two [Deploy targets](concepts#deploy-targets) "staging" and "production".
 When a [Build](concepts#builds) is passed you first [Deploy](concepts#deploys) it to "staging".
 After you have made sure the deploy is stable, you can [Deploy](concepts#deploys) the same [Build](concepts#builds) to "production".
+
+### Staging/Production
 
 -------
 
