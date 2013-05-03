@@ -13,7 +13,15 @@ Wercker comes with a command line interface (CLI) that is written in Python. See
     $ pip install wercker
 
 Pip fetches the wercker CLI from [PyPI](https://pypi.python.org/), the Python package repository. Each time we update the CLI we want to be able to deploy it to the PyPI index automatically.
-You can imagine the same scenarion for other libraries or projects that you want to deploy to platforms such as [RubyGems](http://rubygems.org/) or [NPM](http://npmjs.org).
+You can imagine the same scenario for other libraries or projects that you want to deploy to platforms such as [RubyGems](http://rubygems.org/) or [NPM](http://npmjs.org).
+
+## Preparations
+
+For this tutorial we assumes a few things:
+
+* you have an account on pypi. You can register at [https://pypi.python.org/pypi?%3Aaction=register_form](https://pypi.python.org/pypi?%3Aaction=register_form)
+* a tool/library you want to push to pypi. More information on what you need for pypi can be found in the [he Hitchhiker’s Guide to Packaging](http://guide.python-distribute.org/index.html)
+* your code is already on wercker (i.e. you have already run `wercker create`) See [getting started with the wercker CLI](/articles/gettingstarted/cli.html) for more information on adding your application to wercker.
 
 ## Creating your wercker.json file
 
@@ -37,6 +45,12 @@ We are now ready to create our actual deploy script that we submit the wercker C
 		python setup.py sdist upload
 
 What is more interesting in this deploy script is the usage of environment variables. The `python setup.py sdist upload` command expects a `.pyirc` file in your `$HOME` folder that contains your PyPI username and password. Within wercker you ara able to define these environment variables for a deploy target.
+
+## Add a deploy target.
+
+Go to [wercker](https://app.wercker.com) and add a custom deploy target to your application. Name it pypi and add the two environment varaibles Now there are two environment variables we want to add, PYPI_USER and PYPI_PASSWORD. We may want to check the "hidden from log" checkbox, since it is not relevant to see this information in our deploy log.
+
+That's all!
 
 -------
 
