@@ -29,6 +29,8 @@ Assuming you have succesfully installed the wercker command line interface, you 
         wercker --version
         wercker --help
 
+There's also an article in the getting started section explaning showing some basic usage of the wercker command (see [getting started with the wercker cli](/articles/gettingstarted/cli.html))
+
 ## Commands
 Wercker supports the following commands:
 
@@ -71,6 +73,8 @@ Alias for open targets.
 
 ### update
 Checks if there is a new version of the CLI available.
+
+
 
 
 -------

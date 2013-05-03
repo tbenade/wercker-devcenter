@@ -50,6 +50,16 @@ iframe {
         @include background-image(linear-gradient(left, $black 25%, $body-bg 25%));
     }
 }
+#gradient-container-name {
+    @media #{$small} {
+      position: absolute;
+      height: 80px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      @include background-image(linear-gradient(left, $black 0%, $black 25%, $topbar-bg 25%, $topbar-bg 100%));
+    }
+}
 
 @import "arrows/*.png";
 
