@@ -4,6 +4,8 @@ sidebar_current: "bestpractices"
 
 # Best Practices
 
+Below you can find several best practices for software development with wercker.
+
 * development
 * deployment
 
