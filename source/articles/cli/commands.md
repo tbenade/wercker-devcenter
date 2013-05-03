@@ -104,6 +104,6 @@ Checks if there is a new version of the CLI available.
 </div>
 
 -------
-##### April 19, 2013
+##### last modified on: April 19, 2013
 -------
 

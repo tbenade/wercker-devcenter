@@ -155,5 +155,5 @@ This removes both the wercker addon from your Heroku application and the Heroku 
 </div>
 
 -------
-##### April 19, 2013
+##### last modified on: April 19, 2013
 -------
