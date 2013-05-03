@@ -1,15 +1,18 @@
 ---
-sidebar_current: "deployment"
+sidebar_current: "deployment-flow"
 ---
 
 ## The steps
 
-<ol class="steps steps--four">
+<!-- <ol class="steps steps--four">
     <li><span>1</span><a href="#create_environment">Create environment</a></li>
     <li><span>2</span><a href="#deploy">Deploy</a></li>
     <li><span>3</span><a href="#report">Report</a></li>
     <li><span>4</span><a href="#post_deploy">Post deploy</a></li>
 </ol>
+ -->
+
+NEEDS REWRITE!
 
 ### <a id="create_environment"></a>Create environment
 
@@ -38,19 +41,8 @@ HEROKU_APP_NAME=appname
 
 There are several substeps run during deploy.
 * setup (only for Heroku). In which a test is performed to see if the API key is valid and an SSH-key is gegenerated for use with Heroku.
-* pre-deploy. For Heroku, this means maintenance mode is enabled (`heroku maintenance:on`). For cu
+* pre-deploy. For Heroku, this means maintenance mode is enabled (`heroku maintenance:on`). For custom deploy
 
-### <a id="setup"></a>Setup
-
-**Heroku only**
-
-A test is performed to check if your API key still is valid and a ssh-key is generated to communicate with Heroku.
-
-## <a id="predeploy"></a>Pre-deploy
-
-**Heroku only**
-
-Maintance mode is set to true (`heroku maintenance:on`).
 
 ### <a id="predeploy_custom"></a>Pre-deploy custom
 
@@ -176,5 +168,5 @@ For more information about Graphite, see the <a href="http://graphite.readthedoc
 </div>
 
 -------
-##### last modified on: April 19, 2013
+##### last modified on: May 3, 2013
 -------
