@@ -8,7 +8,7 @@ The `wercker.json` file allows you to set up your test environment, ranging from
 
 Below we see a `wercker.json` sample file:
 
-** wercker.json **
+**wercker.json**
 
     {
     "custom steps" : {
@@ -22,11 +22,11 @@ Below we see a `wercker.json` sample file:
     }
 
 
-By utilizing the `custom steps` directive we can add any build steps we might like, in this case exporting some language settings and compiling our `less` stylesheets.
+By utilizing the `custom steps` directive we can add any build steps we might like, in this case exporting some language settings and compiling our `less` stylesheets. We also add a `post-deploy test` directive to see if our application is running through a `curl` command.
 
-We also add a `post-deploy test` directive to see if our application is running through a `curl` command.
+## Other directives
 
-Other clauses available in `wercker.json`:
+Wercker supports several other directives available in `wercker.json`:
 
 
     {
@@ -47,22 +47,19 @@ Other clauses available in `wercker.json`:
     }
 
 
-All commands are logged by default. If you have sensitive information, it is possible to hide commands from the log.
-In stead of the command, use an object and set log to false:
-
+All commands are logged by default. If you have sensitive information, it is possible to hide commands from the log. Instead of the command, use an object and set log to false:
 
     {
       "pre-install" : [{ "cmd" : "echo my-pre-install-script.sh", "log" : false }]
     }
 
-
 You can combine commands that should be logged and that shouldn't be logged:
-
 
     {
       "pre-install" : ["echo 1", { "cmd" : "echo my-pre-install-script.sh", "log" : false }, "echo 2"]
     }
 
+Below some short explanations on the most common directives:
 
 ### lang
 
@@ -95,3 +92,38 @@ You can use the `packages` directive to install (apt-get) packages which are not
     {
       "packages" : ["nano", "vim"]
     }
+
+-------
+
+<div class="authorCredits">
+    <span class="profile-picture">
+        <img src="https://secure.gravatar.com/avatar/d4b19718f9748779d7cf18c6303dc17f?d=identicon&s=192" alt="Micha Hernandez van Leuffen"/>
+    </span>
+    <ul class="authorCredits">
+
+        <!-- author info -->
+        <li class="authorCredits__name">
+            <h4>Micha Hernandez van Leuffen</h4>
+            <em>
+                Micha is cofounder and CEO at wercker.
+            </em>
+        </li>
+
+        <!-- info -->
+        <li>
+            <a href="http://beta.wercker.com" target="_blank">
+                <i class="icon-company"></i> <em>wercker</em>
+            </a>
+            <a href="http://twitter.com/mies" target="_blank">
+                <i class="icon-twitter"></i>
+                <em> mies</em>
+            </a>
+        </li>
+
+    </ul>
+</div>
+
+-------
+##### last modified on: May 3, 2013
+-------
+
