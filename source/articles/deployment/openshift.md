@@ -47,3 +47,29 @@ OpenShift allows other services, like wercker, to access information via a secre
 Enter the OpenShift authorization token and click `connect`.
 
 ![image](/assets/deployment-openshift/step4-authenticate.png)
+
+### Enter OpenShift deploy target details
+
+Enter a descriptive deploy target name, eq: staging or production.
+
+Select the OpenShift domain and application towards you want to deploy. Wercker automaticly selected the first available domain and application.
+
+If there are no domains or applications listed, please make sure you've created them on OpenShift.
+
+Click `save` to create the deploy target.
+
+_note: you can learn more about OpenShift domains and application in [Namespaces chapter](https://access.redhat.com/site/documentation/en-US/OpenShift/2.0/html/User_Guide/chap-OpenShift-User_Guide-Namespaces.html) of the OpenShift User Guide_
+
+![image](/assets/deployment-openshift/step5-add-deploy-target.png)
+
+### Add public key to OpenShift
+
+Wercker generates a ssh key per deploy target which is used to securely encrypt the connection that is used to deploy to OpenShift. This key needs be added to the [public keys section](https://openshift.redhat.com/app/account/settings) at OpenShift.
+
+Copy the full content of the public key from the second textbox.
+
+![image](/assets/deployment-openshift/step6-copy-public-key.png)
+
+Login to OpenShift and add the key to your public key list.
+
+![image](/assets/deployment-openshift/step7-add-key-to-openshift.png)
