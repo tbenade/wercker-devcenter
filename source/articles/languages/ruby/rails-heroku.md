@@ -26,17 +26,15 @@ We will start with a clean Rails project which we will set up with a Postgres da
 
 	$ rails new rails-sample
 
-Next we replace the sqlite gem in your Gemfile with `pg`; the Postgres gem for Ruby.
+Next we replace the sqlite gem in your Gemfile with `pg`; the Postgres gem for Ruby. Also, we will be using Unicorn as our web server, so we will add it to our `Gemfile`:
+
+    gem 'unicorn'
 
 ## Set up Heroku
 
 	$ heroku create
 
 ## Create your Procfile
-
-We will be using Unicorn as our web server, so we will add it to our Gemfile:
-
-	gem 'unicorn'
 
 Don't forget to run `bundle install` afterwards. Next we will define a Procfile for Heroku:
 
