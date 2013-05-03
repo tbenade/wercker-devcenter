@@ -47,12 +47,13 @@ If all steps are successful, the resulting folder is packaged to a zip file, to 
 By editing the `wercker.json` file you are able to define your own build steps. Below you see a `custom step` declaration that executes a [compass](http://compass-style.org) compilation of [sass](http://sass-lang.com/) assets.
 
     {
-    "custom steps" : {
-        "compass compile": [
-          "sudo gem install compass",
-          "sudo gem install zurb-foundation -v 4.1.2 --no-rdoc --no-ri",
-          "compass compile -s compressed"
-        ],
+        "custom steps" : {
+            "compass compile": [
+              "sudo gem install compass",
+              "sudo gem install zurb-foundation -v 4.1.2 --no-rdoc --no-ri",
+              "compass compile -s compressed"
+            ],
+        }
     }
 
 ***
