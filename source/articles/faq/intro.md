@@ -4,7 +4,7 @@ sidebar_current: "faq"
 
 # FAQ
 
-### Can anybody see my source code ###
+### Can anybody see my source code? ###
 No, see our [security](/articles/introduction/security) section for more details.
 
 ### Why can't I add any public repository to wercker?
