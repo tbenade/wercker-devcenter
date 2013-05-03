@@ -63,7 +63,7 @@ iframe {
   // padding: 0;
   position: relative;
   margin-top: 100px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 
   li {
     width: percentage(1/13);
@@ -95,6 +95,9 @@ iframe {
       background: #d4d4d4;
       border: 1px Solid #4e6c70;
       color: #032428;
+      width: 150px;
+      left: 4.5px;
+      // left: 50%;
       text: {
         align: center;
         decoration: none;
@@ -107,7 +110,7 @@ iframe {
         bottom: 5px;
         left: 8px;
       }
-      &:hover {
+      &[href]:hover {
         background-color: #bf4f67;
         border-color: #8b2f43;
         color: #fff;
@@ -117,7 +120,7 @@ iframe {
     a {
       top: auto;
       bottom: 45px;
-      &:hover {
+      &[href]:hover {
         &:before {
           @include arrows-sprite(list_step_box_arrow_down_hover);
         }
@@ -141,7 +144,7 @@ iframe {
       a {
         top: 32px;
         bottom: auto;
-        &:hover:before {
+        &[href]:hover:before {
           @include arrows-sprite(list_step_box_arrow_hover);
         }
         &:before {
