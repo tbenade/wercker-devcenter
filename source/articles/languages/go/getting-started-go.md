@@ -1,9 +1,13 @@
 # Getting started with Go and Heroku
-For this tutorial we will be developing an application in Google's Go and deploy this on Heroku
+
+For this tutorial we will be developing an application in Google's Go and deploy this on Heroku. The code for this tutorial can be found on [GitHub](https://github.com/wercker/getting-started-golang).
 
 ## Prerequisites
+* A wercker account, sign up is [free and easy](https://app.wercker.com/users/new/), but note we're still in private beta.
+* The wercker [command line interface](/articles/cli/intro.html)
+* A GitHub or Bitbucket repository that hosts your code
 * The [Go](http://golang.org/) programming language
-* You have correctly set up your [$GOROOT](http://golang.org/doc/install) and [$GOPATH](http://golang.org/doc/code.html#tmp_2)environment variables
+* You have correctly set up your [$GOROOT](http://golang.org/doc/install) and [$GOPATH](http://golang.org/doc/code.html#tmp_2) environment variables
 * A Heroku account
 
 ## Creating our Application
@@ -62,13 +66,30 @@ Heroku needs a `Procfile` that defines which process we want to run for our appl
 Also we need to inform Heroku which folder the application runs in. This is done through a `.godir` file in your project folder that should look as followed:
 
 **.godir**
-getting-started-golang
+
+    getting-started-golang
+
+## Push your code to GitHub
+
+    $ git add .
+    $ git commit -am 'my go app on wercker'
+    $ git push origin master
 
 ## Adding your application to wercker
 
-We assume you have installed the wercker [command line interface](/artiles/cli/intro.html)
+We assume you have installed the wercker [command line interface](/artiles/cli/intro.html). Now run the following command:
 
     $ wercker create
+
+This will create an application on wercker and will also trigger a first build.
+
+You can view the status of your build either via:
+
+## Deploying your application
+
+    $ wercker deploy
+
+View your appplication
 
 -------
 
