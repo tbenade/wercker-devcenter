@@ -48,7 +48,7 @@ What is more interesting in this deploy script is the usage of environment varia
 
 ## Add a deploy target.
 
-Go to [wercker](https://app.wercker.com) and add a custom deploy target to your application. Name it pypi and add the two environment varaibles Now there are two environment variables we want to add, PYPI_USER and PYPI_PASSWORD. We may want to check the "hidden from log" checkbox, since it is not relevant to see this information in our deploy log.
+Go to [wercker](https://app.wercker.com) and add a custom deploy target to your application. Name it pypi and add the two environment varaibles Now there are two environment variables we want to add, PYPI\_USER and PYPI\_PASSWORD. We may want to check the "hidden from log" checkbox, since it is not relevant to see this information in our deploy log.
 
 That's all, you can now deploy your succesful builds by running `wercker deploy`.
 
