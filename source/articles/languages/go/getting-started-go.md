@@ -83,13 +83,25 @@ We assume you have installed the wercker [command line interface](/artiles/cli/i
 
 This will create an application on wercker and will also trigger a first build.
 
-You can view the status of your build either via:
+You can view the status of your build either via the Heroku dashboard or via the command line interface by invoking:
+
+    $ wercker status
+
+After your build has passed, you are ready to deploy your application.
 
 ## Deploying your application
 
+You can deploy your app again either via the Heroku add-on or throught the CLI
+
     $ wercker deploy
 
-View your appplication
+This command will ask you which build you want to deploy and to which deploy target, in this case a Heroku application.
+
+You can check the status of your deploy by executing:
+
+    $ wercker status
+
+Your application is now deployed!
 
 -------
 
