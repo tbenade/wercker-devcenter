@@ -39,10 +39,10 @@ We have defined a single directive in this `wercker.json` file. After a deploy i
 
 We are now ready to create our actual deploy script that we submit the wercker CLI to PyPI. The method for submitting packages to is detailed on the PyPI [documentation site](http://docs.python.org/3/distutils/packageindex.html). Suffice it to say that the upload is executed through the `python setup.py sdist upload` command.
 
-		echo "[server-login]" >> ~/.pypirc
-		echo "username:" $PYPI_USER >> ~/.pypirc
-		echo "password:" $PYPI_PASSWORD >> ~/.pypirc
-		python setup.py sdist upload
+	echo "[server-login]" >> ~/.pypirc
+	echo "username:" $PYPI_USER >> ~/.pypirc
+	echo "password:" $PYPI_PASSWORD >> ~/.pypirc
+	python setup.py sdist upload
 
 What is more interesting in this deploy script is the usage of environment variables. The `python setup.py sdist upload` command expects a `.pyirc` file in your `$HOME` folder that contains your PyPI username and password. Within wercker you ara able to define these environment variables for a deploy target.
 
