@@ -22,7 +22,7 @@ each seperate push leads to one Build.
 
 In the project overview there is a list of the latest builds.
 
-More information: [Build](builds.html)
+More information: [Builds](builds.html)
 
 <a id="tests"></a>
 ## Tests

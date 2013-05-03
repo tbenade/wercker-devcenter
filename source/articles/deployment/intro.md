@@ -12,6 +12,7 @@ Furthermore you can use any mechanism to orchestrate and streamline your deploys
 
 It is also possible to 'deploy' your code to package platforms such as [PyPI](http://pypi.python.org) that hosts libraries and other types of dependencies for your code, of which we will showcase an [example](/articles/deployment/pypi.html) as well.
 
+
 -------
 
 <div class="authorCredits">
