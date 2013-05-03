@@ -6,7 +6,7 @@ sidebar_current: "introduction-deployment"
 
 The main benefit of using wercker is that you can Deploy Continuously.
 
-Wercker support deploying to several platforms or targets. For more information see [deployment](/articles/deployment.html). In [wercker.json](/articles/werckerjson/intro.html) you can specify which scripts need to be run.
+Wercker support deploying to several platforms or targets. For more information see the specific section on [deployment](/articles/deployment/intro.html). In [wercker.json](/articles/werckerjson/intro.html) you can specify which scripts need to be run.
 
 To be able to deploy you need three things:
 
@@ -23,7 +23,7 @@ Deploy targets is a name and a collection of settings inside wercker. It often r
 But there are more to come. So let's zoom in on what happend during deployment via wercker.
 
 <ol class="steps steps--four">
-    <li><span>1</span><a >Create environment</a></li>
+    <li><span>1</span><a>Create environment</a></li>
     <li><span>2</span><a>Deploy</a></li>
     <li><span>3</span><a>Report</a></li>
     <li><span>4</span><a>Post deploy</a></li>
@@ -58,3 +58,7 @@ But there are more to come. So let's zoom in on what happend during deployment v
 
     </ul>
 </div>
+
+-------
+##### April 19, 2013
+-------
