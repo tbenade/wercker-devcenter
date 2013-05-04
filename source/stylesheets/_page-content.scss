@@ -1,5 +1,41 @@
 @import "mixins/imageEffects";
 
+// .name-container {
+	// background-color: $topbar-bg;
+	// #gradient-container {
+		// position: relative;
+	    // @media #{$small} {
+	        // position: fixed;
+	        // display: block;
+	        // top: 0;
+	        // left: 0;
+	        // width: 100%;
+	        // height: 100%;
+	        // @include background-image(linear-gradient(left, $black 0%,$black 25%, $topbar-bg 25%, $topbar-bg 100%));
+	    // }
+	// }
+
+// }
+
+// #root {
+//     @media #{$small} {
+// 	    @include background-image(linear-gradient(left, $black 0%, $black 25%, $body-bg 25%, $body-bg 100%));
+// 	}
+// }
+
+.name {
+	background-color: #2d2c2c;
+	// background-color: #171717;
+	height: 80px;
+	padding-top: 26px;
+	padding-bottom: 26px;
+	text-align: center;
+
+	a, img{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
 .page-content {
 	min-width: 100%;
 	min-height: 100%;

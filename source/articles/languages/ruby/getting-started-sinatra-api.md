@@ -76,7 +76,7 @@ Next, run `bundle install` to set up your local bundle.
 
 ## Create a spec folder and add a Spec Helper
 
-** spec/spec_helper.rb **
+**spec/spec_helper.rb**
 
 ``` ruby
   require File.join(File.dirname(__FILE__), '..', 'main.rb')
@@ -100,7 +100,7 @@ Next, run `bundle install` to set up your local bundle.
 
 ## Create your spec
 
-** spec/spec_app.rb **
+**spec/spec_app.rb**
 
 ``` ruby
   require 'spec_helper'
@@ -117,7 +117,7 @@ Next, run `bundle install` to set up your local bundle.
 
 Finally we need to create a Rakefile to run the rspec test:
 
-** Rakefile **
+**Rakefile**
 
 ``` ruby
     require 'rspec/core'
@@ -134,7 +134,7 @@ Finally we need to create a Rakefile to run the rspec test:
 For wercker to know how to run our tests we create a `wercker.json` file
 in our repository:
 
-** wercker.json **
+**wercker.json**
 
 ``` javascript
     {
@@ -224,5 +224,5 @@ Happy coding!
 </div>
 
 -------
-##### April 19, 2013
+##### last modified on: April 19, 2013
 -------

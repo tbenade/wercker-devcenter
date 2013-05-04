@@ -165,7 +165,7 @@ Heroku deploy target secret-bastion-2817 successfully added to the wercker appli
 
 ### Deploy
 
-We can now run `wercker deploy` and wercker will deploy your application!
+You can now run `wercker deploy` and wercker will deploy your application!
 
 
 -------

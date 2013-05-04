@@ -6,7 +6,8 @@ sidebar_current: "languages-go"
 
 Go is an exciting programming language from Google. Wercker has built-in support for Go. Below you'll find articles to get started with Go and wercker:
 
-* [Go and MongoDB](/articles/languages/go/golang-mongo.html)
+* [Getting started with Go and wercker](/articles/languages/go/getting-started-go.html)
+
 
 -------
 
@@ -39,5 +40,5 @@ Go is an exciting programming language from Google. Wercker has built-in support
 </div>
 
 -------
-##### April 19, 2013
+##### last modified on: April 19, 2013
 -------

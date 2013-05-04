@@ -18,6 +18,7 @@ To be able to use services you must first specify them in the service property i
         }
       }
 
+See the [section](/articles/werckerjson/intro.html) on `wercker.json` for more information.
 
 ## Supported services
 
@@ -114,5 +115,5 @@ These are the services which are supported by wercker. The list also includes th
 </div>
 
 -------
-##### April 19, 2013
+##### last modified on: April 19, 2013
 -------

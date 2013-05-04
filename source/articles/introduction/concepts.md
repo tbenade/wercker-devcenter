@@ -22,7 +22,7 @@ each seperate push leads to one Build.
 
 In the project overview there is a list of the latest builds.
 
-More information: [Build](builds.html)
+More information: [Builds](builds.html)
 
 <a id="tests"></a>
 ## Tests
@@ -51,7 +51,7 @@ It's possible to set environment variables that can be used in your custom deplo
     }
 
 
-More information: [Deployment](deployment.html)
+For more information see the section on [deployment](deployment.html).
 
 <a id="deploys"></a>
 ## Deploys
@@ -59,5 +59,5 @@ More information: [Deployment](deployment.html)
 When a [Build](#builds) is passed, it can be deployed to a [Deploy Target](#deploy-targets).
 This can be done from the [Build](#builds) overview
 
-More information: [Deployment](deployment.html)
+If you want to learn more on deployment see the section on [deployment](deployment.html) or the dedicated [chapter](/articles/deployment/intro.html) on supported deployment options.
 

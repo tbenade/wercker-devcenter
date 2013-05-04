@@ -30,7 +30,9 @@ Visually, the flow for wercker is as follows:
 Wercker connects with your GitHub or Bitbucket repository. Each time you do a `git push` wercker receive a signal that new code has been created and wil subsequently start running your tests in a sand-boxed environment. If your build is green, you are ready to deploy your application to Heroku. Through the Heroku add-on you get a concise dashboard with an overview of your builds and deploys.
 
 
-**NOTE**: Having a separate repository on a version control platform such as GitHub is a requirement of using wercker.
+****
+##### NOTE: Having a separate repository on a version control platform such as GitHub is a requirement of using wercker.
+****
 
 <a id="requirements"></a>
 ## Requirements
@@ -61,7 +63,9 @@ Wercker comes with a command line interface that you can install by running:
 
     $ pip install wercker
 
-**NOTE**: Wercker assumes that you already have a repository on GitHub or Bitbucket with pushed code and have created a Heroku application.
+****
+##### NOTE: Wercker assumes that you already have a repository on GitHub or Bitbucket with pushed code and have created a Heroku application.
+****
 
 The CLI helps you interact with the wercker platform. Run the following command to link your application with wercker:
 
@@ -82,7 +86,9 @@ You will receive the following response
 
 As mentioned above, if you now run `heroku addons:open wercker` or go to the Heroku dashboard and click on the wercker resource, you will see the wercker wizard that will guide you through your build and deploy.
 
-**NOTE**: In order to run your tests `werckerbot` needs read permisson on either GitHub or Bitbucket
+****
+##### NOTE: In order to run your tests `werckerbot` needs read permisson on either GitHub or Bitbucket
+****
 
 <a id="buildAndDeploy"></a>
 ## Your first build and deploy
@@ -149,5 +155,5 @@ This removes both the wercker addon from your Heroku application and the Heroku 
 </div>
 
 -------
-##### April 19, 2013
+##### last modified on: April 19, 2013
 -------
