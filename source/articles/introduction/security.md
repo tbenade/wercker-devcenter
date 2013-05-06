@@ -95,5 +95,5 @@ Like the owner of a project, users with admin permissions can do the same as wit
 </div>
 
 -------
-##### May 1, 2013
+##### last modified: May 1, 2013
 -------
