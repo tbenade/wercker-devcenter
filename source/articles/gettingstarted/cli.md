@@ -133,7 +133,7 @@ Found 2 result(s)...
 You are now ready to deploy this application to the Cloud. For this guide we will walk you through a deploy on [Heroku](http://heroku.com) a popular platform-as-a-service provider.
 
 ***
-note: See the [Heroku guide](/articles/deployment/heroku.html) in the deployment section for a more heroku centric explanation.
+##### note: See the [Heroku guide](/articles/deployment/heroku.html) in the deployment section for a more heroku centric explanation.
 ***
 
 We first create a new app on heroku, by running `heroku create`
@@ -199,5 +199,5 @@ You can now run `wercker deploy` and wercker will deploy your application!
 </div>
 
 -------
-##### May 2, 2013
+##### last modified: May 6, 2013
 -------

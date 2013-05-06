@@ -73,3 +73,13 @@ Copy the full content of the public key from the second textbox.
 Login to OpenShift and add the key to your public key list.
 
 ![image](/assets/deployment-openshift/step7-add-key-to-openshift.png)
+
+### Deploy!
+
+You are now ready to deploy to OpenShift. Wercker allows you to deploy all succesfull builds. Navigate to your application and select the succesfull build you like to deploy.
+
+![image](/assets/deployment-openshift/step8-select-successfull-build.png)
+
+In the build via click the `deploy this build` button and choice the target that you have just create.
+
+![image](/assets/deployment-openshift/step9-queue-deploy.png)
