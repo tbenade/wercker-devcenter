@@ -66,7 +66,7 @@ Like the owner of a project, users with admin permissions can do the same as wit
 
 ## Summary
 
-At wercker we take security seriously and have some new features planned. If you have any questions or suggestions, don't hesitate to <a href="mailto:pleasemailus@wercker.com">contact us</a>
+At wercker we take security seriously and have some new features planned. If you have any questions or suggestions, don't hesitate to <a href="mailto:pleasemailus@wercker.com">contact us</a>.
 
 -------
 
