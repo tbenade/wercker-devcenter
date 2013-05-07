@@ -52,7 +52,7 @@ Enter the OpenShift authorization token and click `connect`.
 
 Enter a descriptive deploy target name, eq: staging or production.
 
-Select the OpenShift domain and application towards you want to deploy. Wercker automaticly selected the first available domain and application.
+Select the OpenShift domain and application that you want to deploy to. Wercker automaticly selected the first available domain and application.
 
 If there are no domains or applications listed, please make sure you've created them on OpenShift.
 
