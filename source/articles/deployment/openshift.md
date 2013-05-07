@@ -96,7 +96,7 @@ In the build via click the `deploy this build` button and choice the target that
         <li class="authorCredits__name">
             <h4>Pieter Joost van de Sande</h4>
             <em>
-                Pieter Joost is software developer at wercker.
+                Pieter Joost is a software developer at wercker.
             </is>
         </li>
 
