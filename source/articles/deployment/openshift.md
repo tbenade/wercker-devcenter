@@ -84,6 +84,8 @@ In the build via click the `deploy this build` button and choice the target that
 
 ![image](/assets/deployment-openshift/step9-queue-deploy.png)
 
+Congratulations! You have succesfully deployed your application to OpenShift.
+
 -------
 
 <div class="authorCredits">
@@ -117,5 +119,3 @@ In the build via click the `deploy this build` button and choice the target that
 -------
 ##### last modified: May 7, 2013
 -------
-
-
