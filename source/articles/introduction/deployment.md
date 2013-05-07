@@ -50,7 +50,7 @@ But there are more to come. So let's zoom in on what happend during deployment v
             <a href="http://beta.wercker.com" target="_blank">
                 <i class="icon-company"></i> <em>wercker</em>
             </a>
-            <a href="http://twitter.com/flenter" target="_blank">
+            <a href="http://twitter.com/jflenter" target="_blank">
                 <i class="icon-twitter"></i>
                 <em> flenter</em>
             </a>
