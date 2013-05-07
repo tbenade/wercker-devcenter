@@ -84,6 +84,8 @@ In the build via click the `deploy this build` button and choice the target that
 
 ![image](/assets/deployment-openshift/step9-queue-deploy.png)
 
+Congratulations! You have succesfully deployed your application to OpenShift.
+
 -------
 
 <div class="authorCredits">
@@ -96,7 +98,7 @@ In the build via click the `deploy this build` button and choice the target that
         <li class="authorCredits__name">
             <h4>Pieter Joost van de Sande</h4>
             <em>
-                Pieter Joost is software developer at wercker.
+                Pieter Joost is a software developer at wercker.
             </em>
         </li>
 
