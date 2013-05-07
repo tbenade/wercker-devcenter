@@ -97,7 +97,7 @@ In the build via click the `deploy this build` button and choice the target that
             <h4>Pieter Joost van de Sande</h4>
             <em>
                 Pieter Joost is software developer at wercker.
-            </is>
+            </em>
         </li>
 
         <!-- info -->
@@ -117,5 +117,3 @@ In the build via click the `deploy this build` button and choice the target that
 -------
 ##### last modified: May 7, 2013
 -------
-
-
