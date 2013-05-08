@@ -197,7 +197,7 @@ Select your build and hit the deploy button. Your Python Flask API is now live.
             <a href="http://beta.wercker.com" target="_blank">
                 <i class="icon-company"></i> <em>wercker</em>
             </a>
-            <a href="http://twitter.com/flenter" target="_blank">
+            <a href="http://twitter.com/jflenter" target="_blank">
                 <i class="icon-twitter"></i>
                 <em> flenter</em>
             </a>

@@ -11,6 +11,8 @@
   <meta charset="utf-8" />
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Show full screen on bookmarked iOS devices -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
 
   <title>wercker devcenter</title>
 
@@ -29,8 +31,6 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,600,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/stylesheets/site.css" media="all">
-
-
 
 </head>
 
@@ -79,8 +79,8 @@
             <div class="small-12 large-3 columns">
               <!-- <div class="row"> -->
                 <!-- <div class="large-8 columns right small-12"> -->
-                  <div class="name">
-                    <a href="/#"><img src="/images/logo-devcenter-x2.png" alt="wercker dev center"/></a>
+                  <div class="name logo">
+                    <a href="/#"><img src="/images/logo-x2.png" width="150px" alt="wercker dev center"/></a>
                   </div>
                 <!-- </div> -->
               <!-- </div> -->
@@ -193,7 +193,7 @@
                     <% if sidebar_section == "deployment" %>
                     <ul class="side-nav">
                       <li<%= sidebar_current("deployment-heroku") %>><a href="/articles/deployment/heroku.html">Heroku</a></li>
-                      <!-- <li<%= sidebar_current("deployment-openshift") %>><a href="/articles/deployment/openshift.html">OpenShift</a></li>-->
+                      <li<%= sidebar_current("deployment-openshift") %>><a href="/articles/deployment/openshift.html">OpenShift</a></li>
                       <!-- <li<%= sidebar_current("deployment-cloudfoundry") %>><a href="/articles/deployment/cloudfoundry.html">Cloud Foundry</a></li>-->
                       <!-- <li<%= sidebar_current("deployment-capistrano") %>><a href="/articles/deployment/capistrano.html">Capistrano</a></li>-->
                       <!-- <li<%= sidebar_current("deployment-fabric") %>><a href="/articles/deployment/fabric.html">Fabric</a></li>-->

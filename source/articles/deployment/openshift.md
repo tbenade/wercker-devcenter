@@ -52,7 +52,7 @@ Enter the OpenShift authorization token and click `connect`.
 
 Enter a descriptive deploy target name, eq: staging or production.
 
-Select the OpenShift domain and application towards you want to deploy. Wercker automaticly selected the first available domain and application.
+Select the OpenShift domain and application that you want to deploy to. Wercker automaticly selected the first available domain and application.
 
 If there are no domains or applications listed, please make sure you've created them on OpenShift.
 
@@ -83,3 +83,39 @@ You are now ready to deploy to OpenShift. Wercker allows you to deploy all succe
 In the build via click the `deploy this build` button and choice the target that you have just create.
 
 ![image](/assets/deployment-openshift/step9-queue-deploy.png)
+
+Congratulations! You have succesfully deployed your application to OpenShift.
+
+-------
+
+<div class="authorCredits">
+    <span class="profile-picture">
+        <img src="https://secure.gravatar.com/avatar/5864d682bb0da7bedf31601e4e3172e7?d=identicon&s=192" alt="Pieter Joost van de Sande"/>
+    </span>
+    <ul class="authorCredits">
+
+        <!-- author info -->
+        <li class="authorCredits__name">
+            <h4>Pieter Joost van de Sande</h4>
+            <em>
+                Pieter Joost is a software developer at wercker.
+            </em>
+        </li>
+
+        <!-- info -->
+        <li>
+            <a href="http://beta.wercker.com" target="_blank">
+                <i class="icon-company"></i> <em>wercker</em>
+            </a>
+            <a href="http://twitter.com/pjvds" target="_blank">
+                <i class="icon-twitter"></i>
+                <em> pjvds</em>
+            </a>
+        </li>
+
+    </ul>
+</div>
+
+-------
+##### last modified: May 7, 2013
+-------

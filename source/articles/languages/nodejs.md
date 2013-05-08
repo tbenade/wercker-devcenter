@@ -6,7 +6,7 @@ sidebar_current: "languages-nodejs"
 
 Wercker supports node.js. See our articles below to get started with node and wercker.
 
-* [Getting Started with Express and Mocha](/articles/getting-started-express-and-mocha/)
+* [Getting Started with Express and Mocha](/articles/languages/nodejs/getting-started-express-and-mocha.html)
 
 -------
 

@@ -1,3 +1,8 @@
+---
+title: Work In Progress
+published: false
+---
+
 # Using a blank wercker box
 
 In this article we will explain how to get started with a blank box if you use a development environment which is not currently supported by wercker.

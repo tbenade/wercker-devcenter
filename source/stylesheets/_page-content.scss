@@ -24,12 +24,12 @@
 // }
 
 .name {
-	background-color: #2d2c2c;
-	// background-color: #171717;
+	background-color: #1F1E1E;
 	height: 80px;
 	padding-top: 26px;
 	padding-bottom: 26px;
 	text-align: center;
+	// border-bottom: 2px solid darken(#fff,70%);
 
 	a, img{
 		padding-left: 15px;
@@ -39,9 +39,15 @@
 .page-content {
 	min-width: 100%;
 	min-height: 100%;
+	margin: 0;
 
 	.columns {
 		padding: 0;
+	}
+
+	.row {
+		margin-left: 0;
+		margin-right: 0;
 	}
 
 }
