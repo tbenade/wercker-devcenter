@@ -19,7 +19,7 @@ In this article we will showcase how you can deploy your application from wercke
 
 Every succesful build on wercker can be deployed to a so called deploy target. This can be a custom deploy target, or one of the predefined targets like [Heroku](/articles/deployment/heroku.html) or [OpenShift](#). You can read more at the [deployment section](/articles/deployment/intro.html).
 
-In this article we will add one for OpenShift. You find the describtive steps below:
+In this article we will add one for OpenShift. Follow along with the steps below:
 
 ### Navigate to your application
 First we need to sign in at wercker and navigate to the application we like to deploy to OpenShift.
