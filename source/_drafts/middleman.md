@@ -26,7 +26,26 @@ Middleman site to S3.
 
     middleman init --template blog
 
+    git init
+
+    git add .
+
+    git commit -am 'init'
+
+    git push origin master
+
 Congrats!
+
+## Adding our blog to wercker
+We will add our application to wercker using the [command line interface](/articles/cli/intr.html).
+
+    wercker create
+
+## Adding our S3 deploy target
+
+Custom?
+
+## Creating our wercker.yml
 
 -------
 
