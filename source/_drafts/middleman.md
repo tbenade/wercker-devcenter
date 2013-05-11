@@ -18,8 +18,8 @@ We usually associate deployment with servers and infrastructure, but for static 
 At wercker we are big fans of static site engines. This dev center is
 built using [Middleman(http://middlemanapp.com/) and some of our
 personal [blogs](born2code.net) are created with
-[Jekyll](http://jekyllrb.com/). We have separate articles dealing with
-Jekyll and Pelican, in this guide we will focus on deploying our static
+[Jekyll](http://jekyllrb.com/). We have a separate article dealing with
+Jekyll, in this guide we will focus on deploying our static
 Middleman site to S3.
 
 ## Creating our blog
