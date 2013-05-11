@@ -4,7 +4,7 @@ sidebar_current: "deployment-middleman"
 
 # Deploying static sites to S3 with Middleman and wercker
 
-We usually associate deployment with servers and infrastructure, but for static site deployments such as blogs, we can levarage [Amazon Web Services' S3](http://aws.amazon.com/s3/) to host our static assets. In this article we will go into the details of deploying your static site to S3 and wercker.
+We usually associate *deployment* with servers and infrastructure, but for static site deployments such as blogs, we can levarage [Amazon Web Services' S3](http://aws.amazon.com/s3/) to host our static assets. In this article we will go into the details of deploying your static site to S3 and wercker.
 
 ## Requirements
 
@@ -15,7 +15,7 @@ We usually associate deployment with servers and infrastructure, but for static 
 
 ## Introduction
 
-At wercker we are big fans of static site engines. This dev center is
+Wercker is a continuous *delivery* platform and as such we believe in the delivery of *any* software, be it database-backed web applications to simple html pages. The endgoal remains the same though you want to launch your software.At wercker we are big fans of static site engines. This dev center is
 built using [Middleman(http://middlemanapp.com/) and some of our
 personal [blogs](born2code.net) are created with
 [Jekyll](http://jekyllrb.com/). We have a separate article dealing with
