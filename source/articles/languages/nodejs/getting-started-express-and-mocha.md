@@ -5,7 +5,7 @@ You can find the code for this tutorial on [Github](https://github.com/mies/werc
 ### Table of Contents
 * Prerequisites
 * Write the API
-* Declare dependencies through a `package.json` file
+* Declare dependencies through a `package.yml` file
 * Create a test folder and add a Mocha unit test
 * Initiate your Git repository and push your changes to Github
 * Setting up the wercker add-on for Heroku
@@ -99,7 +99,7 @@ Next, run `npm install` to set up your local environment.
   })
 ```
 
-** Note: For simple node.js applications, wercker does not need a `wercker.json` file to run the unit tests. It automatically runs them if you've defined them correctly in your `package.json` **
+** Note: For simple node.js applications, wercker does not need a `wercker.yml` file to run the unit tests. It automatically runs them if you've defined them correctly in your `package.json` **
 
 ## Initiate your Git repository and push your changes to Github
 ```

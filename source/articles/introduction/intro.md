@@ -10,7 +10,7 @@ In this chapter we will discuss the [benefits](/articles/introduction/benefits.h
 
 You can also check out the different flows for the [Build](/articles/introduction/build.html), [Deployment](/articles/introduction/deployment.html) and [Provisioning](/articles/introduction/provisioning.html) processes.
 
-After this chapter it is a good idea to install the [wercker command](/articles/cli/intro.html) and familiarize yourself with the [wercker.json](/articles/werckerjson/intro.html) file.
+After this chapter it is a good idea to install the [wercker command](/articles/cli/intro.html) and familiarize yourself with the [wercker.yml](/articles/werckeryml/intro.html) file.
 
 -------
 

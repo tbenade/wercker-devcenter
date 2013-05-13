@@ -13,7 +13,7 @@ The box section allows you to choose a box which will be used to run the builds 
 Examples:
 
     box: wercker/nodejs
-    
+
 Use the latest version of a box called `nodejs` which is owned by the user wercker.
 
     box: wercker/nodejs@0.0.5
@@ -24,11 +24,11 @@ Use the specific version 0.0.5 of a box called `nodejs` which is owned by the us
 
 The services section allow you to specify supporting boxes, like databases or queue servers. This item should contain a array of supporting boxes. The reference will be the same as to a main box. So it will be prefixed and can contain a version.
 
-Example: 
+Example:
 
     services:
-    - wercker/mongodb
-    - wercker/rabbitmq
+        - wercker/mongodb
+        - wercker/rabbitmq
 
 This will load two services, `mongodb` and `rabbitmq`, both owned by `wercker` and both using the latest versions.
 
@@ -40,7 +40,7 @@ This build section will contain the all configuration regarding the build pipeli
 
 The steps section will contain all steps which will used during a build. A step in it's simplest form is the name of a buildstep. It can optionally be postfixed with the version of the step.
 
-Example: 
+Example:
 
     build:
       steps:
@@ -51,7 +51,7 @@ This build will be run with two steps, `npm install` and `npm test`, where `npm 
 
 It's also possible to pass options to a step. Note that some options are optional and some are required. Consult the readme of the step to see the available steps.
 
-Example: 
+Example:
 
     build:
       steps:
@@ -94,9 +94,9 @@ build:
         name: some simple test!
         interpreter: bash
         code: |-
-          line 
+          line
           line 2
-        
+
   passed steps:
   failed steps:
     - pager:

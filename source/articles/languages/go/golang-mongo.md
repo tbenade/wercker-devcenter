@@ -11,7 +11,8 @@ You can find the code for this tutorial on [Github](https://github.com/mies/werc
 * create a .godir file
 * Create your structs
 * Create a Unit Test
-* Create a wercker.json file
+* Create a wercker.yml file
+TODO: Add the 'bzr' package as the go mongodb driver 'mgo' depends on it
 * Push your changes to Github
 TODO: Create a Procfile and Heroku deploy target
 TODO: Add Mongolab
@@ -84,23 +85,14 @@ Our unit test will create two decepticons and will check if one of them can be r
 
 
 
-## Create a wercker.json file
+## Create a wercker.yml file
 
-Through `wercker.json` we define that we want a MongoDB service on wercker:
+Through `wercker.yml` we define that we want a MongoDB service on wercker:
 
-**wercker.json**
+**wercker.yml**
 
-
-    {
-        "services" : {
-          "mongodb" : true
-        },
-        "packages" : ["bzr"]
-    }
-
-****
-##### Note we add the 'bzr' package as the go mongodb driver 'mgo' depends on it
-****
+  services:
+    - wercker/mongodb
 
 ## Push your changes to GitHub
 Push your changes to GitHub and see the build results on wercker.
