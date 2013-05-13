@@ -56,7 +56,7 @@ By editing the `wercker.yml` file you are able to define a build step that execu
                     compass compile -s compressed
 
 ***
-See the [section](/articles/werckeryml/intro.html) on `wercker.json` for more information.
+See the [section](/articles/werckeryml/intro.html) on `wercker.yml` for more information.
 
 
 -------
