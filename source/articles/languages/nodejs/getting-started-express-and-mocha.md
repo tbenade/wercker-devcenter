@@ -5,7 +5,7 @@ You can find the code for this tutorial on [Github](https://github.com/mies/werc
 ### Table of Contents
 * Prerequisites
 * Write the API
-* Declare dependencies through a `package.yml` file
+* Declare dependencies through a `package.json` file
 * Create a test folder and add a Mocha unit test
 * Initiate your Git repository and push your changes to Github
 * Setting up the wercker add-on for Heroku
