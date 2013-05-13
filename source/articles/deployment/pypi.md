@@ -27,19 +27,19 @@ For this tutorial we assumes a few things:
 
 Wercker manages any steps it needs to execute through a simple configuration file called `wercker.yml`. For more information see the [wercker.yml](/werckeryml) devcenter article.
 
-	{
-	    "deploy": [
-	        "./deploy.sh"
-	    ]
-	}
+	deploy:
+        steps:
+            - script:
+                name: pypi deploy
+                code: ./deploy.sh
 
-We have defined a single directive in this `wercker.json` file. After a deploy is triggered, the `deploy.sh` script will be executed.
+We have defined a single directive in this `wercker.yml` file. After a deploy is triggered, the `deploy.sh` script will be executed.
 
 ## Creating your deploy script.
 
 We are now ready to create our actual deploy script that we submit the wercker CLI to PyPI. The method for submitting packages to is detailed on the PyPI [documentation site](http://docs.python.org/3/distutils/packageindex.html). Suffice it to say that the upload is executed through the `python setup.py sdist upload` command.
 
-	echo "[server-login]" >> ~/.pypirc
+	echo "[server-login]" > ~/.pypirc
 	echo "username:" $PYPI_USER >> ~/.pypirc
 	echo "password:" $PYPI_PASSWORD >> ~/.pypirc
 	python setup.py sdist upload
