@@ -58,7 +58,7 @@ If there are no domains or applications listed, please make sure you've created 
 
 Click `save` to create the deploy target.
 
-_note: you can learn more about OpenShift domains and application in [Namespaces chapter](https://access.redhat.com/site/documentation/en-US/OpenShift/2.0/html/User_Guide/chap-OpenShift-User_Guide-Namespaces.html) of the OpenShift User Guide_
+_note: you can learn more about OpenShift domains and application in the [Namespaces chapter](https://access.redhat.com/site/documentation/en-US/OpenShift/2.0/html/User_Guide/chap-OpenShift-User_Guide-Namespaces.html) of the OpenShift User Guide._
 
 ![image](/assets/deployment-openshift/step5-add-deploy-target.png)
 
