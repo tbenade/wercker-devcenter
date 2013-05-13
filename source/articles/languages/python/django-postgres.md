@@ -76,18 +76,18 @@ DATABASES = {
 }
 ```
 
-## Create a wercker.json file
+## Create a wercker.yml file
 
-``` json
-{
-  "services" : {
-    "postgresql" : true
-  },
-  "custom steps" : {
-      "setup_environment" : "export DJANGO_SETTINGS_MODULE='wercks.test_settings'",
-      "test" : "python manage.py test"
-  }
-}
+``` yml
+  services:
+    - wercker/postgresql
+  build:
+    steps:
+      - script
+          name: test
+          code: |
+            export DJANGO_SETTINGS_MODULE='wercks.test_settings'
+            python manage.py test
 ```
 
 ## Create a Procfile and Heroku deploy target
