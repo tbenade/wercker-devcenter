@@ -25,7 +25,7 @@ For this tutorial we assumes a few things:
 
 ## Creating your wercker.json file
 
-Wercker manages any steps it needs to execute through a simple configuration file called `wercker.yml`. For more information see the [wercker.yml](/werckeryml) devcenter article.
+Wercker manages any steps it needs to execute through a simple configuration file called `wercker.yml`. For more information see the [wercker.yml](/articles/werckeryml/intro.html) devcenter article.
 
 	deploy:
         steps:

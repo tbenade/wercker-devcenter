@@ -19,7 +19,7 @@ Wercker retrieves your repository from you version control system and clones it 
 
 ***
 ##### 2. wercker.yml
-If there does not exists a [wercker.yml](/werckeryml)in the repository, wercker will generate one. Wercker will analyze the repository and try to find a box and default steps that match the code. For example, if wercker detects that the repository is a ruby project it will use the `wercker/ubuntu12.04-ruby1.9.3` box and add steps that will install the Gems.
+If there does not exists a [wercker.yml](/articles/werckeryml/intro.html)in the repository, wercker will generate one. Wercker will analyze the repository and try to find a box and default steps that match the code. For example, if wercker detects that the repository is a ruby project it will use the `wercker/ubuntu12.04-ruby1.9.3` box and add steps that will install the Gems.
 
 ***
 ##### 3. environment variables
