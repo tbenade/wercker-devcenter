@@ -18,8 +18,8 @@ If you want to run tests on a public/open source library, but have no permission
 ### What happens to my code when I run a build?
 Simplified we:
 
-1. do a checkout your code and parse the wercker.json.
-2. Based on the wercker.json and an analyzis of the code, boot up virtual machines in a sandboxed environment.
+1. do a checkout your code and parse the wercker.yml.
+2. Based on the wercker.yml and an analyzis of the code, boot up virtual machines in a sandboxed environment.
 3. install additional software, packages and or libraries.
 4. Run the tests inside the sandboxed environment
 5. Teardown and destroy the sanboxed environment.
