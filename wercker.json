@@ -1,7 +1,0 @@
-{
-  "custom steps": {
-    "middleman build": [
-      "bundle exec middleman build"
-    ]
-  }
-}
