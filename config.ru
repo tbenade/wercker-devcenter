@@ -5,6 +5,9 @@ require "rack/contrib/response_headers"
 require "rack/contrib/static_cache"
 require "rack/contrib/try_static"
 
+require 'newrelic_rpm'
+
+NewRelic::Agent.after_fork(:force_reconnect => true) 
 
 # Properly compress the output if the client can handle it.
 use Rack::Deflater

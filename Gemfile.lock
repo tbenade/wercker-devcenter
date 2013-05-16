@@ -72,6 +72,7 @@ GEM
       middleman-core (~> 3.0)
       pygments.rb (~> 0.3)
     multi_json (1.5.0)
+    newrelic_rpm (3.6.2.96)
     padrino-core (0.10.7)
       activesupport (~> 3.2.0)
       http_router (~> 0.10.2)
@@ -137,6 +138,7 @@ DEPENDENCIES
   middleman
   middleman-livereload
   middleman-syntax
+  newrelic_rpm
   rack-contrib
   redcarpet
   unicorn
