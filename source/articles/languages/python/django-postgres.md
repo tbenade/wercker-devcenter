@@ -78,7 +78,7 @@ DATABASES = {
 
 ## Create a wercker.yml file
 
-``` yml
+``` yaml
   services:
     - wercker/postgresql
   build:
