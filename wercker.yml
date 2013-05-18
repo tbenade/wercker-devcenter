@@ -7,7 +7,7 @@ build:
         # Executre a custom script step.
         - script:
             name: middleman build
-            code: bundle exec middleman build
+            code: bundle exec middleman build --verbose
 deploy:
     steps:
         # Execute the s3sync deploy step, a step provided by wercker
