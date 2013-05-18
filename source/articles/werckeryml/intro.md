@@ -6,6 +6,11 @@ sidebar_current: "werckeryml"
 
 The `wercker.yml` file allows you to set up your wercker enviroment. This includes the box which is going to be used, any supporting services, steps needed for the  build and steps needed to do the deploy.
 
+***
+##### note: wercker.json has been deprecated in favour of wercker.yml but should still be backwards compatible (for the time being)
+***
+
+
 ## box
 
 The box section allows you to choose a box which will be used to run the builds and deploys. This item will contain a single reference to the box. The box will be prefixed by the owner and it can be postfixed with a version. If no version is given, then the latest version will be used.
