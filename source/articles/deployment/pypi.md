@@ -23,7 +23,7 @@ For this tutorial we assumes a few things:
 * a tool/library you want to push to pypi. More information on what you need for pypi can be found in the [he Hitchhiker’s Guide to Packaging](http://guide.python-distribute.org/index.html)
 * your code is already on wercker (i.e. you have already run `wercker create`) See [getting started with the wercker CLI](/articles/gettingstarted/cli.html) for more information on adding your application to wercker.
 
-## Creating your wercker.json file
+## Creating your wercker.yml file
 
 Wercker manages any steps it needs to execute through a simple configuration file called `wercker.yml`. For more information see the [wercker.yml](/articles/werckeryml/intro.html) devcenter article.
 
