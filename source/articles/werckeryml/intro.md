@@ -84,47 +84,47 @@ The final steps section will always run after the passed or failed steps have be
 ```yaml
 box: wercker/nodejs@0.0.1
 services:
-- wercker/mongodb@0.0.1
-- wercker/rabbitmq
+  - wercker/mongodb@0.0.1
+  - wercker/rabbitmq
 build:
   steps:
-    - npm install@1.0.5:
+    - npm-install@1.0.5:
         strict-ssl: false
     - jshint:
-        use strict: true
-        trailing whitespace: false
+        use_strict: true
+        trailing_whitespace: false
     # A comment
-    -  npm test
+    -  npm-test
     -  script:
         name: some simple test!
         code: |-
-          line
-          line 2
+          echo "line 1"
+          echo "line 2"
 
-  passed steps:
-  failed steps:
+  passed-steps:
+  failed-steps:
     - pager:
         pagernumber: 1234567
-  final steps:
+  final-steps:
     - campfire:
         key: $CAMPFIRE_KEY
     - hipchat:
         key: $HIPCHAT_KEY
 deploy:
   steps:
-    - compass compile@1.0:
+    - compass-compile@1.0:
         version: 4.1.2
         output: compressed
-    - requirejs build:
+    - requirejs-build:
         build: public/js/main.build.js
-  passed steps:
+  passed-steps:
     - beer: { style: ipa }
-  failed steps:
+  failed-steps:
     - pager:
         pagernumber: 1234567
     - mailer:
         emailaddress: manager@wercker.com
-  final steps:
+  final-steps:
     - campfire:
         key: $CAMPFIRE_KEY
     - hipchat:
