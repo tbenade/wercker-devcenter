@@ -124,30 +124,20 @@ We're now ready to write a simple unit test for our API. We're going to leverage
 
 ## Create a wercker.yml file
 
-Now that we have our unit test we need to let wercker know it should run it, we do this through a `wercker.json` file within out project folder.
+Now that we have our unit test we need to let wercker know it should run it, we do this through a `wercker.yml` file within out project folder.
 
 **werkcer.yml**
 
+  box: wercker/python
+  build:
+    steps:
+      - pip-install
+      - script:
+        name: flask tests
+        script: python app_test.py
 
-    {
-      "custom steps" : {
-        "setup_environment" : {
-          "commands": [
-            "export LANG=en_US.UTF-8",
-            "export LC_ALL=en_US.UTF-8",
-            "export WERCKER=true",
-            "export VIRTUALENV_DISTRIBUTE=true"
-          ]
-        },
-        "flask_test" : {
-          "commands" : [
-            "python app_test.py"
-          ]
-        }
-      }
-    }
 
-Here you ca see we added a custom step called `flask_test` that will run `python app_test.py` as a separate buildstep.
+Here you can see we added two steps to our build pipeline. The first one is `pip-install`, a step that is provided by the wercker platform that runs `pip install`. The second is a custom script step that we name `flask tests` and will run `python app_test.py` as a separate buildstep.
 
 ## Create a Procfile and Heroku deploy target
 
