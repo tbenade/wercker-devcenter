@@ -126,15 +126,17 @@ We're now ready to write a simple unit test for our API. We're going to leverage
 
 Now that we have our unit test we need to let wercker know it should run it, we do this through a `wercker.yml` file within out project folder.
 
-**werkcer.yaml**
+**werkcer.yml**
 
-  box: wercker/python
-  build:
-    steps:
-      - pip-install
-      - script:
-        name: flask tests
-        script: python app_test.py
+  ``` yaml
+    box: wercker/python
+    build:
+      steps:
+        - pip-install
+        - script:
+          name: flask tests
+          script: python app_test.py
+  ```
 
 
 Here you can see we added two steps to our build pipeline. The first one is `pip-install`, a step that is provided by the wercker platform that runs `pip install`. The second is a custom script step that we name `flask tests` and will run `python app_test.py` as a separate buildstep.

@@ -134,9 +134,9 @@ Finally we need to create a Rakefile to run the rspec test:
 For wercker to know how to run our tests we create a `wercker.yml` file
 in our repository:
 
-**wercker.yaml**
+**wercker.yml**
 
-``` yml
+``` yaml
     box: wercker/ruby
     build:
       steps:

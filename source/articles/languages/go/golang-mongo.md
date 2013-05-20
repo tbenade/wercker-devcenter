@@ -89,10 +89,12 @@ Our unit test will create two decepticons and will check if one of them can be r
 
 Through `wercker.yml` we define that we want a MongoDB service on wercker:
 
-**wercker.yml**
+**wercker.yaml**
 
-  services:
-    - wercker/mongodb
+``` yaml
+    services:
+      - wercker/mongodb
+```
 
 ## Push your changes to GitHub
 Push your changes to GitHub and see the build results on wercker.
