@@ -6,11 +6,11 @@ sidebar_current: "services"
 
 Most applications use a database to store data or a message queue to handle jobs asynchronously. With wercker you can specify which services you require and wercker will provision them for you.
 
-This is done by specifying the required services in your [wercker.json](/articles/werckerjson/intro.html) file. Through environment variables you will then be able to access these services.
+This is done by specifying the required services in your [wercker.yml](/articles/werckeryml/intro.html) file. Through environment variables you will then be able to access these services.
 
-## wercker.json
+## wercker.yml
 
-To be able to use services you must first specify them in the service property in the `wercker.json` file. You simply specify the name as the key and use 'true' as the value:
+To be able to use services you must first specify them in the service property in the `wercker.yml` file. You simply specify the name as the key and use 'true' as the value:
 
       {
         "services": {
@@ -18,7 +18,7 @@ To be able to use services you must first specify them in the service property i
         }
       }
 
-See the [section](/articles/werckerjson/intro.html) on `wercker.json` for more information.
+See the [section](/articles/werckeryml/intro.html) on `wercker.yml` for more information.
 
 ## Supported services
 

@@ -15,7 +15,7 @@ You can find the code for this tutorial on [Github](https://github.com/mies/werc
 * Create a spec folder and add a Spec Helper
 * Create a spec
 * Create a Rakefile
-* Create a wercker.json file
+* Create a wercker.yml file
 * Initiate your Git repository and push your changes to Github
 * Deploying to Heroku
 
@@ -129,12 +129,12 @@ Finally we need to create a Rakefile to run the rspec test:
   RSpec::Core::RakeTask.new(:spec)
 ```
 
-## Create a wercker.json file
+## Create a wercker.yml file
 
 For wercker to know how to run our tests we create a `wercker.json` file
 in our repository:
 
-**wercker.json**
+**wercker.yml**
 
 ``` javascript
     {

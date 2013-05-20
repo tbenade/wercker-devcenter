@@ -14,7 +14,7 @@ You can find the code for this tutorial on [Github](https://github.com/mies/werc
 * Add project to wercker
 * Write the API
 * Create a simple unit test
-* Create a wercker.json file
+* Create a wercker.yml file
 * Create a Procfile and Heroku deploy target
 * Push your changes to Github
 * Deploy to Heroku
@@ -122,11 +122,11 @@ We're now ready to write a simple unit test for our API. We're going to leverage
         unittest.main()
 
 
-## Create a wercker.json file
+## Create a wercker.yml file
 
 Now that we have our unit test we need to let wercker know it should run it, we do this through a `wercker.json` file within out project folder.
 
-**werkcer.json**
+**werkcer.yml**
 
 
     {
