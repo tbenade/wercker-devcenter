@@ -49,8 +49,8 @@ Example:
 
     build:
       steps:
-        - npm install@1.0.5
-        - npm test
+        - npm-install@1.0.5
+        - npm-test
 
 This build will be run with two steps, `npm install` and `npm test`, where `npm install` will be fixed on version 1.0.5 and `npm test` will use the latest version.
 
@@ -60,10 +60,10 @@ Example:
 
     build:
       steps:
-        - npm install@1.0.5:
+        - npm-install@1.0.5:
             package: jshint
             strict-ssl: false
-        - npm test
+        - npm-test
 
 This will pass two options to the `npm install` step, `package` and `strict-ssl`.
 
