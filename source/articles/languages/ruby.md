@@ -4,6 +4,8 @@ sidebar_current: "languages-ruby"
 
 # Ruby
 
+Wercker has built in support for Ruby and will do some introspection to correctly assess if you are running a Ruby project. You are however able to explicitely define your version.
+
 ## Versions
 
 Wercker currently supports Ruby 1.9.3-p429 by default. If you wish to use Ruby 2.0 you can do so by specifying this in your `wercker.yml` file:
