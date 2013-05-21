@@ -6,7 +6,7 @@ sidebar_current: "introduction-deployment"
 
 The main benefit of using wercker is that you can Deploy Continuously.
 
-Wercker support deploying to several platforms or targets. For more information see the specific section on [deployment](/articles/deployment/intro.html). In [wercker.yml](/articles/werckeryml/intro.html) you can specify which scripts need to be run.
+Wercker support deploying to several platforms or targets. For more information see the specific section on [deployment](/articles/deployment/). In [wercker.yml](/articles/werckeryml/) you can specify which scripts need to be run.
 
 To be able to deploy you need three things:
 

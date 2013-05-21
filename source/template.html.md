@@ -3,7 +3,7 @@
 
 Welcome to the wercker devcenter! Here you will find various articles and guides to help you get up to speed with wercker.
 
-If you are new to wercker, it is recommended you first read the [getting started guide](/articles/gettingstarted/intro.html).
+If you are new to wercker, it is recommended you first read the [getting started guide](/articles/gettingstarted/).
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, odit, facilis architecto quam dicta aspernatur quia quibusdam illo blanditiis alias. Itaque eos iure nulla quam perferendis expedita sunt reprehenderit quo.
 

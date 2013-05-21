@@ -4,7 +4,7 @@ For this tutorial we will be developing an application in Google's Go and deploy
 
 ## Prerequisites
 * A wercker account, sign up is [free and easy](https://app.wercker.com/users/new/), but note we're still in private beta.
-* The wercker [command line interface](/articles/cli/intro.html)
+* The wercker [command line interface](/articles/cli/)
 * A GitHub or Bitbucket repository that hosts your code
 * The [Go](http://golang.org/) programming language
 * You have correctly set up your [$GOROOT](http://golang.org/doc/install) and [$GOPATH](http://golang.org/doc/code.html#tmp_2) environment variables
@@ -77,7 +77,7 @@ Also we need to inform Heroku which folder the application runs in. This is done
 
 ## Adding your application to wercker
 
-We assume you have installed the wercker [command line interface](/artiles/cli/intro.html). Now run the following command:
+We assume you have installed the wercker [command line interface](/artiles/cli/). Now run the following command:
 
     $ wercker create
 

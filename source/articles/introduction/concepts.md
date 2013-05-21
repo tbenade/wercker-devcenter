@@ -47,7 +47,7 @@ For more information see the section on [deployment](deployment.html).
 When a [Build](#builds) is passed, it can be deployed to a [Deploy Target](#deploy-targets).
 This can be done from the [Build](#builds) overview
 
-If you want to learn more on deployment see the section on [deployment](deployment.html) or the dedicated [chapter](/articles/deployment/intro.html) on supported deployment options.
+If you want to learn more on deployment see the section on [deployment](deployment.html) or the dedicated [chapter](/articles/deployment/) on supported deployment options.
 
 -------
 

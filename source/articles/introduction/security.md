@@ -20,7 +20,7 @@ Wercker provides no access to the source code of an application. Your source cod
 
 ### Test logs
 
-Maybe your code contains that default password you should change, or there's other information you don't want to have in your test logs. Wercker offers some tools to help you: you can hide output of commands by setting the log value to false. See the [wercker.yml](/articles/werckeryml/intro.html) article for more details.
+Maybe your code contains that default password you should change, or there's other information you don't want to have in your test logs. Wercker offers some tools to help you: you can hide output of commands by setting the log value to false. See the [wercker.yml](/articles/werckeryml/) article for more details.
 
 ### Deploy logs
 
