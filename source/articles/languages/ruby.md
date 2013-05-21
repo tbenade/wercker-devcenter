@@ -4,6 +4,47 @@ sidebar_current: "languages-ruby"
 
 # Ruby
 
+## Versions
+
+Wercker currently supports Ruby 1.9.3-p429 by default. If you wish to use Ruby 2.0 you can do so by specifying this in your `wercker.yml` file:
+
+``` yaml
+    box: wercker/ubuntu12.04-ruby2.0.0
+```
+
+We have open-sourced our box definitions on [https://github.com/wercker/box-ubuntu12.04-ruby2.0.0](GitHub), so feel free to take a peek and create your own.
+
+***
+##### note that box definitions are still in progress and subject to change
+***
+
+## Common Steps
+
+Through the `wercker.yml` file you are able to define your own build steps. For ruby you will want to execute `bundle install` to install your gems:
+
+``` yaml
+    box: wercker/ruby
+    build:
+      steps:
+        - bundle-install
+```
+In the above example we have speficied the default Ruby version (1.9.3-p429) and execute the `bundle install` command.
+
+`Rake` or other commands can be executed through the `script` clause, of which you can see an example below:
+
+``` yaml
+    box: wercker/ruby
+    build:
+      steps:
+        - bundle-install
+        - script:
+            name: rake
+            code: bundle exec rake
+```
+Please note you have to indent your `wercker.yml` correctly.
+
+## Guides
+
 Below you'll find several articles on developer Ruby applications with wercker:
 
 * [Getting Started with a Sinatra API](/articles/languages/ruby/getting-started-sinatra-api.html "Getting Started with a Sinatra API ").
