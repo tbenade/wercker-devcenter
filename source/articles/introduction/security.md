@@ -43,22 +43,22 @@ To be specific: whether a user can access builds, build steps, view deploy logs 
 
 There are three roles defined at this moment, with increasing amount of permissions these are:
 
-1. read
-2. write
+1. build
+2. build+deploy
 3. admin
 
-#### read
+#### build
 
-A user with read permissions can see builds, build steps together with its details, view deploy logs and can follow/unfollow applications. A note about deploy logs: some sensitive information may be visible in the deploy logs, but wercker allows some output to be hidden from the view.
+A user with build permissions can see builds, build steps together with its details, view deploy logs and can follow/unfollow applications. A note about deploy logs: some sensitive information may be visible in the deploy logs, but wercker allows some output to be hidden from the view.
 
 
-#### write
+#### build+deploy
 
-A user with write permissions can do all things a user with read permissions can, but can also trigger deploys and create new deploy targets.
+A user with build+deploy permissions can do all things a user with build permissions can, but can also trigger deploys and create new deploy targets.
 
 #### admin
 
-Like the owner of a project, users with admin permissions can do the same as with write permissions and also:
+Like the owner of a project, users with admin permissions can do the same as with build+deploy permissions and also:
 
 * change settings on the project (set the application to public/private)
 * change permissions for collaborators
