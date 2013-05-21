@@ -142,8 +142,8 @@ in our repository:
       steps:
         - bundle-install
         - script:
-          name: rake
-          script: bundle exec rake
+            name: rake
+            code: bundle exec rake
 ```
 
 Don't forget to add this to your Git repository.
