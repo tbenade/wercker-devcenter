@@ -32,8 +32,8 @@ The services section allow you to specify supporting boxes, like databases or qu
 Example:
 
     services:
-    - wercker/mongodb
-    - wercker/rabbitmq
+        - wercker/mongodb
+        - wercker/rabbitmq
 
 This will load two services, `mongodb` and `rabbitmq`, both owned by `wercker` and both using the latest versions.
 
