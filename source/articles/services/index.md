@@ -12,11 +12,13 @@ This is done by specifying the required services in your [wercker.yml](/articles
 
 To be able to use services you must first specify them in the service property in the `wercker.yml` file. You simply specify the name as the key and use 'true' as the value:
 
-      {
-        "services": {
-          "mysql": true
-        }
-      }
+
+``` yaml
+box: wercker/ruby
+services:
+    - wercker/mongodb
+    - wercker/rabbitmq
+```
 
 See the [section](/articles/werckeryml/) on `wercker.yml` for more information.
 
