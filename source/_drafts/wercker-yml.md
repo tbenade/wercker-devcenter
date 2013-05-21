@@ -1,10 +1,15 @@
 ---
-sidebar_current: "services"
+sidebar_current: "werckeryml"
 ---
 
 # wercker.yml
 
 The `wercker.yml` file allows you to set up your wercker enviroment. This includes the box which is going to be used, any supporting services, steps needed for the  build and steps needed to do the deploy.
+
+***
+##### note: wercker.json has been deprecated in favour of wercker.yml but should still be backwards compatible (for the time being)
+***
+
 
 ## box
 
@@ -27,8 +32,8 @@ The services section allow you to specify supporting boxes, like databases or qu
 Example:
 
     services:
-        - wercker/mongodb
-        - wercker/rabbitmq
+    - wercker/mongodb
+    - wercker/rabbitmq
 
 This will load two services, `mongodb` and `rabbitmq`, both owned by `wercker` and both using the latest versions.
 
@@ -44,8 +49,8 @@ Example:
 
     build:
       steps:
-        - npm install@1.0.5
-        - npm test
+        - npm-install@1.0.5
+        - npm-test
 
 This build will be run with two steps, `npm install` and `npm test`, where `npm install` will be fixed on version 1.0.5 and `npm test` will use the latest version.
 
@@ -55,10 +60,10 @@ Example:
 
     build:
       steps:
-        - npm install@1.0.5:
+        - npm-install@1.0.5:
             package: jshint
             strict-ssl: false
-        - npm test
+        - npm-test
 
 This will pass two options to the `npm install` step, `package` and `strict-ssl`.
 
@@ -79,48 +84,47 @@ The final steps section will always run after the passed or failed steps have be
 ```yaml
 box: wercker/nodejs@0.0.1
 services:
-- wercker/mongodb@0.0.1
-- wercker/rabbitmq
+  - wercker/mongodb@0.0.1
+  - wercker/rabbitmq
 build:
   steps:
-    - npm install@1.0.5:
+    - npm-install@1.0.5:
         strict-ssl: false
     - jshint:
-        use strict: true
-        trailing whitespace: false
+        use_strict: true
+        trailing_whitespace: false
     # A comment
-    -  npm test
+    -  npm-test
     -  script:
         name: some simple test!
-        interpreter: bash
         code: |-
-          line
-          line 2
+          echo "line 1"
+          echo "line 2"
 
-  passed steps:
-  failed steps:
+  passed-steps:
+  failed-steps:
     - pager:
         pagernumber: 1234567
-  final steps:
+  final-steps:
     - campfire:
         key: $CAMPFIRE_KEY
     - hipchat:
         key: $HIPCHAT_KEY
 deploy:
   steps:
-    - compass compile@1.0:
+    - compass-compile@1.0:
         version: 4.1.2
         output: compressed
-    - requirejs build:
+    - requirejs-build:
         build: public/js/main.build.js
-  passed steps:
+  passed-steps:
     - beer: { style: ipa }
-  failed steps:
+  failed-steps:
     - pager:
         pagernumber: 1234567
     - mailer:
         emailaddress: manager@wercker.com
-  final steps:
+  final-steps:
     - campfire:
         key: $CAMPFIRE_KEY
     - hipchat:
