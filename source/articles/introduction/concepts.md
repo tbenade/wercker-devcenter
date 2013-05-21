@@ -16,7 +16,7 @@ In this section we explain some of the core concepts that you will encounter thr
 
 Every time a push to git is done, wercker pulls this commit. Wercker compiles, tests and packages the code.
 
-Build steps can be specified in [wercker.yml](werckerjson)
+Build steps can be specified in [wercker.yml](/articles/werckeryml/)
 
 In the project overview there is a list of the latest builds.
 
@@ -29,7 +29,7 @@ To deploy code, a deploy target needs to be created. There are two types: Heroku
 
 With Heroku you can deploy your code to Heroku and with Custom you can deploy to your own servers, like Amazon and RackSpace.
 
-Deploy steps can be specified in [wercker.yml](werckerjson)
+Deploy steps can be specified in [wercker.yml](/articles/werckeryml/)
 
 It's possible to set environment variables that can be used in your custom deploy code.
 
