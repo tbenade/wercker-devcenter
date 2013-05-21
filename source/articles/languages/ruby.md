@@ -14,7 +14,7 @@ Wercker currently supports Ruby 1.9.3-p429 by default. If you wish to use Ruby 2
     box: wercker/ubuntu12.04-ruby2.0.0
 ```
 
-We have open-sourced our box definitions on [https://github.com/wercker/box-ubuntu12.04-ruby2.0.0](GitHub), so feel free to take a peek and create your own.
+We have [open-sourced](https://github.com/wercker/box-ubuntu12.04-ruby1.9.3) our box definitions at [GitHub](https://github.com/wercker/box-ubuntu12.04-ruby2.0.0), so feel free to take a peek and create your own.
 
 ***
 ##### note that box definitions are still in progress and subject to change
