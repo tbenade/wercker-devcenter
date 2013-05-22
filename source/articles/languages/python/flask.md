@@ -134,8 +134,8 @@ Now that we have our unit test we need to let wercker know it should run it, we 
       steps:
         - pip-install
         - script:
-          name: flask tests
-          script: python app_test.py
+            name: flask tests
+            code: python app_test.py
   ```
 
 
