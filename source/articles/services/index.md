@@ -83,7 +83,6 @@ These are the services which are supported by wercker. The list also includes th
 * [Getting Started with Rails and Mongodb](/articles/languages/ruby/rails-mongoid.html)
 * [Getting Started with Sinatra and Redis](/articles/languages/ruby/sinatra-redis.html)
 * [Getting Started with Django and Postgres](/articles/languages/python/django-postgres.html)
-* [Getting Started with Go and MongoDB](/articles/languages/go/golang-mongo.html)
 
 
 -------
