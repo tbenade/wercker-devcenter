@@ -126,7 +126,7 @@ We're now ready to write a simple unit test for our API. We're going to leverage
 
 Now that we have our unit test we need to let wercker know it should run it, we do this through a `wercker.yml` file within out project folder.
 
-**werkcer.yml**
+**wercker.yml**
 
   ``` yaml
     box: wercker/python
