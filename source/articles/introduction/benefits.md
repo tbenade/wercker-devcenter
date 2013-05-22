@@ -12,7 +12,7 @@ We want you to focus on your code and the application that you are building and 
 
 ## Integrated
 
-Wercker integrates with your favorite developer platforms out there such as GitHub and Bitbucket for your version control. When you are ready to [deploy](/articles/deployment/intro.html) your application, we allow you to do so to cloud platforms like [Heroku](/articles/deployment/heroku.html) and Amazon Web Services.
+Wercker integrates with your favorite developer platforms out there such as GitHub and Bitbucket for your version control. When you are ready to [deploy](/articles/deployment/) your application, we allow you to do so to cloud platforms like [Heroku](/articles/deployment/heroku.html) and Amazon Web Services.
 
 ## Social
 

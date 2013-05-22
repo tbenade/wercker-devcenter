@@ -109,7 +109,7 @@ You are now ready to deploy your build to Heroku, if it passed of course. You ca
 <a id="supportedLanguages"></a>
 ## Supported Languages and Services
 
-Wercker currently supports Node.js, Python and Ruby. In terms of services like databases and queues, wercker has support for Postgres, MySQL, MongoDB, RabbitMQ, and Redis. See the [services section](/articles/services/intro.html) on how to specify any of these.
+Wercker currently supports Node.js, Python and Ruby. In terms of services like databases and queues, wercker has support for Postgres, MySQL, MongoDB, RabbitMQ, and Redis. See the [services section](/articles/services/) on how to specify any of these.
 
 <a id="removing"></a>
 ## Removing the add-on

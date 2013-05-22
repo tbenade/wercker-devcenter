@@ -50,7 +50,7 @@ During pre-deploy you can run scripts needed to run before the deployment itself
 
 For Heroku, these script are run on the server of Heroku (`heroku run`)
 
-The script or scripts in [wercker.json](/articles/werckerjson/intro.html) in `pre-deploy` are performed.
+The script or scripts in [wercker.json](/articles/werckerjson/) in `pre-deploy` are performed.
 
 ### <a id="deploy"></a>Deploy
 
@@ -62,7 +62,7 @@ The code is pushed to Heroku: `git push -f git@heroku.com:$HEROKU_APP_NAME.git m
 
 #### <a id="custom"></a>Custom
 
-The script or scripts in [wercker.json](/articles/werckerjson/intro.html) in `deploy` are run.
+The script or scripts in [wercker.json](/articles/werckerjson/) in `deploy` are run.
 
 ### <a id="postdeploy_custom"></a>Post-deploy custom
 
@@ -70,7 +70,7 @@ During post-deploy you can execute scripts needed to run after the deployment it
 
 For Heroku, these script are performed on the server of Heroku (`heroku run`)
 
-The script or scripts in [wercker.json](/articles/werckerjson/intro.html) in `post-deploy` are run.
+The script or scripts in [wercker.json](/articles/werckerjson/) in `post-deploy` are run.
 
 
 ### <a id="postdeploy"></a>Post-deploy
@@ -90,7 +90,7 @@ For example, you can try to download the homepage and check if a specfic word ex
 ```
 
 
-The script or scripts in [wercker.json](/articles/werckerjson/intro.html) in `post-deploy test` are run.
+The script or scripts in [wercker.json](/articles/werckerjson/) in `post-deploy test` are run.
 
 ### Report
 

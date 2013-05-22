@@ -8,7 +8,7 @@ sidebar_current: "deployment-pypi"
 In this article we will showcase how you can deploy your application, in this case a library, to a repository.
 
 ## Introduction
-Wercker comes with a command line interface (CLI) that is written in Python. See the section on the [CLI](/articles/cli/intro.html) for more information. Briefly, you can install this CLI via the `pip` package manager:
+Wercker comes with a command line interface (CLI) that is written in Python. See the section on the [CLI](/articles/cli/) for more information. Briefly, you can install this CLI via the `pip` package manager:
 
     $ pip install wercker
 
@@ -25,7 +25,7 @@ For this tutorial we assumes a few things:
 
 ## Creating your wercker.yml file
 
-Wercker manages any steps it needs to execute through a simple configuration file called `wercker.yml`. For more information see the [wercker.yml](/articles/werckeryml/intro.html) devcenter article.
+Wercker manages any steps it needs to execute through a simple configuration file called `wercker.yml`. For more information see the [wercker.yml](/articles/werckeryml/) devcenter article.
 
 	deploy:
         steps:

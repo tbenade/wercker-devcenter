@@ -121,12 +121,12 @@ Finally we need to create a Rakefile to run the rspec test:
 
 ``` ruby
     require 'rspec/core'
-  require 'rspec/core/rake_task'
+    require 'rspec/core/rake_task'
 
-  task :default => :spec
+    task :default => :spec
 
-  desc "Run our Spec"
-  RSpec::Core::RakeTask.new(:spec)
+    desc "Run our Spec"
+    RSpec::Core::RakeTask.new(:spec)
 ```
 
 ## Create a wercker.yml file
@@ -139,11 +139,11 @@ in our repository:
 ``` yaml
     box: wercker/ruby
     build:
-      steps:
-        - bundle-install
-        - script:
-            name: rake
-            code: bundle exec rake
+        steps:
+            - bundle-install
+            - script:
+                name: rake
+                code: bundle exec rake
 ```
 
 Don't forget to add this to your Git repository.

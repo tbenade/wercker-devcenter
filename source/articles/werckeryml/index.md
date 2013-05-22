@@ -31,11 +31,14 @@ The services section allow you to specify supporting boxes, like databases or qu
 
 Example:
 
+    box: wercker/ruby
     services:
-    - wercker/mongodb
-    - wercker/rabbitmq
+        - wercker/mongodb
+        - wercker/rabbitmq
 
 This will load two services, `mongodb` and `rabbitmq`, both owned by `wercker` and both using the latest versions.
+
+See [services](/articles/services/) for more information.
 
 ## build
 
@@ -67,18 +70,6 @@ Example:
 
 This will pass two options to the `npm install` step, `package` and `strict-ssl`.
 
-### passed steps
-
-The passed steps section will contain steps which will be run after the package step, but only if the build didn't have any errors.
-
-### failed steps
-
-The failed steps section is the same as the passed steps section, the only difference is that it will only run if there were errors.
-
-### final steps
-
-The final steps section will always run after the passed or failed steps have been run. It will also consist of a list of steps.
-
 # Example wercker.yml
 
 ```yaml
@@ -100,16 +91,6 @@ build:
         code: |-
           echo "line 1"
           echo "line 2"
-
-  passed-steps:
-  failed-steps:
-    - pager:
-        pagernumber: 1234567
-  final-steps:
-    - campfire:
-        key: $CAMPFIRE_KEY
-    - hipchat:
-        key: $HIPCHAT_KEY
 deploy:
   steps:
     - compass-compile@1.0:
@@ -117,18 +98,6 @@ deploy:
         output: compressed
     - requirejs-build:
         build: public/js/main.build.js
-  passed-steps:
-    - beer: { style: ipa }
-  failed-steps:
-    - pager:
-        pagernumber: 1234567
-    - mailer:
-        emailaddress: manager@wercker.com
-  final-steps:
-    - campfire:
-        key: $CAMPFIRE_KEY
-    - hipchat:
-        key: $HIPCHAT_KEY
 ```
 
 -------
