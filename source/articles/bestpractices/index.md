@@ -33,7 +33,6 @@ To do this within wercker, create two [Deploy targets](/articles/introduction/co
 When a [Build](/articles/introduction/concepts.html#builds) is passed you first [Deploy](/articles/introduction/concepts.html#deploys) it to "staging".
 After you have made sure the deploy is stable, you can [Deploy](/articles/introduction/concepts.html#deploys) the same [Build](/articles/introduction/concepts.html#builds) to "production".
 
-### Staging/Production
 
 -------
 
