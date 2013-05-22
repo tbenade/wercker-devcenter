@@ -9,7 +9,6 @@ Wercker has support for several programming languages. Please pick your language
 * [Node.js](/articles/languages/nodejs.html)
 * [Ruby](/articles/languages/ruby.html)
 * [Python](/articles/languages/python.html)
-* [Go](/articles/languages/go.html)
 
 If you would like support for more programming environments, don't hesitate to [contact us](mailto:pleasemailus@wercker.com).
 
