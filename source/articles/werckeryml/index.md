@@ -10,6 +10,9 @@ The `wercker.yml` file allows you to set up your wercker enviroment. This includ
 ##### note: wercker.json has been deprecated in favour of wercker.yml but should still be backwards compatible (for the time being)
 ***
 
+## Formatting
+
+Yaml is pretty strict with formatting and we advice everyone to use 4 spaces as indent.
 
 ## box
 
