@@ -10,6 +10,9 @@ The `wercker.yml` file allows you to set up your wercker enviroment. This includ
 ##### note: wercker.json has been deprecated in favour of wercker.yml but should still be backwards compatible (for the time being)
 ***
 
+## Formatting
+
+Yaml is pretty strict with formatting and we advice everyone to use 4 spaces as indent.
 
 ## box
 
@@ -21,9 +24,13 @@ Examples:
 
 Use the latest version of a box called `nodejs` which is owned by the user wercker.
 
-    box: wercker/nodejs@0.0.5
+Here is the full list of current boxes:
 
-Use the specific version 0.0.5 of a box called `nodejs` which is owned by the user `wercker`.
+    wercker/nodejs
+    wercker/python
+    wercker/ruby
+    wercker/ubuntu
+    wercker/ubuntu12.04-ruby2.0.0
 
 ## services
 
@@ -52,7 +59,7 @@ Example:
 
     build:
       steps:
-        - npm-install@1.0.5
+        - npm-install
         - npm-test
 
 This build will be run with two steps, `npm install` and `npm test`, where `npm install` will be fixed on version 1.0.5 and `npm test` will use the latest version.

@@ -24,7 +24,7 @@ sidebar_current: "languages-ruby"
 We will start with a clean Rails project which we will set up with a Postgres database. In your terminal run the following command:
 
 
-	$ rails new rails-sample
+	rails new rails-sample
 
 Next we replace the sqlite gem in your Gemfile with `pg`; the Postgres gem for Ruby. Also, we will be using Unicorn as our web server, so we will add it to our `Gemfile`:
 
@@ -32,7 +32,7 @@ Next we replace the sqlite gem in your Gemfile with `pg`; the Postgres gem for R
 
 ## Set up Heroku
 
-	$ heroku create
+	heroku create
 
 ## Create your Procfile
 
@@ -44,17 +44,16 @@ Also don't forget to commit and push this file to your repository.
 
 ## A note on database configurations
 
-It is the convention to not include the `database.yml` file in your repository. Wercker will autogenerate one if you have defined a `wercker.json` file with the database you require. See the [services article](/articles/available-services "Available Services") and [wercker.json article](/articles/werckerjson "wercker.json file") for more information. For our Rails application we will leverage Postgres as our database server and set this up in the next step.
+It is the convention to not include the `database.yml` file in your repository. Adding a service like `wercker/postgresql` will give you access to several environment variables. Wercker will autogenerate one if you have defined a `wercker.yml` file with the database you require. See the [services article](/articles/available-services "Available Services") and [wwercker.yml article](/articles/werckeryml "wercker.yml file") for more information. For our Rails application we will leverage Postgres as our database server and set this up in the next step.
 
-## Creating your wercker.json file
+## Creating your wercker.yml file
 
-The `wercker.json` file helps you define any services you might need for your application such as databases and queues. We will leverage it to set up Postgres. Create a `wercker.json` file with the following contents:
+The `wercker.yml` file helps you define any services you might need for your application such as databases and queues. We will leverage it to set up Postgres. Create a `wercker.yml` file with the following contents:
 
-	{
-	    "services": {
-        	"postgresql" : true
-    	}
-	}
+	box: wercker/ruby
+    services:
+      - wercker/postgresql
+
 
 You will now have access to several environment variables including:
 

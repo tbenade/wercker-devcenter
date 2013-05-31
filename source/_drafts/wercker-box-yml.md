@@ -7,3 +7,9 @@ packages :
   - ruby@2.0.0
 description : Base box with most popular libraries for the web installed
 script : sudo chef-solo -c $WERCKER_SOURCE_DIR/solo.rb -j $WERCKER_SOURCE_DIR/solo.json -l debug
+env :
+  VAR1 : value1
+  VARWITHHOST : connectionstring=$$HOST$$
+init-script: |
+  echo 1
+  echo 2

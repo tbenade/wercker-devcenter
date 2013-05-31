@@ -19,7 +19,7 @@ We have open sourced this documentation on [GitHub](https://github.com/wercker/w
         <li class="authorCredits__name">
             <h4>Lindsey Bateman</h4>
             <em>
-                Lindsey is a product designer at wercker where creates beautiful things.
+                Lindsey is a product designer at wercker where he creates beautiful things.
             </em>
         </li>
 
