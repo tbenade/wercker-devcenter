@@ -6,7 +6,9 @@ sidebar_current: "deployment-middleman"
 
 We usually associate *deployment* with servers and infrastructure, but for static site deployments such as blogs, we can levarage [Amazon Web Services' S3](http://aws.amazon.com/s3/) to host our static assets. In this article we will go into the details of deploying your static site to S3 with wercker.
 
-## Requirements
+USED FOR JEKYLL. AFTER Jekyll now middleman
+
+## Prerequisites
 
 * A wercker account, registration is [free and easy](https://app.wercker.com/users/new)
 * Basic Ruby knowledge and prefably some experience with static sites.
