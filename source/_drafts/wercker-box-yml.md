@@ -3,6 +3,8 @@ version: 0.0.1
 inherits: wercker/ubuntu12.04-chef10.18.2
 type : main
 platform : ubuntu@12.04
+wercker-url: http://app.wercker.com/
+code-url: http://github.com/wercker/
 packages :
   - ruby@2.0.0
   - libxml
