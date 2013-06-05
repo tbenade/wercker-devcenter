@@ -14,11 +14,11 @@ It is also possible to 'deploy' your code to package platforms such as [PyPI](ht
 
 ## Requirements
 
-In order to deploy your application you need to have a green build and have specified a deploy target that you want to deploy your application to.
+In order to deploy your application you need to have a green [build](/articles/introduction/builds.html) and have specified a [deploy target](/articles/introduction/deployment.html) that you want to deploy your application to.
 
 ## Auto-deploying your application
 
-Wercker supports auto-deployment, this means that a green build automatically gets deployed to a specified deploy target. This is convenient for instance, for low-risk applications such as [your blog](/articles/deployment/jekylls3.html) or to deploy to either a staging environment or feature branch environment. As such, wercker allows you to speficy the git branch that you want auto deployed.
+Wercker supports auto-deployment, this means that a green build automatically gets deployed to a specified deploy target. This is convenient for instance, for low-risk applications such as [your blog](/articles/deployment/jekylls3.html) or to deploy to either a staging environment or feature branch environment. As such, wercker allows you to specify the [git branch](http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging) that you want auto deployed.
 
 ![image](http://f.cl.ly/items/2R1a1Y3V0r3k2A2j3U0P/Screen%20Shot%202013-06-03%20at%203.18.49%20PM.png)
 

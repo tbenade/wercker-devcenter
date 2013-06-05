@@ -18,9 +18,12 @@ To be able to deploy you need three things:
 Deploy targets is a name and a collection of settings inside wercker. It often refers to single server or (Heroku) application, often named staging, production, etc. Deploy targets are of a certain type, we right now support:
 
 * Heroku
-* custom (can be used to deploy to your own servers and platforms such as Amazon, Rackspace, etc).
+* OpenShift
+* custom (can be used to deploy to your own servers and platforms such as Amazon, Rackspace, etc, but also S3 for static sites).
 
-But there are more to come. So let's zoom in on what happend during deployment via wercker.
+![image](http://f.cl.ly/items/1M0X400i1J0S0k3b3o1l/Screen%20Shot%202013-06-05%20at%204.18.45%20PM.png)
+
+We have more deploy targets on the roadmap. So let's zoom in on what happend during deployment via wercker.
 
 <ol class="steps steps--four">
     <li><span>1</span><a>Create environment</a></li>
