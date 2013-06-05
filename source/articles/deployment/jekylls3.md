@@ -41,6 +41,11 @@ Create a new file called `wercker.yml` in the root of your repository with the f
             name: generate site
             code: bundler exec jekyll build --trace
 ```
+
+****
+##### note: Please make sure that your wercker.yml is correctly indented as above
+****
+
   
 </br>
 Lets briefly go through the wercher.yml file. The first line contains `box: wercker/ruby` which defines that you want to run the build in a Ruby box (by default this is Ruby version 1.9.3p429).
