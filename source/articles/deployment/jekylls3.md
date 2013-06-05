@@ -39,14 +39,14 @@ Create a new file called `wercker.yml` in the root of your repository with the f
         # that actually builds the jekyll site
         - script:
             name: generate site
-            code: bundler exec jekyll build --trace
+            code: bundle exec jekyll build --trace
 ```
 
 ****
 ##### note: Please make sure that your wercker.yml is correctly indented as above
 ****
 
-  
+
 </br>
 Lets briefly go through the wercher.yml file. The first line contains `box: wercker/ruby` which defines that you want to run the build in a Ruby box (by default this is Ruby version 1.9.3p429).
 The second line describes the `build` section that consists of steps, in this case there are two steps. These steps are performed during the execution of the build process. The first step `bundle-install` is a smart version of the `bundle install` command that leverages caching so future builds will run faster. The second step `script` executes the script that is defined the `code` clause that consists of a single command `bundler exec jekyll build --trace`. This step actually builds your Jekyll site.
@@ -60,7 +60,7 @@ After you created the `wercker.yml` add it to your repository by executing the f
 ```
 </br>
 
-Because you have created an application for this repository at wercker it should now start building. 
+Because you have created an application for this repository at wercker it should now start building.
 
 ## Add deployment target information
 Now you have automated your content generation process that will get executed every time you push your code to git. This is helpful to catch jekyll errors early, but without  deployment it doesn't help your actual live website. Let's add a deploy target to your application on wercker so we can close the loop!
