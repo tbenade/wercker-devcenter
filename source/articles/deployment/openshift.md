@@ -12,7 +12,7 @@ In this article we will showcase how you can deploy your application from wercke
 * You have [created an application in OpenShift](https://openshift.redhat.com/app/console/application_types)
 * A [GitHub](https://github.com/) account with a pre-made repository
 * You are [registered for a wercker account](https://app.wercker.com/users/new) and [signed in](https://app.wercker.com/users)
-* You have [added your application to wercker](http://shrouded-cove-1217.herokuapp.com/articles/gettingstarted/web.html)
+* You have [added your application to wercker](/articles/gettingstarted/web.html)
 
 
 ## Deploy target
