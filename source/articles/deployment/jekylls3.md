@@ -88,7 +88,7 @@ Add the following to the end of your current `wercker.yml` file:
         - s3sync:
             key_id: $KEY
             key_secret: $SECRET
-            bucket_url: $BUCKET
+            bucket_url: $URL
             source_dir: _site/
 ```
 </br>
