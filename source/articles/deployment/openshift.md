@@ -11,7 +11,7 @@ In this article we will showcase how you can deploy your application from wercke
 * OpenShift credentials (sign up at [OpenShift registration page](https://openshift.redhat.com/app/account/new))
 * You have [created an application in OpenShift](https://openshift.redhat.com/app/console/application_types)
 * A [GitHub](https://github.com/) account with a pre-made repository
-* You are [registered for a wercker account](https://app.wercker.com/users/new) and [signed in](https://app.wercker.com/users)
+* You have [registered for a wercker account](https://app.wercker.com/users/new) and [signed in](https://app.wercker.com/users)
 * You have [added your application to wercker](/articles/gettingstarted/web.html)
 
 
@@ -33,7 +33,7 @@ To start the process to add an OpenShift deployment target, do the following:
 * Click the `Add deploy target` dropdown
 * Click `OpenShift`
 
-![image](http://f.cl.ly/items/1R0J3g1v1b0Z2Q1n1V34/Screen%20Shot%202013-06-06%20at%2010.27.46%20AM.png)
+![image](http://f.cl.ly/items/3j2b2R2Y0t3e07422p3D/Screen%20Shot%202013-06-06%20at%2011.15.55%20AM.png)
 
 ### Create OpenShift authentication token
 _note: you can skip this step if you already have an OpenShift authentication token._
@@ -52,11 +52,11 @@ Enter the OpenShift authorization token and click `connect`.
 
 ### Enter OpenShift deploy target details
 
-Enter a descriptive deploy target name, eq: staging or production.
+Enter a descriptive deploy target name, such as: staging or production.
 
-Select the OpenShift domain and application that you want to deploy to. Wercker automaticly selected the first available domain and application.
+Select the OpenShift domain and application that you want to deploy to. Wercker automatically selects the first available domain and application.
 
-If there are no domains or applications listed, please make sure you've created them on OpenShift.
+If there are no domains or applications listed, please make sure you have created them on OpenShift.
 
 Click `save` to create the deploy target.
 
@@ -80,13 +80,13 @@ Login to OpenShift and add the key to your public key list.
 
 You are now ready to deploy to OpenShift. Wercker allows you to deploy all succesfull builds. Navigate to your application and select the succesfull build you like to deploy.
 
-![image](http://f.cl.ly/items/0937133624283Q1w1B3t/Screen%20Shot%202013-06-06%20at%2010.52.25%20AM.png)
+![image](http://f.cl.ly/items/0f1W0u1M391m2K2p1n2s/Screen%20Shot%202013-06-06%20at%2011.03.02%20AM.png)
 
-In the build via click the `deploy this build` button and choice the target that you have just create.
+In the build via click the `deploy this build` button and choose the target that you have just create.
 
-![image](/assets/deployment-openshift/step9-queue-deploy.png)
+![image](http://f.cl.ly/items/090u37223b3h0X1s0Y11/Screen%20Shot%202013-06-07%20at%2010.08.39%20AM.png)
 
-Congratulations! You have succesfully deployed your application to OpenShift.
+Congratulations! You have successfully deployed your application to OpenShift.
 
 -------
 
