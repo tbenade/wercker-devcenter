@@ -85,7 +85,7 @@ Add the following to the end of your current `wercker.yml` file:
 ```yaml
     deploy:
       steps:
-        - s3sync
+        - s3sync:
             key_id: $KEY
             key_secret: $SECRET
             bucket_url: $BUCKET
