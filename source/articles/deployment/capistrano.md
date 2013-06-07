@@ -1,6 +1,8 @@
 ---
 sidebar_current: "deployment-capistrano"
 ---
+# Deploying with Capistrano
+In this article we explain how to deploy your applications with wercker and [Capistrano](https://github.com/capistrano/capistrano), an automation tool for remote servers. Read more about Capistrano [here](https://github.com/capistrano/capistrano/wiki).
 
 ### Prerequisites
 
