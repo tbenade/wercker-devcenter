@@ -85,15 +85,15 @@ Add the following to the end of your current `wercker.yml` file:
 ```yaml
     deploy:
       steps:
-        - s3sync
+        - s3sync:
             key_id: $KEY
             key_secret: $SECRET
-            bucket_url: $BUCKET
-            source: _site/
+            bucket_url: $URL
+            source_dir: _site/
 ```
 </br>
 
-The `s3sync` step synchronises a source directory with an Amazon S3 bucket. The `key_id`, `key_secret` and `bucket_url` options are set to the information from the deploy target, previously created. Only the `source` option is _hard coded_ (or should I say _hard configured_) to `_site/`. This is the directory where Jekyll stores the output.
+The `s3sync` step synchronises a source directory with an Amazon S3 bucket. The `key_id`, `key_secret` and `bucket_url` options are set to the information from the deploy target, previously created. Only the `source_dir` option is _hard coded_ (or should I say _hard configured_) to `_site/`. This is the directory where Jekyll stores the output.
 
 We could also _hard code_ the key and key secret in here, but that is not something you want to put in your git repository. Especially not when you repository is public like [mine](https://github.com/pjvds/born2code.net).
 
