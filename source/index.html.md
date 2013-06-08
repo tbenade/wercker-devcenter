@@ -7,6 +7,8 @@ If you are new to wercker, it is recommended you first read the [getting started
 
 We have open sourced this documentation on [GitHub](https://github.com/wercker/wercker-devcenter), feel free to improve upon it through pull requests.
 
+You can find the awesome people who have already contributed [here](http://devcenter.wercker.com/articles/contributors.html).
+
 -------
 
 <div class="authorCredits">
