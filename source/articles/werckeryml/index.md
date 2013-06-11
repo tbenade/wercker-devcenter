@@ -4,7 +4,17 @@ sidebar_current: "werckeryml"
 
 # wercker.yml
 
-The `wercker.yml` file allows you to set up your wercker enviroment. This includes the box which is going to be used, any supporting services, steps needed for the  build and steps needed to do the deploy.
+The `wercker.yml` file allows you to set up your wercker enviroment.
+This includes the box which is going to be used, any supporting
+services, steps needed for the build and steps needed to do the deploy.
+The most basic and default *wercker.yml* file is the following:
+
+    box: wercker/default
+
+This is a barebones ubuntu box with no support for a specific
+programming environment. The default box can be the
+[foundation](https://github.com/wercker/box-default) for
+creating your own box.
 
 ***
 ##### note: wercker.json has been deprecated in favour of wercker.yml but should still be backwards compatible (for the time being)
@@ -12,13 +22,15 @@ The `wercker.yml` file allows you to set up your wercker enviroment. This includ
 
 ## Formatting
 
-Yaml is pretty strict with formatting and we advice everyone to use 4 spaces as indent.
+Yaml is pretty strict with formatting and we advice everyone to use 4 spaces for indentation.
 
 ## box
 
-The box section allows you to choose a box which will be used to run the builds and deploys. This item will contain a single reference to the box. The box will be prefixed by the owner and it can be postfixed with a version. If no version is given, then the latest version will be used.
+The box section allows you to choose a box which will be used to run the builds and deploys. This item will contain a single reference to the box. The box will be prefixed by the owner and it can be postfixed with a version. If no version is given, then the latest version will be used. The default blank box:
 
-Examples:
+    box: wercker/default
+
+A node.js box:
 
     box: wercker/nodejs
 

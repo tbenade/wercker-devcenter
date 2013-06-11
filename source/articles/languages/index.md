@@ -4,7 +4,17 @@ sidebar_current: "languages"
 
 # Language Support
 
-Wercker has support for several programming languages. Please pick your language of choice from the list below for more information and in-depth articles on how to use your favoritre programming environment and wercker.
+Wercker has support for several programming languages. Please pick your
+language of choice from the list below for more information and in-depth
+articles on how to use your favoritre programming environment and
+wercker. 
+
+## wercker.yml
+
+The [wercker.yml](/articles/werckeryml) file is the method to define your stack and
+programming environment. In the language sections below we will go into
+a basic *wercker.yml* for each of the stacks.
+
 
 * [Node.js](/articles/languages/nodejs.html)
 * [Ruby](/articles/languages/ruby.html)
