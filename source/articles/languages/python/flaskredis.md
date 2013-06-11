@@ -2,6 +2,7 @@
 sidebar_current: "languages-python"
 ---
 
+# Building and testing a Flask application with Redis
 
 In this tutorial we are going to build a very simple API that returns a list of latin *cloud* names in JSON which are retrieved from Redis. We're also going to add a unittest to test the functionality of our API. Finally we will test all of this within wercker, so lets get started! The code for this example application can be found on [GitHub](https://github.com/mies/getting-started-flask-redis).
 
@@ -191,15 +192,15 @@ You can see the final result of this application on my [wercker page](https://ap
 
 <div class="authorCredits">
     <span class="profile-picture">
-        <img src="https://secure.gravatar.com/avatar/7d9ef3d3f6911e6e4f9c51f6d99c48f8?d=identicon&s=192" alt="Jacco Flenter"/>
+        <img src="https://secure.gravatar.com/avatar/d4b19718f9748779d7cf18c6303dc17f?d=identicon&s=192" alt="Micha Hernandez van Leuffen"/>
     </span>
     <ul class="authorCredits">
 
         <!-- author info -->
         <li class="authorCredits__name">
-            <h4>Jacco Flenter</h4>
+            <h4>Micha Hernandez van Leuffen</h4>
             <em>
-                Jacco is an interaction engineer at wercker.
+                Micha is cofounder and CEO at wercker.
             </em>
         </li>
 
@@ -208,9 +209,9 @@ You can see the final result of this application on my [wercker page](https://ap
             <a href="http://beta.wercker.com" target="_blank">
                 <i class="icon-company"></i> <em>wercker</em>
             </a>
-            <a href="http://twitter.com/jflenter" target="_blank">
+            <a href="http://twitter.com/mies" target="_blank">
                 <i class="icon-twitter"></i>
-                <em> flenter</em>
+                <em> mies</em>
             </a>
         </li>
 
