@@ -19,6 +19,15 @@ After you've signed up, you are ready to get started with wercker. For your conv
 
 You can follow along with this section in two ways. First, we have a [guided tour](/articles/gettingstarted/web.html) of the wercker web interface. Second, you there is a [specific guide](/articles/gettingstarted/cli.html) that helps you get up to speed with the wercker [command line interface](/articles/cli/).
 
+You can find the [language specific] sections below:
+
+* [Ruby](/articles/languages/ruby.html)
+* [Node.js](/articles/languages/nodejs.html)
+* [Python](/articles/languages/python.html)
+
+Feel free to [get in touch](mailto:pleasemailus@wercker.com) if you
+[want support](http://twitter.com/wercker) for a specific stack.
+
 -------
 
 <div class="authorCredits">
