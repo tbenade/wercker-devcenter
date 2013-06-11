@@ -44,6 +44,7 @@ See the [wercker.yml section](/articles/wercker.yml) for more information.
 Below you will find several articles on getting started with Python on wercker:
 
 * [Getting Started with a Flask API](/articles/languages/python/flask.html "Getting Started with a Flask API ").
+* [Building and testing a Flask application with Redis](/articles/languages/python/flaskredis.html "Building and testing a Flask application with Redis ").
 
 
 -------
