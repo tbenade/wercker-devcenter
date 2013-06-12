@@ -2,7 +2,7 @@
 sidebar_current: "languages-python"
 ---
 
-# Building and testing a Flask application with Redis
+# Building and testing a Flask application with a Redis backend
 
 In this tutorial we are going to build a very simple API that returns a list of latin *cloud* names in JSON which are retrieved from Redis. We're also going to add a unittest to test the functionality of our API. Finally we will test all of this within wercker, so lets get started! The code for this example application can be found on [GitHub](https://github.com/mies/getting-started-flask-redis).
 
