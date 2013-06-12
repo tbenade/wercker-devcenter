@@ -18,6 +18,9 @@ During development wercker offers several key benefits.
 ### Pull Request status
 
 On GitHub you can check the build status of your pull request. If you have added your GitHub project on wercker, you are able to see the build status of your pull request without any additional configuration.
+Read more on pull requests and attaching the status of your build to
+commits in the pull requests
+[section](/articles/bestpractices/pullrequests.html)
 
 <a id="deployment"></a>
 ## Deployment

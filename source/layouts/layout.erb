@@ -214,6 +214,11 @@
                 <section <%= sidebar_current("bestpractices") %>>
                   <p class="title" data-section-title><a href="/articles/bestpractices/">Best Practices</a></p>
                   <div class="content" data-section-content>
+                    <% if sidebar_section == "bestpractices" %>
+                    <ul class="side-nav">
+                      <li<%= sidebar_current("bestpractices") %>><a href="/articles/bestpractices/pullrequests.html">Pull Requests</a></li>
+                    </ul>
+                  <% end %>
                   </div>
                 </section>
 
