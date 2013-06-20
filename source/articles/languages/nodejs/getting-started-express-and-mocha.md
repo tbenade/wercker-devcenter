@@ -1,6 +1,10 @@
+---
+sidebar_current: "languages-nodejs"
+---
+
 # Getting started with Express and Mocha
 
-You can find the code for this tutorial on [Github](https://github.com/mies/wercker-nodejs-api)
+You can find the code for this tutorial on [GitHub](https://github.com/mies/wercker-nodejs-api)
 
 ### Table of Contents
 * Prerequisites

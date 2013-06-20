@@ -1,3 +1,7 @@
+---
+sidebar_current: "languages-nodejs"
+---
+
 # Getting started with node.js and Redis on wercker
 
 ### Table of Contents
