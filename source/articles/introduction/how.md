@@ -6,7 +6,7 @@ sidebar_current: "introduction-how"
 
 The workflow that wercker offers is roughly depicted below.
 
-<a href="https://s3.amazonaws.com/wercker.static.assets/heroku_flow.jpg" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/heroku_flow.jpg" ></a>
+<a href="http://f.cl.ly/items/3E3j34301N3Q1z1t1S2N/wercker_flow.jpg" target="_blank"><img src="http://f.cl.ly/items/3E3j34301N3Q1z1t1S2N/wercker_flow.jpg" ></a>
 
 Each time you do a `git push` wercker gets a signal via the source control platform that hosts your code that new code has been comitted. Wercker subsequently fetched this code, builds it and runs your unit tests or other build steps (javascript minimization, compass compilation).
 

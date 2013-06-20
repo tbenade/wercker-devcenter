@@ -3,6 +3,10 @@
 
 Welcome to the wercker devcenter! Here you will find various articles and guides to help you get up to speed with wercker.
 
+Wercker is a collaborative continuous delivery platform that helps developers reduce risk and eliminate waste in their software development process, by enabling them to test and deploy often, all in a hassle free way.
+
+![image](http://f.cl.ly/items/3E3j34301N3Q1z1t1S2N/wercker_flow.jpg)
+
 If you are new to wercker, it is recommended you first read the [getting started guide](/articles/gettingstarted/).
 
 We have open sourced this documentation on [GitHub](https://github.com/wercker/wercker-devcenter), feel free to improve upon it through pull requests.

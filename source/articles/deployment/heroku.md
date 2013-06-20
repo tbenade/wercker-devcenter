@@ -24,7 +24,7 @@ This article deals with the wercker Heroku add-on, available on their [Marketpla
 Visually, the flow for wercker is as follows:
 
 <p>
-<a href="https://app.wercker.com/public/images/heroku_flow.jpg" target="_blank"><img src="https://app.wercker.com/public/images/heroku_flow.jpg" width="100%"></a>
+<a href="http://f.cl.ly/items/24352w223K2v142I1Y1V/heroku_flow.jpg" target="_blank"><img src="http://f.cl.ly/items/24352w223K2v142I1Y1V/heroku_flow.jpg" width="100%"></a>
 </p>
 
 Wercker connects with your GitHub or Bitbucket repository. Each time you do a `git push` wercker receive a signal that new code has been created and wil subsequently start running your tests in a sand-boxed environment. If your build is green, you are ready to deploy your application to Heroku. Through the Heroku add-on you get a concise dashboard with an overview of your builds and deploys.
