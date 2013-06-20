@@ -40,6 +40,7 @@ See the [wercker.yml section](/articles/wercker.yml) for more information.
 See our articles below to get started with node and wercker.
 
 * [Getting Started with Express and Mocha](/articles/languages/nodejs/getting-started-express-and-mocha.html)
+* [Test-Driven-Development with Express, MongoDB and Mongoose](/articles/languages/nodejs/tdd-with-mongoose.html)
 
 -------
 
