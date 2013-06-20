@@ -15,7 +15,7 @@ You can find the code for this tutorial on [GitHub](https://github.com/mies/gett
 * Defining our Mongoose Model
 * Adding our application to wercker
 * Create a build environment variable
-* Deploying to Heroku [STILL TO COME]
+* Deploying to Heroku
 
 ## Prerequisites
 * Basic knowledge on node.js, the express framework and the mongoose ODM
