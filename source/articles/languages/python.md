@@ -45,6 +45,7 @@ Below you will find several articles on getting started with Python on wercker:
 
 * [Getting Started with a Flask API](/articles/languages/python/flask.html "Getting Started with a Flask API ").
 * [Building and testing a Flask application with Redis](/articles/languages/python/flaskredis.html "Building and testing a Flask application with Redis ").
+* [Getting Started with Django and Postgres](/articles/languages/python/django-postgres.html "Getting Started with Django and Postgres").
 
 
 -------
