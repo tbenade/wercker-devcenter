@@ -83,7 +83,7 @@ DATABASES = {
     - wercker/postgresql
   build:
     steps:
-      - script
+      - script:
           name: test
           code: |
             export DJANGO_SETTINGS_MODULE='wercks.test_settings'
