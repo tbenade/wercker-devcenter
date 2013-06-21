@@ -4,7 +4,7 @@ sidebar_current: "languages-ruby"
 
 # Getting Started with a Sinatra API
 
-You can find the code for this tutorial on [Github](https://github.com/mies/wercker-ruby-api)
+You can find the code for this tutorial on [Github](https://github.com/wercker/getting-started-ruby)
 
 ### Table of Contents
 * Prerequisites
@@ -15,7 +15,7 @@ You can find the code for this tutorial on [Github](https://github.com/mies/werc
 * Create a spec folder and add a Spec Helper
 * Create a spec
 * Create a Rakefile
-* Create a wercker.json file
+* Create a wercker.yml file
 * Initiate your Git repository and push your changes to Github
 * Deploying to Heroku
 
@@ -37,12 +37,9 @@ require 'sinatra'
 require 'json'
 
 get '/' do
-  "Hello Cybertron!"
-end
-
-get '/decepticons.json' do
-  content_type :json
-  return {:decepticons => ["Megatron", "Soundwave", "Starscream", "Astrotrain"]}
+      content_type :json
+        return {:cities=> ["Amsterdam", "San Francisco", "Berlin",
+                           "New York", "Tokyo", "London"]}.to_json
 end
 ```
 
@@ -62,10 +59,12 @@ A basic `Gemfile` for this application would be:
 **Gemfile**
 
 ``` ruby
-source :rubygems
+source 'http://rubygems.org'
 gem 'sinatra'
-gem 'thin'
+gem 'unicorn'
 gem 'json'
+gem 'rake'
+gem 'rack-test'
 
 group :test do
   gem 'rspec'
@@ -100,17 +99,17 @@ Next, run `bundle install` to set up your local bundle.
 
 ## Create your spec
 
-**spec/spec_app.rb**
+**spec/main_spec.rb**
 
 ``` ruby
-  require 'spec_helper'
+require 'spec_helper'
 
-  describe "Decepticon API" do
-    it "should respond to GET" do
-      get '/decepticons.json'
-      last_response.should be_ok
-    end
+describe "City API" do
+  it "should respond to GET" do
+    get '/'
+    last_response.should be_ok
   end
+end
 ```
 
 ## Create a Rakefile
@@ -226,5 +225,5 @@ Happy coding!
 </div>
 
 -------
-##### last modified on: April 19, 2013
+##### last modified on: June 21, 2013
 -------
