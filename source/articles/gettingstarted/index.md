@@ -12,7 +12,7 @@ Before we start with developing our first application, make sure you have regist
 ##### NOTE: at this moment we are in public beta, you can sign up [here](https://app.wercker.com/users/new). Wercker is still a bit rough around the edges; send us feedback and questions via [email](mailto:pleasemailus@wercker.com).
 ***
 
-After you've signed up, you are ready to get started with wercker. For your convenience we have created four separate Getting Started repositories in
+After you've signed up, you are ready to get started with wercker. For your convenience we have created three separate Getting Started repositories in
 [Ruby](https://github.com/wercker/getting-started-ruby),
 [Python](https://github.com/wercker/getting-started-python) and
 [Node.js](https://github.com/wercker/getting-started-nodejs).
@@ -59,5 +59,5 @@ Feel free to [get in touch](mailto:pleasemailus@wercker.com) if you
 </div>
 
 -------
-##### April 19, 2013
+##### Juni 21, 2013
 -------
