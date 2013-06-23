@@ -55,7 +55,7 @@ Logs the user in and stores the token on the machine.
 Removes the login token from the machine.
 
 ### open
-Launched your default browser and opens your application page on wercker
+Launches your default browser and opens your application page on wercker
 
 ### open targets
 Opens a webpage showing a deploy target's details.
