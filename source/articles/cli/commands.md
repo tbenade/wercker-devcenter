@@ -112,6 +112,6 @@ Checks if there is a new version of the CLI available.
 </div>
 
 -------
-##### last modified on: April 19, 2013
+##### last modified on: June 23, 2013
 -------
 
