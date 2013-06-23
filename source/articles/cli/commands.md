@@ -17,6 +17,7 @@ Assuming you have succesfully installed the wercker command line interface, you 
         wercker status
         wercker deploy
         wercker builds
+        wercker open
         wercker open targets
         wercker queue
         wercker apps
@@ -52,6 +53,9 @@ Logs the user in and stores the token on the machine.
 
 ### logout
 Removes the login token from the machine.
+
+### open
+Launched your default browser and opens your application page on wercker
 
 ### open targets
 Opens a webpage showing a deploy target's details.
