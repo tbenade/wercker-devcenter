@@ -22,16 +22,28 @@ The first step is to fork one of the above mentioned repositories and clone it t
 
 Next you can add this application to wercker. Log into wercker and push the `add application` button.
 
-<a href="https://s3.amazonaws.com/wercker.static.assets/step2.png" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/step2.png" ></a>
+We first allow you to select your git provider, currently either GitHub or Bitbucket. If you've already authorized wercker to connect with either of these platforms, we will show this as well.
 
-Next, select the repository that you have forked in the previous step.
+<a href="http://f.cl.ly/items/0v080B3l1b1I2P3P3x2z/Screen%20Shot%202013-06-21%20at%2011.53.17%20AM.png" target="_blank"><img src="http://f.cl.ly/items/0v080B3l1b1I2P3P3x2z/Screen%20Shot%202013-06-21%20at%2011.53.17%20AM.png" ></a>
 
-<a href="https://s3.amazonaws.com/wercker.static.assets/step3.png" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/step3.png" ></a>
+We now present you with a list of repositories and also show if a repository is private, public, and if it's a fork of another repo. We introduced a search box which you can use to filter your repositories, making selection even snappier. Select the repository that you have forked in the previous step.
+
+<a href="http://f.cl.ly/items/0Z1c0A1k0g1c0j2h082z/Screen%20Shot%202013-06-21%20at%2011.53.43%20AM.png" target="_blank"><img src="http://f.cl.ly/items/0Z1c0A1k0g1c0j2h082z/Screen%20Shot%202013-06-21%20at%2011.53.43%20AM.png" ></a>
 
 Wercker needs read permissions to run your tests each time you do a `git push`. For this to work you have to give the `werckerbot` user read permissions to your repository as indicated in the step below.
 
-<a href="https://s3.amazonaws.com/wercker.static.assets/step4.png" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/step4.png" ></a>
+<a href="http://f.cl.ly/items/2J3U202n06120u0G1i0a/Screen%20Shot%202013-06-21%20at%2011.53.58%20AM.png" target="_blank"><img src="http://f.cl.ly/items/2J3U202n06120u0G1i0a/Screen%20Shot%202013-06-21%20at%2011.53.58%20AM.png" ></a>
 
+Now, wercker is ready to help you with the `wercker.yml` file. It could of course be the case that you've already
+added a wercker.yml to your repository. The new flow automatically detects the presence of a wercker.yml in your repository.
+
+If the `wercker.yml` is not present we will try to detect the programming language of your project and present a suggested wercker.yml file with sensible defaults that you need to commit and push to your repository.
+
+![image](http://f.cl.ly/items/3V33302R3W1F3z03461m/Screen%20Shot%202013-06-21%20at%2012.00.50%20PM.png)
+
+Again, you can read more on the `wercker.yml` file and its possibilities at [wercker.yml section](http://devcenter.wercker.com/werckeryml/).
+
+Finally when you're done we present you with a success dialog and allow you to make your project **public** on wercker, which is great for open source projects.
 
 ### Step 3. Code and create your first Build
 
