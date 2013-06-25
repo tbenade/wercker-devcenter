@@ -2,7 +2,7 @@
 sidebar_current: "cli"
 ---
 
-# The wercker command
+# The wercker command line interface
 
 The wercker command or command line interface allows you to interfact with the wercker platform from the comfort of your terminal.
 
