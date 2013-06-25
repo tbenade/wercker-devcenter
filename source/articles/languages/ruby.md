@@ -12,6 +12,7 @@ Below you'll find several articles on developer Ruby applications with wercker:
 
 * [Getting Started with a Sinatra API](/articles/languages/ruby/getting-started-sinatra-api.html "Getting Started with a Sinatra API ").
 * [Getting Started with Rails and Heroku](/articles/languages/ruby/rails-heroku.html "Getting Started with Rails and Heroku").
+* [Setting up your Rails4 project](/articles/languages/ruby/settingup-rails4.html "Setting up your Rails4 project").
 
 Wercker has built in support for Ruby and will do some introspection to correctly assess if you are running a Ruby project. You are however able to explicitely define your version.
 
