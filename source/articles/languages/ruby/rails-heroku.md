@@ -21,14 +21,23 @@ sidebar_current: "languages-ruby"
 
 ## Create your Rails project
 
+The code for this article is available on [GitHub](https://github.com/mies/getting-started-rails)
 We will start with a clean Rails project which we will set up with a Postgres database. In your terminal run the following command:
 
+	rails new getting-started-rails
 
-	rails new rails-sample
+Next we replace the `sqlite` gem in your Gemfile with `pg`; the Postgres gem for Ruby. Also, we will be using Unicorn as our web server, so we will add it to our `Gemfile`:
 
-Next we replace the sqlite gem in your Gemfile with `pg`; the Postgres gem for Ruby. Also, we will be using Unicorn as our web server, so we will add it to our `Gemfile`:
-
+``` ruby
+    gem 'pg'
     gem 'unicorn'
+```
+
+For this project we will be using Ruby version `2.0.0`, which we also specify in the `Gemfile`, just below the `:source 'https://rubygems.org'` section, create the following line:
+
+``` ruby
+ruby "2.0.0"
+```
 
 ## Set up Heroku
 
@@ -48,12 +57,16 @@ It is the convention to not include the `database.yml` file in your repository. 
 
 ## Creating your wercker.yml file
 
-The `wercker.yml` file helps you define any services you might need for your application such as databases and queues. We will leverage it to set up Postgres. Create a `wercker.yml` file with the following contents:
+The `wercker.yml` file helps you define any services you might need for your application such as databases and queues. We will leverage it to set up Postgres. Read more on the wercker.yml file and its possibilities [here](http://devcenter.wercker.com/articles/werckeryml/). Create a `wercker.yml` file with the following contents (we will go over it, inn a bit):
 
-	box: wercker/ruby
+	box: wercker/ubuntu12.04-ruby2.0.0
     services:
       - wercker/postgresql
+  build:
+    steps:
+      - bundle-install
 
+We first specify the Ruby box that we want to use on wercker, which is of course the `2.0.0` box. Next we specify the services that we want to leverage. As said, we will be using Postgresql for our database backend, so we add it to our wercker.yml.
 
 You will now have access to several environment variables including:
 
@@ -66,6 +79,26 @@ You will now have access to several environment variables including:
 and the convenience url in the form of `postgres://postgres:wercker@10.0.3.223:5432/werckerdb1` that you can access via the environment variable:
 
 	WERCKER_POSTGRESQL_URL
+
+****
+##### A NOTE ON DATABASE.YML
+****
+
+Similar to [Heroku](), there is no need to specify your database connections in a `database.yml` file as one is generated for you, based on the services section in your `wercker.yml` file, each time a build is run on wercker. However, if you want to override this default behavior, through the `rails-database-yml` step as presented in the following wercker.yml:
+
+``` yaml
+box: wercker/ubuntu12.04-ruby2.0.0
+services:
+  - wercker/postgresql
+  - wercker/mysql
+build:
+  steps:
+    - bundle-install
+    - rails-database-yml:
+        service: mysql
+```
+
+Here we have specified that we want to use *two* databases, a Mysql and Postgres database, but the `database.yml` on wercker should be generated based on the mysql service. This scenario is probably not common, but it is possible.
 
 Commit and push this file to your git repository.
 
@@ -81,7 +114,7 @@ This will set up a wizard that will guide you through subsequent steps needed to
 
 ## Adding your application to wercker
 
-Wercker comes with a command line interface (CLI) that will help you in setting up your applications with wercker. It is a Python program that can be installed via `pip install wercker`. Please see the [specific CLI documentation](/articles/cli "The wercker command line interface") for more. Running `wercker create` will add your application to wercker and set up your Heroku deploy target.
+Wercker comes with a command line interface (CLI) that will help you in setting up your applications with wercker. It is a Python program that can be installed via `pip install wercker`. Please see the [specific CLI documentation](/articles/cli "The wercker command line interface") for more. Running `wercker create` will add your application to wercker and set up your Heroku deploy target. You can also add your project via the [web interface](http://devcenter.wercker.com/articles/gettingstarted/web.html).
 
 	$ wercker create
 	Searching for git remote information...
@@ -144,5 +177,5 @@ You can now deploy your green build to Heroku. You can do so via the dashboard t
 </div>
 
 -------
-##### last modified on: April 19, 2013
+##### last modified on: June 25, 2013
 -------
