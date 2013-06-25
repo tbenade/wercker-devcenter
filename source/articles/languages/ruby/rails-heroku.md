@@ -102,9 +102,9 @@ Here we have specified that we want to use *two* databases, a Mysql and Postgres
 
 Commit and push this file to your git repository.
 
-## Setting up the wercker addon
+## Setting up the wercker add-on
 
-Wercker comes with a Heroku addon which you can find on the Heroku marketplace (currently still in beta so not visible yet). By running the following command you will add the wercker addon to your Heroku app that you've created in previous steps:
+Wercker comes with a [Heroku add-on](https://addons.heroku.com/wercker) which you can find on the Heroku marketplace (please make sure you are part of the [Heroku Beta program](http://beta.heroku.com) while the add-on is in beta). By running the following command you will add the wercker addon to your Heroku app that you've created in previous steps:
 
 	$ heroku addons:add wercker
 
