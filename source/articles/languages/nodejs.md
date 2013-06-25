@@ -4,6 +4,13 @@ sidebar_current: "languages-nodejs"
 
 # Node.js
 
+Below several guides to getting started with Node.js and wercker.
+
+* [Getting Started with Express and Mocha](/articles/languages/nodejs/getting-started-express-and-mocha.html)
+* [Test-Driven-Development with Express, MongoDB and Mongoose](/articles/languages/nodejs/tdd-with-mongoose.html)
+
+## Guides
+
 Wercker supports [node.js](http://nodejs.org). The default [wercker.yml](/articles/werckeryml) file for node.js is the following:
 
     box: wercker/nodejs
@@ -37,11 +44,6 @@ Custom build steps, which are basically bash scripts defined via the 'script' cl
 
 See the [wercker.yml section](/articles/wercker.yml) for more information.
 
-See our articles below to get started with node and wercker.
-
-* [Getting Started with Express and Mocha](/articles/languages/nodejs/getting-started-express-and-mocha.html)
-* [Test-Driven-Development with Express, MongoDB and Mongoose](/articles/languages/nodejs/tdd-with-mongoose.html)
-
 -------
 
 <div class="authorCredits">
@@ -73,5 +75,5 @@ See our articles below to get started with node and wercker.
 </div>
 
 -------
-##### last modified on: April 19, 2013
+##### last modified on: June 25, 2013
 -------

@@ -65,8 +65,9 @@ The `wercker.yml` file helps you define any services you might need for your app
   build:
     steps:
       - bundle-install
+      - rails-database-yml
 
-We first specify the Ruby box that we want to use on wercker, which is of course the `2.0.0` box. Next we specify the services that we want to leverage. As said, we will be using Postgresql for our database backend, so we add it to our wercker.yml.
+We first specify the Ruby box that we want to use on wercker, which is of course the `2.0.0` box. Next we specify the services that we want to leverage. As said, we will be using Postgresql for our database backend, so we add it to our wercker.yml. We subsequently run the `bundle-install` step that will run a `bundle install` command to install your gems. Next, the `rails-database-yml` step generates a `database.yml` file that will set up the wercker dependent connection strings for your database.
 
 You will now have access to several environment variables including:
 
@@ -80,11 +81,13 @@ and the convenience url in the form of `postgres://postgres:wercker@10.0.3.223:5
 
 	WERCKER_POSTGRESQL_URL
 
+Again, the `rails-database-yml` leverages these [environment variables](www.12factor.net/config) to generate a `database.yml` file on wercker.
+
 ****
 ##### A NOTE ON DATABASE.YML
 ****
 
-Similar to [Heroku](), there is no need to specify your database connections in a `database.yml` file as one is generated for you, based on the services section in your `wercker.yml` file, each time a build is run on wercker. However, if you want to override this default behavior, through the `rails-database-yml` step as presented in the following wercker.yml:
+Similar to [Heroku](https://devcenter.heroku.com/articles/heroku-postgresql#connecting-in-rails), there is [no need](https://devcenter.heroku.com/articles/ruby-support#build-behavior) to specify your database connections in a `database.yml` file as one is generated for you, based on the services section in your `wercker.yml` file and the `rails-database-yml` build step, each time a build is run on wercker. However, if you want to override this default behavior, through the `rails-database-yml` step as presented in the following wercker.yml:
 
 ``` yaml
 box: wercker/ubuntu12.04-ruby2.0.0

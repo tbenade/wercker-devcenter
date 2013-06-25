@@ -4,6 +4,15 @@ sidebar_current: "languages-ruby"
 
 # Ruby
 
+Below several guides to getting started with Ruby and wercker:
+
+## Guides
+
+Below you'll find several articles on developer Ruby applications with wercker:
+
+* [Getting Started with a Sinatra API](/articles/languages/ruby/getting-started-sinatra-api.html "Getting Started with a Sinatra API ").
+* [Getting Started with Rails and Heroku](/articles/languages/ruby/rails-heroku.html "Getting Started with Rails and Heroku").
+
 Wercker has built in support for Ruby and will do some introspection to correctly assess if you are running a Ruby project. You are however able to explicitely define your version.
 
 ## Versions
@@ -45,13 +54,6 @@ In the above example we have speficied the default Ruby version (1.9.3-p429) and
 ```
 Please note you have to indent your `wercker.yml` correctly.
 
-## Guides
-
-Below you'll find several articles on developer Ruby applications with wercker:
-
-* [Getting Started with a Sinatra API](/articles/languages/ruby/getting-started-sinatra-api.html "Getting Started with a Sinatra API ").
-* [Getting Started with Rails and Heroku](/articles/languages/ruby/rails-heroku.html "Getting Started with Rails and Heroku").
-
 -------
 
 <div class="authorCredits">
@@ -83,5 +85,5 @@ Below you'll find several articles on developer Ruby applications with wercker:
 </div>
 
 -------
-##### last modified on: April 19, 2013
+##### last modified on: June 25, 2013
 -------
