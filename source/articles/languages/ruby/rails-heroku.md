@@ -9,7 +9,7 @@ sidebar_current: "languages-ruby"
 * Set up Heroku
 * Create your Procfile
 * A note on database configurations
-* Creating your wercker.json file
+* Creating your wercker.yml file
 * Adding your application to wercker
 * Deploy to heroku
 
