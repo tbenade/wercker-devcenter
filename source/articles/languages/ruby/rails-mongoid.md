@@ -12,7 +12,7 @@ You can find the code for this tutorial on [Github](https://github.com/mies/mong
 * Create a new Rails project
 * Declare dependencies
 * Create your mongoid configuration
-* Create a wercker.json file
+* Create a wercker.yml file
 * TODO: Create a Procfile and Heroku deploy target
 * Push your changes to Github
 * TODO: Add Mongolab
@@ -70,17 +70,19 @@ test:
 
 ## Create your wercker.json
 
-Wercker has to know it should make MongoDB available for our tests, so lets create a `wercker.json` [file](/articles/werckerjson)
+Wercker has to know it should make MongoDB available for our tests, so lets create a `wercker.yml` [file](/articles/werckeryml)
 
-**wercker.json**
+**wercker.yaml**
 
-``` json
-{
-  "services" :  {
-    "mongodb" : true
-  }
-}
+``` yaml
+box: wercker/ubuntu12.04-ruby2.0.0
+services:
+  - wercker/mongodb
+build:
+  steps:
+    - bundle-install
 ```
+The `services` section specifies any database you want to leverage, in this case `mongodb`. By declaring this in your `wercker.yml`, the `WERCKER_MONGODB_HOST` environment variable becomes available.
 
 ## Push to GitHub
 
@@ -90,7 +92,9 @@ git commit -am 'init'
 git push origin master
 ```
 
-when we return we will add unit test and deploy our application
+*****
+##### Stay tuned for more updates on this tutorial
+*****
 
 -------
 
