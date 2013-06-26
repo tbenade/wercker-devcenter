@@ -59,19 +59,13 @@ test:
     default:
       database: mongodb_demo_test
       hosts:
-        -  <%= ENV['WERCKER_MONGODB_HOST'] %>
+        -  <%= ENV['WERCKER_MONGODB_HOST'] || 'localhost:27017' %>
       options:
         consistency: :strong
         # In the test environment we lower the retries and retry interval to
         # low amounts for fast failures.
         max_retries: 1
         retry_interval: 0
-```
-
-Keep in mind that if you run individual rspec tests the environment is set to `test` so for convenience you can export the WERCKER_MONGODB_HOST environment variable:
-
-``` bash
-export WERCKER_MONGODB_HOST="localhost:27017"
 ```
 
 ## Create your wercker.json
