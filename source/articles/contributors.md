@@ -8,6 +8,7 @@ These are the people that have contributed and improved the wercker devcenter.
 * [Dennis Laumen](https://app.wercker.com/#dennislaumen)
 * [Petar Radosevic](https://app.wercker.com/#wunki)
 * [Jason Garber](https://app.wercker.com/#jgarber)
+* [Karan Chaudhary](https://app.wercker.com/#lafolle)
 
 Team wercker ([Lindsey](https://app.wercker.com/#lindseybateman), [PJ](https://app.wercker.com/#pjvds), [Jacco](https://app.wercker.com/#flenter), [Benno](https://app.wercker.com/#bvdberg), [Wouter](https://app.wercker.com/#wouter), [mies](https://app.wercker.com/#mies))
 

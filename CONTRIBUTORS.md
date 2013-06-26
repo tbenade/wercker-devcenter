@@ -4,3 +4,4 @@ Team wercker (Lindsey, PJ, Jacco, Benno, Wouter, mies)
 - Dennis Laumen - https://app.wercker.com/#dennislaumen
 - Petar Radosevic - https://app.wercker.com/#wunki
 - Jason Garber - https://app.wercker.com/#jgarber
+- Karan Chaudhary - https://app.wercker.com/#lafolle
