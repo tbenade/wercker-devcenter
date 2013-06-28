@@ -15,7 +15,8 @@ wercker needs to have some additional rights to the repository so it can:
 
 If you want to run tests on a public/open source library, but have no permissions on the project: you could fork it and add that project to wercker.
 
-### When I `git push` my code, builds aren't triggered on wercker. What's up?
+<a id="nobuilds"></a>
+### When I `git push` my code, builds aren't triggered on wercker.
 
 It is probably the case that you have added an application to wercker of which you are not the owner/admin on GitHub, just a collaborator.
 As a collaborator you are not allowed to set the webhooks on your repository that wercker needs for triggering builds.
