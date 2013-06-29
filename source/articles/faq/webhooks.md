@@ -42,11 +42,11 @@ On Bitbucket you can have `read`, `write` and `admin` permissions. You need the 
 
 ### I've removed the WebHook, what do I do now? ###
 
-You can use the fix WebHook button to recreate the WebHook. Be sure that your source control provider credentials have suffient permissions.
+You can use the fix WebHook button to recreate the WebHook. Make sure that your source control provider credentials have suffient permissions.
 
 ### I'm a collaborator on a GitHub repository, how do I get admin permissions ###
 
-Unfortunately it's not possible to get admin permissions for collaborator in a GitHub repository.
+Unfortunately it's not possible to get admin permissions for a collaborator on a GitHub repository.
 
 -------
 
