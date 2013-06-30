@@ -81,7 +81,7 @@ and the convenience url in the form of `postgres://postgres:wercker@10.0.3.223:5
 
 	WERCKER_POSTGRESQL_URL
 
-Again, the `rails-database-yml` leverages these [environment variables](www.12factor.net/config) to generate a `database.yml` file on wercker.
+Again, the `rails-database-yml` leverages these [environment variables](http://www.12factor.net/config) to generate a `database.yml` file on wercker.
 
 ****
 ##### A NOTE ON DATABASE.YML
@@ -180,5 +180,5 @@ You can now deploy your green build to Heroku. You can do so via the dashboard t
 </div>
 
 -------
-##### last modified on: June 25, 2013
+##### last modified on: June 30, 2013
 -------
