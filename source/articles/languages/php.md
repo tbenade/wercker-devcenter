@@ -2,7 +2,13 @@
 sidebar_current: "languages-php"
 ---
 
-## PHP box
+# PHP
+
+Below several guides to getting started with PHP and wercker.
+
+## Guides
+
+* [Getting Started with PHP and wercker](/articles/languages/php/gettingstarted-api.html "Getting Started with an API in PHP").
 
 The `wercker/php` box runs on ubuntu 12.04 and provides multiple versions of PHP. It also includes XDebug, PEAR, Pyrus, Composer and PHPUnit.
 
@@ -161,7 +167,7 @@ The PHP box comes with PECL which can be used to compile and extensions to the e
 		code: |-
 			pecl install memcache
 			pecl install SQLite
-			
+
 Some extensions ask for user input during the installation. The `apc` package is an example of this:
 
 	$ pecl install apc
@@ -174,10 +180,10 @@ Some extensions ask for user input during the installation. The `apc` package is
 	PHP Api Version:         20100412
 	Zend Module Api No:      20100525
 	Zend Extension Api No:   220100525
-	Enable internal debugging in APC [no] : 
+	Enable internal debugging in APC [no] :
 
 If this was a build on wercker it would eventually timeout. To solve this you can print user input to the process. Here is a script step that prints a newline (enter) to the pecl install command:
-	
+
 	- script:
 		name: Install extensions
 		code: echo '\n' | pecl install apc
