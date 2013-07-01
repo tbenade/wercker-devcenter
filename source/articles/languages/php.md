@@ -6,9 +6,11 @@ sidebar_current: "languages-php"
 
 Below several guides to getting started with PHP and wercker.
 
-## Guides
+## Sample application
 
-* [Getting Started with PHP and wercker](/articles/languages/php/gettingstarted-api.html "Getting Started with an API in PHP").
+There is an [getting-started-php](http://github.com/wercker/gettings-started-php) application that demonstrates dependency management via Composer and running an integration test with PHPUnit.
+
+## PHP box
 
 The `wercker/php` box runs on ubuntu 12.04 and provides multiple versions of PHP. It also includes XDebug, PEAR, Pyrus, Composer and PHPUnit. For PHP projects your [wercker.yml](/articles/werckeryml/) could look as follows:
 
