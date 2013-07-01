@@ -4,7 +4,7 @@ sidebar_current: "languages-php"
 
 # PHP
 
-Below several guides to getting started with PHP and wercker.
+Below we go into detail on how to get started with wercker and php.
 
 ## Sample application
 
