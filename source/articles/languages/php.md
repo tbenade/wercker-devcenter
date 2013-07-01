@@ -19,30 +19,14 @@ build:
     - script:
         name: Install extensions
         code: |-
-          pecl install apc
           pecl install memcache
           pecl install SQLite
     - script:
-        name: List available PHP versions
-        code: |-
-            phpenv version
-            phpenv versions
-            php -v
-            which php
-    - script:
-        name: List available tools
-        code: |-
-            phpunit --version
-            composer --version
-            pear version
-            pyrus --version
-            phpenv -v
-    - script:
         name: install dependencies
         code: |-
-            composer install
+            composer install --no-interaction
     - script:
-        name: Serve application
+        name: Serve application for integration tests
         code: php -S localhost:8000 >> /dev/null &
     - script:
         name: PHPUnit integration tests
@@ -50,6 +34,7 @@ build:
 ```
 
 At the top you see the 'box' definition that states we want the 'wercker/php' box. Next, there is a 'build' clause, this defines your build pipeline on wercker. In the `wercker.yml` above we have defined several custom steps.
+
 ## PHP versions
 
 There are three versions available on the wercker PHP box. The previous stable release PHP 5.3, the current stable release PHP 5.4 and the upcoming release PHP 5.5. By default the current stable release 5.4 is active.
@@ -225,3 +210,33 @@ If this was a build on wercker it would eventually timeout. To solve this you ca
 	- script:
 		name: Install extensions
 		code: echo '\n' | pecl install apc
+
+-------
+
+<div class="authorCredits">
+    <span class="profile-picture">
+        <img src="https://secure.gravatar.com/avatar/5864d682bb0da7bedf31601e4e3172e7?d=identicon&s=192" alt="Pieter Joost van de Sande"/>
+    </span>
+    <ul class="authorCredits">
+
+        <!-- author info -->
+        <li class="authorCredits__name">
+            <h4>Pieter Joost van de Sande</h4>
+            <em>
+                Pieter Joost is an engineer and community manager at wercker
+            </em>
+        </li>
+
+        <!-- info -->
+        <li>
+            <a href="http://beta.wercker.com" target="_blank">
+                <i class="icon-company"></i> <em>wercker</em>
+            </a>
+            <a href="http://twitter.com/pjvds" target="_blank">
+                <i class="icon-twitter"></i>
+                <em> mies</em>
+            </a>
+        </li>
+
+    </ul>
+</div>
