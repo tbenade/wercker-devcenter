@@ -10,8 +10,46 @@ Below several guides to getting started with PHP and wercker.
 
 * [Getting Started with PHP and wercker](/articles/languages/php/gettingstarted-api.html "Getting Started with an API in PHP").
 
-The `wercker/php` box runs on ubuntu 12.04 and provides multiple versions of PHP. It also includes XDebug, PEAR, Pyrus, Composer and PHPUnit.
+The `wercker/php` box runs on ubuntu 12.04 and provides multiple versions of PHP. It also includes XDebug, PEAR, Pyrus, Composer and PHPUnit. For PHP projects your [wercker.yml](/articles/werckeryml/) could look as follows:
 
+``` yaml
+box: wercker/php
+build:
+  steps:
+    - script:
+        name: Install extensions
+        code: |-
+          pecl install apc
+          pecl install memcache
+          pecl install SQLite
+    - script:
+        name: List available PHP versions
+        code: |-
+            phpenv version
+            phpenv versions
+            php -v
+            which php
+    - script:
+        name: List available tools
+        code: |-
+            phpunit --version
+            composer --version
+            pear version
+            pyrus --version
+            phpenv -v
+    - script:
+        name: install dependencies
+        code: |-
+            composer install
+    - script:
+        name: Serve application
+        code: php -S localhost:8000 >> /dev/null &
+    - script:
+        name: PHPUnit integration tests
+        code: phpunit --configuration phpunit.xml
+```
+
+At the top you see the 'box' definition that states we want the 'wercker/php' box. Next, there is a 'build' clause, this defines your build pipeline on wercker. In the `wercker.yml` above we have defined several custom steps.
 ## PHP versions
 
 There are three versions available on the wercker PHP box. The previous stable release PHP 5.3, the current stable release PHP 5.4 and the upcoming release PHP 5.5. By default the current stable release 5.4 is active.
