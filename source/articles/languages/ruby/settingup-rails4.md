@@ -199,7 +199,41 @@ wercker queue
 ```
 Your application should now be alive and kicking on Heroku!
 
-We briefly discussed how to test and deploy your Rails4 application with wercker. Check out our [dev center](http://devcenter.wercker.com) for more information and other guides
+Below is a complete [wercker.yml](/articles/werckeryml) created by [Frans Krojegård](https://twitter.com/frunns) that uses the wercker Ruby 2.0 [box](https://github.com/wercker/box-ubuntu12.04-ruby2.0.0), a Postgres [service](http://devcenter.wercker.com/articles/services/) and contains [Rake](http://rake.rubyforge.org/) task that bootstraps his database. Finally, he runs his rspec tests using `bundle exec rspec`. For deployment, he leverages the `heroku-deploy` step, after which he runs a database migration script.
+
+```yaml
+box: wercker/ubuntu12.04-ruby2.0.0
+services:
+    - wercker/postgresql
+build:
+    steps:
+        - bundle-install
+
+        - rails-database-yml:
+            service: postgresql
+
+        - script:
+            name: echo ruby information
+            code: |
+                echo "ruby version $(ruby --version) running!"
+                echo "from location $(which ruby)"
+                echo -p "gem list: $(gem list)"
+
+        - script:
+            name: Set up db
+            code: bundle exec rake db:schema:load RAILS_ENV=test
+
+        - script:
+            name: rspec
+            code: bundle exec rspec
+
+deploy:
+    steps:
+        - heroku-deploy
+        - script:
+            name: Update database
+            code: heroku run rake db:migrate --app $TARGET_NAME
+```
 
 -------
 
