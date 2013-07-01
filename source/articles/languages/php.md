@@ -8,7 +8,7 @@ Below we go into detail on how to get started with wercker and php.
 
 ## Sample application
 
-There is an [getting-started-php](http://github.com/wercker/gettings-started-php) application that demonstrates dependency management via Composer and running an integration test with PHPUnit.
+There is an [getting-started-php](http://github.com/wercker/getting-started-php) application that demonstrates dependency management via Composer and running an integration test with PHPUnit.
 
 ## PHP box
 
