@@ -35,13 +35,13 @@ Here is an example of a script step that activates PHP 5.3:
 
 ## PHP configuration
 
-Because the PHP box has phpenv installed, you can use `phpenv config-add` to add a custom configuration file:
+As the PHP box has phpenv installed, you can use `phpenv config-add` to add a custom configuration file:
 
 	- script:
 		name: Add project-config.ini
 		code: phpenv config-add project-config.ini
 
-You must have a `project-config.ini` file inside your code repository. Here is an example of the possible content of this file:
+You must have a `project-config.ini` file inside your code repository. Here is an example of the possible contents of this file:
 
 	date.timezone = "Europe/Amsterdam"
 
@@ -51,9 +51,9 @@ You could also add a line to the existing configuration file:
 
 ## Available tools
 
-The following package managers are installed PEAR, Pyrus and Composer.
+The following package managers are installed [PEAR](http://pear.php.net/), [Pyrus](http://pear.php.net/manual/en/pyrus.about.php) and [Composer](http://getcomposer.org/).
 
-## Installing Composer packages
+### Installing Composer packages
 
 Composer is a tool for dependency management in PHP. Composer is globally installed on the PHP box and the version does not change when changing the PHP version with phpenv.
 
@@ -75,7 +75,7 @@ By default composer installed only stable packages. This behaviour can be change
 	    name: install dependencies
 	    code: composer install --dev
 
-### Composer lock file
+#### Composer lock file
 
 After installing dependencies, Composer writes the list of the exact versions it installed info a `composer.lock` file. This locks the project to those specific versions. It is a best practise to commit this `composer.lock` along with `composer.json` into version control to ensure wercker uses the same versions of dependencies as in your local development environment. This also guarantees that the same versions of dependencies are used among the full development team.
 
@@ -91,7 +91,7 @@ If you only want to update one dependency:
 	$ git add composer.lock
 	$ git commit -m 'Updates monolog to new version'
 
-## Installing pear packages
+### Installing pear packages
 
 Pear is a package manager for PHP. Pear is globally installed on the PHP box and the version does not change when changing the PHP version with phpenv.
 
@@ -105,7 +105,7 @@ Here is an example of an script step that installs the `pear/PHPDoc` package wit
 
 After install you should refresh your path by executing an `php rehash`.
 
-## Installing pyrus packages
+### Installing pyrus packages
 
 Pyrus is the successor of pear and is a package manager for PHP. Pyrus is globally installed on the PHP box and the version does not change when changing the PHP version with phpenv.
 
@@ -158,7 +158,7 @@ If your tests are integration tests, you can serve your application with the fol
 
 This will host your PHP application on port 80. All output will be piped to `output.txt` to keep your log clean. The ampersand (`&`) at the end of this command makes the command asynchronously.
 
-## Installing extension
+## Installing extensions
 
 The PHP box comes with PECL which can be used to compile and extensions to the environment. Installing an extension with PECL will automatically activate them as well. In other words, it will update the php.ini accordingly. Here is an example of a script step that installs `memcache` and `SQLite` extension:
 
