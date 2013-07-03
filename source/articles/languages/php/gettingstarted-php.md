@@ -172,11 +172,11 @@ $ git commit -m 'Adds phpunit setup files'
 The integration tests levarages the httpful framework to make the http request. Use composer to handle the dependency management by creating a `composer.json` file in the root of your project with the following content.
 
 ``` json
-    {
-        "require-dev": {
-            "nategood/httpful": "*"
-        }
+{
+    "require-dev": {
+        "nategood/httpful": "*"
     }
+}
 ```
 
 Now install the dependencies by executing the following command.
