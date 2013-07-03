@@ -9,10 +9,10 @@ test and build pipeline setup at wercker.
 
 ## Prerequisites
 
-* Having [PHP](http://php.net) 5.4 or higher installed
+* Have [PHP](http://php.net) 5.4 or higher installed
 * Use [Composer](http://getcomposer.org/) for dependencies
-* Having a [GitHub](http://github.com) or [Bitbucket](http://bitbucket.com) account
-* Having [git](http://git-scm.com/) installed
+* Have a [GitHub](http://github.com) or [Bitbucket](http://bitbucket.com) account
+* Have [git](http://git-scm.com/) installed
 
 ## Creating the repository
 
@@ -24,7 +24,7 @@ Start by creating a new git repository on your local machine. This will be the p
 
 ## Adding index.php
 
-Create a new file with the name `index.php` with the following content.
+Create a new file named `index.php` with the following contents.
 
     <?php
     $cities = array("Amsterdam", "San Francisco", "Berlin",
@@ -43,7 +43,7 @@ Add the `index.php` file to the git repository.
 
 ## Running the service
 
-See the service in action by serving it with the build in webserver that PHP offers since version 5.4.
+See the service in action by serving it with the built-in webserver that PHP offers since version 5.4.
 
     $ php -S localhost:8000
 
@@ -51,13 +51,17 @@ Open your favorite browser and browse to [localhost:8000](http://localhost:8000)
 
 ## Add project to GitHub or Bitbucket
 
-Now add your code repository to GitHub or Bitbucket.
+Now add your code repository to your version control platform of choice,
+either GitHub or Bitbucket.
 
 ## Add wercker.yml
 
-With the `wercker.yml` file you can configure the build and deployment environment for your application.
+With the `wercker.yml` file you can configure the build and deployment
+pipeline for your application.
 
-Create a new file with the name `wercker.yml` with the following content. This file will tell wercker to run the build pipeline in a PHP environment and simply output the PHP environment information on every build. We will add more useful steps in a few minutes.
+Create a new file named `wercker.yml` with the following content. This file will tell wercker to run the build pipeline in a 
+PHP environment and simply output the PHP environment information on every build. 
+We will add more useful steps in a bit.
 
     box: wercker/php
     build:
@@ -68,7 +72,7 @@ Create a new file with the name `wercker.yml` with the following content. This f
                 php -v
                 php -i
 
-Add the file to git.
+Add the file to your git repository:
 
     $ git add wercker.yml
     $ git commit -m 'Adds wercker.yml that defines the build`
@@ -77,13 +81,15 @@ Add the file to git.
 
 Add your GitHub or Bitbucket project to wercker using the [wercker add application](https://app.wercker.com/#projects/create) flow.
 
-When you finished the flow. Every commit you push to your git repository will from now on trigger a build at wercker.
+When you've added your application, every commit you push to your git
+repository will from now on trigger a build on wercker.
 
 ## Install PHPUnit
 
-Now it is time to add an integration test to verify if the service works as expected. This is very helpful for future development and allows you to notice breaking changes in the future.
+Now is time to add an integration test to verify that your PHP service works as expected. 
+This is very useful for future development and allows you to notice breaking changes in the future.
 
-If you do not have PHPUnit installed, install it via pear:
+If you do not have PHPUnit installed, do so now via pear:
 
     $ pear config-set auto_discover 1
     $ pear install pear.phpunit.de/PHPUnit
@@ -92,7 +98,9 @@ See the [installing PHPUnit](http://phpunit.de/manual/3.7/en/installation.html) 
 
 ## Adding an integration test
 
-Create a new directory with the name `tests` that will hold the tests of this application. Create a new file with the name `ResponseTest.php` with the following content.
+Create a new directory with the name `tests` that will hold the tests
+for this application. Create a new file with the name `ResponseTest.php`
+  with the following contents:
 
     <?php
     class CitiesResponseTest extends PHPUnit_Framework_TestCase
@@ -115,7 +123,7 @@ Create a new directory with the name `tests` that will hold the tests of this ap
 
  ## Setup PHPUnit
 
-Create a file called `tests/bootstrap.php` with the following content.
+Create a file called `tests/bootstrap.php` with the following contents:
 
     <?php
     $file = __DIR__.'/../vendor/autoload.php';
@@ -126,7 +134,8 @@ Create a file called `tests/bootstrap.php` with the following content.
     $autoload = require_once $file;
     ?>
 
-Create a file called `phpunit.xml` in the root of the project with the following content.
+Create a file called `phpunit.xml` in the root of the project that looks
+as follows:
 
     <?xml version="1.0" encoding="utf-8" ?>
     <phpunit bootstrap="tests/bootstrap.php">
@@ -137,7 +146,7 @@ Create a file called `phpunit.xml` in the root of the project with the following
       </testsuites>
     </phpunit>
 
-Add this test to the git repository.
+Add this test to the git repository:
 
     $ git add bootstrap.php
     $ git add phpunit.xml
@@ -145,7 +154,9 @@ Add this test to the git repository.
 
 ## Add httpful dependency
 
-The integration tests levarages the httpful framework to make the http request. Use composer to handle the dependency management by creating a `composer.json` file in the root of your project with the following content.
+The integration tests levarages the httpful framework to make the actual http request. Use composer to handle the dependency management 
+by creating a `composer.json` file in the root of your project with the
+following contents:
 
     {
         "require-dev": {
@@ -182,9 +193,10 @@ In the other window, run php unit and see the test pass.
 
     OK (1 test, 2 assertions)
 
-## Update wercker.yml to run tests
+## Update wercker.yml to run your tests
 
-Update the `wercker.yml` file by adding steps that execute our tests.
+Update the `wercker.yml` file by adding steps that execute our newly
+created tests.
 
     box: wercker/php
     build:
@@ -202,7 +214,10 @@ Update the `wercker.yml` file by adding steps that execute our tests.
 
 ## Push commits and see wercker execute your build
 
-You have successfully developed an application and pushing the commits should trigger a build at wercker. The build consists of a step that install the dependencies defined in composer.json, serving the application with PHP's buildin webserver and then executing the integration test.
+You have successfully developed a simple API in PHP and pushing the
+commits should trigger a build on wercker. The build consists of a step
+that installs the dependencies defined in `composer.json`, serves the
+application with PHP's built-in webserver and then executes the integration test.
 
     $ git add wercker.yml
     $ git push origin master
