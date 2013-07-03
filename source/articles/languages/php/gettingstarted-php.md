@@ -18,34 +18,34 @@ test and build pipeline setup at wercker.
 
 Start by creating a new git repository on your local machine. This will be the place where we store all the application source files.
 
-  $ mkdir php-cities
-  $ cd php-cities
-  $ git init
+    $ mkdir php-cities
+    $ cd php-cities
+    $ git init
 
 ## Adding index.php
 
 Create a new file with the name `index.php` with the following content.
 
-  <?php
-  $cities = array("Amsterdam", "San Francisco", "Berlin",
-                  "New York", "Tokyo", "London");
+    <?php
+    $cities = array("Amsterdam", "San Francisco", "Berlin",
+                    "New York", "Tokyo", "London");
 
-  header('Content-Type: application/json');
-  echo json_encode($cities, JSON_PRETTY_PRINT);
-  ?>
+    header('Content-Type: application/json');
+    echo json_encode($cities, JSON_PRETTY_PRINT);
+    ?>
 
 ## Add index.php to the repository
 
 Add the `index.php` file to the git repository.
 
-  $ git add index.php
-  $ git commit -m 'Adds index.php'
+    $ git add index.php
+    $ git commit -m 'Adds index.php'
 
 ## Running the service
 
 See the service in action by serving it with the build in webserver that PHP offers since version 5.4.
 
-  $ php -S localhost:8000
+    $ php -S localhost:8000
 
 Open your favorite browser and browse to [localhost:8000](http://localhost:8000) to see your service in action.
 
@@ -59,19 +59,19 @@ With the `wercker.yml` file you can configure the build and deployment environme
 
 Create a new file with the name `wercker.yml` with the following content. This file will tell wercker to run the build pipeline in a PHP environment and simply output the PHP environment information on every build. We will add more useful steps in a few minutes.
 
-  box: wercker/php
-  build:
-    steps:
-      - script:
-          name: echo PHP information
-          code: |-
-              php -v
-              php -i
+    box: wercker/php
+    build:
+      steps:
+        - script:
+            name: echo PHP information
+            code: |-
+                php -v
+                php -i
 
 Add the file to git.
 
-  $ git add wercker.yml
-  $ git commit -m 'Adds wercker.yml that defines the build`
+    $ git add wercker.yml
+    $ git commit -m 'Adds wercker.yml that defines the build`
 
 ## Add project to wercker
 
@@ -85,8 +85,8 @@ Now it is time to add an integration test to verify if the service works as expe
 
 If you do not have PHPUnit installed, install it via pear:
 
-  $ pear config-set auto_discover 1
-  $ pear install pear.phpunit.de/PHPUnit
+    $ pear config-set auto_discover 1
+    $ pear install pear.phpunit.de/PHPUnit
 
 See the [installing PHPUnit](http://phpunit.de/manual/3.7/en/installation.html) for more ways to install PHPUnit.
 
@@ -94,118 +94,118 @@ See the [installing PHPUnit](http://phpunit.de/manual/3.7/en/installation.html) 
 
 Create a new directory with the name `tests` that will hold the tests of this application. Create a new file with the name `ResponseTest.php` with the following content.
 
-  <?php
-  class CitiesResponseTest extends PHPUnit_Framework_TestCase
-  {
-    public function testCitiesListContainsAmsterdam()
+    <?php
+    class CitiesResponseTest extends PHPUnit_Framework_TestCase
     {
-      $uri = "http://localhost:8000";
-      $response = http_get($uri, null, $info)
+      public function testCitiesListContainsAmsterdam()
+      {
+        $uri = "http://localhost:8000";
+        $response = http_get($uri, null, $info)
 
-      $this->assertEquals("application/json", $info["content_type"]);
-      $this->assertContains("Amsterdam", $response;
+        $this->assertEquals("application/json", $info["content_type"]);
+        $this->assertContains("Amsterdam", $response;
+      }
     }
-  }
-  ?>
+    ?>
 
  Add this test to the git repository.
 
-  $ git add tests/ResponseTest.php
-  $ git commit -m 'Adds integration test'
+    $ git add tests/ResponseTest.php
+    $ git commit -m 'Adds integration test'
 
  ## Setup PHPUnit
 
 Create a file called `tests/bootstrap.php` with the following content.
 
-  <?php
-  $file = __DIR__.'/../vendor/autoload.php';
-  if (!file_exists($file)) {
-      throw new RuntimeException('Install dependencies to run test suite.');
-  }
+    <?php
+    $file = __DIR__.'/../vendor/autoload.php';
+    if (!file_exists($file)) {
+        throw new RuntimeException('Install dependencies to run test suite.');
+    }
 
-  $autoload = require_once $file;
-  ?>
+    $autoload = require_once $file;
+    ?>
 
 Create a file called `phpunit.xml` in the root of the project with the following content.
 
-  <?xml version="1.0" encoding="utf-8" ?>
-  <phpunit bootstrap="tests/bootstrap.php">
-    <testsuites>
-      <testsuite name="integration tests">
-        <directory>tests</directory>
-      </testsuite>
-    </testsuites>
-  </phpunit>
+    <?xml version="1.0" encoding="utf-8" ?>
+    <phpunit bootstrap="tests/bootstrap.php">
+      <testsuites>
+        <testsuite name="integration tests">
+          <directory>tests</directory>
+        </testsuite>
+      </testsuites>
+    </phpunit>
 
 Add this test to the git repository.
 
-  $ git add bootstrap.php
+    $ git add bootstrap.php
     $ git add phpunit.xml
-  $ git commit -m 'Adds phpunit setup files'
+    $ git commit -m 'Adds phpunit setup files'
 
 ## Add httpful dependency
 
 The integration tests levarages the httpful framework to make the http request. Use composer to handle the dependency management by creating a `composer.json` file in the root of your project with the following content.
 
-  {
-      "require-dev": {
-          "nategood/httpful": "*"
-      }
-  }
+    {
+        "require-dev": {
+            "nategood/httpful": "*"
+        }
+    }
 
 Now install the dependencies by executing the following command.
 
-  $ composer install
+    $ composer install
 
 Add the `composer.json` and the `composer.lock` file that was just created by composer to the repository.
 
-  $ git add composer.json
-  $ git add composer.lock
-  $ git commit -m 'Adds composer depedency files'
+    $ git add composer.json
+    $ git add composer.lock
+    $ git commit -m 'Adds composer depedency files'
 
 ## Run PHPUnit
 
 Start a new terminal window that hosts the service.
 
-  $ php -S localhost:8000
+    $ php -S localhost:8000
 
 In the other window, run php unit and see the test pass.
 
-  $ phpunit
-  PHPUnit 3.7.21 by Sebastian Bergmann.
+    $ phpunit
+    PHPUnit 3.7.21 by Sebastian Bergmann.
 
-  Configuration read from /Users/pjvds/dev/php-cities/phpunit.xml
+    Configuration read from /Users/pjvds/dev/php-cities/phpunit.xml
 
-  .
+    .
 
-  Time: 0 seconds, Memory: 3.25Mb
+    Time: 0 seconds, Memory: 3.25Mb
 
-  OK (1 test, 2 assertions)
+    OK (1 test, 2 assertions)
 
 ## Update wercker.yml to run tests
 
 Update the `wercker.yml` file by adding steps that execute our tests.
 
-  box: wercker/php
-  build:
-    steps:
-      - script:
-          name: install dependencies
-          code: |-
-              composer install --no-interaction
-      - script:
-          name: Serve application
-          code: php -S localhost:8000 >> /dev/null &
-      - script:
-          name: PHPUnit integration tests
-          code: phpunit --configuration phpunit.xml
+    box: wercker/php
+    build:
+      steps:
+        - script:
+            name: install dependencies
+            code: |-
+                composer install --no-interaction
+        - script:
+            name: Serve application
+            code: php -S localhost:8000 >> /dev/null &
+        - script:
+            name: PHPUnit integration tests
+            code: phpunit --configuration phpunit.xml
 
 ## Push commits and see wercker execute your build
 
 You have successfully developed an application and pushing the commits should trigger a build at wercker. The build consists of a step that install the dependencies defined in composer.json, serving the application with PHP's buildin webserver and then executing the integration test.
 
-  $ git add wercker.yml
-  $ git push origin master
+    $ git add wercker.yml
+    $ git push origin master
 
 Now go to your application at [wercker](http://app.wercker.com) and see your build succeed.
 
