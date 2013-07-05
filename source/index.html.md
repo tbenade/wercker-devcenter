@@ -7,7 +7,8 @@ Wercker is a collaborative continuous delivery platform that helps developers re
 
 ![image](http://f.cl.ly/items/3E3j34301N3Q1z1t1S2N/wercker_flow.jpg)
 
-If you are new to wercker, it is recommended you first read the [getting started guide](/articles/gettingstarted/).
+If you are new to wercker, it is recommended you first familiarize
+yourself by reading the [introduction](/articles/introduction/), after which you can proceed to the [getting started guide](/articles/gettingstarted/).
 
 We have open sourced this documentation on [GitHub](https://github.com/wercker/wercker-devcenter), feel free to improve upon it through pull requests.
 
@@ -45,5 +46,5 @@ You can find the awesome people who have already contributed [here](http://devce
 
 
 -------
-##### April 19, 2013
+##### July 5th, 2013
 -------
