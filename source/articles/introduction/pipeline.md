@@ -9,7 +9,15 @@ Wercker has the notion of a `pipeline`; a set of `steps` and phases aimed at del
 
 ## Builds
 
-The build pipeline consists of steps that aim to create tested deliverable package. It is defined by the `wercker.yml` file inside the root of the repository, or if not present, wercker tries to generate it based on the source code. A build is triggered by every push to your git repository and applies to all branches. Execution of the pipeline is done inside an sandboxed environment that consists of an box and additional services. The pipeline itself consists of a series of steps that can either succeed or fail. The build is succeeded when all steps are, and failed when one of the steps is failed. The outcome of a successful build is packaged and stored.
+The build pipeline consists of steps that aim to create tested deliverable package. It should proof the code matches the quality target by executing tests and code analyses tools.
+
+The steps of the build pipeline are defined in the `wercker.yml`, which should be in the root of the code repository. If this file is not present, wercker tries to generate it based on the source code.
+
+A build is triggered by every push to your git repository and applies to all branches. 
+
+Execution of the pipeline is done inside an sandboxed environment that consists of an box and additional services. The pipeline itself consists of a series of steps that can either succeed or fail.
+
+The build is succeeded when all steps are, and failed when one of the steps is failed. The outcome of a successful build is packaged and stored.
 
 ![image](/assets/pipeline-overview/wercker_build.png)
 
