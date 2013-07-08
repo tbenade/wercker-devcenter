@@ -74,11 +74,14 @@ The result of an successful build is a deployable package. This package can be t
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! HOW TO CHANGE THIS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ## Deploys
-The deploy pipeline consists of steps that aim to deploy the outcome of an successful build. The steps of this pipeline are defined in the `wercker.yml` that needs to be in the root of the repository. A deployment can either be triggered manually via the [wercker cli](!!!!!!), manually via the website or automatically with the auto deployment trigger. 
+The deploy pipeline consists of steps that aim to deploy the outcome of an successful build. The steps of the pipeline are defined in the `wercker.yml`.
 
 Execution of the deployment pipeline is done inside an sandboxed environment that consists of an box. In contrast to builds, deployments cannot have services defined. The pipeline itself consists of a series of steps that can either succeed or fail. The build is succeeded when all steps are, and failed when one of the steps is failed. Configuration management is done via it's deploy target.
 
 ![image](/assets/pipeline-overview/wercker_build.png)
+
+### Triggers 
+A deployment can either be triggered manually via the [wercker cli](!!!!!!), manually via the website or automatically with the auto deployment trigger. 
 
 
 # TODO:
@@ -87,3 +90,4 @@ Execution of the deployment pipeline is done inside an sandboxed environment tha
 * Deployment targets
 * Fix links (wercker cli, etc)
 * Describe how to change the package behaviour
+* Add deployment triggers to image
