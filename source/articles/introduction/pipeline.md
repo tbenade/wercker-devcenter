@@ -56,3 +56,9 @@ A build pipeline consists of steps which can either succeed or fail. These steps
 The first step that is used is `bundle-install` which is a step provided by wercker. It runs the `bundle instal` command in the root of the source directory to install the dependencies with leveraging the cache that is shared between builds to increase build speed. The second steps is the script step which allows you to execute shell script. In this example script that executes a sass compile.
 
 Steps are executed sequencly and you can add as many steps as you want.
+
+### Package
+
+The result of an successful build is a deployable package. This package can be the input of an deployment pipeline. The package is created at the end of the build pipeline and contains all the assets that are inside the working directory.
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! HOW TO CHANGE THIS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
