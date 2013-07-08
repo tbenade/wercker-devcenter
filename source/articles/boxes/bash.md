@@ -11,6 +11,9 @@ instead of deploying these to the cloud, you `deploy` to the wercker registry.
 
 The wercker box we will be building in this guide is a box containing [RethinkDB](http://rethinkdb.com), an open source distributed database.
 
+You can find the source of this box on
+[GitHub](https://github.com/mies/box-rethinkdb).
+
 ## Getting started
 
 Creating a bash based box is trivial; first create a `git repository` with just one file called `wercker-box.yml`.
