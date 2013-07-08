@@ -4,13 +4,10 @@ sidebar_current: "introduction"
 
 # Introduction to wercker
 
-Wercker is a continuous delivery platform that allows developers to test and deploy their code often. By embracing continuous delivery, developers reduce risk and eliminate waste while developing software.
+Wercker is a continuous delivery platform that allows developers to test and deploy their code often.
+By embracing continuous delivery, developers reduce risk and eliminate waste while developing software.
 
-In this chapter we will discuss the [benefits](/articles/introduction/benefits.html) of using wercker but also introduce you to the [concepts](/articles/introduction/concepts.html) and principles of wercker and continuous delivery.
-
-You can also check out the different flows for the [Build](/articles/introduction/build.html), [Deployment](/articles/introduction/deployment.html) and [Provisioning](/articles/introduction/provisioning.html) processes.
-
-After this chapter it is a good idea to install the [wercker command](/articles/cli/) and familiarize yourself with the [wercker.yml](/articles/werckeryml/) file.
+In this section we discuss [how wercker works](/articles/introduction/how.html) and what happens in the wercker [pipeline](/articles/introduction/pipeline.html).
 
 -------
 
@@ -43,6 +40,6 @@ After this chapter it is a good idea to install the [wercker command](/articles/
 </div>
 
 -------
-##### last modified: April 19, 2013
+##### last modified: July 8th, 2013
 -------
 

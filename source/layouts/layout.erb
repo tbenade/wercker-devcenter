@@ -140,18 +140,6 @@
                   </div>
                 </section>
 
-                <section <%= sidebar_current("cli") %>>
-                  <p class="title" data-section-title><a href="/articles/cli/">The wercker CLI</a></p>
-                  <div class="content" data-section-content>
-                    <% if sidebar_section == "cli" %>
-                    <ul class="side-nav">
-                      <li<%= sidebar_current("cli-installation") %>><a href="/articles/cli/installation.html">Installation</a></li>
-                      <li<%= sidebar_current("cli-commands") %>><a href="/articles/cli/commands.html">Commands</a></li>
-                    </ul>
-                    <% end %>
-                  </div>
-                </section>
-
                 <section <%= sidebar_current("werckeryml") %>>
                   <p class="title" data-section-title><a href="/articles/werckeryml/">Wercker.yml</a></p>
                   <!--
@@ -173,7 +161,7 @@
                 </section>
 
                 <section <%= sidebar_current("languages") %>>
-                  <p class="title" data-section-title><a href="/articles/languages/">Languages</a></p>
+                  <p class="title" data-section-title><a href="/articles/languages/">Language Guides</a></p>
 
                   <div class="content" data-section-content>
                     <% if sidebar_section == "languages" %>
@@ -187,6 +175,46 @@
                     <% end %>
                   </div>
                </section>
+
+                <section <%= sidebar_current("boxes") %>>
+                  <p class="title" data-section-title><a href="/articles/boxes/">Boxes</a></p>
+                  <!--
+                  <div class="content" data-section-content>
+                    <% if sidebar_section == "boxes" %>
+                    <ul class="side-nav">
+                      <li<%= sidebar_current("boxes-advanced") %>><a href="/articles/werckeryml/advanced.html">Advanced</a></li>
+                      <li<%= sidebar_current("boxes-other") %>><a href="/articles/werckeryml/other.html">Other</a></li>
+                    </ul>
+                    <% end %>
+                  </div>
+                -->
+                </section>
+
+                <section <%= sidebar_current("werckeryml") %>>
+                  <p class="title" data-section-title><a href="/articles/werckeryml/">Wercker.yml</a></p>
+                  <!--
+                  <div class="content" data-section-content>
+                    <% if sidebar_section == "werckeryml" %>
+                    <ul class="side-nav">
+                      <li<%= sidebar_current("werckeryml-advanced") %>><a href="/articles/werckeryml/advanced.html">Advanced</a></li>
+                      <li<%= sidebar_current("werckeryml-other") %>><a href="/articles/werckeryml/other.html">Other</a></li>
+                    </ul>
+                    <% end %>
+                  </div>
+                -->
+                </section>
+
+               <section <%= sidebar_current("cli") %>>
+                  <p class="title" data-section-title><a href="/articles/cli/">The wercker CLI</a></p>
+                  <div class="content" data-section-content>
+                    <% if sidebar_section == "cli" %>
+                    <ul class="side-nav">
+                      <li<%= sidebar_current("cli-installation") %>><a href="/articles/cli/installation.html">Installation</a></li>
+                      <li<%= sidebar_current("cli-commands") %>><a href="/articles/cli/commands.html">Commands</a></li>
+                    </ul>
+                    <% end %>
+                  </div>
+                </section>
 
                 <section <%= sidebar_current("services") %>>
                   <p class="title" data-section-title><a href="/articles/services/">Services</a></p>
