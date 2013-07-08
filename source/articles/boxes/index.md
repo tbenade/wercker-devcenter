@@ -4,7 +4,7 @@ sidebar_current: "boxes"
 
 # Boxes
 
-Wercker build and deploy pipelines are run within `boxes` that define your stack.
+Wercker's build and deploy pipelines are run within `boxes` that define your stack.
 Stacks can range from [programming languages](/articles/services) such as Python or Ruby, to databases like MongoDB.
 A box is basically a virtual machine with a set of packages installed that support your stack of choice.
 
