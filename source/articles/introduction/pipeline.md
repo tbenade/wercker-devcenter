@@ -7,7 +7,7 @@ Wercker has the notion of a `pipeline`; a set of `steps` and phases aimed at del
 
 ![image](/assets/pipeline-overview/wercker_pipeline.png)
 
-## Build pipeline
+## Builds
 
 The build pipeline consists of steps that aim to create tested deliverable package. It is defined by the `wercker.yml` file inside the root of the repository, or if not present, wercker tries to generate it based on the source code. A build is triggered by every push to your git repository and applies to all branches. Execution of the pipeline is done inside an sandboxed environment that consists of an box and additional services. The pipeline itself consists of a series of steps that can either succeed or fail. The build is succeeded when all steps are, and failed when one of the steps is failed. The outcome of a successful build is packaged and stored.
 
@@ -62,3 +62,10 @@ Steps are executed sequencly and you can add as many steps as you want.
 The result of an successful build is a deployable package. This package can be the input of an deployment pipeline. The package is created at the end of the build pipeline and contains all the assets that are inside the working directory.
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! HOW TO CHANGE THIS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+## Deploys
+The deploy pipeline consists of steps that aim to deploy the outcome of an successful build. The steps of this pipeline are defined in the `wercker.yml` that needs to be in the root of the repository. A deployment can either be triggered manually via the [wercker cli](!!!!!!), manually via the website or automatically with the auto deployment trigger. 
+
+Execution of the deployment pipeline is done inside an sandboxed environment that consists of an box. In contrast to builds, deployments cannot have services defined. The pipeline itself consists of a series of steps that can either succeed or fail. The build is succeeded when all steps are, and failed when one of the steps is failed. Configuration management is done via it's deploy target.
+
+![image](/assets/pipeline-overview/wercker_build.png)
