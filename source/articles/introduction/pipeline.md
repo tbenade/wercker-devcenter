@@ -11,11 +11,11 @@ Wercker has the notion of a `pipeline`; a set of `steps` and phases aimed at del
 
 The build pipeline consists of steps that aim to create tested deliverable package. It should proof the code matches the quality target by executing tests and code analyses tools.
 
-The steps of the build pipeline are defined in the `wercker.yml`, which should be in the root of the code repository. If this file is not present, wercker tries to generate it based on the source code.
+Which steps should be executed are defined in the `wercker.yml`, which should be in the root of the code repository. If this file is not present, wercker tries to generate it based on the source code.
 
 A build is triggered by every push to your git repository and applies to all branches. 
 
-Execution of the pipeline is done inside an sandboxed environment that consists of an box and additional services. The pipeline itself consists of a series of steps that can either succeed or fail.
+Execution of the pipeline is done inside an sandboxed environment that consists of an box and additional services.
 
 The build is succeeded when all steps are, and failed when one of the steps is failed. The outcome of a successful build is packaged and stored.
 
@@ -61,9 +61,11 @@ A build pipeline consists of steps which can either succeed or fail. These steps
             name: sass compile
             code: bundle exec sass --style compressed assets/scss/styles.scss:assets/css/styles.min.css --debug-info
 
-The first step that is used is `bundle-install` which is a step provided by wercker. It runs the `bundle instal` command in the root of the source directory to install the dependencies with leveraging the cache that is shared between builds to increase build speed. The second steps is the script step which allows you to execute shell script. In this example script that executes a sass compile.
+The first step that is used is `bundle-install` which is a step provided by wercker. It runs the `bundle install` command in the root of the source directory to install the dependencies with leveraging the cache that is shared between builds to increase build speed. 
 
-Steps are executed sequencly and you can add as many steps as you want.
+The second steps is the `script` step which allows you to execute shell script. In this example script that executes a sass compile.
+
+Steps are executed sequentially and you can add as many steps as you want.
 
 ### Package
 
@@ -77,3 +79,11 @@ The deploy pipeline consists of steps that aim to deploy the outcome of an succe
 Execution of the deployment pipeline is done inside an sandboxed environment that consists of an box. In contrast to builds, deployments cannot have services defined. The pipeline itself consists of a series of steps that can either succeed or fail. The build is succeeded when all steps are, and failed when one of the steps is failed. Configuration management is done via it's deploy target.
 
 ![image](/assets/pipeline-overview/wercker_build.png)
+
+
+# TODO:
+* Build configuration management
+* Deployment
+* Deployment targets
+* Fix links (wercker cli, etc)
+* Describe how to change the package behaviour
