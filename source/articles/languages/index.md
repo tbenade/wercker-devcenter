@@ -19,6 +19,7 @@ a basic *wercker.yml* for each of the stacks.
 * [Node.js](/articles/languages/nodejs.html)
 * [Ruby](/articles/languages/ruby.html)
 * [Python](/articles/languages/python.html)
+* [PHP](/articles/languages/php.html)
 
 If you would like support for more programming environments, don't hesitate to [contact us](mailto:pleasemailus@wercker.com).
 
