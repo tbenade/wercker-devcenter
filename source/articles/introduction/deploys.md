@@ -7,7 +7,6 @@ sidebar_current: "introduction-concepts"
 In this section we explain some of the core concepts that you will encounter throughout wercker. By explaining these concepts you will be able to make better use of wercker.
 
 * [builds](#builds)
-* [provisioning](#provisioning)
 * [deploy targets](#deploy-targets)
 * [deploys](#deploys)
 
