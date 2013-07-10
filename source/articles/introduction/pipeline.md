@@ -98,8 +98,20 @@ The result of a passed build is a deployable package. The package is
 created at the end of the build pipeline and contains all the assets and
 code that are inside the working directory. This package can be the
 input of a deployment pipeline. For advanced use-cases it can make sense
-to create a sub-selection to be packaged, this is for instance applicable to compiled languages whereby the build output would be the selection. 
+to create a sub-selection to be packaged, this is for instance applicable to compiled languages whereby the build output would be the selection.
 Another example is the minification of javascript files which should be made available for deployment.
+
+You can write the files you want to package to the `$WERCKER_OUTPUT_DIR`. This will change the default behavior of packaging the working directory and wercker will package the files in the `$WERCKER_OUTPUT_DIR`. Here is an example of that builds an [yekyll](http://jekyllrb.com) website and places the static html output in the `$WERCKER_OUTPUT_DIR`. Thus, these files will be packages and will be the input of a deployment pipeline.
+
+``` yaml
+    build:
+        - bundle-install
+        - script:
+            name: generate production site
+            code: |-
+              bundle exec jekyll build --trace --destination "$WERCKER_OUTPUT_DIR"
+```
+
 
 ## Deploys
 The deploy pipeline is aimed at delivering your passed build to your target of choice. At wercker we view deployment and delivery as a broad subject;
@@ -129,8 +141,8 @@ have succesfully completed. Configuration management is done via its
 ![image](http://f.cl.ly/items/0T3z2f32433N2J3o0J26/wercker_pipeline_deploy.png)
 
 ### Triggering your deploy
-A deployment can either be triggered manually via the [wercker cli](/articles/cli/), 
+A deployment can either be triggered manually via the [wercker cli](/articles/cli/),
 manually via the wercker web application or automatically with the [auto
-deploy feature](/articles/deployment/). 
+deploy feature](/articles/deployment/).
 Only successful builds can be deployed.
 
