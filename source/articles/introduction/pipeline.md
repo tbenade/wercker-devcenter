@@ -107,7 +107,7 @@ You can write the files you want to package to the `$WERCKER_OUTPUT_DIR`. This w
     build:
         - bundle-install
         - script:
-            name: generate production site
+            name: generate static site
             code: |-
               bundle exec jekyll build --trace --destination "$WERCKER_OUTPUT_DIR"
 ```
