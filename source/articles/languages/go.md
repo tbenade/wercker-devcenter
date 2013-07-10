@@ -1,27 +1,13 @@
 ---
-sidebar_current: "languages"
+sidebar_current: "languages-go"
 ---
 
-# Language Support
+# Go
 
-Wercker has support for several programming languages. Please pick your
-language of choice from the list below for more information and in-depth
-articles on how to use your favoritre programming environment and
-wercker.
+Go is an exciting programming language from Google. Wercker has built-in support for Go through the [golang box](https://github.com/pjvds/box-golang) that wercker engineer Pieter Joost has created. Below you'll find articles to get started with Go and wercker:
 
-## wercker.yml
-
-The [wercker.yml](/articles/werckeryml) file is the method to define your stack and
-programming environment. In the language sections below we will go into
-a basic *wercker.yml* for each of the stacks.
-
-
-* [Node.js](/articles/languages/nodejs.html)
-* [Ruby](/articles/languages/ruby.html)
-* [Python](/articles/languages/python.html)
-* [Go](/articles/languages/go.html)
-
-If you would like support for more programming environments, don't hesitate to [contact us](mailto:pleasemailus@wercker.com).
+* [Getting started with Go and wercker](/articles/languages/go/getting-started-go.html)
+* [Building and deploying Go apps with wercker and Heroku](/articles/languages/go/deploying-go-apps-to-heroku.html)
 
 -------
 
@@ -54,5 +40,5 @@ If you would like support for more programming environments, don't hesitate to [
 </div>
 
 -------
-##### last modified on: April 19, 2013
+##### last modified on: July 10th, 2013
 -------
