@@ -72,7 +72,7 @@ The `platform` clause lets us specify the underlying host operating system. Curr
 
 #### Description, keywords and packages
 
-The `description`, `keywords` and `packages` tags allow us to add metadata to our box, which will be added to the [wercker registry](http://app.wercker.com/explore). Packages will lock the version of our box in the registry as well, so make sure to increment it when a new version of the underlying service is available.
+The `description`, `keywords` and `packages` tags allow us to add metadata to our box, which will be added to the wercker registry. Packages will lock the version of our box in the registry as well, so make sure to increment it when a new version of the underlying service is available.
 
 #### Script
 
@@ -93,7 +93,7 @@ We write this this file to the correct path as a final step in the script clause
 
 These environment variable are created in the `env` clause. We've defined env vars such as `WERCKER_RETHINKDB_HOST` to which we can connect from our applications.
 
-You can explore the wercker registry for boxes [here](http://app.wercker.com/explore).
+<!--You can explore the wercker registry for boxes [here](http://app.wercker.com/explore).-->
 
 ### Adding your box to the wercker registry
 

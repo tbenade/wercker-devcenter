@@ -77,5 +77,5 @@ We've created separate guides that explain both script-based and chef-based prov
 </div>
 
 -------
-##### last modified: July 8th, 2013
+##### last modified: July 11th, 2013
 -------
