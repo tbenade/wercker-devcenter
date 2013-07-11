@@ -34,8 +34,8 @@ You are also able to create your own boxes, provisioned either via simple bash-b
 
 Similar to applications, boxes are defined through a single file called `wercker-box.yml`.
 
-Boxes can be `deployed` to the [wercker
-registry](http://app.wercker.com/explore), which is an index of both boxes and the previously mentioned [steps](/articles/steps).
+Boxes can be `deployed` to the wercker
+registry, which is an index of both boxes and the previously mentioned [steps](/articles/steps).
 
 Deploying you boxes to the wercker registry allows not only **you** to use
 another programming language or service, but **others** as well.
@@ -43,9 +43,8 @@ another programming language or service, but **others** as well.
 We've created separate guides that explain both script-based and chef-based provisioning of your own boxes:
 
 * [Creating your own wercker boxes with Bash](/articles/boxes/bash.html)
-* [Creating your own wercker boxes with Chef](/articles/boxes/chef.html)
 
-You can explore the wercker registry for boxes [here](http://app.wercker.com/explore).
+<!--You can explore the wercker registry for boxes [here](http://app.wercker.com/explore). -->
 
 -------
 
