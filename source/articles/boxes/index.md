@@ -35,7 +35,7 @@ You are also able to create your own boxes, provisioned either via simple bash-b
 Similar to applications, boxes are defined through a single file called `wercker-box.yml`.
 
 Boxes can be `deployed` to the wercker
-registry, which is an index of both boxes and the previously mentioned [steps](/articles/steps).
+registry, which is an index of both boxes and the previously mentioned steps.
 
 Deploying you boxes to the wercker registry allows not only **you** to use
 another programming language or service, but **others** as well.
