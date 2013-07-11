@@ -5,7 +5,7 @@ sidebar_current: "introduction-pipeline"
 # The wercker pipeline
 Wercker has the notion of a **pipeline**; a set of **steps** and phases aimed at delivering your application.
 
-![image](http://f.cl.ly/items/1o1R3f300f2C0Y2k470f/wercker_pipeline.png)
+![image](http://f.cl.ly/items/2O3V2n3A1n2d3u3S363D/wercker_pipeline.png)
 
 In the following paragraphs we will describe the elements that make up the wercker pipeline.
 
@@ -20,7 +20,7 @@ additional [services](/articles/services/), such as databases or message queues.
 
 If all steps in the pipeline are succesful, a build has passed.
 
-The outcome of a successful build is packaged and stored, making it ready for deployment.
+The outcome of a successful build is packaged and stored, readying it for deployment.
 
 ![image](http://f.cl.ly/items/3S1e1Q2U462j0V0Z1e3V/wercker_pipeline_build.png)
 
@@ -64,8 +64,7 @@ Services that are added to the build pipeline can set additional environment var
 
 In each pipeline there is a default step named `environment variables` that exposes all environment variables that you can use, including those made available through declared services.
 
-As is the case with boxes, it is possible to [create your own
-boxes](/articles/boxes/)
+Similar to language specific boxes, it is possible to [create your own boxes](/articles/boxes/)
 that run services as well.
 
 ### Steps
@@ -98,10 +97,10 @@ The result of a passed build is a deployable package. The package is
 created at the end of the build pipeline and contains all the assets and
 code that are inside the working directory. This package can be the
 input of a deployment pipeline. For advanced use-cases it can make sense
-to create a sub-selection to be packaged, this is for instance applicable to compiled languages whereby the build output would be the selection.
+to create a sub-selection to be packaged, this is for instance applicable to compiled languages whereby the compiled output is the selection that you want to actually deploy.
 Another example is the minification of javascript files which should be made available for deployment.
 
-You can write the files you want to package to the `$WERCKER_OUTPUT_DIR`. This will change the default behavior of packaging the working directory and wercker will package the files in the `$WERCKER_OUTPUT_DIR`. Here is an example of that builds an [yekyll](http://jekyllrb.com) website and places the static html output in the `$WERCKER_OUTPUT_DIR`. Thus, these files will be packages and will be the input of a deployment pipeline.
+You can write the files you want packaged to the `$WERCKER_OUTPUT_DIR`. This will change the default behavior of packaging the working directory and will package the files in the `$WERCKER_OUTPUT_DIR`. Here is an example that builds a [Jekyll](http://jekyllrb.com) website and places the static html output in the `$WERCKER_OUTPUT_DIR`.
 
 ``` yaml
     build:
@@ -111,7 +110,7 @@ You can write the files you want to package to the `$WERCKER_OUTPUT_DIR`. This w
             code: |-
               bundle exec jekyll build --trace --destination "$WERCKER_OUTPUT_DIR"
 ```
-
+The static html files will be copied into the `$WERCKER_OUTPUT_DIR` folder readying them for the deployment pipeline.
 
 ## Deploys
 The deploy pipeline is aimed at delivering your passed build to your target of choice. At wercker we view deployment and delivery as a broad subject;
@@ -132,7 +131,7 @@ deploy:
 ```
 
 Execution of the deployment pipeline is done inside a sandboxed
-environment which in turn is a box. In contrast to builds, deployments
+environment which in turn is a **box**. In contrast to builds, deployments
 cannot have services defined. The pipeline itself consists of a series
 of steps that can either succeed or fail. Deploys pass when all steps
 have succesfully completed. Configuration management is done via its
@@ -145,4 +144,38 @@ A deployment can either be triggered manually via the [wercker cli](/articles/cl
 manually via the wercker web application or automatically with the [auto
 deploy feature](/articles/deployment/).
 Only successful builds can be deployed.
+
+-------
+
+<div class="authorCredits">
+    <span class="profile-picture">
+        <img src="https://secure.gravatar.com/avatar/5864d682bb0da7bedf31601e4e3172e7?d=identicon&s=192" alt="Pieter Joost van de Sande"/>
+    </span>
+    <ul class="authorCredits">
+
+        <!-- author info -->
+        <li class="authorCredits__name">
+            <h4>Pieter Joost van de Sande</h4>
+            <em>
+                Pieter Joost is an engineer and community manager at wercker
+            </em>
+        </li>
+
+        <!-- info -->
+        <li>
+            <a href="http://beta.wercker.com" target="_blank">
+                <i class="icon-company"></i> <em>wercker</em>
+            </a>
+            <a href="http://twitter.com/pjvds" target="_blank">
+                <i class="icon-twitter"></i>
+                <em> mies</em>
+            </a>
+        </li>
+
+    </ul>
+</div>
+
+-------
+##### last modified: July 11th, 2013
+-------
 

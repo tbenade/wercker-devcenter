@@ -1,8 +1,8 @@
 ---
-sidebar_current: "introduction-concepts"
+sidebar_current: "introduction-deploys"
 ---
 
-# Wercker concepts
+# Deploys
 
 In this section we explain some of the core concepts that you will encounter throughout wercker. By explaining these concepts you will be able to make better use of wercker.
 
