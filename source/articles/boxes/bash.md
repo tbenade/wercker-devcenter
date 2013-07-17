@@ -7,7 +7,8 @@ sidebar_current: "boxes-bash"
 In this guide we will showcase how to create your own `wercker box` via shell scripting.
 
 Boxes are git repositories which are added to wercker, similar to applications. However,
-instead of deploying these to the cloud, you `deploy` to the wercker registry.
+instead of deploying these to the cloud, you `deploy` to the wercker
+directory.
 
 The wercker box we will be building in this guide is a box containing [RethinkDB](http://rethinkdb.com), an open source distributed database.
 
@@ -78,7 +79,9 @@ The `platform` clause lets us specify the underlying host operating system. Curr
 
 #### Description, keywords and packages
 
-The `description`, `keywords` and `packages` tags allow us to add metadata to our box, which will be added to the wercker registry. Packages will lock the version of our box in the registry as well, so make sure to increment it when a new version of the underlying service is available.
+The `description`, `keywords` and `packages` tags allow us to add
+metadata to our box, which will be added to the wercker directory.
+Packages will lock the version of our box in the directory as well, so make sure to increment it when a new version of the underlying service is available.
 
 #### Script
 
@@ -99,9 +102,9 @@ We write this this file to the correct path as a final step in the script clause
 
 These environment variable are created in the `env` clause. We've defined env vars such as `WERCKER_RETHINKDB_HOST` to which we can connect from our applications.
 
-<!--You can explore the wercker registry for boxes [here](http://app.wercker.com/explore).-->
+<!--You can explore the wercker directory for boxes [here](http://app.wercker.com/explore).-->
 
-### Adding your box to the wercker registry
+### Adding your box to the wercker directory
 
 Make sure to add your repository to wercker. If you need some guidance with this, see the [getting started guide for the web](/articles/gettingstarted/web.html), that will help you do so.
 
@@ -115,13 +118,16 @@ git push origin master
 
 This should trigger a build, which should pass.
 
-You need to deploy your box to the wercker registry, just like any other application. As such, you also need to create a deploy target for the registry, so let's do so.
+You need to deploy your box to the wercker directory, just like any other
+application. As such, you also need to create a deploy target for the
+directory, so let's do so.
 
 Go to the `settings tab` and under the *Deploy targets* section click **add deploy target**, after which a dialog is presented.
 
 ![image](http://f.cl.ly/items/0n0g0C0W3e1o33322o2R/Screen%20Shot%202013-07-08%20at%203.54.58%20PM.png)
 
-Pick **wercker registry** as a deploy target and give it a name (such as registry).
+Pick **wercker directory** as a deploy target and give it a name (such as
+'directory').
 
 ![image](http://f.cl.ly/items/222d453f1R2w1F3a3o1V/Screen%20Shot%202013-07-08%20at%203.55.20%20PM.png)
 
@@ -129,7 +135,7 @@ Now go to your green build and hit the deploy button. Keep in mind that this dep
 
 ![image](http://f.cl.ly/items/0g2Z3p2A1B3g1X2j0v1w/Screen%20Shot%202013-07-08%20at%204.15.09%20PM.png)
 
-Your box should now be available in the registry!
+Your box should now be available in the directory!
 
 -------
 
@@ -162,5 +168,5 @@ Your box should now be available in the registry!
 </div>
 
 -------
-##### last modified: July 8th, 2013
+##### last modified: July 17th, 2013
 -------
