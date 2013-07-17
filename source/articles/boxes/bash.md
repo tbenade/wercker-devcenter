@@ -58,9 +58,11 @@ Let's go over the `wercker-box.yml` file that sets up our box.
 
 The `name` and `version` clauses are simple enough to understand. Each time you want to deploy a new version of your box, make sure to bump the version number.
 
-#### Inherit
+#### Inherits
 
-We have inheritence for boxes and as such we inherit from a box called [webessentials](https://github.com/wercker/box-ubuntu12.04-webessentials) which is base box with th most popular libraries for the web installed such as `curl`, `libxslt` and `git`.
+We have inheritence for boxes and as such we inherit from a box called
+[webessentials](https://github.com/wercker/box-ubuntu12.04-webessentials)
+which is a base box with the most popular libraries for the web installed such as `curl`, `libxslt` and `git`.
 
 #### Type
 
