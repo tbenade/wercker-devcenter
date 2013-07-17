@@ -43,6 +43,7 @@ another programming language or service, but **others** as well.
 We've created separate guides that explain both script-based and chef-based provisioning of your own boxes:
 
 * [Creating your own wercker boxes with Bash](/articles/boxes/bash.html)
+* [Creating your own wercker boxes with Chef](/articles/boxes/chef.html)
 
 <!--You can explore the wercker registry for boxes [here](http://app.wercker.com/explore). -->
 
