@@ -62,7 +62,11 @@ The `name` and `version` clauses are simple enough to understand. Each time you 
 
 We have inheritence for boxes and as such we inherit from a box called
 [webessentials](https://github.com/wercker/box-ubuntu12.04-webessentials)
-which is a base box with the most popular libraries for the web installed such as `curl`, `libxslt` and `git`.
+which is a base box with the most popular libraries for the web installed such as `curl`, `libxslt` and `git`. With regards to inheritance, you may want to keep
+your boxes lightweight. Otherwise the result could be that packages will
+conflict with each other in one way or another. It also results in your
+boxes being sharp, and fitted for a single purpose, as opposed to a
+blunt instrument.
 
 #### Type
 
