@@ -192,7 +192,17 @@
                     </ul>
                     <% end %>
                   </div>
-               </section>
+                  </section>
+
+                <section class="section__divider show-for-medium-up">
+                  <p class="title" data-section-title><p></p></p>
+                  <div class="content" data-section-content>
+                  </div>
+                  </section>
+
+                <section <%= sidebar_current("directory") %>>
+                  <p class="title" data-section-title><a href="/articles/directory/">Wercker Directory</a></p>
+                </section>
 
                 <section <%= sidebar_current("boxes") %>>
                   <p class="title" data-section-title><a href="/articles/boxes/">Boxes</a></p>
@@ -218,6 +228,12 @@
                   </div>
 
                 </section>
+                
+                <section class="section__divider show-for-medium-up">
+                  <p class="title" data-section-title><p></p></p>
+                  <div class="content" data-section-content>
+                  </div>
+                  </section>
 
                <section <%= sidebar_current("cli") %>>
                   <p class="title" data-section-title><a href="/articles/cli/">The wercker CLI</a></p>
