@@ -6,3 +6,4 @@ Team wercker (Lindsey, PJ, Jacco, Benno, Wouter, mies)
 - Jason Garber - https://app.wercker.com/#jgarber
 - Karan Chaudhary - https://app.wercker.com/#lafolle
 - Desmond Morris - https://app.wercker.com/#desmondmorris
+- Jan-Willem - https://app.wercker.com/#jewilmeer
