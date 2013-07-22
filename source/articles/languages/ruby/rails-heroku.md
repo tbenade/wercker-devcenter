@@ -53,7 +53,7 @@ Also don't forget to commit and push this file to your repository.
 
 ## A note on database configurations
 
-It is the convention to not include the `database.yml` file in your repository. Adding a service like `wercker/postgresql` will give you access to several environment variables. Wercker will autogenerate one if you have defined a `wercker.yml` file with the database you require. See the [services article](/articles/available-services "Available Services") and [wercker.yml article](/articles/werckeryml "wercker.yml file") for more information. For our Rails application we will leverage Postgres as our database server and set this up in the next step.
+It is the convention to not include the `database.yml` file in your repository. Adding a service like `wercker/postgresql` will give you access to several environment variables. Wercker will autogenerate one if you have defined a `wercker.yml` file with the database you require. See the [services article](/articles/services "Available Services") and [wercker.yml article](/articles/werckeryml "wercker.yml file") for more information. For our Rails application we will leverage Postgres as our database server and set this up in the next step.
 
 ## Creating your wercker.yml file
 
