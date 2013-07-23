@@ -197,6 +197,9 @@ Now go to your green build and hit the deploy button. Keep in mind that this dep
 
 Your box should now be available in the directory!
 
+Explore what is currently available in the [wercker
+directory](http://app.wercker.com/#explore).
+
 -------
 
 <div class="authorCredits">
