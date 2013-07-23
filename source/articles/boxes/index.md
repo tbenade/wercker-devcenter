@@ -41,6 +41,9 @@ directory, which is an index of both boxes and the previously mentioned
 Deploying your boxes to the wercker directory allows not only **you** to use
 another programming language or service, but **others** as well.
 
+When you deploy your box, be aware that it may take a while as wercker
+is basically provisioning a VM.
+
 We've created separate guides that explain both script-based and chef-based provisioning of your own boxes:
 
 * [Creating your own wercker boxes with Bash](/articles/boxes/bash.html)
