@@ -1,22 +1,22 @@
 ---
-title: Steps developer guide
+sidebar_current: "steps-guide"
 ---
 
-## Wercker steps
+# Wercker steps
 
 Steps make up the wercker pipeline and can either be executed in the build or
-deploy phase within the pipeline. Examples of a buid step are compilation of
+deploy phase within the pipeline. Examples of a build step are compilation of
 your code, running your unit tests or performing jshint. A deploy step could be
 the synchronization of static assets, for which we've created the s3sync step,
 that takes some Amazon Web Services credentials and bucket information and
 places these assets on Amazon S3.
 
-## Wercker step yaml
+## wercker-step.yml
 
-Every step must contain a `wercker-step.yml` file, which os the manifest that
+Every step must contain a `wercker-step.yml` file, which is the manifest that
 describes the properties for the step.
 
-Here is an example of a `wercker-step.yml` that contains only the required fields:
+Here is an example of a `wercker-step.yml` that only holds the required fields:
 
 ``` yaml
 name: create-file
@@ -24,7 +24,7 @@ version: 0.9.6
 description: create-file step
 ```
 
-You can also add keywords to your step which increases discoverebility:
+You can also add keywords to your step which increases discoverability:
 
 ``` yaml
 keywords:
@@ -35,19 +35,20 @@ keywords:
 
 ## Step entry point
 
-Every step is executed by executing `run.sh`. It is responsible for the high-level
-organization the the step's functionality. The actual step logic can be written
+Every step is executed by executing a `run.sh` file, which should be present as well.
+This file is responsible for the high-level
+organization of the step's functionality. The actual step logic can be written
 inside the `run.sh`. When you want to group things you can move your logic
 to multiple shell scripts and call them from `run.sh`. You could also develop
-a step in Ruby or NodeJS and use the `run.sh` to bootstrap this. A good example
-of the later is [validate-wercker-step](https://github.com/wercker/step-validate-wercker-step).
+a step in Ruby, Python or Node.js and use the `run.sh` to bootstrap this. A good example
+of the latter is the [validate-wercker-step](https://github.com/wercker/step-validate-wercker-step).
 
 ## Step options
 
-Steps can have options to receive input. For example, the `create-file` step
-has the option `filename` that specifies where the file should be created.
+Steps can have options or parameters to receive input. For example, the `create-file` step
+has the option `filename` that specifies the filename and where the file should be created.
 Options are set as elements of the step attribute in `wercker.yml`. Here is an
-example of that uses `create-file` step and specifies three options:
+example that uses the `create-file` step and specifies three options:
 
     - create-file:
         name: generate production robots.txt
@@ -58,7 +59,7 @@ example of that uses `create-file` step and specifies three options:
 
 The `name` option is default for every step and it allows the user to specify the
 logical name for that step. In the example above `filename` and `content` are
-`create-file` specific option. The value from options can be retrieved with the
+`create-file` specific options. The value from options can be retrieved with the
 `get_option` function:
 
     filename=`get_option filename`
@@ -66,24 +67,57 @@ logical name for that step. In the example above `filename` and `content` are
 
 ## Environment variables
 
-The following environment variables are available in the context of an step execution:
+The following environment variables are available in the context of a step execution:
 
-Note: environment variables that contain a path to an directory contain the resolved path and ends with the directory name without a slash.
+Note: environment variables that contain a path to a directory contain the resolved path and ends with the directory name without a slash.
 
-| Variable name      | Example                    | Purpose                                                                                                                                |
-| ---------------    | ---------                  | ---------                                                                                                                              |
-| WERCKER_ROOT       | /pipeline/build                     | The root folder where wercker runs the build or deployment pipeline.                                                                   |
-| WERCKER_SOURCE_DIR | $WERCKER_ROOT/src          | The path to the directory of the source code.                                                                                          |
-| WERCKER_OUTPUT_DIR | /output                    | The path to the directory that contains, or will contain, the output of the build pipeline.                                            |
-| WERCKER_CACHE_DIR  | /cache                     | The path to the cache directory. This directory will be stored after the pipeline completes and restored when the pipeline runs again. |
-| WERCKER_STEP_ROOT  | /wercker/steps/wercker/bundle-install/0.9.0 | The path to the working directory of the step that is currently executed. It contains the full content as deployed to the [wercker Directory](http://TODO).                                                               |
-| WERCKER_STEP_ID    | S3SYNC7                    | The unique - within the context of the pipeline execution - idenfier for the step. The pattern is _{STEPNAME}{ORDINAL}. The value could be different on the next run of the pipeline.                                                                                                                                     |
-| WERCKER_STEP_NAME  | S3SYNC                     | The name of the step as specified by the step in `wercker-step.yml` |
 
+<table border="0">
+<tr>
+    <th>VARIABLE NAME</th>
+    <th>EXAMPLE</th>
+    <th>PURPOSE</th>
+</tr>
+<tr>
+    <td>WERCKER_ROOT</td>
+    <td>/pipeline/build</td>
+    <td>The root folder where wercker runs the build or deployment pipeline</td>
+</tr>
+<tr>
+    <td>WERCKER_SOURCE_DIR</td>
+    <td>$WERCKER_ROOT/src</td>
+    <td>The path to the directory of the source code</td>
+</tr>
+<tr>
+    <td>WERCKER_OUTPUT_DIR</td>
+    <td>/output</td>
+    <td>The path to the directory that contains, or will contain, the output of the build pipeline</td>
+</tr>
+<tr>
+    <td>WERCKER_CACHE_DIR</td>
+    <td>/cache</td>
+    <td>The path to the cache directory. This directory will be stored after the pipeline completes and restored when the pipeline runs again
+</tr>
+<tr>
+    <td>WERCKER_STEP_ROOT</td>
+    <td>/wercker/steps/wercker/bundle-install/0.9.0</td>
+    <td>The path to the working directory of the step that is currently executed. It contains the full content as deployed to the <a href="http://app.wercker.com/#explore">wercker directory</a>
+</tr>
+<tr>
+    <td>WERCKER_STEP_ID</td>
+    <td>S3SYNC7</td>
+    <td>The unique - within the context of the pipeline execution - idenfier for the step. The pattern is _{STEPNAME}{ORDINAL}. The value could be different on the next run of the pipeline
+</tr>
+<tr>
+    <td>WERCKER_STEP_NAME</td>
+    <td>S3SYNC</td>
+    <td>The name of the step as specified by the step in <strong>wercker-step.yml</strong>
+</tr>
+</table>
 
 ## Writing output
 
-The following functions are available to write output:
+The following functions are available for writing output:
 
 `success` - writes a success message.
 
@@ -123,3 +157,37 @@ Where `$var` is the variable you want to check.
     fi
 
 Where `s3cmd` is the command you want to check. The `&> /dev/null` part makes it silence (it generates no output).
+
+-------
+
+<div class="authorCredits">
+    <span class="profile-picture">
+        <img src="https://secure.gravatar.com/avatar/5864d682bb0da7bedf31601e4e3172e7?d=identicon&s=192" alt="Pieter Joost van de Sande"/>
+    </span>
+    <ul class="authorCredits">
+
+        <!-- author info -->
+        <li class="authorCredits__name">
+            <h4>Pieter Joost van de Sande</h4>
+            <em>
+                Pieter Joost is an engineer and community manager at wercker
+            </em>
+        </li>
+
+        <!-- info -->
+        <li>
+            <a href="http://beta.wercker.com" target="_blank">
+                <i class="icon-company"></i> <em>wercker</em>
+            </a>
+            <a href="http://twitter.com/pjvds" target="_blank">
+                <i class="icon-twitter"></i>
+                <em> mies</em>
+            </a>
+        </li>
+
+    </ul>
+</div>
+
+-------
+##### last modified on: July 23rd, 2013
+-------

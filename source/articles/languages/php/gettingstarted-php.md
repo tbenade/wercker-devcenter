@@ -67,8 +67,8 @@ either GitHub or Bitbucket.
 With the `wercker.yml` file you can configure the build and deployment
 pipeline for your application.
 
-Create a new file named `wercker.yml` with the following content. This file will tell wercker to run the build pipeline in a 
-PHP environment and simply output the PHP environment information on every build. 
+Create a new file named `wercker.yml` with the following content. This file will tell wercker to run the build pipeline in a
+PHP environment and simply output the PHP environment information on every build.
 We will add more useful steps in a bit.
 
 ``` yaml
@@ -98,7 +98,7 @@ repository will from now on trigger a build on wercker.
 
 ## Install PHPUnit
 
-Now is time to add an integration test to verify that your PHP service works as expected. 
+Now is time to add an integration test to verify that your PHP service works as expected.
 This is very useful for future development and allows you to notice breaking changes in the future.
 
 If you do not have PHPUnit installed, do so now via pear:
@@ -178,7 +178,7 @@ $ git commit -m 'Adds phpunit setup files'
 
 ## Add httpful dependency
 
-The integration tests levarages the httpful framework to make the actual http request. Use composer to handle the dependency management 
+The integration tests levarages the httpful framework to make the actual http request. Use composer to handle the dependency management
 by creating a `composer.json` file in the root of your project with the
 following contents:
 
@@ -291,3 +291,7 @@ Now go to your application at [wercker](http://app.wercker.com) and see your bui
 
     </ul>
 </div>
+
+-------
+##### last modified on: June 25th, 2013
+-------
