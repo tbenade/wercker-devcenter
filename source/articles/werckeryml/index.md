@@ -36,13 +36,15 @@ A node.js box:
 
 Use the latest version of a box called `nodejs` which is owned by the user wercker.
 
-Here is the full list of current boxes:
+Here is the full list of wercker supported boxes:
 
     wercker/nodejs
     wercker/python
     wercker/ruby
     wercker/ubuntu
     wercker/ubuntu12.04-ruby2.0.0
+
+You can visit the [wercker directory](http://app.wercker.com/#explore) for more boxes created by the community.
 
 ## services
 

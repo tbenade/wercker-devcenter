@@ -7,12 +7,12 @@ sidebar_current: "boxes-chef"
 In this article we will go through the process of creating a wercker box
 which is provisioned via [Opscode's Chef](http://www.opscode.com/chef/).
 
-Some basic knowledge on chef is necessary to build your own boxes with Chef.
+Some basic knowledge on Chef is necessary to build your own boxes with Chef.
 See the [Chef documentation](http://docs.opscode.com/) for more more information on cookbooks and chef-solo.
 
 Boxes are git repositories which are added to wercker, similar to
 applications. However, instead of deploying these to the cloud, you
-deploy to the wercker registry.
+deploy to the [wercker directory](http://app.wercker.com/#explore).
 
 The box we will be building will run [CouchDB](http://couchdb.apache.org/), a document oriented
 database.
@@ -85,8 +85,8 @@ The `platform` clause lets us specify the underlying host operating system. Curr
 #### Description, keywords and packages
 
 The `description`, `keywords` and `packages` tags allow us to add
-metadata to our box, which will be added to the wercker registry.
-Packages will lock the version of our box in the registry as well, so
+metadata to our box, which will be added to the wercker directory.
+Packages will lock the version of our box in the directory as well, so
 make sure to increment it when a new version of the underlying service
 is available.
 
@@ -103,7 +103,7 @@ We've defined env vars such as `WERCKER_COUCHDB_HOST` to which we can
 connect from our applications. Similarly we've defined the port, connection
 url and the CouchDB version we have installed
 
-<!--You can explore the wercker registry for boxes [here](http://app.wercker.com/explore).-->
+You can explore the wercker directory for boxes [here](http://app.wercker.com/#explore).
 
 ### Setting up your cookbooks
 
@@ -167,7 +167,7 @@ build :
 
 We inherit from the **berkshelf** box and add a buildstep that runs the **berks** command installing our cookbooks.
 
-### Adding your box to the wercker registry
+### Adding your box to the wercker directory
 
 Make sure to add your repository to wercker. If you need some guidance with this, see the [getting started guide for the web](/articles/gettingstarted/web.html), that will help you do so.
 
@@ -181,13 +181,13 @@ git push origin master
 
 This should trigger a build, which should pass.
 
-You need to deploy your box to the wercker registry, just like any other application. As such, you also need to create a deploy target for the registry, so let's do so.
+You need to deploy your box to the wercker directory, just like any other application. As such, you also need to create a deploy target for the directory, so let's do so.
 
 Go to the `settings tab` and under the *Deploy targets* section click **add deploy target**, after which a dialog is presented.
 
 ![image](http://f.cl.ly/items/0n0g0C0W3e1o33322o2R/Screen%20Shot%202013-07-08%20at%203.54.58%20PM.png)
 
-Pick **wercker registry** as a deploy target and give it a name (such as registry).
+Pick **wercker directory** as a deploy target and give it a name (such as directory).
 
 ![image](http://f.cl.ly/items/222d453f1R2w1F3a3o1V/Screen%20Shot%202013-07-08%20at%203.55.20%20PM.png)
 
@@ -195,7 +195,7 @@ Now go to your green build and hit the deploy button. Keep in mind that this dep
 
 ![image](http://f.cl.ly/items/0g2Z3p2A1B3g1X2j0v1w/Screen%20Shot%202013-07-08%20at%204.15.09%20PM.png)
 
-Your box should now be available in the registry!
+Your box should now be available in the directory!
 
 -------
 
@@ -228,5 +228,5 @@ Your box should now be available in the registry!
 </div>
 
 -------
-##### last modified: July 8th, 2013
+##### last modified: July 23rd, 2013
 -------

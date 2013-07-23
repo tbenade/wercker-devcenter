@@ -34,7 +34,7 @@ To be able to deploy you need three things:
 To deploy code, a deploy target needs to be created. Various deploy
 targets exist on wercker; [Heroku](/articles/deployment/heroku.html),
 [OpenShift](/articles/deployment/openshift.html), Custom and the
-[wercker registry](/articles/boxes).
+[wercker directory](/articles/directory).
 
 With the Heroku deploy target you are able to deploy your code to the
 Heroku platform-as-a-service and with the Custom target you can deploy
