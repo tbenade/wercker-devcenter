@@ -107,7 +107,7 @@ You can explore the wercker directory for boxes [here](http://app.wercker.com/#e
 
 ### Setting up your cookbooks
 
-For Chef provisiong we use Berkshelf, a cookbook dependency management
+For Chef provisioning we use [Berkshelf](http://berkshelf.com/), a cookbook dependency management
 tool. We create a file called `Berksfile` that declares our cookbook dependencies:
 
 ``` ruby
@@ -185,15 +185,15 @@ You need to deploy your box to the wercker directory, just like any other applic
 
 Go to the `settings tab` and under the *Deploy targets* section click **add deploy target**, after which a dialog is presented.
 
-![image](http://f.cl.ly/items/0n0g0C0W3e1o33322o2R/Screen%20Shot%202013-07-08%20at%203.54.58%20PM.png)
+![image](http://f.cl.ly/items/25463i3b3q1y0A2e1F3i/Screen%20Shot%202013-07-22%20at%203.10.40%20PM.png)
 
 Pick **wercker directory** as a deploy target and give it a name (such as directory).
 
-![image](http://f.cl.ly/items/222d453f1R2w1F3a3o1V/Screen%20Shot%202013-07-08%20at%203.55.20%20PM.png)
+![image](http://f.cl.ly/items/200a290x181A1f2F1F1u/Screen%20Shot%202013-07-23%20at%209.53.17%20AM.png)
 
 Now go to your green build and hit the deploy button. Keep in mind that this deployment process can take a while as wercker is actually provisioning your box.
 
-![image](http://f.cl.ly/items/0g2Z3p2A1B3g1X2j0v1w/Screen%20Shot%202013-07-08%20at%204.15.09%20PM.png)
+![image](http://f.cl.ly/items/0f0T1B0I19422i081U3v/Screen%20Shot%202013-07-22%20at%203.20.24%20PM.png)
 
 Your box should now be available in the directory!
 
