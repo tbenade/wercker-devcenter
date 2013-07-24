@@ -14,7 +14,7 @@ Below several guides to getting started with Python and wercker.
 
 Wercker supports Python out of the box. You can even [deploy](/articles/deployment/pypi.html) your libraries to [PyPI](http://pypi.python.org).
 
-For Python projects the default [wercker.yml](/articles/wercker.yml)
+For Python projects the default [wercker.yml](/articles/werckeryml)
 file is the following:
 
 ``` yaml
