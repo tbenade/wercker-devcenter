@@ -45,7 +45,7 @@ Predefined buildsteps such as pip-install in the wercker.yml above. This command
 #### custom buildsteps
 Custom build steps, which are basically bash scripts defined via the 'script' clause, requiring a 'name' and 'code' section. In the example file above we created a custom build step called 'echo python information' that echos the python and pip versions back to us.
 
-See the [wercker.yml section](/articles/wercker.yml) for more information.
+See the [wercker.yml section](/articles/werckeryml) for more information.
 
 
 -------
