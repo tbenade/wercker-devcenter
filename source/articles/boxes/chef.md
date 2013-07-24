@@ -2,7 +2,7 @@
 sidebar_current: "boxes-chef"
 ---
 
-# Creating your own boxes with Bash
+# Creating your own boxes with Chef
 
 In this article we will go through the process of creating a wercker box
 which is provisioned via [Opscode's Chef](http://www.opscode.com/chef/).
