@@ -48,6 +48,7 @@ We've created separate guides that explain both script-based and chef-based prov
 
 * [Creating your own wercker boxes with Bash](/articles/boxes/bash.html)
 * [Creating your own wercker boxes with Chef](/articles/boxes/chef.html)
+* [Creating your own wercker boxes with Puppet](/articles/boxes/puppet.html)
 
 <!--You can explore the wercker directory for boxes [here](http://app.wercker.com/explore). -->
 
