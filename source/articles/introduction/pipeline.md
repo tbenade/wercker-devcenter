@@ -9,6 +9,18 @@ Wercker has the notion of a **pipeline**; a set of **steps** and phases aimed at
 
 In the following paragraphs we will describe the elements that make up the wercker pipeline.
 
+### Table of contents
+
+* [Builds](#builds)
+* [Git Push](#gitpush)
+* [Box](#box)
+* [Services](#services)
+* [Steps](#steps)
+* [Package](#package)
+* [Deploys](#deploys)
+* [Triggering your deploy](#trigger)
+
+<a id="builds"></a>
 ## Builds
 
 Builds are the result of a run-through of the steps in the wercker pipeline. If builds are succesful they produce a deployable package. You can define the steps in the wercker pipeline through the
@@ -24,7 +36,8 @@ The outcome of a successful build is packaged and stored, readying it for deploy
 
 ![image](http://f.cl.ly/items/3S1e1Q2U462j0V0Z1e3V/wercker_pipeline_build.png)
 
-### Git push
+<a id="gitpush"></a>
+### Git Push
 
 Each `git push` to a git repository that is added to wercker will
 trigger a new build, regardless of the branch. This means that wercker
@@ -34,6 +47,7 @@ See the section on
 [werckerbot](/articles/gettingstarted/werckerbot.html) for more
 information on this.
 
+<a id="box"></a>
 ### Box
 
 A build is executed inside a box which, in essence, is a virtual machine that consists of an operating system and a set of packages installed that support your stack of choice. Wercker offers predefined boxes, but also allows you to create your own. See the [boxes](/articles/boxes/) section for more information.
@@ -44,6 +58,7 @@ Here is an example that defines usage of the `Ruby` box from the
 
     box: wercker/ruby
 
+<a id="services"></a>
 ### Services
 
 A service on wercker is a box that runs a database, message queue or other software process. Services are created alongside the box that executes your build pipeline.
@@ -67,6 +82,7 @@ In each pipeline there is a default step named `environment variables` that expo
 Similar to language specific boxes, it is possible to [create your own boxes](/articles/boxes/)
 that run services as well.
 
+<a id="steps"></a>
 ### Steps
 
 A build consists of steps which can either succeed or fail. These steps
@@ -91,6 +107,7 @@ Steps are executed sequentially and you can add as many steps as you
 want. If one fails the execution of the build is stopped, and the build
 will be marked as **failed**.
 
+<a id="package"></a>
 ### Package
 
 The result of a passed build is a deployable package. The package is
@@ -112,6 +129,7 @@ You can write the files you want packaged to the `$WERCKER_OUTPUT_DIR`. This wil
 ```
 The static html files will be copied into the `$WERCKER_OUTPUT_DIR` folder readying them for the deployment pipeline.
 
+<a id="deploys"></a>
 ## Deploys
 The deploy pipeline is aimed at delivering your passed build to your target of choice. At wercker we view deployment and delivery as a broad subject;
 you can deploy your application to a cloud platform such as
@@ -139,6 +157,7 @@ have succesfully completed. Configuration management is done via its
 
 ![image](http://f.cl.ly/items/0T3z2f32433N2J3o0J26/wercker_pipeline_deploy.png)
 
+<a id="trigger"></a>
 ### Triggering your deploy
 A deployment can either be triggered manually via the [wercker cli](/articles/cli/),
 manually via the wercker web application or automatically with the [auto
