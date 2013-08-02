@@ -52,16 +52,18 @@ I added a script
 to the end of my
 [wercker.yml](http://devcenter.wercker.com/articles/werckeryml/) that rsync's the Go full workspace, but excludes the source directory.
 
+```yaml
   - script:
           name: Store cache
           code: |-
               rsync -avzv --exclude "$WERCKER_SOURCE_DIR" "$GOPATH/" "$WERCKER_CACHE_DIR/go-pkg-cache/"
-
+```
 ## Populate cache
 
 I added a script step that first checks if the cache directory is
 present, and if this is the case, it rsync's it into the Go workspace at the `$GOPATH`.
 
+```yaml
   - script:
       name: Populate cache
       code: |-
@@ -70,7 +72,7 @@ present, and if this is the case, it rsync's it into the Go workspace at the `$G
         # make sure you set $WERCKER_SOURCE_DIR to the package directory
         # of your project, like: $GOPATH/github.com/pjvds/httpcallback.io
           if test -d "$WERCKER_CACHE_DIR/go-pkg-cache"; then rsync -avzv --exclude "$WERCKER_SOURCE_DIR" "$WERCKER_CACHE_DIR/go-pkg-cache/" "$GOPATH/" ; fi
-
+```
 ## The result
 
 The `go get` now has a duration of 0 seconds, the actual time is of
