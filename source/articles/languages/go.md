@@ -8,6 +8,7 @@ Go is an exciting programming language from Google. Wercker has built-in support
 
 * [Getting started with Go and wercker](/articles/languages/go/getting-started-go.html)
 * [Building and deploying Go apps with wercker and Heroku](/articles/languages/go/deploying-go-apps-to-heroku.html)
+* [Improving golang build times](/articles/languages/go/improving-build-time.html)
 
 -------
 

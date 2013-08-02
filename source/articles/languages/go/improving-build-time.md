@@ -1,6 +1,11 @@
-## The build
+---
+sidebar_current: "languages-go"
+---
 
-Here are the steps including their duration [from one of the builds](https://app.wercker.com/#build/51dfef45bf67fc2f7500046a) 
+
+# Improving your Golang build times
+
+Here are the steps including their duration [from one of the builds](https://app.wercker.com/#build/51dfef45bf67fc2f7500046a)
 of my own golang project called [httpcallback.io](https://github.com/pjvds/httpcallback.io):
 
 1. get code (0 sec)
@@ -81,3 +86,36 @@ improved the build time with 55 seconds!
   7. go test (1 sec)
   8. saving build output (0 sec)
 
+-------
+
+<div class="authorCredits">
+    <span class="profile-picture">
+        <img src="https://secure.gravatar.com/avatar/5864d682bb0da7bedf31601e4e3172e7?d=identicon&s=192" alt="Pieter Joost van de Sande"/>
+    </span>
+    <ul class="authorCredits">
+
+        <!-- author info -->
+        <li class="authorCredits__name">
+            <h4>Pieter Joost van de Sande</h4>
+            <em>
+                Pieter Joost is an engineer and community manager at wercker
+            </em>
+        </li>
+
+        <!-- info -->
+        <li>
+            <a href="http://beta.wercker.com" target="_blank">
+                <i class="icon-company"></i> <em>wercker</em>
+            </a>
+            <a href="http://twitter.com/pjvds" target="_blank">
+                <i class="icon-twitter"></i>
+                <em> mies</em>
+            </a>
+        </li>
+
+    </ul>
+</div>
+
+-------
+##### last modified on: August 1st, 2013
+-------
