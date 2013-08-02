@@ -11,7 +11,7 @@ By embracing continuous delivery, developers reduce risk and eliminate waste whi
 
 The workflow that wercker offers is roughly depicted below.
 
-<a href="http://f.cl.ly/items/3E3j34301N3Q1z1t1S2N/wercker_flow.jpg" target="_blank"><img src="http://f.cl.ly/items/3E3j34301N3Q1z1t1S2N/wercker_flow.jpg" ></a>
+<a href="http://f.cl.ly/items/0W313m2j3W2d2y1K3f0e/Image%202013.08.02%206%3A08%3A00%20PM.jpeg" target="_blank"><img src="http://f.cl.ly/items/0W313m2j3W2d2y1K3f0e/Image%202013.08.02%206%3A08%3A00%20PM.jpeg" ></a>
 
 Each time you do a `git push` wercker gets a signal via the source control platform that hosts your code that new code has been comitted. Wercker subsequently fetches this code, builds it and runs your unit tests or other [build](/articles/introduction/builds.html) steps (javascript minimization, compass compilation).
 
