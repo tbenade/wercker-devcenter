@@ -1,5 +1,5 @@
 ---
-sidebar_current: "faq-security"
+sidebar_current: "introduction-security"
 ---
 
 # Security
