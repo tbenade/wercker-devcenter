@@ -16,10 +16,6 @@ programming environment. The default box can be the
 [foundation](https://github.com/wercker/box-default) for
 creating your own box.
 
-***
-##### note: wercker.json has been deprecated in favour of wercker.yml but should still be backwards compatible (for the time being)
-***
-
 ## Formatting
 
 Yaml is pretty strict with formatting and we advice everyone to use 4 spaces for indentation.
