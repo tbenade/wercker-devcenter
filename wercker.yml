@@ -8,6 +8,13 @@ build:
         - script:
             name: middleman build
             code: bundle exec middleman build --verbose
+    after-steps:
+    - wouter/email-notify:
+        from: alerts@wercker.com
+        to: mies@wercker.com
+        username: $USER
+        password: $PASS
+        host: smtp.gmail.com:587
 deploy:
     steps:
         # Execute the heroku-deploy, heroku details can be edited
