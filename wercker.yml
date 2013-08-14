@@ -20,3 +20,10 @@ deploy:
             key_secret: $AWS_SECRET_ACCESS_KEY
             bucket_url: $AWS_BUCKET_URL
             source_dir: build/
+    after-steps:
+        - wouter/email-notify:
+            from: alerts@wercker.com
+            to: mies@wercker.com
+            username: $USER
+            password: $PASS
+            host: smtp.gmail.com:587
