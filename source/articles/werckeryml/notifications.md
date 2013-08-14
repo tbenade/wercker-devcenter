@@ -147,14 +147,14 @@ build:
             code: bundle exec middleman build
     # use IRC NOTIFY Step
     after-steps:
-     - wouter/irc-notify:
+     - wercker/irc-notify:
         server: irc.freenode.net
         port: 6667
         nickname: wercker
         channel: wercker-dev
 ```
 
-As you can see in the `after-steps` clause, we make use of the `wouter/irc-notify` step, as [wouter](https://app.wercker.com/#wouter) created this notifier. We fill in the server we wish to connect to, which port and under which **nickname** we want to publish the message. Finally, we declare to which irc **#channel** you want to post the message to. You can view all the options available below:
+As you can see in the `after-steps` clause, we make use of the `wercker/irc-notify` step, as [wouter](https://app.wercker.com/#wouter) created this notifier. We fill in the server we wish to connect to, which port and under which **nickname** we want to publish the message. Finally, we declare to which irc **#channel** you want to post the message to. You can view all the options available below:
 
 #### required
 

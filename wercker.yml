@@ -27,7 +27,7 @@ deploy:
             bucket_url: $AWS_BUCKET_URL
             source_dir: build/
     after-steps:
-        - wouter/irc-notify:
+        - wercker/irc-notify:
             server: irc.freenode.net
             port: 6667
             nickname: wercker
