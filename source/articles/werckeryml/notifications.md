@@ -103,7 +103,7 @@ build:
     after-steps:
         - wercker/email-notify:
             from: alerts@wercker.com
-            to: mies@wercker.com
+            to: example@example.com
             username: $USER
             password: $PASS
             host: YOURSMTPSERVER

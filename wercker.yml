@@ -8,12 +8,6 @@ build:
         - script:
             name: middleman build
             code: bundle exec middleman build --verbose
-    after-steps:
-         - wercker/irc-notify:
-            server: irc.freenode.net
-            port: 6667
-            nickname: wercker
-            channel: wercker-dev
 deploy:
     steps:
         # Execute the heroku-deploy, heroku details can be edited
