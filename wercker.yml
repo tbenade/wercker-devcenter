@@ -9,12 +9,13 @@ build:
             name: middleman build
             code: bundle exec middleman build --verbose
     after-steps:
-    - wouter/email-notify:
-        from: alerts@wercker.com
-        to: mies@wercker.com
-        username: $USER
-        password: $PASS
-        host: smtp.gmail.com:587
+        - wercker/email-notify:
+            from: alerts@wercker.com
+            to: mies@wercker.com
+            username: $USER
+            password: $PASS
+            host: smtp.gmail.com:587
+            passed-body: Sending them emails!
 deploy:
     steps:
         # Execute the heroku-deploy, heroku details can be edited
@@ -28,9 +29,10 @@ deploy:
             bucket_url: $AWS_BUCKET_URL
             source_dir: build/
     after-steps:
-        - wouter/email-notify:
+        - wercker/email-notify:
             from: alerts@wercker.com
             to: mies@wercker.com
             username: $USER
             password: $PASS
             host: smtp.gmail.com:587
+            passed-body: Hi!
