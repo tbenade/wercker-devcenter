@@ -49,6 +49,20 @@ The `$HIPCHAT_TOKEN` can be set as an pipeline variable, which is available for 
 
 _note: this is not my real token!_
 
+View the available options below:
+
+#### required
+
+* `token` - Your HipChat token.
+* `room-id` - The id of the HipChat room.
+
+#### optional
+
+* `passed-message` - Use this option to override the default passed message.
+* `failed-message` -  Use this option to override the default failed message.
+* `from-name` - Use this option to override the name that will appear in the room as sender. Default is `wercker`.
+* `on` - Possible values: `always` and `failed`, default `always`
+
 You can create HipChat tokens on the [API tokens](https://www.hipchat.com/admin/api) page.
 
 Check out our HipChat step in the [wercker directory](https://app.wercker.com/#applications/51f26c380771b3526e000c1c/tab/details).
@@ -81,6 +95,20 @@ The `$CAMPFIRE_TOKEN` can be set as an pipeline variable, which is available for
 
 _note: this is not my real token!_
 
+View the available options below:
+
+#### required
+
+* `token` - Your Campfire token.
+* `room-id` - The id of the Campfire room.
+* `subdomain` - The Campfire subdomain.
+
+#### optional
+
+* `passed-message` - Use this option to override the default passed message.
+* `failed-message` -  Use this option to override the default failed message.
+* `on` - Possible values: `always` and `failed`, default `always`
+
 Check your info/account page on your Campifre for your API token that you can use as the above mentioned environment variable.
 
 View our Campfire step in the [wercker directory](https://app.wercker.com/#applications/51f2a3e8df5a46247c000e0d/tab/details).
@@ -111,7 +139,7 @@ build:
 
 The wercker/email-notify step is self-explanatory; the **from** and **to** addresses are the email addresses from which you want to send the message and of course to whom. The **username** and **password** fields are the credentials for your SMTP server. We of course pass these along as pipeline environment variables as opposed to hardcoding them. Finally, you also fill in your SMTP **host**.
 
-You can view the complete available options below:
+View the available options below:
 
 #### required
 
@@ -154,7 +182,9 @@ build:
         channel: wercker-dev
 ```
 
-As you can see in the `after-steps` clause, we make use of the `wercker/irc-notify` step, as [wouter](https://app.wercker.com/#wouter) created this notifier. We fill in the server we wish to connect to, which port and under which **nickname** we want to publish the message. Finally, we declare to which irc **#channel** you want to post the message to. You can view all the options available below:
+As you can see in the `after-steps` clause, we make use of the `wercker/irc-notify` step, as [wouter](https://app.wercker.com/#wouter) created this notifier. We fill in the server we wish to connect to, which port and under which **nickname** we want to publish the message. Finally, we declare to which irc **#channel** you want to post the message to.
+
+View the available options below:
 
 #### required
 
