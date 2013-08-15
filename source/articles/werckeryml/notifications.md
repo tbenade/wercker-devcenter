@@ -13,7 +13,7 @@ Wercker currently support four types of notifications:
 * [Email](#email)
 * [IRC](#irc)
 
-<a id="HipChat"></a>
+<a id="hipchat"></a>
 ## HipChat
 
 Here is an example of an [wercker.yml](/articles/werckeryml/) for a typical Ruby application that leverages `after-steps`  for the build and deployment pipeline to send HipChat notifications.
@@ -67,7 +67,7 @@ You can create HipChat tokens on the [API tokens](https://www.hipchat.com/admin/
 
 Check out our HipChat step in the [wercker directory](https://app.wercker.com/#applications/51f26c380771b3526e000c1c/tab/details).
 
-<a id="Campfire"></a>
+<a id="campfire"></a>
 ## Campfire
 
 Here is an example of an [wercker.yml](/articles/werckeryml/) for a Ruby application that leverages `after-steps`  for the build pipeline and sends notifications to a Campfire room after builds.
@@ -113,7 +113,7 @@ Check your info/account page on your Campifre for your API token that you can us
 
 View our Campfire step in the [wercker directory](https://app.wercker.com/#applications/51f2a3e8df5a46247c000e0d/tab/details).
 
-<a id="Email"></a>
+<a id="email"></a>
 ## Email
 
 To make use of the [Email-Notify step](https://app.wercker.com/#applications/520c938f8a20a2624501003e/tab/details) which we've open sourced [here](https://github.com/mies/wercker-step-email-notify), you would create a [wercker.yml](http://devcenter.wercker.com/articles/werckeryml/) file in the following way:
@@ -160,7 +160,7 @@ View the available options below:
 
 Check out our Email Notify step in the [wercker directory](https://app.wercker.com/#applications/520c938f8a20a2624501003e/tab/details). We've open sourced the code for this step as well on [GitHub](https://github.com/mies/wercker-step-email-notify)
 
-<a id="IRC"></a>
+<a id="irc"></a>
 ## IRC
 
 Here is an example of a [wercker.yml](/articles/werckeryml/) file, that makes use of the [IRC Notify Step](https://app.wercker.com/#applications/51f2a14ddf5a46247c000cf7/tab/details) to send messages to an IRC room on passed or failed builds.
