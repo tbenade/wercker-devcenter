@@ -62,7 +62,7 @@ This will pass two options to the **npm install** step, `package` and `strict-ss
 Apart from predefined steps there is also the notion of **custom**, or
 inline, steps
 
-Custom build steps, which are basically bash scripts defined via the 'script' clause, 
+Custom build steps, which are basically bash scripts defined via the 'script' clause,
 requiring **name** and **code** elements:
 
 ``` yaml
@@ -79,6 +79,8 @@ This example echos back the **Python** and **pip** versions to us. Note
 that the result of these commands area available in the wercker ui and
 will be exposed as a build step under the name `echo python
 information`.
+
+Wercker also has the notion of [after-steps](/articles/werckeryml/#after-steps) ideally suited for [notifications](/articles/werckeryml/notifications.html). See the subsection for [wercker.yml](/articles/werckeryml) for more information.
 
 ## Creating your own steps
 
