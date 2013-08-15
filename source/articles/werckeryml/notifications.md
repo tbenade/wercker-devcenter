@@ -116,7 +116,7 @@ View our Campfire step in the [wercker directory](https://app.wercker.com/#appli
 <a id="Email"></a>
 ## Email
 
-To make use of the [Email-Notify step](https://app.wercker.com/#applications/520b5ea98a20a2624500a932/tab/details) which we've open sourced [here](https://github.com/wercker/wercker-step-email-notify), you would create a [wercker.yml](http://devcenter.wercker.com/articles/werckeryml/) file in the following way:
+To make use of the [Email-Notify step](https://app.wercker.com/#applications/520c938f8a20a2624501003e/tab/details) which we've open sourced [here](https://github.com/mies/wercker-step-email-notify), you would create a [wercker.yml](http://devcenter.wercker.com/articles/werckeryml/) file in the following way:
 
 ``` yaml
 box: wercker/ruby
@@ -158,7 +158,7 @@ View the available options below:
 * `on` - Possible values: `always` and `failed`, default `always`
 
 
-Check out our Email Notify step in the [wercker directory](https://app.wercker.com/#applications/520b5ea98a20a2624500a932/tab/details). We've open sourced the code for this step as well on [GitHub](https://github.com/wercker/wercker-step-email-notify)
+Check out our Email Notify step in the [wercker directory](https://app.wercker.com/#applications/520c938f8a20a2624501003e/tab/details). We've open sourced the code for this step as well on [GitHub](https://github.com/mies/wercker-step-email-notify)
 
 <a id="IRC"></a>
 ## IRC
