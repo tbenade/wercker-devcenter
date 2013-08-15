@@ -13,6 +13,10 @@ Wercker currently support four types of notifications:
 * [Email](#email)
 * [IRC](#irc)
 
+***
+#### Note: feel free to fork these notifications and adapt as you see fit
+***
+
 <a id="hipchat"></a>
 ## HipChat
 
