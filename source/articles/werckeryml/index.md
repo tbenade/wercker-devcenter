@@ -143,7 +143,7 @@ This will pass two options to the `npm install` step, `package` and `strict-ssl`
 # Example wercker.yml
 
 ```yaml
-box: wercker/nodejs@0.0.1
+box: wercker/nodejs@0.0.10
 services:
   - wercker/mongodb@0.0.1
   - wercker/rabbitmq
@@ -161,6 +161,8 @@ build:
         code: |-
           echo "line 1"
           echo "line 2"
+```
+This `wercker.yml` file sets up a [nodejs box](https://app.wercker.com/#applications/51ac34f1df8960ba4500495a/tab/details) with [mongodb](https://app.wercker.com/#explore/boxes/wercker/mongodb/0.0.6) and [rabbitmq](https://app.wercker.com/#applications/51acf2a7c67e0560780006d2/tab/details) as services and executes a build pipeline consisting of [npm-install](https://app.wercker.com/#applications/51c829f23179be44780021ac/tab/details), [jshint](https://app.wercker.com/#applications/51c829ec3179be4478002179/tab/details), [npm-test](https://app.wercker.com/#applications/51c829f43179be44780021bd/tab/details), and a custom script that executes several **echos**. See the [builds section](/articles/introduction/builds.html) and [steps](/articles/steps/) section for more information.
 
 <a id="deploy"></a>
 ## deploy
@@ -186,6 +188,8 @@ deploy:
             source_dir: build/
 ```
 The example above does a deploy to Heroku (the configuration data, such as the Heroku API can be filled in on the wercker website). It also syncs the `build/` folder, which could hold static assets to S3 using the [s3sync](https://app.wercker.com/#applications/51c82a063179be4478002245/tab/details) step.
+
+See the [deployment](/articles/deployment/) and [steps](/articles/steps/) section for more information.
 
 <a id="after-steps"></a>
 ## after-steps
