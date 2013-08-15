@@ -80,6 +80,8 @@ that the result of these commands area available in the wercker ui and
 will be exposed as a build step under the name `echo python
 information`.
 
+#### after-steps
+
 Wercker also has the notion of [after-steps](/articles/werckeryml/#after-steps) ideally suited for [notifications](/articles/werckeryml/notifications.html). See the subsection for [wercker.yml](/articles/werckeryml) for more information.
 
 ## Creating your own steps
