@@ -20,6 +20,8 @@ Wercker currently support four types of notifications:
 <a id="hipchat"></a>
 ## HipChat
 
+You can find the source code for this step on [GitHub](https://github.com/wercker/wercker-step-hipchat-notify)
+
 Here is an example of an [wercker.yml](/articles/werckeryml/) for a typical Ruby application that leverages `after-steps`  for the build and deployment pipeline to send HipChat notifications.
 
 ``` yaml
@@ -73,6 +75,8 @@ Check out our HipChat step in the [wercker directory](https://app.wercker.com/#a
 
 <a id="campfire"></a>
 ## Campfire
+
+You can find the source code for this step on [GitHub](https://github.com/wercker/wercker-step-campfire-notify)
 
 Here is an example of an [wercker.yml](/articles/werckeryml/) for a Ruby application that leverages `after-steps`  for the build pipeline and sends notifications to a Campfire room after builds.
 
@@ -166,6 +170,8 @@ Check out our Email Notify step in the [wercker directory](https://app.wercker.c
 
 <a id="irc"></a>
 ## IRC
+
+You can find the source code for this step on [GitHub](https://github.com/wwwouter/wercker-step-irc-notify)
 
 Here is an example of a [wercker.yml](/articles/werckeryml/) file, that makes use of the [IRC Notify Step](https://app.wercker.com/#applications/51f2a14ddf5a46247c000cf7/tab/details) to send messages to an IRC room on passed or failed builds.
 
