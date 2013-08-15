@@ -129,7 +129,7 @@ build:
             name: middleman build
             code: bundle exec middleman build --verbose
     after-steps:
-        - wercker/email-notify:
+        - mies/email-notify:
             from: alerts@wercker.com
             to: example@example.com
             username: $USER
@@ -137,7 +137,7 @@ build:
             host: YOURSMTPSERVER
 ```
 
-The wercker/email-notify step is self-explanatory; the **from** and **to** addresses are the email addresses from which you want to send the message and of course to whom. The **username** and **password** fields are the credentials for your SMTP server. We of course pass these along as pipeline environment variables as opposed to hardcoding them. Finally, you also fill in your SMTP **host**.
+The mies/email-notify step is self-explanatory; the **from** and **to** addresses are the email addresses from which you want to send the message and of course to whom. The **username** and **password** fields are the credentials for your SMTP server. We of course pass these along as pipeline environment variables as opposed to hardcoding them. Finally, you also fill in your SMTP **host**.
 
 View the available options below:
 
@@ -175,14 +175,14 @@ build:
             code: bundle exec middleman build
     # use IRC NOTIFY Step
     after-steps:
-     - wercker/irc-notify:
+     - wouter/irc-notify:
         server: irc.freenode.net
         port: 6667
         nickname: wercker
         channel: wercker-dev
 ```
 
-As you can see in the `after-steps` clause, we make use of the `wercker/irc-notify` step, as [wouter](https://app.wercker.com/#wouter) created this notifier. We fill in the server we wish to connect to, which port and under which **nickname** we want to publish the message. Finally, we declare to which irc **#channel** you want to post the message to.
+As you can see in the `after-steps` clause, we make use of the `wouter/irc-notify` step, as [wouter](https://app.wercker.com/#wouter) created this notifier. We fill in the server we wish to connect to, which port and under which **nickname** we want to publish the message. Finally, we declare to which irc **#channel** you want to post the message to.
 
 View the available options below:
 
