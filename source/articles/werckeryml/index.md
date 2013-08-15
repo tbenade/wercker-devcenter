@@ -4,7 +4,56 @@ sidebar_current: "werckeryml"
 
 # wercker.yml
 
-The `wercker.yml` file allows you to set up your wercker enviroment.
+The `wercker.yml` file allows you to set up your wercker enviroment. In this section we go through the details of setting up your build and deploy pipeline using the `wercker.yml` DSL.
+
+* [Full working example](#example)
+* [Basics](#basics)
+* [Formatting](#formatting)
+* [box](#box)
+* [services](#services)
+* [build](#build)
+* [deploy](#deploy)
+* [after-steps](#after-steps)
+
+<a id="example"></a>
+## Full working example
+
+If you're eager to grasp the `wercker.yml` format, below an example file that includes all elements which are discussed below.
+
+``` yaml
+box: wercker/ruby
+services:
+    - mies/rethinkdb
+build:
+    steps:
+        # Execute the bundle install step, a step provided by wercker
+        - bundle-install
+        # Execute a custom script step.
+        - script:
+            name: middleman build
+            code: bundle exec middleman build --verbose
+deploy:
+    steps:
+        # Execute the heroku-deploy, heroku details can be edited
+        # online at http://app.wercker.com/
+        #- heroku-deploy
+
+        # Execute the s3sync deploy step, a step provided by wercker
+        - s3sync:
+            key_id: $AWS_ACCESS_KEY_ID
+            key_secret: $AWS_SECRET_ACCESS_KEY
+            bucket_url: $AWS_BUCKET_URL
+            source_dir: build/
+    after-steps:
+        - hipchat-notify:
+            token: $HIPCHAT_TOKEN
+            room_id: id
+            from-name: name
+```
+
+<a id="basics"></a>
+## Basics
+
 This includes the box which is going to be used, any supporting
 services, steps needed for the build and steps needed to do the deploy.
 The most basic and default *wercker.yml* file is the following:
@@ -16,10 +65,12 @@ programming environment. The default box can be the
 [foundation](https://github.com/wercker/box-default) for
 creating your own box.
 
+<a id="formatting"></a>
 ## Formatting
 
 Yaml is pretty strict with formatting and we advice everyone to use 4 spaces for indentation.
 
+<a id="box"></a>
 ## box
 
 The box section allows you to choose a box which will be used to run the builds and deploys. This item will contain a single reference to the box. The box will be prefixed by the owner and it can be postfixed with a version. If no version is given, then the latest version will be used. The default blank box:
@@ -42,6 +93,7 @@ Here is the full list of wercker supported boxes:
 
 You can visit the [wercker directory](http://app.wercker.com/#explore) for more boxes created by the community.
 
+<a id="services"></a>
 ## services
 
 The services section allow you to specify supporting boxes, like databases or queue servers. This item should contain a array of supporting boxes. The reference will be the same as to a main box. So it will be prefixed and can contain a version.
@@ -57,9 +109,10 @@ This will load two services, `mongodb` and `rabbitmq`, both owned by `wercker` a
 
 See [services](/articles/services/) for more information.
 
+<a id="build"></a>
 ## build
 
-This build section will contain the all configuration regarding the build pipeline.
+The `build` section will contain the all configuration regarding the build pipeline.
 
 ### steps
 
@@ -108,28 +161,61 @@ build:
         code: |-
           echo "line 1"
           echo "line 2"
+
+<a id="deploy"></a>
+## deploy
+
+The `deploy` section will contain the all configuration regarding the [deployment](/articles/deployment/) pipeline.
+
+### steps
+
+The steps section will contain all steps which will used during a deploy. A step in it's simplest form is the name of a deploystep. It can optionally be postfixed with the version of the step.
+
+``` yaml
 deploy:
-  steps:
-    - compass-compile@1.0:
-        version: 4.1.2
-        output: compressed
-    - requirejs-build:
-        build: public/js/main.build.js
+    steps:
+        # Execute the heroku-deploy, heroku details can be edited
+        # online at http://app.wercker.com/
+        - heroku-deploy
+
+        # Execute the s3sync deploy step, a step provided by wercker
+        - s3sync:
+            key_id: $AWS_ACCESS_KEY_ID
+            key_secret: $AWS_SECRET_ACCESS_KEY
+            bucket_url: $AWS_BUCKET_URL
+            source_dir: build/
+```
+The example above does a deploy to Heroku (the configuration data, such as the Heroku API can be filled in on the wercker website). It also syncs the `build/` folder, which could hold static assets to S3 using the [s3sync](https://app.wercker.com/#applications/51c82a063179be4478002245/tab/details) step.
+
+<a id="after-steps"></a>
+## after-steps
+
+Both a build and deploy pipeline can contain `after-steps`; steps that need to be executed after a build or deploy has either failed or passed. A good use-case for `after-steps` are [notifications](/articles/werckeryml/notifications.html) to an [IRC channel](https://app.wercker.com/#applications/51f2a14ddf5a46247c000cf7/tab/details) or [HipChat Room](https://app.wercker.com/#applications/51f26c380771b3526e000c1c/tab/details), closing an issue on a project management system or sending out a newsletter after a succesful deploy.
+
+Below an example example of leveraging the [hipchat-notify](https://app.wercker.com/#applications/51f26c380771b3526e000c1c/tab/details) step to send a message after a deploy on wercker. We make use of the `after-steps` element to signify that the message has to be sent after the deploy.
+
+``` yaml
+deploy:
+   after-steps:
+        - hipchat-notify:
+            token: $HIPCHAT_TOKEN
+            room_id: id
+            from-name: name
 ```
 
 -------
 
 <div class="authorCredits">
     <span class="profile-picture">
-        <img src="https://secure.gravatar.com/avatar/dff7a3e4eadab56aa69a24569cb61e98?d=identicon&s=192" alt="Benno van den Berg"/>
+        <img src="https://secure.gravatar.com/avatar/d4b19718f9748779d7cf18c6303dc17f?d=identicon&s=192" alt="Micha Hernandez van Leuffen"/>
     </span>
     <ul class="authorCredits">
 
         <!-- author info -->
         <li class="authorCredits__name">
-            <h4>Benno van den Berg</h4>
+            <h4>Micha Hernandez van Leuffen</h4>
             <em>
-                Benno is engineer at wercker.
+                Micha is cofounder and CEO at wercker.
             </em>
         </li>
 
@@ -138,9 +224,9 @@ deploy:
             <a href="http://beta.wercker.com" target="_blank">
                 <i class="icon-company"></i> <em>wercker</em>
             </a>
-            <a href="https://twitter.com/hatchan_kitsune" target="_blank">
+            <a href="http://twitter.com/mies" target="_blank">
                 <i class="icon-twitter"></i>
-                <em> hatchan_kitsune</em>
+                <em> mies</em>
             </a>
         </li>
 
@@ -148,5 +234,5 @@ deploy:
 </div>
 
 -------
-##### last modified on: May 8, 2013
+##### last modified on: August 15th, 2013
 -------
