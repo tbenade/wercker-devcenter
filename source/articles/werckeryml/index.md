@@ -4,7 +4,16 @@ sidebar_current: "werckeryml"
 
 # wercker.yml
 
-The `wercker.yml` file allows you to set up your wercker enviroment. In this section we go through the details of setting up your build and deploy pipeline using the `wercker.yml` DSL.
+The `wercker.yml` file allows you to set up your wercker enviroment.
+
+***
+#### NOTE: Add your wercker.yml to your repository
+***
+You need to add this file to your project repository and push it to **git**.
+Changes to the `wercker.yml` that are pushed will be picked up by **wercker** automatically.
+***
+
+In this section we go through the details of setting up your build and deploy pipeline using the `wercker.yml` DSL.
 
 * [Full working example](#example)
 * [Basics](#basics)
