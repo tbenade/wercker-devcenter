@@ -13,6 +13,8 @@ Wercker currently support four types of notifications:
 * [Email](#email)
 * [IRC](#irc)
 
+You are also able to subscribe to a **build** or **deploy** feed using for instance [cctray](http://ccmenu.sourceforge.net). See the [cctray section](/articles/faq/ccmenu.html) for more information.
+
 ***
 #### Note: feel free to fork these notifications and adapt as you see fit
 ***
