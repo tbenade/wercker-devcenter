@@ -6,8 +6,8 @@ sidebar_current: "gettingstarted-cli"
 
 This guide will walk you through creating your first application on wercker using the command line interface (CLI). You can install the cli via `pip install wercker`. Please see the [specific CLI documentation](/articles/cli "The wercker command line interface") for more.
 
-As mentioned, we have created four separate Getting Started repositories in
-[Ruby](https://github.com/wercker/getting-started-ruby), [Python](https://github.com/wercker/getting-started-python), [Node.js](https://github.com/wercker/getting-started-nodejs) and [Go](https://github.com/wercker/getting-started-golang).
+As previously mentioned, we have created five separate Getting Started repositories in
+[Ruby](https://github.com/wercker/getting-started-ruby), [Python](https://github.com/wercker/getting-started-python), [Node.js](https://github.com/wercker/getting-started-nodejs), [PHP](https://github.com/wercker/getting-started-php) and [Go](https://github.com/wercker/getting-started-golang).
 
 We assume you have registered for a [wercker account](https://app.wercker.com/users/new) and have a Heroku account.
 
@@ -199,5 +199,5 @@ You can now run `wercker deploy` and wercker will deploy your application!
 </div>
 
 -------
-##### last modified: May 6, 2013
+##### last modified: Sept 7, 2013
 -------

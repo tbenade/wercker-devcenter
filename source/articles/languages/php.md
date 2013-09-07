@@ -4,7 +4,7 @@ sidebar_current: "languages-php"
 
 # PHP
 
-Below we go into detail on how to get started with wercker and php you can also find guides specfic to PHP below.
+Below we go into detail on how to get started with wercker and php. You can also find guides specific to PHP below.
 
 ## Guides
 
@@ -106,7 +106,7 @@ By default composer installed only stable packages. This behaviour can be change
 
 #### Composer lock file
 
-After installing dependencies, Composer writes the list of the exact versions it installed info a `composer.lock` file. This locks the project to those specific versions. It is a best practise to commit this `composer.lock` along with `composer.json` into version control to ensure wercker uses the same versions of dependencies as in your local development environment. This also guarantees that the same versions of dependencies are used among the full development team.
+After installing dependencies, Composer writes the list of the exact versions it installed into a `composer.lock` file. This locks the project to those specific versions. It is a best practise to commit this `composer.lock` along with `composer.json` into version control to ensure wercker uses the same versions of dependencies as in your local development environment. This also guarantees that the same versions of dependencies are used among the full development team.
 
 This means that if any of the dependencies get a new version, you won't get the updates automatically. To update to the new version, use the `update` on your local development machine and commit the updated `composer.lock` file:
 
@@ -132,7 +132,7 @@ Here is an example of an script step that installs the `pear/PHPDoc` package wit
 	    	pear install pear/PHPDoc
 	    	phpenv rehash
 
-After install you should refresh your path by executing an `php rehash`.
+After the install, you should refresh your path by executing a `php rehash`.
 
 ### Installing pyrus packages
 
@@ -146,7 +146,7 @@ Here is an example of an script step that installs the `pear/PHPDoc` package wit
 	    	pyrus install pear/PHPDoc
 	    	phpenv rehash
 
-After install you should refresh your path by executing an `php rehash`.
+After the install, you should refresh your path by executing an `php rehash`.
 
 ## Running tests with PHPUnit
 
@@ -185,11 +185,11 @@ If your tests are integration tests, you can serve your application with the fol
         name: Serve application
         code: php -S localhost:80 >> output.txt &
 
-This will host your PHP application on port 80. All output will be piped to `output.txt` to keep your log clean. The ampersand (`&`) at the end of this command makes the command asynchronously.
+This will host your PHP application on port 80. All output will be piped to `output.txt` to keep your log clean. The ampersand (`&`) at the end of this command makes the command asynchronous.
 
 ## Installing extensions
 
-The PHP box comes with PECL which can be used to compile and extensions to the environment. Installing an extension with PECL will automatically activate them as well. In other words, it will update the php.ini accordingly. Here is an example of a script step that installs `memcache` and `SQLite` extension:
+The PHP box comes with PECL which can be used to compile and install extensions to the environment. Installing an extension with PECL will automatically activate them as well. In other words, it will update the php.ini accordingly. Here is an example of a script step that installs `memcache` and `SQLite` extension:
 
 	- script:
 		name: Install extensions
@@ -248,5 +248,5 @@ If this was a build on wercker it would eventually timeout. To solve this you ca
 </div>
 
 -------
-##### last modified on: June 25, 2013
+##### last modified on: September 7, 2013
 -------

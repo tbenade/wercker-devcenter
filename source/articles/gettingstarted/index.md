@@ -63,5 +63,5 @@ Feel free to [get in touch](mailto:pleasemailus@wercker.com) if you
 </div>
 
 -------
-##### June 21, 2013
+##### Sept 7, 2013
 -------

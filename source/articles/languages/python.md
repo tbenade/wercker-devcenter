@@ -4,7 +4,7 @@ sidebar_current: "languages-python"
 
 # Python
 
-Below several guides to getting started with Python and wercker.
+Below are several guides on getting started with Python and wercker.
 
 ## Guides
 

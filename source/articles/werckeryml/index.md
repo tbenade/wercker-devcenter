@@ -77,7 +77,7 @@ creating your own box.
 <a id="formatting"></a>
 ## Formatting
 
-Yaml is pretty strict with formatting and we advice everyone to use 4 spaces for indentation.
+Yaml is pretty strict with formatting and we advise everyone to use 4 spaces for indentation.
 
 <a id="box"></a>
 ## box
@@ -105,7 +105,7 @@ You can visit the [wercker directory](http://app.wercker.com/#explore) for more 
 <a id="services"></a>
 ## services
 
-The services section allow you to specify supporting boxes, like databases or queue servers. This item should contain a array of supporting boxes. The reference will be the same as to a main box. So it will be prefixed and can contain a version.
+The services section allow you to specify supporting boxes, like databases or queue servers. This item should contain an array of supporting boxes. The reference will be the same as to a main box. So it will be prefixed and can contain a version.
 
 Example:
 
@@ -121,11 +121,11 @@ See [services](/articles/services/) for more information.
 <a id="build"></a>
 ## build
 
-The `build` section will contain the all configuration regarding the build pipeline.
+The `build` section will contain all the configuration for the build pipeline.
 
 ### steps
 
-The steps section will contain all steps which will used during a build. A step in it's simplest form is the name of a buildstep. It can optionally be postfixed with the version of the step.
+The steps section will contain all of the steps which will used during a build. A step in it's simplest form is the name of a buildstep. It can optionally be postfixed with the version of the step.
 
 Example:
 
@@ -176,11 +176,11 @@ This `wercker.yml` file sets up a [nodejs box](https://app.wercker.com/#applicat
 <a id="deploy"></a>
 ## deploy
 
-The `deploy` section will contain the all configuration regarding the [deployment](/articles/deployment/) pipeline.
+The `deploy` section will contain all the configuration for the [deployment](/articles/deployment/) pipeline.
 
 ### steps
 
-The steps section will contain all steps which will used during a deploy. A step in it's simplest form is the name of a deploystep. It can optionally be postfixed with the version of the step.
+The steps section will contain all steps which will be used during a deploy. A step in it's simplest form is the name of a deploystep. It can optionally be suffixed with the version of the step.
 
 ``` yaml
 deploy:
@@ -247,5 +247,5 @@ deploy:
 </div>
 
 -------
-##### last modified on: August 15th, 2013
+##### last modified on: September 7, 2013
 -------

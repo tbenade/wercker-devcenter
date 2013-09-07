@@ -4,11 +4,11 @@ sidebar_current: "languages-ruby"
 
 # Ruby
 
-Below several guides to getting started with Ruby and wercker:
+Below are several guides on getting started with Ruby and wercker:
 
 ## Guides
 
-Below you'll find several articles on developer Ruby applications with wercker:
+Below you'll find several articles on developing Ruby applications with wercker:
 
 * [Getting Started with a Sinatra API](/articles/languages/ruby/getting-started-sinatra-api.html "Getting Started with a Sinatra API ").
 * [Getting Started with Rails and Heroku](/articles/languages/ruby/rails-heroku.html "Getting Started with Rails and Heroku").
@@ -40,9 +40,9 @@ Through the `wercker.yml` file you are able to define your own build steps. For 
       steps:
         - bundle-install
 ```
-In the above example we have speficied the default Ruby version (1.9.3-p429) and execute the `bundle install` command.
+In the above example we have specified the default Ruby version (1.9.3-p429) and execute the `bundle install` command.
 
-`Rake` or other commands can be executed through the `script` clause, of which you can see an example below:
+`Rake` or other commands can be executed through the `script` clause, like so:
 
 ``` yaml
     box: wercker/ruby
