@@ -7,7 +7,7 @@ sidebar_current: "contributions"
 This section describes third party articles, boxes, steps and other types of contributions to wercker.
 
 <div data-alert class="alert-box">
-  Note: Third part contributions are unsupported by wercker.
+  Note: Third party contributions are unsupported by wercker.
 </div>
 
 * Golang box
