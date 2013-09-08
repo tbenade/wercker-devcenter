@@ -86,5 +86,5 @@ Please note you have to indent your `wercker.yml` correctly.
 </div>
 
 -------
-##### last modified on: June 25, 2013
+##### last modified: Sept 7, 2013
 -------

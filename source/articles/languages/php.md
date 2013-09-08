@@ -248,5 +248,5 @@ If this was a build on wercker it would eventually timeout. To solve this you ca
 </div>
 
 -------
-##### last modified on: September 7, 2013
+##### last modified: Sept 7, 2013
 -------

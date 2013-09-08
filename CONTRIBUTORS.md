@@ -7,3 +7,4 @@ Team wercker (Lindsey, PJ, Jacco, Benno, Wouter, mies)
 - Karan Chaudhary - https://app.wercker.com/#lafolle
 - Desmond Morris - https://app.wercker.com/#desmondmorris
 - Jan-Willem - https://app.wercker.com/#jewilmeer
+- Fernando Paredes - https://app.wercker.com/#NanoXD
