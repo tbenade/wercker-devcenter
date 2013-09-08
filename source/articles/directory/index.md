@@ -21,7 +21,7 @@ author are shown as well.
 
 ![image](http://f.cl.ly/items/2u050M0j293M2R0b0X1T/Screen%20Shot%202013-07-22%20at%203.14.32%20PM.png)
 
-Boxes and steps are public by default such all members of the community
+Boxes and steps are public by default so all members of the community
 can benefit.
 
 ## Publishing your own box or step

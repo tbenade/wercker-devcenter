@@ -85,7 +85,7 @@ Packages will lock the version of our box in the directory as well, so make sure
 
 #### Script
 
-Finally, we actualy create the script that will provision our box. We add the *personal package archive*, or PPA, for RethinkDB, after which we update our packages through `apt-get update`.
+Finally, we actually create the script that will provision our box. We add the *personal package archive*, or PPA, for RethinkDB, after which we update our packages through `apt-get update`.
 Next, we `apt-get install` RethinkDB.
 
 We need to make RethinkDB listen to all interfaces (not just localhost). Each time we run a build we need to be able to connect to it, through environment variables. In RethinkDB this is done through a configuration file that needs to exists in `/etc/rethinkdb/instances.d` with the following contents:

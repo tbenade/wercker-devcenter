@@ -4,7 +4,7 @@ sidebar_current: "languages-nodejs"
 
 # Node.js
 
-Below several guides to getting started with Node.js and wercker.
+Below are several guides on getting started with Node.js and wercker.
 
 * [Getting Started with Express and Mocha](/articles/languages/nodejs/getting-started-express-and-mocha.html)
 * [Test-Driven-Development with Express, MongoDB and Mongoose](/articles/languages/nodejs/tdd-with-mongoose.html)

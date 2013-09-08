@@ -4,7 +4,7 @@ sidebar_current: "werckeryml-notifications"
 
 # Adding notifications to your build and deploy pipelines
 
-Through the [wercker.yml](/articles/werckeryml/) you are able to add notifications to your build and deploy pipelines on wercker. These notifications could for instance send a message on a failed build or successful deploy. Wercker has the notion of an additional phase in the [wercker pipeline](/articles/introduction/pipeline.html), after build and deploy [steps](/articles/steps/), called `after-steps`, which can be used to execute steps after the build or deployment pipeline is finished. This makes them ideally suited for notifications.
+Through the [wercker.yml](/articles/werckeryml/) you are able to add notifications to your build and deploy pipelines on wercker. For instance, these notifications could send a message on a failed build or successful deploy. Wercker has the notion of an additional phase in the [wercker pipeline](/articles/introduction/pipeline.html), after build and deploy [steps](/articles/steps/), called `after-steps`, which can be used to execute steps after the build or deployment pipeline is finished. This makes them ideally suited for notifications.
 
 Wercker currently support four types of notifications:
 
@@ -246,5 +246,5 @@ And now you have IRC notifications on your builds and deploys, as can be seen be
 </div>
 
 -------
-##### last modified on: August 15th, 2013
+##### last modified on: September 7, 2013
 -------
