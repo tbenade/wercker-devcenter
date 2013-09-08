@@ -279,15 +279,6 @@
 
                 <section <%= sidebar_current("contributions") %>>
                   <p class="title" data-section-title><a href="/articles/contributions/">Contributions</a></p>
-                  <!--
-                  <div class="content" data-section-content>
-                    <% if sidebar_section == "bestpractices" %>
-                    <ul class="side-nav">
-                      <li<%= sidebar_current("bestpractices") %>><a href="/articles/bestpractices/pullrequests.html">Pull Requests</a></li>
-                    </ul>
-                  <% end %>
-                  </div>
-                -->
                 </section>
 
                 <section class="section__divider show-for-medium-up">
@@ -301,7 +292,7 @@
                   <div class="content" data-section-content>
                     <% if sidebar_section == "bestpractices" %>
                     <ul class="side-nav">
-                      <li<%= sidebar_current("bestpractices") %>><a href="/articles/bestpractices/pullrequests.html">Pull Requests</a></li>
+                      <li<%= sidebar_current("bestpractices-pullrequests") %>><a href="/articles/bestpractices/pullrequests.html">Pull Requests</a></li>
                     </ul>
                   <% end %>
                   </div>
@@ -318,8 +309,8 @@
                   <div class="content" data-section-content>
                     <% if sidebar_section == "faq" %>
                     <ul class="side-nav">
-                      <li<%= sidebar_current("faq") %>><a href="/articles/faq/webhooks.html">A note on Webhooks</a></li>
-                      <li<%= sidebar_current("ccmenu") %>><a href="/articles/faq/ccmenu.html">CCMenu Feed</a></li>
+                      <li<%= sidebar_current("faq-Webhooks") %>><a href="/articles/faq/webhooks.html">A note on Webhooks</a></li>
+                      <li<%= sidebar_current("faq-ccmenu") %>><a href="/articles/faq/ccmenu.html">CCMenu Feed</a></li>
                     </ul>
                   <% end %>
                   </div>
