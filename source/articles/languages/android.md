@@ -40,6 +40,7 @@ build:
         code: |
           gradle -v
           echo $ANDROID_HOME
+          echo $ANDROID_SDK_VERSION
           echo $ANDROID_BUILD_TOOLS
           echo $ANDROID_UPDATE_FILTER
     # A step that executes `gradle build` command
