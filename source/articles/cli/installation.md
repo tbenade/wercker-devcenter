@@ -56,7 +56,8 @@ The wercker command line interface is written in python and on Linux/Mac OSX can
 $ pip install wercker
 ```
 
-Depending on your operating systems you may have to run this with superuser privileges (i.e. use `sudo pip install wercker`).
+Depending on your operating system, you may have to run this with superuser privileges (i.e. use `sudo pip install wercker`). Also note:
+linux users may need to install python headers (for Ubuntu/Debian users: `sudo apt-get install python-dev`).
 
 -------
 
