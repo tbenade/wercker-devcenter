@@ -100,12 +100,12 @@ Note: environment variables that contain a path to a directory contain the resol
 </tr>
 <tr>
     <td>WERCKER_STEP_ROOT</td>
-    <td>/wercker/steps/wercker/bundle-install/0.9.0</td>
+    <td>/wercker/steps/wercker/bundle-install/0.9.1</td>
     <td>The path to the working directory of the step that is currently executed. It contains the full content as deployed to the <a href="http://app.wercker.com/#explore">wercker directory</a>
 </tr>
 <tr>
     <td>WERCKER_STEP_ID</td>
-    <td>S3SYNC7</td>
+    <td>9c182f44-e12d-4daf-91eb-a48d0540cc10</td>
     <td>The unique - within the context of the pipeline execution - idenfier for the step. The pattern is _{STEPNAME}{ORDINAL}. The value could be different on the next run of the pipeline
 </tr>
 <tr>
