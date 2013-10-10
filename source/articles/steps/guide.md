@@ -96,22 +96,29 @@ Note: environment variables that contain a path to a directory contain the resol
 <tr>
     <td>WERCKER_CACHE_DIR</td>
     <td>/cache</td>
-    <td>The path to the cache directory. This directory will be stored after the pipeline completes and restored when the pipeline runs again
+    <td>The path to the cache directory. This directory will be stored after the pipeline completes and restored when the pipeline runs again</td>
 </tr>
 <tr>
     <td>WERCKER_STEP_ROOT</td>
     <td>/wercker/steps/wercker/bundle-install/0.9.1</td>
-    <td>The path to the working directory of the step that is currently executed. It contains the full content as deployed to the <a href="http://app.wercker.com/#explore">wercker directory</a>
+    <td>The path to the working directory of the step that is currently executed. It contains the full content as deployed to the <a href="http://app.wercker.com/#explore">wercker directory</a></td>
 </tr>
 <tr>
     <td>WERCKER_STEP_ID</td>
     <td>9c182f44-e12d-4daf-91eb-a48d0540cc10</td>
-    <td>The unique - within the context of the pipeline execution - idenfier for the step. The pattern is _{STEPNAME}{ORDINAL}. The value could be different on the next run of the pipeline
+    <td>The unique - within the context of the pipeline execution - idenfier for the step. It is unique for each build/deploy.</td>
 </tr>
 <tr>
     <td>WERCKER_STEP_NAME</td>
-    <td>S3SYNC</td>
-    <td>The name of the step as specified by the step in <strong>wercker-step.yml</strong>
+    <td>bundle-install</td>
+    <td>The name of the step as specified by the step in <strong>wercker-step.yml</strong></td>
+</tr>
+<tr>
+    <td>WERCKER_REPORT_MESSAGE_FILE</td>
+    <td>$WERCKER_REPORT_DIR/
+        $WERCKER_STEP_ID/
+        message.txt</td>
+    <td>The location of a file you can use to output additonal information about the step.</td>
 </tr>
 </table>
 
@@ -119,15 +126,14 @@ Note: environment variables that contain a path to a directory contain the resol
 
 The following functions are available for writing output:
 
-`success` - writes a success message.
+* `success` - writes a success message.
+* `fail` - writes a failure message and **stops execution**. It also sets the
+text which will be displayed on the build/deploy page.
+* `warn` - writes a warning message.
+* `info` - writes a informational message.
+* `debug` - writes a debug message.
+* `setMessage` - sets a message for in the wercker user interface. Visible on build and deploy pages. For an exanple on where it is displayed in wercker, look at the `setup environment` of a build or deploy. This function changes the file specified in `WERCKER_REPORT_MESSAGE_FILE`.
 
-`fail` - writes a failure message and **stops execution**.
-
-`warn` - writes a warning message.
-
-`info` - writes a informational message.
-
-`debug` - writes a debug message.
 
 Here is a short example:
 
