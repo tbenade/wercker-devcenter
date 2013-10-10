@@ -128,7 +128,7 @@ The following functions are available for writing output:
 
 * `success` - writes a success message.
 * `fail` - writes a failure message and **stops execution**. It also sets the
-text which will be displayed on the build/deploy page.
+text which will be displayed on the build/deploy page (like calling the setMessage function).
 * `warn` - writes a warning message.
 * `info` - writes a informational message.
 * `debug` - writes a debug message.
