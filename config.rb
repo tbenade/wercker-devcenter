@@ -56,7 +56,7 @@ set :images_dir, 'images'
 #set :markdown, :fenced_code_blocks => true
 
 set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true, :smartypants => true, :layout_engine => :erb
+set :markdown, :fenced_code_blocks => true, :smartypants => true
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
