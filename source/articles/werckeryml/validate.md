@@ -4,18 +4,26 @@ sidebar_current: "werckeryml"
 
 # wercker.yml validate
 
-    <%= tag :script, :type => "text/javascript", src => "/assets/validate-yaml/wercker-schema.js" %>
-    <%= tag :script, :type => "text/javascript", src => "/assets/validate-yaml/js/jquery-2.0.2.min.js" %>
-    <%= tag :script, :type => "text/javascript", src => "/assets/validate-yaml/js/underscore-min.js" %>
-    <%= tag :script, :type => "text/javascript", src => "/assets/validate-yaml/js/async.js" %>
-    <%= tag :script, :type => "text/javascript", src => "/assets/validate-yaml/js/JSV/uri/uri.js" %>
-    <%= tag :script, :type => "text/javascript", src => "/assets/validate-yaml/js/JSV/uri/schemes/urn.js" %>
-    <%= tag :script, :type => "text/javascript", src => "/assets/validate-yaml/js/JSV/jsv.js" %>
-    <%= tag :script, :type => "text/javascript", src => "/assets/validate-yaml/js/JSV/json-schema-draft-03.js" %>
-    <%= tag :script, :type => "text/javascript", src => "/assets/validate-yaml/js/js-yaml.js" %>
+    <script
+    type="text/javascript" src="/assets/validate-yaml/wercker-schema.js"></script>
+    <script
+     type="text/javascript" src="/assets/validate-yaml/js/jquery-2.0.2.min.js"></script>
+    <script
+     type="text/javascript" src="/assets/validate-yaml/js/underscore-min.js"></script>
+    <script
+     type="text/javascript" src="/assets/validate-yaml/js/async.js"></script>
+    <script
+     type="text/javascript" src="/assets/validate-yaml/js/JSV/uri/uri.js"></script>
+    <script
+     type="text/javascript" src="/assets/validate-yaml/js/JSV/uri/schemes/urn.js"></script>
+    <script
+     type="text/javascript" src="/assets/validate-yaml/js/JSV/jsv.js"></script>
+    <script
+     type="text/javascript" src="/assets/validate-yaml/js/JSV/json-schema-draft-03.js"></script>
+    <script
+     type="text/javascript" src="/assets/validate-yaml/js/js-yaml.js"></script>
 
-<%= content_tag :script %>
-
+    <script>
 
     function makeSummary (box, buildSteps) {
       var result = "Your wercker.yml will use the box " + box.name + "<br/>" +
@@ -188,7 +196,7 @@ sidebar_current: "werckeryml"
 
 
     })
-  <% end %>
+    </script>
 <style>
   #pipeline {
     background-color:#ebeef3;
@@ -246,5 +254,3 @@ build:
 
 </div>
     </div>
-
-
