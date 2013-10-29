@@ -11,6 +11,8 @@ The `wercker.yml` file allows you to set up your wercker enviroment.
 
 You need to add this file to your project repository and push it to **git**.
 Changes to the `wercker.yml` that are pushed will be picked up by **wercker** automatically.
+
+Not sure if your `wercker.yml` is correct, please use our <a href="/articles/werckeryml/validate.html">validator</a>.
 ***
 
 In this section we go through the details of setting up your build and deploy pipeline using the `wercker.yml` DSL.
