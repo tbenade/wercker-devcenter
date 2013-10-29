@@ -18,6 +18,8 @@ If you want to run tests on a public/open source library, but have no permission
 <a id="nobuilds"></a>
 ### When I `git push` my code, builds aren't triggered on wercker.
 
+First make sure the push isn't for a ignored branch. Currently it's not possible to change ignored branches. The only ignored branch is `gh-pages` for GitHub repositories.
+
 **This issue is discussed in detail in the [Webhook section](/articles/faq/webhooks.html).** The summary is as follows:
 
 It is probably the case that you have added an application to wercker of which you are not the owner/admin on GitHub, just a collaborator.
