@@ -1,28 +1,5 @@
 @import "mixins/imageEffects";
 
-// .name-container {
-	// background-color: $topbar-bg;
-	// #gradient-container {
-		// position: relative;
-	    // @media #{$small} {
-	        // position: fixed;
-	        // display: block;
-	        // top: 0;
-	        // left: 0;
-	        // width: 100%;
-	        // height: 100%;
-	        // @include background-image(linear-gradient(left, $black 0%,$black 25%, $topbar-bg 25%, $topbar-bg 100%));
-	    // }
-	// }
-
-// }
-
-// #root {
-//     @media #{$small} {
-// 	    @include background-image(linear-gradient(left, $black 0%, $black 25%, $body-bg 25%, $body-bg 100%));
-// 	}
-// }
-
 .name {
 	background-color: #1F1E1E;
 	height: 80px;
@@ -184,4 +161,76 @@
 	h5 + hr { margin-top: 0;	}
 	h4 + p { font-size: 0.9*$base-font-size;}
 	// hr + p { font-size: 0.8*$base-font-size;}
+
+
+	.validate {
+		.validate__area {
+			height: 250px;
+		}
+
+		.button {
+			margin: 0;
+		}
+
+		.validate__pipeline {
+			margin-bottom: 3*$column-gutter;
+		}
+
+		.validate__feedback {
+			line-height: 24px;
+			padding-left: 10px;
+			line-height: 32px;
+
+			.summary__header {
+				font-size: 1.1em;
+				color: $black;
+			}
+
+			span {
+				display: block;
+			}
+
+			em {
+				margin-right: 10px;
+				opacity: .8;
+			}
+		}
+
+		.validate__pipeline {
+			padding: 20px;
+			border: 1px solid $contentBorderColor;
+			background-color: white;
+
+		    .box {
+		    	background-color: rgba(#4898C1,0.1);
+		    	margin: 5px;
+			    padding: 20px;
+			}
+
+			.step {
+				position: relative;
+				text-align: center;
+				display: block;
+				background: #FFD146;
+   			    margin: 5px;
+			    padding: 20px;
+
+			    &:before {
+			    	@extend .icon-down_arrows:before;
+			    	position: absolute;
+					top: 40px;
+					left: 49%;
+			    }
+			}
+
+			.box-label {
+				display: block;
+			    text-transform: uppercase;
+			    margin-bottom: 15px;
+			    text-align: center;
+			    font-size: 1.4em;
+			    color: #4898C1;
+			}
+		}
+	}
 }
