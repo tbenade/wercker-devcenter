@@ -203,20 +203,19 @@
 
 		    .box {
 		    	background-color: rgba(#4898C1,0.1);
-		    	margin: 5px;
-			    padding: 20px;
+			    padding: 10px;
 			}
 
 			.step {
+				border-bottom: 1px solid darken(#FFD146, 20%);
 				position: relative;
 				text-align: center;
 				display: block;
+				margin-bottom: 10px;
 				background: #FFD146;
-   			    margin: 5px;
 			    padding: 20px;
 
-			    &:before {
-			    	@extend .icon-down_arrows:before;
+			    .icon-down_arrows {
 			    	position: absolute;
 					top: 40px;
 					left: 49%;
@@ -225,11 +224,12 @@
 
 			.box-label {
 				display: block;
+				color: #4898C1;
 			    text-transform: uppercase;
-			    margin-bottom: 15px;
+			    margin-bottom: 10px;
 			    text-align: center;
 			    font-size: 1.4em;
-			    color: #4898C1;
+
 			}
 		}
 	}
