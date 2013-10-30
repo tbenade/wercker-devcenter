@@ -16,7 +16,7 @@ sidebar_current: "werckeryml"
 
     function makeSummary (box, buildSteps) {
       var result = "<span class='summary__header'>Your wercker.yml will use the box <strong>" + box.name + "</strong></span>" +
-        "<span><em>Description: </em> " + box.description + "</span>" ;
+        "<span class='summary__description'>" + box.description + "</span>" ;
 
       _.each(buildSteps, function (buildStep) {
         result += "<span><em>" + buildStep.name + ": </em>" + buildStep.description + "</span>"
@@ -26,9 +26,9 @@ sidebar_current: "werckeryml"
       createPipeline(box,buildSteps);
     }
     function createPipeline (box, buildSteps) {
+      $("#validate__summary").toggleClass("force-hidden");
       $("#box-name").html("");
       $("#build-steps").html("");
-
 
       _.each(buildSteps, function (buildStep) {
         $("<span class=\"step\">").html('<i class="icon-down_arrows"></i>' + buildStep.name).appendTo("#build-steps");
@@ -38,6 +38,7 @@ sidebar_current: "werckeryml"
     }
 
     function showError (message) {
+      $("#validate__error").toggleClass("force-hidden", false);
       $("#errors").html(message);
     }
 
@@ -97,6 +98,8 @@ sidebar_current: "werckeryml"
     $(function () {
 
       $("#check-button").on("click", function () {
+        $("#validate__error").addClass("force-hidden", false);
+        $("#validate__summary").addClass("force-hidden", false);
         $("#errors").html("");
         $("#summary").html("");
         var yaml = $("#wercker-yml-input").val();
@@ -105,7 +108,8 @@ sidebar_current: "werckeryml"
           doc = jsyaml.load(yaml);
         }
         catch(error){
-          return $("#errors").html(error.message.replace("\n","</br>"));
+
+          return showError(error.message.replace("\n","</br>"));
         }
         var environmentId = "json-schema-draft-03";
         var environment = JSV.createEnvironment(environmentId);
@@ -121,7 +125,7 @@ sidebar_current: "werckeryml"
           errorMessage += error.message + ": " + elementName + "\n";
         });
         errorMessage = errorMessage.replace("\n","</br>");
-        return $("#errors").html(errorMessage);
+        return showError(errorMessage);
       }
 
       var boxName = doc.box;
@@ -203,27 +207,33 @@ sidebar_current: "werckeryml"
 
   <hr/>
 
-  <h3>Errors</h3>
-  <div class="validate__feedback" id="errors"></div>
-  <hr/>
-  <h3>Summary</h3>
-  <div class="validate__feedback" id="summary"></div>
-  <hr/>
-  <h3>Pipeline</h3>
-  <div class="validate__pipeline" id="pipeline">
-    <span class="step">get code<i class="icon-down_arrows"></i></span>
-    <div class="box">
-      <span class="box-label" id="box-name">boxname</span>
-      <div class="box-steps">
-        <span class="step">setup environment<i class="icon-down_arrows"></i></span>
-        <span class="step">environment variables<i class="icon-down_arrows"></i></span>
-        <span id="build-steps"></span>
-        <span class="step">package</span>
+  <div class="force-hidden" id="validate__error">
+    <h3>Errors</h3>
+    <div class="validate__feedback" id="errors"></div>
+    <hr/>
+  </div>
+
+  <div class="force-hidden" id="validate__summary">
+    <h3>Summary</h3>
+    <div class="validate__feedback" id="summary"></div>
+    <hr/>
+    <h3>Pipeline</h3>
+    <div class="validate__pipeline" id="pipeline">
+      <span class="step">get code<i class="icon-down_arrows"></i></span>
+      <div class="box">
+        <span class="box-label" id="box-name">boxname</span>
+        <div class="box-steps">
+          <span class="step">setup environment<i class="icon-down_arrows"></i></span>
+          <span class="step">environment variables<i class="icon-down_arrows"></i></span>
+          <span id="build-steps"></span>
+          <span class="step">package</span>
+        </div>
       </div>
     </div>
+    <hr/>
   </div>
 </div>
-<hr/>
+
 <div class="authorCredits">
     <span class="profile-picture">
         <img src="https://secure.gravatar.com/avatar/37936f9de593de18c525a8e2f5707834?d=identicon&s=192" alt="Micha Hernandez van Leuffen"/>

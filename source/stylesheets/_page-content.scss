@@ -164,6 +164,11 @@
 
 
 	.validate {
+
+		.force-hidden {
+			display: none;
+		}
+
 		.validate__area {
 			height: 250px;
 		}
@@ -178,11 +183,14 @@
 
 		.validate__feedback {
 			line-height: 26px;
-			padding-left: 10px;
 
 			.summary__header {
 				font-size: 1.1em;
 				color: $black;
+			}
+
+			.summary__description {
+				margin-bottom: 15px;
 			}
 
 			span {
