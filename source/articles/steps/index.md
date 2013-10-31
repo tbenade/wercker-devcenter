@@ -84,6 +84,19 @@ information`.
 
 Wercker also has the notion of [after-steps](/articles/werckeryml/#after-steps) ideally suited for [notifications](/articles/werckeryml/notifications.html). See the subsection for [wercker.yml](/articles/werckeryml) for more information.
 
+#### Changing the working directory
+
+Some tools need to be in a certain directory to work, `bundle-install` for example will look for a Gemfile in the current directory and install the gems from that Gemfile. With wercker it is possible to change the working directory for all steps, it is not necessary for the steps developers to add extra code.
+
+To change the working directory of a step you need to add a **cwd** element to the step. You can specify a relative path (relative from `$WERCKER_ROOT`) or a absolute path. Use of environment variables is possible.
+
+``` yaml
+build:
+  steps:
+    - bundle-install:
+        cwd: src/
+```
+
 ## Creating your own steps
 
 You are also able to create your own steps.
