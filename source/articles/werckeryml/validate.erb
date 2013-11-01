@@ -12,15 +12,25 @@ sidebar_current: "werckeryml"
   <script type="text/javascript" src="/assets/validate-yaml/js/JSV/json-schema-draft-03.js" ></script>
   <script type="text/javascript" src="/assets/validate-yaml/js/js-yaml.js" ></script>
 
+
  <script>
 
-    function makeSummary (box, buildSteps) {
+    function makeSummary (box, services, buildSteps) {
+      $("#validate__loader").addClass("force-hidden");
       var result = "<span class='summary__header'>Your wercker.yml will use the box <strong>" + box.name + "</strong></span>" +
         "<span class='summary__description'>" + box.description + "</span>" ;
 
+      if(!!services && services.length > 0){
+        result += "<span><strong>Services:</strong></span>";
+        _.each(services, function (service) {
+          result += "<span><em>" + service.name + ": </em>" + service.description + "</span>"
+        });
+
+      }
+      result += "<span><strong>Steps:</strong></span>"
       _.each(buildSteps, function (buildStep) {
         result += "<span><em>" + buildStep.name + ": </em>" + buildStep.description + "</span>"
-      })
+      });
 
       $("#summary").html(result);
       createPipeline(box,buildSteps);
@@ -39,10 +49,16 @@ sidebar_current: "werckeryml"
 
     function showError (message) {
       $("#validate__error").toggleClass("force-hidden", false);
+      $("#validate__loader").addClass("force-hidden");
       $("#errors").html(message);
     }
 
+
+    var cachedBoxes = {};
     function getBox (fullname, callback) {
+      if(cachedBoxes[fullname]){
+        return callback(null, cachedBoxes[fullname]);
+      }
       var boxName = fullname;
       var boxVersion = "*"
       if(boxName.split("@").length > 1){
@@ -51,6 +67,9 @@ sidebar_current: "werckeryml"
       }
 
       $.getJSON("http://app.wercker.com/api/v2/boxes/" + boxName + "/" + boxVersion + "?callback=?",function  (data) {
+        if(data){
+          cachedBoxes[fullname] = data;
+        }
         callback(null, data);
       }).fail(function  (error) {
         if(error.status === 404){
@@ -62,6 +81,7 @@ sidebar_current: "werckeryml"
       });
     }
 
+    var cachedSteps = {};
     function getStep (fullname, callback) {
       if(!_.isString(fullname)){
         try{
@@ -71,6 +91,9 @@ sidebar_current: "werckeryml"
           console.log(e);
           callback(e)
         }
+      }
+      if(cachedSteps[fullname]){
+        return callback(null, cachedSteps[fullname]);
       }
 
         var stepName = fullname;
@@ -84,6 +107,9 @@ sidebar_current: "werckeryml"
       }
 
       $.getJSON("http://app.wercker.com/api/v2/steps/" + stepName + "/" + stepVersion + "?callback=?",function  (data) {
+        if(data){
+          cachedSteps[fullname] = data;
+        }
         callback(null, data);
       }).fail(function  (error) {
         if(error.status === 404){
@@ -95,11 +121,62 @@ sidebar_current: "werckeryml"
       });
     }
 
+    function validateBox (box, callback) {
+      // var boxName = box;
+      // var boxVersion = "*"
+      // if(boxName.split("@").length > 1){
+      //   boxName = box.split("@")[0]
+      //   boxVersion = box.split("@")[1]
+      // }
+      getBox(box, function  (error, boxData) {
+        if(error){
+          return showError(JSON.stringify(error))
+        }
+        if(!boxData){
+          return showError("Box '" + box + "' does not exist in de the registry.")
+        }
+        return callback(null, boxData)
+      });
+
+    }
+
+    function validateServices (services, callback) {
+      var result = [];
+      if (!services || services.length === 0) {
+        return callback(null,result)
+      }
+
+      async.eachSeries(services, function (service, eachNext) {
+        getBox(service, function (error, boxData) {
+        if(error){
+          return callback(JSON.stringify(error))
+        }
+        if(!boxData){
+          return callback("Service '" + service + "' does not exist in de the registry.")
+        }
+        result.push(boxData);
+        return eachNext()
+
+        });
+
+      }, function (error) {
+
+          return callback(error,result)
+
+
+      });
+
+    }
+
     $(function () {
+
+
+      createTextAreaWithLines('wercker-yml-input');
 
       $("#check-button").on("click", function () {
         $("#validate__error").addClass("force-hidden", false);
         $("#validate__summary").addClass("force-hidden", false);
+        $("#validate__loader").removeClass("force-hidden");
         $("#errors").html("");
         $("#summary").html("");
         var yaml = $("#wercker-yml-input").val();
@@ -128,21 +205,16 @@ sidebar_current: "werckeryml"
         return showError(errorMessage);
       }
 
-      var boxName = doc.box;
-      var boxVersion = "*"
-      if(boxName.split("@").length > 1){
-        boxName = doc.box.split("@")[0]
-        boxVersion = doc.box.split("@")[1]
-      }
-
-
-      getBox(doc.box, function  (error, boxData) {
+      validateBox(doc.box, function  (error, boxData) {
         if(error){
-          return showError(JSON.stringify(error))
+          return showError(error)
         }
-        if(!boxData){
-          return showError("Box '" + doc.box + "' does not exist in de the registry.")
-        }
+        validateServices(doc.services, function (error, servicesData) {
+
+          if(error){
+            return showError(error)
+          }
+
 
         buildSteps = []
 
@@ -174,28 +246,92 @@ sidebar_current: "werckeryml"
             })
 
           }, function (error) {
-                        makeSummary(boxData, buildSteps);
-          })
+                        makeSummary(boxData, servicesData, buildSteps);
+          });
 
         }
         else{
-          makeSummary(boxData, [])
+          makeSummary(boxData,servicesData, [])
         }
 
-      })
+      });
+      });
 
-
-      })
+      });
 
 
     })
  </script>
 
+
+
+<style>
+
+      textarea {font-size:100%;}
+      #wercker-yml-input{
+          margin-left:30px;
+          padding-left:3px;
+          width:600px;
+          height:200px;
+          border:1px solid #666;
+          font-family: monospace;
+      }
+     .textAreaWithLines{
+         display:block;
+         margin:0;
+         border:1px solid #666;
+         border-right:none;
+         background:#aaa;
+         font-family: monospace;
+      }
+    </style>
+    <script type="text/javascript">
+       var move = false;
+      function createTextAreaWithLines(id)
+      {
+        var el = document.createElement('TEXTAREA');
+        var ta = document.getElementById(id);
+
+        var string = '';
+        for(var no=1;no<300;no++){
+          if(string.length>0)string += '\n';
+          string += no;
+        }
+
+        el.className      = 'textAreaWithLines';
+        el.style.height   = (ta.offsetHeight-3) + "px";
+        el.style.width    = "35px";
+        el.style.position = "absolute";
+        el.style.overflow = 'hidden';
+        el.style.textAlign = 'right';
+        el.style.paddingRight = '0.2em';
+        $(el).val(string)
+        el.style.zIndex   = 0;
+        ta.style.zIndex   = 1;
+        ta.style.position = "relative";
+        ta.parentNode.insertBefore(el, ta.nextSibling);
+        setLine();
+        ta.focus();
+
+        ta.onkeydown    = function() { setLine(); }
+        ta.onscroll    = function() { setLine(); }
+        ta.onmousedown  = function() { setLine(); move=true; }
+        ta.onmouseup    = function() { setLine(); move=false; }
+        ta.onmousemove  = function() { if(move){setLine();} }
+
+        function setLine(){
+          el.scrollTop   = ta.scrollTop;
+          el.style.top   = (ta.offsetTop) + "px";
+          el.style.left  = (ta.offsetLeft - 37) + "px";
+        }
+      }
+    </script>
+
 <div class="validate">
 
   <h1>Validate wercker.yml</h1>
 
-  <textarea class="validate__area" id="wercker-yml-input">box: wercker/default
+  <textarea class="validate__area" id="wercker-yml-input" name="wercker-yml-input" >box: wercker/default
   build:
     steps:
       - jshint
@@ -206,6 +342,10 @@ sidebar_current: "werckeryml"
   <button class="button medium radius text-center" id="check-button">Check my wercker.yml</button>
 
   <hr/>
+
+  <div class="force-hidden" id="validate__loader">
+    Validating...
+  </div>
 
   <div class="force-hidden" id="validate__error">
     <h3>Errors</h3>
