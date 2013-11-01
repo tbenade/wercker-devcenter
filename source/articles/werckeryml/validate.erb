@@ -53,6 +53,32 @@ sidebar_current: "werckeryml"
       $("#errors").html(message);
     }
 
+    function hasMixedIdentation (yaml) {
+      var lines = yaml.split('\n')
+      var startPattern = new RegExp("^[ \t]+")
+      hasSpaces = false;
+      hasTabs = false;
+
+
+      for (var i = 0; i < lines.length; i++) {
+        var startCharsResult = startPattern.exec(lines[i])
+        if(startCharsResult){
+          var startChars = startCharsResult[0]
+          if(!hasSpaces && startChars.indexOf(" ") !== -1 ){
+            hasSpaces = true;
+          }
+          if(!hasTabs && startChars.indexOf("\t") !== -1 ){
+            hasTabs = true;
+          }
+
+          if( hasTabs && hasSpaces){
+            return true;
+          }
+        }
+      };
+
+      return false;
+    }
 
     var cachedBoxes = {};
     function getBox (fullname, callback) {
@@ -173,13 +199,24 @@ sidebar_current: "werckeryml"
 
       createTextAreaWithLines('wercker-yml-input');
 
+      $("#fix-tabs-button").on("click", function () {
+        var yaml = $("#wercker-yml-input").val()
+        yaml = yaml.replace(/\t/g,"  ")
+        $("#wercker-yml-input").val(yaml)
+      });
+
       $("#check-button").on("click", function () {
         $("#validate__error").addClass("force-hidden", false);
         $("#validate__summary").addClass("force-hidden", false);
-        $("#validate__loader").removeClass("force-hidden");
+        $("#validate__fixtabs").addClass("force-hidden");
         $("#errors").html("");
         $("#summary").html("");
         var yaml = $("#wercker-yml-input").val();
+        if(hasMixedIdentation(yaml)){
+          return $("#validate__fixtabs").removeClass("force-hidden");
+        }
+        $("#validate__loader").removeClass("force-hidden");
+
         var doc = {};
         try{
           doc = jsyaml.load(yaml);
@@ -345,6 +382,10 @@ sidebar_current: "werckeryml"
 
   <div class="force-hidden" id="validate__loader">
     Validating...
+  </div>
+
+  <div class="force-hidden" id="validate__fixtabs">
+    Your YAML contains tabs and spaces as identation. <button class="button medium radius text-center" id="fix-tabs-button">Replace tabs with 2 spaces.</button>
   </div>
 
   <div class="force-hidden" id="validate__error">
