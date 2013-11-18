@@ -25,6 +25,7 @@ In this section we go through the details of setting up your build and deploy pi
 * [build](#build)
 * [deploy](#deploy)
 * [after-steps](#after-steps)
+* [timeout](#timeout)
 
 <a id="example"></a>
 ## Full working example
