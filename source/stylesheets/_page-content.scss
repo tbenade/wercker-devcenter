@@ -151,10 +151,21 @@
 		overflow: auto;
 		background: white;
 		font-size: 0.9em;
-		padding: 0.5*$column-gutter;
+		padding: $column-gutter;
+		margin-bottom: 20px;
 		border: 1px solid $contentBorderColor;
-		font-family: "inconsolata", "ubuntu mono", "Courier New", Courier, monospace, sans-serif;
-		line-height: 1.4*$base-font-size;
+		font-family: 'Consolas',"Liberation Mono",Courier,monospace;
+		line-height: 24px;
+		@include border-radius(3px);
+	}
+
+	p code, li code {
+		font-weight: normal;
+		color: $black;
+		@include border-radius(3px);
+		background: rgba($contentBorderColor, .5);
+		border: 1px solid $contentBorderColor;
+		padding: 5px;
 	}
 
 	hr + h5 {  text-transform: uppercase	}
