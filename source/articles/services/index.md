@@ -47,6 +47,7 @@ These are the services which are supported by wercker. The list also includes th
     Port: WERCKER_POSTGRESQL_PORT
     Username: WERCKER_POSTGRESQL_USERNAME
     Password: WERCKER_POSTGRESQL_PASSWORD
+    Database Name: WERCKER_POSTGRESQL_DATABASE
 
 
 ****
