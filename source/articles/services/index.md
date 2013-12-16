@@ -35,6 +35,7 @@ These are the services which are supported by wercker. The list also includes th
     Port: WERCKER_MYSQL_PORT
     Username: WERCKER_MYSQL_USERNAME
     Password: WERCKER_MYSQL_PASSWORD
+    Database: WERCKER_MYSQL_DATABASE
 
 ****
 ##### Note there is also a convencience environment variable in the form of `mysql://username:password@hostname:port/databasename`: `WERCKER_MYSQL_URL`
@@ -47,7 +48,7 @@ These are the services which are supported by wercker. The list also includes th
     Port: WERCKER_POSTGRESQL_PORT
     Username: WERCKER_POSTGRESQL_USERNAME
     Password: WERCKER_POSTGRESQL_PASSWORD
-    Database Name: WERCKER_POSTGRESQL_DATABASE
+    Database: WERCKER_POSTGRESQL_DATABASE
 
 
 ****
