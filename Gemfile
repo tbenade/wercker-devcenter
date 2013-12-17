@@ -6,6 +6,7 @@ gem "middleman"
 gem "middleman-livereload"
 gem "middleman-syntax"
 gem "middleman-minify-html"
+gem "middleman-smusher"
 gem "rack-contrib"
 gem 'zurb-foundation', '~> 4.1.2'
 gem "unicorn"
