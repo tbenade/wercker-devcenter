@@ -12,6 +12,7 @@ These are the people that have contributed and improved the wercker devcenter.
 * [Desmond Morris](https://app.wercker.com/#desmondmorris)
 * [Jan-Willem](https://app.wercker.com/#jewilmeer)
 * [Fernando Paredes](https://app.wercker.com/#NanoXD)
+* [Paul Kuruvilla](https://app.wercker.com/#rohitpaulk)
 
 Team wercker ([Lindsey](https://app.wercker.com/#lindseybateman), [PJ](https://app.wercker.com/#pjvds), [Jacco](https://app.wercker.com/#flenter), [Benno](https://app.wercker.com/#bvdberg), [Wouter](https://app.wercker.com/#wouter), [mies](https://app.wercker.com/#mies))
 
@@ -47,5 +48,5 @@ Team wercker ([Lindsey](https://app.wercker.com/#lindseybateman), [PJ](https://a
 </div>
 
 -------
-##### last modified: June 26, 2013
+##### last modified: December 16, 2013
 -------

@@ -232,7 +232,7 @@ deploy:
         - heroku-deploy
         - script:
             name: Update database
-            code: heroku run rake db:migrate --app $TARGET_NAME
+            code: heroku run rake db:migrate --app $HEROKU_APP_NAME
 ```
 
 -------

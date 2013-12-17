@@ -89,12 +89,12 @@ A build consists of steps which can either succeed or fail. These steps
 are defined in the `steps` clause within the `build` element of the `wercker.yml`. All steps contain a `name` property which can be set to a custom value. This property will be exposed in the user interface of wercker. Here is an example of a build pipeline of a ruby project:
 
 ``` yaml
-    build:
-        - bundle-install
-        - script:
-            name: sass compile
-            code: |
-              bundle exec sass --style compressed scss/styles.scss:css/styles.min.css
+build:
+    - bundle-install
+    - script:
+        name: sass compile
+        code: |
+          bundle exec sass --style compressed scss/styles.scss:css/styles.min.css
 ```
 
 The first step that is used is `bundle-install` and is a step provided by wercker. It runs the `bundle install` command in the root of the source directory to install the dependencies needed for your project. The reason for using the wercker provided **bundle install** step is that it leverages a cache that is shared between builds to increase build speed.
@@ -120,12 +120,12 @@ Another example is the minification of javascript files which should be made ava
 You can write the files you want packaged to the `$WERCKER_OUTPUT_DIR`. This will change the default behavior of packaging the working directory and will package the files in the `$WERCKER_OUTPUT_DIR`. Here is an example that builds a [Jekyll](http://jekyllrb.com) website and places the static html output in the `$WERCKER_OUTPUT_DIR`.
 
 ``` yaml
-    build:
-        - bundle-install
-        - script:
-            name: generate static site
-            code: |-
-              bundle exec jekyll build --trace --destination "$WERCKER_OUTPUT_DIR"
+build:
+    - bundle-install
+    - script:
+        name: generate static site
+        code: |-
+          bundle exec jekyll build --trace --destination "$WERCKER_OUTPUT_DIR"
 ```
 The static html files will be copied into the `$WERCKER_OUTPUT_DIR` folder readying them for the deployment pipeline.
 

@@ -25,6 +25,7 @@ In this section we go through the details of setting up your build and deploy pi
 * [build](#build)
 * [deploy](#deploy)
 * [after-steps](#after-steps)
+* [timeout](#timeout)
 
 <a id="example"></a>
 ## Full working example
@@ -218,6 +219,17 @@ deploy:
             from-name: name
 ```
 
+<a id="timeout"></a>
+## Timeout
+
+Wercker will stop the build if it doesn't generate any output for 5 minutes. It can be overriden by settings `no-response-timeout` to the number of minutes of your liking:
+
+```yaml
+box: wercker/golang
+no-response-timeout: 10
+build:
+   ...
+```
 -------
 
 <div class="authorCredits">
