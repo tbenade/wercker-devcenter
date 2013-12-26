@@ -18,13 +18,13 @@ Wercker has built in support for Ruby and will do some introspection to correctl
 
 ## Versions
 
-Wercker currently supports Ruby 1.9.3-p429 by default. If you wish to use Ruby 2.0 you can do so by specifying this in your `wercker.yml` file:
+Wercker currently supports Ruby 2.0.0-p353 by default. If you wish to use Ruby 1.9.3 you can do so by specifying this in your `wercker.yml` file:
 
 ``` yaml
-    box: wercker/ubuntu12.04-ruby2.0.0
+    box: wercker/ubuntu12.04-ruby1.9.3
 ```
 
-We have [open-sourced](https://github.com/wercker/box-ubuntu12.04-ruby1.9.3) our box definitions at [GitHub](https://github.com/wercker/box-ubuntu12.04-ruby2.0.0), so feel free to take a peek and create your own.
+We have [open-sourced](https://github.com/wercker/box-ubuntu12.04-ruby2.0.0) our box definitions at [GitHub](https://github.com/wercker/box-ubuntu12.04-ruby1.9.3), so feel free to take a peek and create your own.
 
 ***
 ##### note that box definitions are still in progress and subject to change
@@ -40,7 +40,7 @@ Through the `wercker.yml` file you are able to define your own build steps. For 
       steps:
         - bundle-install
 ```
-In the above example we have specified the default Ruby version (1.9.3-p429) and execute the `bundle install` command.
+In the above example we have specified the default Ruby version (2.0.0-p353) and execute the `bundle install` command.
 
 `Rake` or other commands can be executed through the `script` clause, like so:
 
@@ -86,5 +86,5 @@ Please note you have to indent your `wercker.yml` correctly.
 </div>
 
 -------
-##### last modified: Sept 7, 2013
+##### last modified: Dec 26, 2013
 -------
