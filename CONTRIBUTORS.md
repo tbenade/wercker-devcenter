@@ -9,4 +9,4 @@ Team wercker (Lindsey, PJ, Jacco, Benno, Wouter, mies)
 - Jan-Willem - https://app.wercker.com/jewilmeer
 - Fernando Paredes - https://app.wercker.com/NanoXD
 - Paul Kuruvilla - https://app.wercker.com/rohitpaulk
-- fernandoalmeida - https://app.wercker.com/fernandoalmeida
+- Fernando Almeida - https://app.wercker.com/fernandoalmeida
