@@ -7,7 +7,7 @@ sidebar_current: "introduction-security"
 One of the concerns people may have when they start using wercker for Continuous Integration is whether other people can see or access their source code. In this article we will look at some of the authorization aspects on wercker and a bit at technology behind wercker.
 
 ## Sensitive information in wercker
-Before discribing in details what is visible to who, let's take a look first at how to prevent sensitive information to be accessible to the wrong people via wercker. There are four main areas where sensitive information may be visible:
+Before describing in details what is visible to who, let's take a look first at how to prevent sensitive information to be accessible to the wrong people via wercker. There are four main areas where sensitive information may be visible:
 
 1. In the source code.
 2. In the logs of tests.
