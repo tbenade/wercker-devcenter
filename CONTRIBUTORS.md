@@ -10,3 +10,4 @@ Team wercker (Lindsey, PJ, Jacco, Benno, Wouter, mies)
 - Fernando Paredes - https://app.wercker.com/NanoXD
 - Paul Kuruvilla - https://app.wercker.com/rohitpaulk
 - Fernando Almeida - https://app.wercker.com/fernandoalmeida
+- Isaac Cook
