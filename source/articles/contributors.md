@@ -14,6 +14,7 @@ These are the people that have contributed and improved the wercker devcenter.
 * [Fernando Paredes](https://app.wercker.com/NanoXD)
 * [Paul Kuruvilla](https://app.wercker.com/rohitpaulk)
 * [Fernando Almeida](https://app.wercker.com/fernandoalmeida)
+* Isaac Cook
 
 Team wercker ([Lindsey](https://app.wercker.com/#lindseybateman), [PJ](https://app.wercker.com/#pjvds), [Jacco](https://app.wercker.com/#flenter), [Benno](https://app.wercker.com/#bvdberg), [Wouter](https://app.wercker.com/#wouter), [mies](https://app.wercker.com/#mies))
 
