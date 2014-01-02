@@ -57,7 +57,7 @@ Please note you have to indent your `wercker.yml` correctly.
 
 ## Common problems
 
-### Unable to install gems due to `debugger-ruby_core_source` gem
+### Unable to install gems due to debugger-ruby_core_source gem
 
 #### Problem
 
