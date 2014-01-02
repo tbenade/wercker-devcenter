@@ -1,5 +1,5 @@
 # Build this in the wercker ruby box
-box: wercker/ubuntu12.04-ruby1.9.3
+box: wercker/ubuntu12.04-ruby2.0.0
 build:
     steps:
         # Execute the bundle install step, a step provided by wercker
