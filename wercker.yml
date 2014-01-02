@@ -7,7 +7,7 @@ build:
         # Execute a custom script step.
         - script:
             name: middleman build
-            code: bundle exec middleman build --verbose
+            code: bundle exec middleman build --verbose --no-clean
 deploy:
     steps:
         # Execute the heroku-deploy, heroku details can be edited
