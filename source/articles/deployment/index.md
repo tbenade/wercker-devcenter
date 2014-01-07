@@ -14,7 +14,7 @@ It is also possible to 'deploy' your code to package platforms such as [PyPI](ht
 
 ## Requirements
 
-In order to deploy your application you need to have a green [build](/articles/introduction/builds.html) and have specified a [deploy target](/articles/introduction/deployment.html) that you want to deploy your application to.
+In order to deploy your application you need to have a green [build](/articles/introduction/builds.html) and have specified a [deploy target](/articles/introduction/deploys.html) that you want to deploy your application to.
 
 ## Auto-deploying your application
 
