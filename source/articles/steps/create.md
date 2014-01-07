@@ -84,7 +84,7 @@ git push origin master
 
 This should trigger a build, which should pass.
 
-You need to deploy your box to the wercker directory, just like any
+You need to deploy your step to the wercker directory, just like any
 other application. As such, you also need to create a deploy target for
 the directory, so let's do so.
 
@@ -97,11 +97,11 @@ Pick **wercker directory** as a deploy target and give it a name (such as
 
 ![image](http://f.cl.ly/items/222d453f1R2w1F3a3o1V/Screen%20Shot%202013-07-08%20at%203.55.20%20PM.png)
 
-Now go to your green build and hit the deploy button. Keep in mind that this deployment process can take a while as wercker is actually provisioning your box.
+Now go to your green build and hit the deploy button.
 
 ![image](http://f.cl.ly/items/0g2Z3p2A1B3g1X2j0v1w/Screen%20Shot%202013-07-08%20at%204.15.09%20PM.png)
 
-Your box should now be available in the directory!
+Your step should now be available in the directory!
 
 ## Conclusion
 
