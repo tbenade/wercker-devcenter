@@ -11,7 +11,7 @@ executed in the [build](/articles/introduction/builds.html) or
 
 ![image](http://f.cl.ly/items/2O3V2n3A1n2d3u3S363D/wercker_pipeline.png)
 
-Examples of a **buid step** are compilation of your code, running your
+Examples of a **build step** are compilation of your code, running your
 unit tests or performing
 [jshint](https://github.com/wercker/step-jshint/).
 

@@ -11,7 +11,7 @@ Wercker allows you to subscribe to build and deploy feeds using for instance [CC
 ## Configuration
 Wercker offers two endpoints per project that serve status information in the **cctray.xml** format. One for the build status, and one for the deployment status.
 
-### Buids status feed
+### Build status feed
 
 The feed url that contains the build status from an project is:
 
