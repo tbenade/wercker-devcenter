@@ -8,7 +8,7 @@ The wercker directory is an index of published [boxes](/articles/boxes)
 and [steps](/articles/steps) that have been created by not only the
 wercker team, but more importantly the community.
 
-![image](http://f.cl.ly/items/1E2V3j1p2B3p2Z0M3f2N/Screen%20Shot%202013-07-18%20at%203.17.32%20PM.png)
+![image](http://f.cl.ly/items/0A2g31260n0T280M1i1W/directory-screenshot.jpg)
 
 You can reach the directory in the [explore
 section](http://app.wercker.com/#explore) of wercker.
@@ -19,7 +19,7 @@ Upon publication, boxes and steps have an additional **details pane** that
 showcases how to use the box or step. Other metadata such as tags and
 author are shown as well.
 
-![image](http://f.cl.ly/items/2u050M0j293M2R0b0X1T/Screen%20Shot%202013-07-22%20at%203.14.32%20PM.png)
+![image](http://f.cl.ly/items/2W2h0R04181W2Z0v0h2M/box-details-screenshot.jpg)
 
 Boxes and steps are public by default so all members of the community
 can benefit.
@@ -49,7 +49,7 @@ Keep in mind you need to bump the version number of you box or step each
 time you want a new version to be published and available in the
 directory.
 
-![image](http://f.cl.ly/items/0f0T1B0I19422i081U3v/Screen%20Shot%202013-07-22%20at%203.20.24%20PM.png)
+![image](http://f.cl.ly/items/3E3s3m2f0y360Z3F3q2H/deploy-to-directory.jpg)
 
 
 -------

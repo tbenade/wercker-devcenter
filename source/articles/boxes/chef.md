@@ -193,7 +193,7 @@ Pick **wercker directory** as a deploy target and give it a name (such as direct
 
 Now go to your green build and hit the deploy button. Keep in mind that this deployment process can take a while as wercker is actually provisioning your box.
 
-![image](http://f.cl.ly/items/0f0T1B0I19422i081U3v/Screen%20Shot%202013-07-22%20at%203.20.24%20PM.png)
+![image](http://f.cl.ly/items/3E3s3m2f0y360Z3F3q2H/deploy-to-directory.jpg)
 
 Your box should now be available in the directory!
 

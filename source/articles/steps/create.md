@@ -99,7 +99,7 @@ Pick **wercker directory** as a deploy target and give it a name (such as
 
 Now go to your green build and hit the deploy button.
 
-![image](http://f.cl.ly/items/0g2Z3p2A1B3g1X2j0v1w/Screen%20Shot%202013-07-08%20at%204.15.09%20PM.png)
+![image](http://f.cl.ly/items/3E3s3m2f0y360Z3F3q2H/deploy-to-directory.jpg)
 
 Your step should now be available in the directory!
 
