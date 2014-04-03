@@ -19,8 +19,6 @@ We assume you have registered for a [wercker account](https://app.wercker.com/us
 
 The first step is to fork one of the above mentioned repositories and clone it to your local machine.
 
-<a href="https://s3.amazonaws.com/wercker.static.assets/step1.png" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/step1.png" width="100%"></a>
-
 ### Add Project
 
 Go to the repository on your machine and run `wercker create`. This should result in an output similar to this:

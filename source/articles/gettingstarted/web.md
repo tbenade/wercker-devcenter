@@ -6,8 +6,12 @@ sidebar_current: "gettingstarted-web"
 
 This guide will walk you through creating your first application on wercker via the web interface.
 
-As mentioned, we have created four separate Getting Started repositories in
-[Ruby](https://github.com/wercker/getting-started-ruby), [Python](https://github.com/wercker/getting-started-python) and [Node.js](https://github.com/wercker/getting-started-nodejs).
+For your convenience we have created five separate Getting Started repositories in
+[Ruby](https://github.com/wercker/getting-started-ruby),
+[Python](https://github.com/wercker/getting-started-python),
+[Node.js](https://github.com/wercker/getting-started-nodejs),
+[Go](https://github.com/wercker/getting-started-golang), and
+[PHP](https://github.com/wercker/getting-started-php).
 
 We assume you have registered for a [wercker account](https://app.wercker.com/users/new).
 
@@ -15,8 +19,6 @@ We assume you have registered for a [wercker account](https://app.wercker.com/us
 ### Step 1. Fork the Repository
 
 The first step is to fork one of the above mentioned repositories and clone it to your local machine.
-
-<a href="https://s3.amazonaws.com/wercker.static.assets/step1.png" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/step1.png" width="100%"></a>
 
 ### Step 2. Add Project
 
@@ -54,7 +56,7 @@ Make a modification to the application's code. A simple update to the `README.md
 
 Commit your changes to your git repository and push them. This will trigger a new build on wercker, depicted in the activity feed, as you can see below.
 
-<a href="https://s3.amazonaws.com/wercker.static.assets/build_progress.png" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/build_progress.png" ></a>
+![image](http://f.cl.ly/items/240s2M363v0H053r133m/build-started.jpg)
 
 ### Step 4. Add a deploy target
 
@@ -66,7 +68,7 @@ You are now ready to deploy this application to the Cloud. For this guide we wil
 
 From the deployment tab on wercker select the `add deploy target` button and pick Heroku from the list. You will be asked to enter your Heroku API key which you can find on your [Heroku account page](https://dashboard.heroku/com/account).
 
-<a href="https://s3.amazonaws.com/wercker.static.assets/deploy_target.png" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/deploy_target.png" width="100%"></a>
+![image](http://f.cl.ly/items/3Z123S141T35402B0a2q/add-deploy-target.jpg)
 
 You can now either choose an existing application on Heroku that you want to deploy to, or create a new application. You can add a label to this deploy target, such as `production` or `staging`.
 
@@ -74,7 +76,7 @@ You can now either choose an existing application on Heroku that you want to dep
 
 Now you are ready to deploy your build to Heroku. Select your green build from the list of builds and hit deploy:
 
-<a href="https://s3.amazonaws.com/wercker.static.assets/deploy_build.png" target="_blank"><img src="https://s3.amazonaws.com/wercker.static.assets/deploy_build.png" width="100%"></a>
+![image](http://f.cl.ly/items/2D0g2U032j1o2P2l0v0O/deploy-build.jpg)
 
 Wercker will now deploy your application!
 
