@@ -12,3 +12,4 @@ Team wercker (Lindsey, PJ, Jacco, Benno, Wouter, mies)
 - Fernando Almeida - https://app.wercker.com/fernandoalmeida
 - Isaac Cook
 - Stephan van Stekelenburg
+- Michael Lindahl - https://app.wercker.com/michaellindahl
