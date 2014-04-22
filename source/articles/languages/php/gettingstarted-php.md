@@ -86,7 +86,7 @@ Add the file to your git repository:
 
 ``` bash
 $ git add wercker.yml
-$ git commit -m 'Adds wercker.yml that defines the build`
+$ git commit -m 'Adds wercker.yml that defines the build'
 ```
 
 ## Add project to wercker
@@ -123,10 +123,10 @@ class CitiesResponseTest extends PHPUnit_Framework_TestCase
   public function testCitiesListContainsAmsterdam()
   {
     $uri = "http://localhost:8000";
-    $response = http_get($uri, null, $info)
+    $response = http_get($uri, null, $info);
 
     $this->assertEquals("application/json", $info["content_type"]);
-    $this->assertContains("Amsterdam", $response;
+    $this->assertContains("Amsterdam", $response);
   }
 }
 ?>
@@ -293,5 +293,5 @@ Now go to your application at [wercker](http://app.wercker.com) and see your bui
 </div>
 
 -------
-##### last modified on: June 25th, 2013
+##### last modified on: April 22nd, 2014
 -------
