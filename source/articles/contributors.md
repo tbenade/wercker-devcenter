@@ -16,8 +16,9 @@ These are the people that have contributed and improved the wercker devcenter.
 * [Fernando Almeida](https://app.wercker.com/fernandoalmeida)
 * Isaac Cook
 * Stephan van Stekelenburg
+* [Michael Lindahl](https://app.wercker.com/michaellindahl)
 
-Team wercker ([Lindsey](https://app.wercker.com/#lindseybateman), [PJ](https://app.wercker.com/#pjvds), [Jacco](https://app.wercker.com/#flenter), [Benno](https://app.wercker.com/#bvdberg), [Wouter](https://app.wercker.com/#wouter), [mies](https://app.wercker.com/#mies))
+Team wercker ([Lindsey](https://app.wercker.com/lindseybateman), [PJ](https://app.wercker.com/pjvds), [Jacco](https://app.wercker.com/flenter), [Benno](https://app.wercker.com/bvdberg), [Wouter](https://app.wercker.com/wouter), [mies](https://app.wercker.com/mies))
 
 
 -------
