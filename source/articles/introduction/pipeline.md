@@ -15,6 +15,7 @@ In the following paragraphs we will describe the elements that make up the werck
 * [Git Push](#gitpush)
 * [Box](#box)
 * [Services](#services)
+* [Environment Variables](#envvars)
 * [Steps](#steps)
 * [Package](#package)
 * [Deploys](#deploys)
@@ -81,6 +82,78 @@ In each pipeline there is a default step named `environment variables` that expo
 
 Similar to language specific boxes, it is possible to [create your own boxes](/articles/boxes/)
 that run services as well.
+
+<a id="envvars"></a>
+### Environment Variables
+
+Environment variables are the defacto way to retrieve information on wercker. Wercker provides a lot of
+information by default that we can use in our steps. So let's look at a couple
+of them that you can leverage, apart from those made available through services as mentioned above.
+
+<table border="0">
+<tr>
+    <th>VARIABLE NAME</th>
+    <th>EXAMPLE VALUE</th>
+    <th>PURPOSE</th>
+</tr>
+<tr>
+    <td>WERCKER_GIT_OWNER</td>
+    <td>wercker</td>
+    <td>The owner of the repository</td>
+</tr>
+<tr>
+    <td>WERCKER_GIT_REPOSITORY</td>
+    <td>step-bundle-install</td>
+    <td>The name of the repository</td>
+</tr>
+<tr>
+    <td>WERCKER_GIT_BRANCH</td>
+    <td>master</td>
+    <td>The branch name</td>
+</tr>
+<tr>
+    <td>WERCKER_GIT_COMMIT</td>
+    <td>ef306b2479a7ecd433
+        7875b4d954a4c8fc18
+        e237</td>
+    <td>The commit hash</td>
+</tr>
+<tr>
+    <td>WERCKER_SOURCE_DIR</td>
+    <td>$WERCKER_ROOT/src</td>
+    <td>The path to the directory of the source code</td>
+</tr>
+<tr>
+    <td>WERCKER_CACHE_DIR</td>
+    <td>/cache</td>
+    <td>The path to the cache directory. This directory will be stored after the pipeline completes and restored when the pipeline runs again</td>
+</tr>
+<tr>
+    <td>WERCKER_STEP_ROOT</td>
+    <td>/wercker/steps/wercker
+        /bundle-install/0.9.1</td>
+    <td>The path to the working directory of the step that is currently executed. It contains the full content as deployed to the <a href="https://app.wercker.com/#explore">wercker directory</a></td>
+</tr>
+<tr>
+    <td>WERCKER_STEP_ID</td>
+    <td>9c182f44-e12d-4daf-91eb-a48d0540cc10</td>
+    <td>The unique idenfier for the step, unique for each build/deploy.</td>
+</tr>
+<tr>
+    <td>WERCKER_STEP_NAME</td>
+    <td>bundle-install</td>
+    <td>The name of the step as specified by the step in <strong>wercker-step.yml</strong></td>
+</tr>
+<tr>
+    <td>WERCKER_REPORT_MESSAGE_FILE</td>
+    <td>$WERCKER_REPORT_DIR/
+        $WERCKER_STEP_ID/
+        message.txt</td>
+    <td>The location of a file you can use to output additonal information about the step.</td>
+</tr>
+</table>
+
+Environment variables are made available in the different steps that get executed in the wercker pipeline. Below we explain what steps entail.
 
 <a id="steps"></a>
 ### Steps
