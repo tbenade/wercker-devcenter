@@ -154,7 +154,7 @@ A step should not depend on content of the cache and should be able to handle sc
 Here is a simple example of a step that leverages the cache:
 
 ``` bash
-if [ -f "$WERKER_CACHE_DIR/mystep/a-dependency.bin" ];
+if [ -f "$WERCKER_CACHE_DIR/mystep/a-dependency.bin" ];
 then
     debug "a-dependency.bin found in cache"
 else
@@ -163,7 +163,7 @@ else
 fi
 ```
 
-This example checks for the file `$WERKER_CACHE_DIR/mystep/a-dependency.bin` from the cache. If the file is not found, it will be downloaded to the cache directory so it will be available for future builds, if the build succeeds.
+This example checks for the file `$WERCKER_CACHE_DIR/mystep/a-dependency.bin` from the cache. If the file is not found, it will be downloaded to the cache directory so it will be available for future builds, if the build succeeds.
 
 ## Check if a variable is set and not empty
 
