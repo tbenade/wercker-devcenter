@@ -122,6 +122,49 @@ Note: environment variables that contain a path to a directory contain the resol
 </tr>
 </table>
 
+There are also a number of generic environment variables which may be of interest (they are defined during the environment variables step of your build/deploy). Here's a small selection:
+
+<table border="0">
+<tr>
+    <th>VARIABLE NAME</th>
+    <th>EXAMPLE</th>
+    <th>PURPOSE</th>
+</tr>
+<tr>
+    <td>WERCKER_GIT_OWNER</td>
+    <td>wercker</td>
+    <td>The owner of the repository</td>
+</tr>
+<tr>
+    <td>WERCKER_GIT_REPOSITORY</td>
+    <td>step-bundle-install</td>
+    <td>The name of the repository</td>
+</tr>
+<tr>
+    <td>WERCKER_GIT_BRANCH</td>
+    <td>master</td>
+    <td>The branch name</td>
+</tr>
+<tr>
+    <td>WERCKER_GIT_COMMIT</td>
+    <td>ef306b2479a7ecd433
+        7875b4d954a4c8fc18
+        e237</td>
+    <td>The commit hash</td>
+</tr>
+<tr>
+    <td>WERCKER_SOURCE_DIR</td>
+    <td>$WERCKER_ROOT/src</td>
+    <td>The path to the directory of the source code</td>
+</tr>
+<tr>
+    <td>WERCKER_CACHE_DIR</td>
+    <td>/cache</td>
+    <td>The path to the cache directory. This directory will be stored after the pipeline completes and restored when the pipeline runs again</td>
+</tr>
+</table>
+
+
 ## Writing output
 
 The following functions are available for writing output:
