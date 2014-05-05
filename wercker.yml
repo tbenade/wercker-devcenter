@@ -2,7 +2,7 @@
 box: wercker/rvm
 build:
     steps:
-        - install-package:
+        - install-packages:
             name: advancecomp gifsicle jhead jpegoptim libjpeg-progs pngcrush
         # Execute the bundle install step, a step provided by wercker
         - bundle-install
