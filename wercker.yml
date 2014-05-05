@@ -2,8 +2,11 @@
 box: wercker/rvm
 build:
     steps:
-        - install-packages:
-            name: advancecomp gifsicle jhead jpegoptim libjpeg-progs pngcrush
+        - script:
+            name: install packages
+            code: |
+                sudo apt-get update
+                sudo apt-get install advancecomp gifsicle jhead jpegoptim libjpeg-progs pngcrush -y
         # Execute the bundle install step, a step provided by wercker
         - bundle-install
         # Execute a custom script step.
