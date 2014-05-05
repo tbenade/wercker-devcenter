@@ -27,6 +27,8 @@ In the following paragraphs we will describe the elements that make up the werck
 Builds are the result of a run-through of the steps in the wercker pipeline. If builds are succesful they produce a deployable package. You can define the steps in the wercker pipeline through the
 [wercker.yml](/articles/werckeryml) file.
 
+![image](http://f.cl.ly/items/3S1e1Q2U462j0V0Z1e3V/wercker_pipeline_build.png)
+
 Every push to your git repository triggers a build. The pipeline is
 executed inside a sandboxed environment that consists of a box and
 additional [services](/articles/services/), such as databases or message queues.
@@ -35,7 +37,6 @@ If all steps in the pipeline are succesful, a build has passed.
 
 The outcome of a successful build is packaged and stored, readying it for deployment.
 
-![image](http://f.cl.ly/items/3S1e1Q2U462j0V0Z1e3V/wercker_pipeline_build.png)
 
 <a id="gitpush"></a>
 ### Git Push
