@@ -2,6 +2,8 @@
 box: wercker/rvm
 build:
     steps:
+        - install-package:
+            name: pngcrush
         # Execute the bundle install step, a step provided by wercker
         - bundle-install
         # Execute a custom script step.
