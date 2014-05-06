@@ -154,6 +154,7 @@ of them that you can leverage, apart from those made available through services 
 </tr>
 </table>
 
+For more information on how variables are made available and handled on the wercker platform, please see: [environment variables](/articles/steps/variables.html).
 Environment variables are made available in the different steps that get executed in the wercker pipeline. Below we explain what steps entail.
 
 <a id="steps"></a>

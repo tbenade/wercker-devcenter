@@ -67,9 +67,8 @@ logical name for that step. In the example above `filename` and `content` are
 
 ## Environment variables
 
-The following environment variables are available in the context of a step execution:
-
-Note: environment variables that contain a path to a directory contain the resolved path and ends with the directory name without a slash.
+The following is a selection of environment variables available in the context
+of a step execution:
 
 
 <table border="0">

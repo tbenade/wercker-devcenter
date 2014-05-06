@@ -11,7 +11,9 @@ be created that contains data on the step.
 
 Let's create a step that notifies the Campfire chat platform when we do
 a build on wercker. You can find the source for this step on
-[GitHub](https://github.com/wwwouter/wercker-step-campfire-notify).
+[GitHub](https://github.com/wwwouter/wercker-step-campfire-notify). Before we
+begin, please make sure you are familiar with [environment variables](/articles/steps/variables.html)
+and have read [A guide to steps](/articles/steps/guide.html).
 
 We want to use this step in the following way in the
 [wercker.yml](/articles/werckeryml) of our application:
