@@ -1,5 +1,5 @@
 ---
-sidebar_current: "steps"
+sidebar_current: "steps-variables"
 ---
 
 # Environment variables
