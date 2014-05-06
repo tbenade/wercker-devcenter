@@ -4,12 +4,15 @@ sidebar_current: "steps-variables"
 
 # Environment variables
 
+
 ## Introduction
 
 What if you have an API key you need during a deploy or during a build? This is
 information that is either unique for each server you want to deploy to
 or may be too sensitive to store in the repository. Wercker supports a number
 of ways to store and expose this data as environment variables.
+
+![image](http://f.cl.ly/items/2O3V2n3A1n2d3u3S363D/wercker_pipeline.png)
 
 If you want to know which environment variables are available during a build
 or deploy, look at the `environment variables` step of your pipeline run.
@@ -78,6 +81,8 @@ You can generate new pairs, via SSH Keys section in the settings tab of your
 application. Simply use the "generate new key pair" button and you'll be
 presented with a small form asking for you to give it a name.
 
+![freshly created ssh key](http://f.cl.ly/items/3x0P3u1X3P2Z1E3A2Z2t/Screen%20Shot%202013-08-23%20at%202.50.10%20PM.png)
+
 #### Create a variable
 
 When you create a new variable for the SSH key pair, remember you are actually
@@ -86,6 +91,8 @@ created an SSH key pair to use as a bitbucket deploy key. You may want to name
 the variable BITBUCKET\_DEPLOY\_KEY. During the pipeline run you will now have
 two environment variables: BITBUCKET\_DEPLOY\_KEY\_PRIVATE and
 BITBUCKET\_DEPLOY\_KEY\_PUBLIC
+
+![variable on deploy target](http://f.cl.ly/items/2P163u1h440J3d433k2K/Screen%20Shot%202013-09-02%20at%203.06.25%20PM.png)
 
 ## Predefined variables
 
