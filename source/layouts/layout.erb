@@ -102,7 +102,7 @@
             <div class="small-12 large-9 columns show-for-medium-up">
                 <a href="https://app.wercker.com/users/new" onClick="_gaq.push(['_trackEvent', 'Conversion', 'Register', 'onClick signup']);" target="_self" class="button button-register radius secondary">REGISTER FOR FREE</a>
 
-                <iframe class="fork-this" src="http://ghbtns.com/github-btn.html?user=wercker&repo=wercker-devcenter&type=fork&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="160" height="30"></iframe>
+                <iframe class="fork-this" src="http://ghbtns.com/github-btn.html?user=wercker&amp;repo=wercker-devcenter&amp;type=fork&amp;count=true&amp;size=large" allowtransparency="true" frameborder="0" scrolling="0" width="160" height="30"></iframe>
             </div>
       </div>
       <div class="row">
@@ -114,8 +114,8 @@
 
                 <section <%= sidebar_current("introduction") %> >
                   <p class="title" data-section-title><a href="/articles/introduction/">Introduction</a></p>
+                  <% if sidebar_section == "introduction" %>
                   <div class="content" data-section-content>
-                    <% if sidebar_section == "introduction" %>
                     <ul class="side-nav">
                       <li<%= sidebar_current("introduction-pipeline") %>><a href="/articles/introduction/pipeline.html">The wercker pipeline</a></li>
                       <li<%= sidebar_current("introduction-builds") %>><a href="/articles/introduction/builds.html">Builds</a></li>
@@ -123,15 +123,15 @@
                       <li<%= sidebar_current("introduction-benefits") %>><a href="/articles/introduction/benefits.html">Benefits</a></li>
                       <li<%= sidebar_current("introduction-security") %>><a href="/articles/introduction/security.html">Security</a></li>
                     </ul>
-                    <% end %>
                   </div>
+                  <% end %>
                 </section>
 
                 <section <%= sidebar_current("gettingstarted") %>>
                   <p class="title" data-section-title><a href="/articles/gettingstarted/">Getting Started</a></p>
 
+                  <% if sidebar_section == "gettingstarted" %>
                   <div class="content" data-section-content>
-                    <% if sidebar_section == "gettingstarted" %>
                     <ul class="side-nav">
                       <li<%= sidebar_current("gettingstarted-web") %>><a href="/articles/gettingstarted/web.html">Using the web interface</a></li>
                       <li<%= sidebar_current("gettingstarted-cli") %>><a href="/articles/gettingstarted/cli.html">Using the CLI</a></li>
@@ -142,37 +142,17 @@
                       -->
 
                     </ul>
-                    <% end %>
                   </div>
+                  <% end %>
 
                 </section>
 
-                <section class="section__divider show-for-medium-up">
+<!--                 <section class="section__divider show-for-medium-up">
                   <p class="title" data-section-title><p></p></p>
                   <div class="content" data-section-content>
                   </div>
                 </section>
-
-                <section <%= sidebar_current("werckeryml") %>>
-                  <p class="title" data-section-title><a href="/articles/werckeryml/">Wercker.yml</a></p>
-
-                  <div class="content" data-section-content>
-                    <% if sidebar_section == "werckeryml" %>
-                    <ul class="side-nav">
-                      <li<%= sidebar_current("werckeryml-notifications") %>><a href="/articles/werckeryml/notifications.html">Notifications</a></li>
-                      <li<%= sidebar_current("werckeryml-validate") %>><a href="/articles/werckeryml/validate.html">Validate wercker.yml</a></li>
-                    </ul>
-                    <% end %>
-                  </div>
-
-                </section>
-
-                <section class="section__divider show-for-medium-up">
-                  <p class="title" data-section-title><p></p></p>
-                  <div class="content" data-section-content>
-                  </div>
-                </section>
-
+ -->
                 <section <%= sidebar_current("languages") %>>
                   <p class="title" data-section-title><a href="/articles/languages/">Language Guides</a></p>
 
@@ -190,12 +170,32 @@
                   </div>
                   </section>
 
-                <section class="section__divider show-for-medium-up">
+<!--                 <section class="section__divider show-for-medium-up">
+                  <p class="title" data-section-title><p></p></p>
+                  <div class="content" data-section-content>
+                  </div>
+                </section>
+ -->
+                <section <%= sidebar_current("werckeryml") %>>
+                  <p class="title" data-section-title><a href="/articles/werckeryml/">Wercker.yml</a></p>
+
+                  <div class="content" data-section-content>
+                    <% if sidebar_section == "werckeryml" %>
+                    <ul class="side-nav">
+                      <li<%= sidebar_current("werckeryml-notifications") %>><a href="/articles/werckeryml/notifications.html">Notifications</a></li>
+                      <li<%= sidebar_current("werckeryml-validate") %>><a href="/articles/werckeryml/validate.html">Validate wercker.yml</a></li>
+                    </ul>
+                    <% end %>
+                  </div>
+
+                </section>
+
+<!--                 <section class="section__divider show-for-medium-up">
                   <p class="title" data-section-title><p></p></p>
                   <div class="content" data-section-content>
                   </div>
                   </section>
-
+ -->
                 <section <%= sidebar_current("directory") %>>
                   <p class="title" data-section-title><a href="/articles/directory/">Wercker Directory</a></p>
                 </section>
@@ -212,6 +212,10 @@
                     <% end %>
                   </div>
                 </section>
+                <section <%= sidebar_current("services") %>>
+                  <p class="title" data-section-title><a href="/articles/services/">Services</a></p>
+                </section>
+
 
                 <section <%= sidebar_current("steps") %>>
                   <p class="title" data-section-title><a href="/articles/steps/">Steps</a></p>
@@ -228,12 +232,12 @@
 
                 </section>
 
-                <section class="section__divider show-for-medium-up">
+<!--                 <section class="section__divider show-for-medium-up">
                   <p class="title" data-section-title><p></p></p>
                   <div class="content" data-section-content>
                   </div>
                   </section>
-
+ -->
                <section <%= sidebar_current("cli") %>>
                   <p class="title" data-section-title><a href="/articles/cli/">The wercker CLI</a></p>
                   <div class="content" data-section-content>
@@ -244,10 +248,6 @@
                     </ul>
                     <% end %>
                   </div>
-                </section>
-
-                <section <%= sidebar_current("services") %>>
-                  <p class="title" data-section-title><a href="/articles/services/">Services</a></p>
                 </section>
 
                 <section <%= sidebar_current("deployment") %>>
@@ -269,20 +269,24 @@
                 </section>
 
 
-                <section class="section__divider show-for-medium-up">
+<!--                 <section class="section__divider show-for-medium-up">
                   <p class="title" data-section-title><p></p></p>
                   <div class="content" data-section-content>
                   </div>
                 </section>
-
-                <section <%= sidebar_current("contributions") %>>
+ -->
+<!--                 <section <%= sidebar_current("contributions") %>>
                   <p class="title" data-section-title><a href="/articles/contributions/">Contributions</a></p>
-                </section>
-
+                </section> -->
+<!--
                 <section class="section__divider show-for-medium-up">
                   <p class="title" data-section-title><p></p></p>
                   <div class="content" data-section-content>
                   </div>
+                </section>
+ -->
+                <section <%= sidebar_current("docker") %>>
+                  <p class="title" data-section-title><a href="/articles/docker/">Docker</a></p>
                 </section>
 
                 <section <%= sidebar_current("bestpractices") %>>
@@ -291,21 +295,18 @@
                     <% if sidebar_section == "bestpractices" %>
                     <ul class="side-nav">
                       <li<%= sidebar_current("bestpractices-pullrequests") %>><a href="/articles/bestpractices/pullrequests.html">Pull Requests</a></li>
+                      <li<%= sidebar_current("bestpractices-emailnotifications") %>><a href="/articles/bestpractices/emailnotifications.html">Email notifications</a></li>
                     </ul>
                   <% end %>
                   </div>
                 </section>
 
-                <section <%= sidebar_current("docker") %>>
-                  <p class="title" data-section-title><a href="/articles/docker/">Docker</a></p>
-                </section>
-
-                <section class="section__divider show-for-medium-up">
+<!--                 <section class="section__divider show-for-medium-up">
                   <p class="title" data-section-title><p></p></p>
                   <div class="content" data-section-content>
                   </div>
                 </section>
-
+ -->
                 <section <%= sidebar_current("faq") %>>
                   <p class="title" data-section-title><a href="/articles/faq/">FAQ</a></p>
                   <div class="content" data-section-content>
@@ -318,12 +319,12 @@
                   </div>
                 </section>
 
-                <section class="section__divider show-for-medium-up">
+<!--                 <section class="section__divider show-for-medium-up">
                   <p class="title" data-section-title><p></p></p>
                   <div class="content" data-section-content>
                   </div>
                 </section>
-
+ -->
               </div>
             </div>
           </div>
