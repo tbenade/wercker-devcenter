@@ -59,7 +59,7 @@ deploy:
     after-steps:
         - hipchat-notify:
             token: $HIPCHAT_TOKEN
-            room_id: id
+            room-id: id
             from-name: name
 ```
 
