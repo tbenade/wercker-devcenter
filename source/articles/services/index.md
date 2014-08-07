@@ -38,7 +38,7 @@ These are the services which are supported by wercker. The list also includes th
     Database: WERCKER_MYSQL_DATABASE
 
 ****
-##### Note there is also a convencience environment variable in the form of `mysql://username:password@hostname:port/databasename`: `WERCKER_MYSQL_URL`
+##### Note there is also a convencience environment variable `WERCKER_MYSQL_URL` in the form of `mysql://username:password@hostname:port/databasename`
 ****
 
 #### postgresql
@@ -52,7 +52,7 @@ These are the services which are supported by wercker. The list also includes th
 
 
 ****
-##### Note there is also a convencience environment variable in the form of `postgres://username:password@hostname:port/databasename`: `WERCKER_POSTGRESQL_URL`
+##### Note there is also a convencience environment variable `WERCKER_POSTGRESQL_URL` in the form of `postgres://username:password@hostname:port/databasename`
 ****
 
 #### mongodb
