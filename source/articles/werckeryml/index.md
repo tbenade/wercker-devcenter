@@ -134,7 +134,7 @@ Example:
 
     build:
       steps:
-        - npm-install
+        - npm-install@1.0.5
         - npm-test
 
 This build will be run with two steps, `npm install` and `npm test`, where `npm install` will be fixed on version 1.0.5 and `npm test` will use the latest version.

@@ -41,13 +41,15 @@ The outcome of a successful build is packaged and stored, readying it for deploy
 <a id="gitpush"></a>
 ### Git Push
 
-Each `git push` to a git repository that is added to wercker will
-trigger a new build, regardless of the branch. This means that wercker
-builds every branch. Wercker clones your repository via SSH as the
-`werckerbot` user, for private repositories `werckerbot` needs to be a collaborator. For public repositories, adding `werckerbot` as a collaborator is not required.
-See the section on
-[werckerbot](/articles/gettingstarted/werckerbot.html) for more
-information on this.
+Each `git push` to a git repository that is added to wercker will trigger a new
+build, regardless of the branch. This means that wercker builds every branch.
+Wercker will start by cloning your repository via an private SSH key. For
+private repositories you're required to add the public SSH key as a deploy key
+to the repository, or you can add the public SSH key to a user which has access
+to the repository. For public repositories, you're not required to add a SSH
+key, you just need to make sure that you selected the public repository option.
+See the section on [werckerbot](/articles/gettingstarted/werckerbot.html) for
+more information on this.
 
 <a id="box"></a>
 ### Box

@@ -32,7 +32,12 @@ We now present you with a list of repositories and also show if a repository is 
 
 <a href="http://f.cl.ly/items/0Z1c0A1k0g1c0j2h082z/Screen%20Shot%202013-06-21%20at%2011.53.43%20AM.png" target="_blank"><img src="http://f.cl.ly/items/0Z1c0A1k0g1c0j2h082z/Screen%20Shot%202013-06-21%20at%2011.53.43%20AM.png" ></a>
 
-Wercker needs read permissions to run your tests each time you do a `git push`. For this to work you have to give the `werckerbot` user read permissions to your repository as indicated in the step below.
+Wercker uses a SSH key to checkout the code to run a build.
+For private projects you need to add a public SSH key as an deploy key to your
+repository, or you can add this public SSH key to an user which has acces to the
+repository. For public repositories you don't have to add a public SSH key, you
+just need to make sure you selected the public repository option in the
+application settings.
 
 <a href="http://f.cl.ly/items/2J3U202n06120u0G1i0a/Screen%20Shot%202013-06-21%20at%2011.53.58%20AM.png" target="_blank"><img src="http://f.cl.ly/items/2J3U202n06120u0G1i0a/Screen%20Shot%202013-06-21%20at%2011.53.58%20AM.png" ></a>
 
