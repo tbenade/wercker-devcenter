@@ -69,9 +69,6 @@ configure :build do
   # Minify html on build
   activate :minify_html
 
-  # Live Reload
-  # activate :livereload
-
   # Enable cache buster
   # activate :cache_buster
 
@@ -86,6 +83,11 @@ configure :build do
 
   # Or use a different image path
   # set :http_path, "/Content/images/"
+end
+
+configure :development do
+  # Live Reload
+  activate :livereload
 end
 
 activate  :syntax,
