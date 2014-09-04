@@ -4,8 +4,7 @@ sidebar_current: "gettingstarted-werckerbot"
 
 # Checking out the code
 
-Wercker needs to be able to checkout the code from your source control provider, currently GitHub and Bitbucket are supported. This article
-desrcibes how we retrieve the code and the various way on how to set it up.
+Wercker needs to be able to checkout the code from your source control provider, currently GitHub and Bitbucket are supported. This article describes how we retrieve the code and the various way on how to set it up.
 
 
 Wercker currently uses SSH keys to retrieve the code. SSH keys can be attached to either a user, or a repository (in the form of deploy keys).

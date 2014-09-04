@@ -70,7 +70,7 @@ configure :build do
   activate :minify_html
 
   # Live Reload
-  # activate :livereload
+  activate :livereload
 
   # Enable cache buster
   # activate :cache_buster
