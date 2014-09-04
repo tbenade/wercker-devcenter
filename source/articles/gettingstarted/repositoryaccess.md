@@ -4,26 +4,26 @@ sidebar_current: "gettingstarted-repositoryaccess"
 
 # Repository access
 
-Wercker needs to be able to checkout the code from your source control provider,
-currently GitHub and Bitbucket are supported. This article describes how we
-retrieve the code and the various way on how to set it up. If you have a public
+Wercker needs to be able to check out the code from your source control provider.
+Currently, both GitHub and Bitbucket are supported. This article describes how we
+retrieve the code and the various methods of how to set up repository access. If you have a public
 repository then you can skip to the public repository section.
 
 ## SSH Keys
 
-Currently wercker uses a SSH key pair to checkout code. We provide a public SSH
-key which should be authorized to access the repository. Then we use the private
-SSH key to checkout the code. There are a couple of ways to give authorization
-to a public key, each of the methods have some advantages and disadvantages over
+Currently wercker uses an SSH key pair to check out code. We provide a public SSH
+key which should be authorized to access the repository. Then, we use the private
+SSH key to check out the code. There are a couple of ways to give authorization
+to a public key; each of the methods have some advantages and disadvantages over
 the others.
 
 ### Deploykeys
 
 The first method is to add the SSH key to the repository as a deploy key. A
-deploy key is a SSH key that is associated with a single repository. Advantages
-of this method is that we only get access to that single repository. However
-this also mean that we're unable to checkout any submodules (it is only possible
-to add a SSH key to a single repository).
+deploy key is an SSH key that is associated with a single repository. The advantage
+of this method is that we only get access to that single repository. However,
+this also means that we're unable to check out any submodules (it is only possible
+to add an SSH key to a single repository).
 
 More information:
 
@@ -32,16 +32,16 @@ More information:
 
 ### Machine users
 
-The second method is to add the SSH key to a user in GitHub or Bitbucket. This
+The second method is to add the SSH key to a user on GitHub or Bitbucket. This
 allows you to add more than 1 repositories to a single SSH key. Most of the time
 these users are just used for authorization and don't have a real person using
-it. This is why they are called "machine users". Advantage of this method is
-that you'll be able to add multiple authorization to a single SSH key.
-Disadvantage is that it requires more management.
+it. This is why they are called "machine users". The advantage of this method is
+that you'll be able to add multiple authorizations to a single SSH key.
+The disadvantage is that it requires more management.
 
 More information:
 
-- [Machine user in GitHub](https://developer.github.com/guides/managing-deploy-keys/#machine-users)
+- [Machine user on GitHub](https://developer.github.com/guides/managing-deploy-keys/#machine-users)
 
 ### Picking the right method
 
@@ -57,15 +57,19 @@ option in the "repository access" configuration.
 
 ## Werckerbot
 
-If you've created your application after 4 september 2014, then you can skip
-this section. If you created your application before 4 september 2014, then you
+If you've created your application after September 4th, 2014, then you can skip
+this section. However, if you created your application before September 4th 2014, then you
 need to migrate to the new flow. This is also applicable to public repositories,
-which never added werckerbot.
+that never added werckerbot.
 
-You need to goto the settings page of your application, you can find the
-repository access section. This will migrate you from using werckerbot to using
-a SSH key pair. Read the above sections to see which method you can select. Once
-you changed the key, you should remove werckerbot from your organisation teams
+You need to go to the settings page of your application; here you can find the
+repository access section. This wizard will migrate you from using werckerbot to using
+an SSH key pair. Read the above sections to see which method you can select.
+The wizard is similar to the add application flow presented in [this section](/articles/gettingstarted/web.html).
+
+![image](/images/articles/gettingstarted/repository_access.png)
+
+Once you've changed the key, you should remove werckerbot from your organisation teams
 or the access management sections.
 
 We're keeping wercker-bot around till 01-01-2015, than we will remove
@@ -89,7 +93,7 @@ werckerbot. So make sure you migrate before that time to prevent any downtime.
 
         <!-- info -->
         <li>
-            <a href="http://beta.wercker.com" target="_blank">
+            <a href="http://wercker.com" target="_blank">
                 <i class="icon-company"></i> <em>wercker</em>
             </a>
             <a href="http://twitter.com/mies" target="_blank">
