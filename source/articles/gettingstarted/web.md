@@ -32,12 +32,14 @@ We now present you with a list of repositories and also show if a repository is 
 
 <a href="/images/articles/gettingstarted/selectrepository.png" target="_blank"><img src="/images/articles/gettingstarted/selectrepository.png" ></a>
 
-Wercker uses an SSH key to checkout the code to run a build.
-For private projects you need to add a public SSH key as a deploy key to your
-repository, or you can add this public SSH key to an user which has acces to the
-repository. For public repositories you don't have to add a public SSH key, you
-just need to make sure you selected the public repository option in the
-application settings.
+Wercker uses an SSH key to checkout the code to run a build. For private
+projects you need to add a public SSH key as a deploy key to your repository, or
+you can add this public SSH key to an user which has acces to the repository.
+For public repositories you don't have to add a public SSH key, you just need to
+make sure you selected the public repository option in the repository access
+settings of the application. See the section on [repository
+access](/articles/gettingstarted/repositoryaccess.html) for more information on
+this.
 
 <a href="/images/articles/gettingstarted/configureaccess.png" target="_blank"><img src="/images/articles/gettingstarted/configureaccess.png" ></a>
 
