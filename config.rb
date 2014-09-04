@@ -69,6 +69,9 @@ configure :build do
   # Minify html on build
   activate :minify_html
 
+  # Live Reload
+  # activate :livereload
+
   # Enable cache buster
   # activate :cache_buster
 

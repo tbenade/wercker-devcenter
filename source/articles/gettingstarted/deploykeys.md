@@ -6,8 +6,8 @@ sidebar_current: "gettingstarted-repositoryaccess"
 
 Wercker needs to be able to checkout the code from your source control provider,
 currently GitHub and Bitbucket are supported. This article describes how we
-retrieve the code and the various way on how to set it up with GitHub or
-Bitbucket. If you have a public repository then you can skip to the public repository section.
+retrieve the code and the various way on how to set it up. If you have a public
+repository then you can skip to the public repository section.
 
 ## SSH Keys
 
@@ -58,7 +58,7 @@ option in the "repository access" configuration.
 ## Werckerbot
 
 If you've created your application after 4 september 2014, then you can skip
-this section. If you created your application before 4 september 2014, than you
+this section. If you created your application before 4 september 2014, then you
 need to migrate to the new flow. This is also applicable to public repositories,
 which never added werckerbot.
 

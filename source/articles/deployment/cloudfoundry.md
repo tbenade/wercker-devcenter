@@ -28,10 +28,9 @@ In this subsection we will discuss how you can deploy your application to [Cloud
 ## Create wercker application
 
 - Login to wercker
-- Click add an application
+- Click add an application and make sure you configure [access](/articles/gettingstarted/web.html)
 - Choose GitHub repositories (connect to GitHub if you haven't already done so)
 - Choose [YOURNAME]/cloudfoundry-example
-- Goto https://github.com/[YOURNAME]/cloudfoundry-example/settings/collaboration and give werckerbot as a collaborator
 - Go back to wercker and choose go to your application
 - Build now
 - See how the build is run
