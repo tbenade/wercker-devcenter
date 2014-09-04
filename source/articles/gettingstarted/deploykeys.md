@@ -1,5 +1,5 @@
 ---
-sidebar_current: "gettingstarted-werckerbot"
+sidebar_current: "gettingstarted-deploykeys"
 ---
 
 # Checking out the code
