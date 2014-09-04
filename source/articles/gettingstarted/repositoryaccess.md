@@ -1,53 +1,75 @@
 ---
-sidebar_current: "gettingstarted-werckerbot"
+sidebar_current: "gettingstarted-repositoryaccess"
 ---
 
-# A note on werckerbot
+# Repository access
 
-Wercker needs read permissions to run your tests each time you do a `git
-push`. For this to work, you have to give the **werckerbot** user, which is
-present on both [GitHub](http://github.com) and [Bitbucket](http://bitbucket.org), read
-permissions to your repository.
+Wercker needs to be able to checkout the code from your source control provider,
+currently GitHub and Bitbucket are supported. This article describes how we
+retrieve the code and the various way on how to set it up. If you have a public
+repository then you can skip to the public repository section.
 
-### Using the web interface
+## SSH Keys
 
-This is made apparent in both the **add application**
-flow as seen below:
+Currently wercker uses a SSH key pair to checkout code. We provide a public SSH
+key which should be authorized to access the repository. Then we use the private
+SSH key to checkout the code. There are a couple of ways to give authorization
+to a public key, each of the methods have some advantages and disadvantages over
+the others.
 
-![image](http://f.cl.ly/items/0b1R0D2M2l033K073w2t/wercker-bot.png)
+### Deploykeys
 
-### Using the CLI
+The first method is to add the SSH key to the repository as a deploy key. A
+deploy key is a SSH key that is associated with a single repository. Advantages
+of this method is that we only get access to that single repository. However
+this also mean that we're unable to checkout any submodules (it is only possible
+to add a SSH key to a single repository).
 
-When adding a project through the [command line
-interface](/articles/cli/) you are also made aware of this:
+More information:
 
-```bash
-github repository detected...
-Selected repository url is
-git@github.com:flenter/getting-started-python.git
+- [Deploy keys in GitHub](https://developer.github.com/guides/managing-deploy-keys/#deploy-keys)
+- [Deploy keys in Bitbucket](https://confluence.atlassian.com/display/BITBUCKET/Use+deployment+keys)
 
-Creating a new application
-a new application has been created.
-In the root of this repository a .wercker file has been created which
-enables the link between the source code and wercker.
+### Machine users
 
-Checking werckerbot permissions on the repository...
-Werckerbot has access
-```
+The second method is to add the SSH key to a user in GitHub or Bitbucket. This
+allows you to add more than 1 repositories to a single SSH key. Most of the time
+these users are just used for authorization and don't have a real person using
+it. This is why they are called "machine users". Advantage of this method is
+that you'll be able to add multiple authorization to a single SSH key.
+Disadvantage is that it requires more management.
 
+More information:
 
-## Adding werckerbot on GitHub
-On [GitHub](http://github.com) you can add a collaborator by going into the **settings** tab for your repository and clicking on the **Collaborators** option as shown:
+- [Machine user in GitHub](https://developer.github.com/guides/managing-deploy-keys/#machine-users)
 
-![image](http://f.cl.ly/items/2P2L3O0M0Z3F013T0J3B/Screen%20Shot%202013-06-13%20at%2010.36.32%20AM.png)
+### Picking the right method
 
+For repositories that do not use a private submodule we recommend using a deploy
+key. If you have a repository that uses private submodules, than you need to
+create a machine user, and authorize this user access to all repositories.
 
-## Adding werckerbot on Bitbucket
-On [Bitbucket](http://bitbucket.org) you can add werckerbot by clicking the **settings** wheel and picking the **access amangement** option. Next you can add the **werckerbot** username as shown:
+## Public repositories
 
-![image](http://cl.ly/PcnX/Screen%20Shot%202013-06-13%20at%2010.40.50%20AM.png)
+For public repositories, you do not have to add a deploy key or authorize a
+machine user. You just have to make sure that you selected the "public repository"
+option in the "repository access" configuration.
 
-You can always revoke access for werckerbot at a later stage. Please note that this will prohibit wercker from running any builds for you.
+## Werckerbot
+
+If you've created your application after 4 september 2014, then you can skip
+this section. If you created your application before 4 september 2014, then you
+need to migrate to the new flow. This is also applicable to public repositories,
+which never added werckerbot.
+
+You need to goto the settings page of your application, you can find the
+repository access section. This will migrate you from using werckerbot to using
+a SSH key pair. Read the above sections to see which method you can select. Once
+you changed the key, you should remove werckerbot from your organisation teams
+or the access management sections.
+
+We're keeping wercker-bot around till 01-01-2015, than we will remove
+werckerbot. So make sure you migrate before that time to prevent any downtime.
 
 -------
 
