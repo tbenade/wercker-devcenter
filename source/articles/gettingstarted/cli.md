@@ -12,7 +12,7 @@ As previously mentioned, we have created five separate Getting Started repositor
 We assume you have registered for a [wercker account](https://app.wercker.com/users/new) and have a Heroku account.
 
 ***
-##### NOTE: at this moment we are in closed beta, you need to have access to Heroku's beta program to complete this guide.
+##### NOTE: at this moment we are in beta, you need to have access to Heroku's beta program to complete this guide.
 ***
 
 ### Fork the Repository
