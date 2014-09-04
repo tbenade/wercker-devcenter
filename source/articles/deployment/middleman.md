@@ -27,7 +27,7 @@ git commit -am 'init'
 git push origin master
 ```
 
-Congrats, you have just created your blog with Middleman; now lets add it to wercker! Log into wercker and add your repository to wercker by clicking the 'add application button'. Select your repository from either GitHub or Bitbucket. Follow the steps given and make sure you give the `werckerbot` user, read rights on your repository at either Github or Bitbucket.
+Congrats, you have just created your blog with Middleman; now lets add it to wercker! Log into wercker and add your repository to wercker by clicking the 'add application button'. Select your repository from either GitHub or Bitbucket. Follow the steps given and make sure you configure [access to your repository](/articles/gettingstarted/web.html)
 
 
 ### Adding our S3 deploy target

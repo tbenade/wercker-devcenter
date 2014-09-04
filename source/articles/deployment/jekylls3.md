@@ -17,7 +17,7 @@ _note: a long form post is available at our [blog](http://blog.wercker.com/2013/
 
 First you need to add an application to wercker. [Sign in](http://app.wercker.com/) at wercker and click the `add an application` button and subsequently select your repository.
 
-Follow the steps given and make sure you give the `werckerbot` user, read rights on your repository at Github or Bitbucket.
+Follow the steps given and make sure you configure [access to your repository](/articles/gettingstarted/web.html)
 
 
 ## Creating the wercker.yml
