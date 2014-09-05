@@ -97,7 +97,7 @@ committing and pushing your latest changes.
 Happy coding!
 ```
 
-Note: wercker will check if you have configured repository access correctly. For more information see the [repository access section](http://devcenter.wercker.com/articles/gettingstarted/repositoryaccess.html)
+Note: wercker will check if you have configured repository access correctly. For more information see the [repository access section](/articles/gettingstarted/repositoryaccess.html)
 
 ### List & monitor builds
 
