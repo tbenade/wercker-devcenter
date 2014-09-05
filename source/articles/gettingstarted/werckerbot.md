@@ -1,5 +1,5 @@
 ---
-sidebar_current: "gettingstarted-werckerbot"
+sidebar_current: "gettingstarted"
 ---
 
 # *- outdated -* A note on werckerbot
@@ -84,5 +84,5 @@ You can always revoke access for werckerbot at a later stage. Please note that t
 </div>
 
 -------
-##### June 13, 2013
+##### September 5, 2014
 -------
