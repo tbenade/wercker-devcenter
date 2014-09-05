@@ -32,43 +32,61 @@ welcome to wercker-cli
 About to create an application on wercker.
 
 This consists of the following steps:
-1. Validate permissions and create an application
-2. Add a deploy target (0 heroku targets detected)
-3. Trigger initial build
+1. Configure application
+2. Setup keys
+3. Add a deploy target (0 heroku targets detected)
+4. Trigger initial build
 
-Step 1.
+Step 1. Configure application
 -------------
 
-Found 1 repository location(s)...
+1 repository location(s) found...
 
 Please choose one of the following options:
- (1) git@github.com:flenter/getting-started-python.git
+ (1) git@github.com:USERNAME/REPOSITORY.git
 Make your choice (1=default):
 ```
 
-The wercker create wizard will pause here, to allow you to catch up with what it is about to do. Since my repository has only one remote location (github), pressing enter or input 1 will suffice. After which the wizard will continue:
+The wercker create wizard will pause here, to allow you to catch up with what it is about to do. Since my repository has only one remote location (GitHub), pressing enter or input 1 will suffice. After which the wizard will continue:
 
 ```bash
 github repository detected...
-Selected repository url is git@github.com:flenter/getting-started-python.git
+Selected repository url is git@github.com:wercker/USERNAME/REPOSITORY.git
 
-Creating a new application
-a new application has been created.
-In the root of this repository a .wercker file has been created which enables the link between the source code and wercker.
-
-Checking werckerbot permissions on the repository...
-Werckerbot has access
 
 Step 2.
 -------------
+In order to clone the repository on wercker, an ssh key is needed. A new/unique
+key can be generated for each repository. There 3 ways of using ssh keys on
+wercker:
 
-0 automatic supported target(s) found.
+1. Automatically add a deploy key [recommended]
+2. Use the checkout key, wercker uses for public projects.
+3. Let wercker generate a key, but allow add it manually to github/bitbucket.
+(needed when using git submodules)
+
+For more information on this see: http://devcenter.wercker.com/articles/gettingstarted/repositoryaccess.html
+
+Options:(enter=1):
+Retrieving a new ssh-key.
+done.
+Adding deploy key to repository:
+Creating a new application
+done.
+
+In the root of this repository a .wercker file has been created which enables the link between the source code and wercker.
+
 
 Step 3.
 -------------
 
-Triggering build
-A new build has been created
+0 automatic supported target(s) found.
+
+Step 4.
+-------------
+
+Triggering a new build.
+done.
 
 Done.
 -------------
@@ -79,7 +97,7 @@ committing and pushing your latest changes.
 Happy coding!
 ```
 
-Note: wercker will check if you have linked your github or bitbucket account with your account and check for permissions on the repository. If either of them is not done yet, the wizard will guide you through some additional steps.
+Note: wercker will check if you have configured repository access correctly. For more information see the [repository access section](http://devcenter.wercker.com/articles/gettingstarted/repositoryaccess.html)
 
 ### List & monitor builds
 
@@ -197,5 +215,5 @@ You can now run `wercker deploy` and wercker will deploy your application!
 </div>
 
 -------
-##### last modified: Sept 7, 2013
+##### last modified: Sept 5, 2014
 -------
