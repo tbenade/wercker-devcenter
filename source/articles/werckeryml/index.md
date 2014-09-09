@@ -85,7 +85,7 @@ Yaml is pretty strict with formatting and we advise everyone to use 4 spaces for
 <a id="box"></a>
 ## box
 
-The box section allows you to choose a box which will be used to run the builds and deploys. This item will contain a single reference to the box. The box will be prefixed by the owner and it can be postfixed with a version. If no version is given, then the latest version will be used. The default blank box:
+The box section allows you to choose a box which will be used to run the builds and deploys. This item will contain a single reference to the box. The box will be prefixed by the owner and it can be postfixed with a "@" followed by a version. If no version is given, then the latest version will be used. The default blank box:
 
     box: wercker/default
 
