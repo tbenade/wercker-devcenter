@@ -95,7 +95,7 @@ A node.js box:
 
 Use the latest version of a box called `nodejs` which is owned by the user wercker.
 
-Here is the full list of wercker supported boxes:
+Here is a selection of wercker supported boxes:
 
     wercker/android
     wercker/dart
@@ -113,15 +113,14 @@ Here is the full list of wercker supported boxes:
     wercker/ruby
     wercker/rvm
     wercker/ubuntu
-    wercker/ubuntu12.04-chef10.18.2
     wercker/ubuntu12.04-nodejs0.10
     wercker/ubuntu12.04-nodejs0.8
     wercker/ubuntu12.04-ruby1.9.3
-    wercker/ubuntu12.04-ruby1.9.3-berkshelf1
     wercker/ubuntu12.04-ruby2.0.0
     wercker/ubuntu12.04-webessentials
 
-You can visit the [wercker directory](http://app.wercker.com/#explore) for more boxes created by the community.
+You can visit the [wercker directory](http://app.wercker.com/#explore) for more boxes, created by us
+and the community.
 
 <a id="services"></a>
 ## services
