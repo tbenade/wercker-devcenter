@@ -97,11 +97,29 @@ Use the latest version of a box called `nodejs` which is owned by the user werck
 
 Here is the full list of wercker supported boxes:
 
+    wercker/android
+    wercker/dart
+    wercker/default
+    wercker/golang
+    wercker/mongodb
+    wercker/mysql
     wercker/nodejs
+    wercker/php
+    wercker/postgresql
+    wercker/postgresql9.2
     wercker/python
+    wercker/rabbitmq
+    wercker/redis
     wercker/ruby
+    wercker/rvm
     wercker/ubuntu
+    wercker/ubuntu12.04-chef10.18.2
+    wercker/ubuntu12.04-nodejs0.10
+    wercker/ubuntu12.04-nodejs0.8
+    wercker/ubuntu12.04-ruby1.9.3
+    wercker/ubuntu12.04-ruby1.9.3-berkshelf1
     wercker/ubuntu12.04-ruby2.0.0
+    wercker/ubuntu12.04-webessentials
 
 You can visit the [wercker directory](http://app.wercker.com/#explore) for more boxes created by the community.
 
