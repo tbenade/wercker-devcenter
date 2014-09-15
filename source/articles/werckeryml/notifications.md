@@ -126,7 +126,7 @@ View our Campfire step in the [wercker directory](https://app.wercker.com/#appli
 <a id="email"></a>
 ## Email
 
-To make use of the [Email-Notify step](https://app.wercker.com/#applications/520c938f8a20a2624501003e/tab/details) which we've open sourced [here](https://github.com/mies/wercker-step-email-notify), you would create a [wercker.yml](http://devcenter.wercker.com/articles/werckeryml/) file in the following way:
+To make use of the [Email-Notify step](https://app.wercker.com/#applications/52b3132e0a0076c9780036ff/tab/details) which we've open sourced [here](https://github.com/wercker/step-email-notify), you would create a [wercker.yml](http://devcenter.wercker.com/articles/werckeryml/) file in the following way:
 
 ``` yaml
 box: wercker/ruby
@@ -139,7 +139,7 @@ build:
             name: middleman build
             code: bundle exec middleman build --verbose
     after-steps:
-        - mies/email-notify:
+        - wercker/email-notify:
             from: alerts@wercker.com
             to: example@example.com
             username: $USER
@@ -147,7 +147,7 @@ build:
             host: YOURSMTPSERVER
 ```
 
-The mies/email-notify step is self-explanatory; the **from** and **to** addresses are the email addresses from which you want to send the message and of course to whom. The **username** and **password** fields are the credentials for your SMTP server. We of course pass these along as pipeline environment variables as opposed to hardcoding them. Finally, you also fill in your SMTP **host**.
+The wercker/email-notify step is self-explanatory; the **from** and **to** addresses are the email addresses from which you want to send the message and of course to whom. The **username** and **password** fields are the credentials for your SMTP server. We of course pass these along as pipeline environment variables as opposed to hardcoding them. Finally, you also fill in your SMTP **host**.
 
 View the available options below:
 
@@ -168,7 +168,7 @@ View the available options below:
 * `on` - Possible values: `always` and `failed`, default `always`
 
 
-Check out our Email Notify step in the [wercker directory](https://app.wercker.com/#applications/520c938f8a20a2624501003e/tab/details). We've open sourced the code for this step as well on [GitHub](https://github.com/mies/wercker-step-email-notify)
+Check out our Email Notify step in the [wercker directory](https://app.wercker.com/#applications/52b3132e0a0076c9780036ff/tab/details). We've open sourced the code for this step as well on [GitHub](https://github.com/wercker/step-email-notify)
 
 <a id="irc"></a>
 ## IRC
