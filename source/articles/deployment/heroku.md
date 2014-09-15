@@ -87,7 +87,7 @@ You will receive the following response
 As mentioned above, if you now run `heroku addons:open wercker` or go to the Heroku dashboard and click on the wercker resource, you will see the wercker wizard that will guide you through your build and deploy.
 
 ****
-##### NOTE: In order to run your tests `werckerbot` needs read permisson on either GitHub or Bitbucket
+##### NOTE: In order to run your tests you need to configure [access](/articles/gettingstarted/web.html)
 ****
 
 <a id="buildAndDeploy"></a>

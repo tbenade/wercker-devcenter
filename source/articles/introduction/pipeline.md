@@ -37,17 +37,20 @@ If all steps in the pipeline are succesful, a build has passed.
 
 The outcome of a successful build is packaged and stored, readying it for deployment.
 
-
 <a id="gitpush"></a>
 ### Git Push
 
-Each `git push` to a git repository that is added to wercker will
-trigger a new build, regardless of the branch. This means that wercker
-builds every branch. Wercker clones your repository via SSH as the
-`werckerbot` user, for private repositories `werckerbot` needs to be a collaborator. For public repositories, adding `werckerbot` as a collaborator is not required.
-See the section on
-[werckerbot](/articles/gettingstarted/werckerbot.html) for more
-information on this.
+Each `git push` to a git repository that is added to wercker will trigger a new
+build, regardless of the branch. This means that wercker builds every branch.
+Wercker will start by cloning your repository via an private SSH key. Wercker
+uses an SSH key to checkout the code to run a build. For private projects you
+need to add a public SSH key as a deploy key to your repository, or you can add
+this public SSH key to an user which has acces to the repository. For public
+repositories you don't have to add a public SSH key, you just need to make sure
+you selected the public repository option in the repository access settings of
+the application. See the section on [repository
+access](/articles/gettingstarted/repositoryaccess.html) for more information on
+this.
 
 <a id="box"></a>
 ### Box

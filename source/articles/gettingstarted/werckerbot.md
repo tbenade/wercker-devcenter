@@ -1,8 +1,12 @@
 ---
-sidebar_current: "gettingstarted-werckerbot"
+sidebar_current: "gettingstarted"
 ---
 
-# A note on werckerbot
+# *- outdated -* A note on werckerbot
+
+****
+##### NOTE: Werckerbot is replaced by a more flexible solution. For information on our current solution see: [repository access](/articles/gettingstarted/repositoryaccess.html)
+****
 
 Wercker needs read permissions to run your tests each time you do a `git
 push`. For this to work, you have to give the **werckerbot** user, which is
@@ -80,5 +84,5 @@ You can always revoke access for werckerbot at a later stage. Please note that t
 </div>
 
 -------
-##### June 13, 2013
+##### September 5, 2014
 -------

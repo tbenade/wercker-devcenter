@@ -26,15 +26,22 @@ Next you can add this application to wercker. Log into wercker and push the `add
 
 We first allow you to select your git provider, currently either GitHub or Bitbucket. If you've already authorized wercker to connect with either of these platforms, we will show this as well.
 
-<a href="http://f.cl.ly/items/0v080B3l1b1I2P3P3x2z/Screen%20Shot%202013-06-21%20at%2011.53.17%20AM.png" target="_blank"><img src="http://f.cl.ly/items/0v080B3l1b1I2P3P3x2z/Screen%20Shot%202013-06-21%20at%2011.53.17%20AM.png" ></a>
+<a href="/images/articles/gettingstarted/startwizard.png" target="_blank"><img src="/images/articles/gettingstarted/startwizard.png" ></a>
 
 We now present you with a list of repositories and also show if a repository is private, public, and if it's a fork of another repo. We introduced a search box which you can use to filter your repositories, making selection even snappier. Select the repository that you have forked in the previous step.
 
-<a href="http://f.cl.ly/items/0Z1c0A1k0g1c0j2h082z/Screen%20Shot%202013-06-21%20at%2011.53.43%20AM.png" target="_blank"><img src="http://f.cl.ly/items/0Z1c0A1k0g1c0j2h082z/Screen%20Shot%202013-06-21%20at%2011.53.43%20AM.png" ></a>
+<a href="/images/articles/gettingstarted/selectrepository.png" target="_blank"><img src="/images/articles/gettingstarted/selectrepository.png" ></a>
 
-Wercker needs read permissions to run your tests each time you do a `git push`. For this to work you have to give the `werckerbot` user read permissions to your repository as indicated in the step below.
+Wercker uses an SSH key to checkout the code to run a build. For private
+projects you need to add a public SSH key as a deploy key to your repository, or
+you can add this public SSH key to an user which has acces to the repository.
+For public repositories you don't have to add a public SSH key, you just need to
+make sure you selected the public repository option in the repository access
+settings of the application. See the section on [repository
+access](/articles/gettingstarted/repositoryaccess.html) for more information on
+this.
 
-<a href="http://f.cl.ly/items/2J3U202n06120u0G1i0a/Screen%20Shot%202013-06-21%20at%2011.53.58%20AM.png" target="_blank"><img src="http://f.cl.ly/items/2J3U202n06120u0G1i0a/Screen%20Shot%202013-06-21%20at%2011.53.58%20AM.png" ></a>
+<a href="/images/articles/gettingstarted/configureaccess.png" target="_blank"><img src="/images/articles/gettingstarted/configureaccess.png" ></a>
 
 Now, wercker is ready to help you with the `wercker.yml` file. It could of course be the case that you've already
 added a wercker.yml to your repository. The new flow automatically detects the presence of a wercker.yml in your repository.

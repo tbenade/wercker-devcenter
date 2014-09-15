@@ -88,6 +88,11 @@ configure :build do
   # set :http_path, "/Content/images/"
 end
 
+configure :development do
+  # Live Reload
+  activate :livereload
+end
+
 activate  :syntax,
           :element => "pre>code"
 
