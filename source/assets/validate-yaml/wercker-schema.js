@@ -28,7 +28,7 @@ var schema = {
               "type":"object",
               "additionalProperties": {"type":"object"}
             } ]
-         }
+          }
         }
       }
     },
@@ -40,7 +40,18 @@ var schema = {
         "steps": {
           "type":"array",
           "id": "http://jsonschema.net/deploy/steps",
-          "required":true
+          "required":true,
+          "items":{
+            "type": [
+            {
+              "type":"string",
+              "minLength" : 1
+            },
+            {
+              "type":"object",
+              "additionalProperties": {"type":"object"}
+            } ]
+          }
         }
       }
     },
