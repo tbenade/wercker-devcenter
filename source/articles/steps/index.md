@@ -80,6 +80,33 @@ that the result of these commands are available in the wercker ui and
 will be exposed as a build step under the name `echo python
 information`.
 
+Caution: All code inside the code tag are sent line by line. This means that any bash
+commands (such as `if [ ... ]; then ....; fi;` need to be placed in a single
+line and you need to make that you add the trailing semicolons.
+
+``` yaml
+    - script:
+        name: config status
+        code: |
+          if [ -e "config" ]; then echo "config exists"; else echo "config does not exist"; fi;
+```
+
+You can use the `>` folded operator in yaml to make it easier to work with large
+code tags. This operator will replace all new lines with spaces, thus creating a
+single line. One caveat: you cannot use indentation or add blank lines. This
+will cause yaml to add extra `\n` characters.
+
+``` yaml
+    - script:
+        name: config status
+        code: >
+          if [ -e "config" ]; then
+          echo "config exists";
+          else
+          echo "config does not exist";
+          fi;
+```
+
 #### after-steps
 
 Wercker also has the notion of [after-steps](/articles/werckeryml/#after-steps) ideally suited for [notifications](/articles/werckeryml/notifications.html). See the subsection for [wercker.yml](/articles/werckeryml) for more information.
