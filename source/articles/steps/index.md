@@ -76,7 +76,7 @@ requiring **name** and **code** elements:
 ```
 
 This example echos back the **Python** and **pip** versions to us. Note
-that the result of these commands area available in the wercker ui and
+that the result of these commands are available in the wercker ui and
 will be exposed as a build step under the name `echo python
 information`.
 
