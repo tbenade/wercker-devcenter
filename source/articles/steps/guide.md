@@ -50,20 +50,18 @@ has the option `filename` that specifies the filename and where the file should 
 Options are set as elements of the step attribute in `wercker.yml`. Here is an
 example that uses the `create-file` step and specifies three options:
 
-    - create-file:
-        name: generate production robots.txt
-        filename: ./_production/robots.txt
-        content: |-
-          User-agent: *
-          Allow: /
+``` yaml
+- create-file:
+    name: generate production robots.txt
+    filename: ./_production/robots.txt
+    content: |-
+      User-agent: *
+      Allow: /
+```
 
 The `name` option is default for every step and it allows the user to specify the
 logical name for that step. In the example above `filename` and `content` are
-`create-file` specific options. The value from options can be retrieved with the
-`get_option` function:
-
-    filename=`get_option filename`
-    echo "Value for filename option: $filename"
+`create-file` specific options.
 
 ## Environment variables
 
@@ -170,61 +168,81 @@ The following functions are available for writing output:
 
 * `success` - writes a success message.
 * `fail` - writes a failure message and **stops execution**. It also sets the
-text which will be displayed on the build/deploy page (like calling the setMessage function).
+text which will be displayed on the build/deploy page (like calling the
+setMessage function).
 * `warn` - writes a warning message.
 * `info` - writes a informational message.
 * `debug` - writes a debug message.
-* `setMessage` - sets a message for in the wercker user interface. Visible on build and deploy pages. For an exanple on where it is displayed in wercker, look at the `setup environment` of a build or deploy. This function changes the file specified in `WERCKER_REPORT_MESSAGE_FILE`.
+* `setMessage` - sets a message for in the wercker user interface. Visible on
+build and deploy pages. For an exanple on where it is displayed in wercker,
+look at the `setup environment` of a build or deploy. This function changes
+the file specified in `WERCKER_REPORT_MESSAGE_FILE`.
 
 
 Here is a short example:
 
-    debug "checking if config exists…"
-    if [ -e ".config" ]
-    then
-        info ".config file found"
-    else
-        fail "missing .config file"
-    fi
+``` bash
+debug "checking if config exists…"
+if [ -e ".config" ]; then
+    info ".config file found"
+else
+    fail "missing .config file"
+fi
+```
 
 ## Using wercker cache
 
-A cache directory is shared between builds. The path to this directory is stored in the environment variable `$WERCKER_CACHE_DIR`. A step can leverage this cache to share assets between builds. A good example of this is the [`bundler-install`](https://app.wercker.com/#applications/51c829d13179be44780020be/tab/details) step which leverages the cache to shorten the installation time of dependencies. It does so by storing the end-result of downloading and compiling dependend packages. Future builds can use this as a starting point and only new dependencies which were not cached are downloaded. At the start of every build the cache directory is filled with the cached content from the last successful build, if not older than 14 days (and is < 1GB).
+A cache directory is shared between builds. The path to this directory is stored
+in the environment variable `$WERCKER_CACHE_DIR`. A step can leverage this cache
+to share assets between builds. A good example of this is the [`bundler-install`
+](https://app.wercker.com/#applications/51c829d13179be44780020be/tab/details)
+step which leverages the cache to shorten the installation time of dependencies.
+It does so by storing the end-result of downloading and compiling dependend
+packages. Future builds can use this as a starting point and only new
+dependencies which were not cached are downloaded. At the start of every build
+the cache directory is filled with the cached content from the last successful
+build, if not older than 14 days (and is < 1GB).
 
-A step should not depend on content of the cache and should be able to handle scenarios where the cache is not populated.
+A step should not depend on content of the cache and should be able to handle
+scenarios where the cache is not populated.
 
 Here is a simple example of a step that leverages the cache:
 
 ``` bash
-if [ -f "$WERCKER_CACHE_DIR/mystep/a-dependency.bin" ];
-then
+if [ -f "$WERCKER_CACHE_DIR/mystep/a-dependency.bin" ]; then
     debug "a-dependency.bin found in cache"
 else
     debug "tool.rar not found in cache, will download"
-    curl -o "$WERCKER_CACHE_DIR/mystep/a-dependency.bin" "http://domain.org/a-dependency.bin"
+    curl -o "$WERCKER_CACHE_DIR/mystep/a-dependency.bin" "http://example.com/a-dependency.bin"
 fi
 ```
 
-This example checks for the file `$WERCKER_CACHE_DIR/mystep/a-dependency.bin` from the cache. If the file is not found, it will be downloaded to the cache directory so it will be available for future builds, if the build succeeds.
+This example checks for the file `$WERCKER_CACHE_DIR/mystep/a-dependency.bin`
+from the cache. If the file is not found, it will be downloaded to the cache
+directory so it will be available for future builds, if the build succeeds.
 
 ## Check if a variable is set and not empty
 
-    if [ ! -n "$var" ] ; then
-        echo "var is not set or value is empty"
-    fi
+``` bash
+if [ ! -n "$var" ]; then
+    echo "var is not set or value is empty"
+fi
+```
 
 Where `$var` is the variable you want to check.
 
 ## Check if command exists
 
-    if ! type s3cmd &> /dev/null
-    then
-        echo "s3cmd exists!"
-    else
-        echo "s3cmd does not exist!"
-    fi
+``` bash
+if type s3cmd > /dev/null 2>&1; then
+    echo "s3cmd exists!"
+else
+    echo "s3cmd does not exist!"
+fi
+```
 
-Where `s3cmd` is the command you want to check. The `&> /dev/null` part makes it silence (it generates no output).
+Where `s3cmd` is the command you want to check. The `> /dev/null 2>&1` part makes it
+silence (it generates no output).
 
 -------
 
