@@ -18,7 +18,7 @@ describes the properties for the step.
 
 Here is an example of a `wercker-step.yml` that only holds the required fields:
 
-``` yaml
+```yaml
 name: create-file
 version: 0.9.6
 description: create-file step
@@ -26,7 +26,7 @@ description: create-file step
 
 You can also add keywords to your step which increases discoverability:
 
-``` yaml
+```yaml
 keywords:
   - file
   - text
@@ -50,7 +50,7 @@ has the option `filename` that specifies the filename and where the file should 
 Options are set as elements of the step attribute in `wercker.yml`. Here is an
 example that uses the `create-file` step and specifies three options:
 
-``` yaml
+```yaml
 - create-file:
     name: generate production robots.txt
     filename: ./_production/robots.txt
@@ -181,7 +181,7 @@ the file specified in `WERCKER_REPORT_MESSAGE_FILE`.
 
 Here is a short example:
 
-``` bash
+```bash
 debug "checking if config exists…"
 if [ -e ".config" ]; then
     info ".config file found"
@@ -208,7 +208,7 @@ scenarios where the cache is not populated.
 
 Here is a simple example of a step that leverages the cache:
 
-``` bash
+```bash
 if [ -f "$WERCKER_CACHE_DIR/mystep/a-dependency.bin" ]; then
     debug "a-dependency.bin found in cache"
 else
@@ -223,7 +223,7 @@ directory so it will be available for future builds, if the build succeeds.
 
 ## Check if a variable is set and not empty
 
-``` bash
+```bash
 if [ ! -n "$var" ]; then
     echo "var is not set or value is empty"
 fi
@@ -233,7 +233,7 @@ Where `$var` is the variable you want to check.
 
 ## Check if command exists
 
-``` bash
+```bash
 if type s3cmd > /dev/null 2>&1; then
     echo "s3cmd exists!"
 else
