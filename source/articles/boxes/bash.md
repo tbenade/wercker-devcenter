@@ -15,6 +15,9 @@ The wercker box we will be building in this guide is a box containing [RethinkDB
 You can find the source of this box on
 [GitHub](https://github.com/mies/box-rethinkdb).
 
+**Note** not all the commands are compatible with the `script` step. See the [script 
+step section](/articles/steps/#toc_1) for more information about the limitations of the `script` step.
+
 ## Getting started
 
 Creating a bash based box is trivial; first create a `git repository` with just one file called `wercker-box.yml`.
