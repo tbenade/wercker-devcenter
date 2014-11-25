@@ -26,7 +26,7 @@ for your application. Taking the
 abovementioned steps as examples, your **wercker.yml** would look as
 follows:
 
-``` yaml
+```yaml
 box: wercker/python
 services:
     - wercker/mongodb
@@ -65,8 +65,8 @@ inline, steps
 Custom build steps, which are basically bash scripts defined via the 'script' clause,
 requiring **name** and **code** elements:
 
-``` yaml
-# A custom script step, name value is used in the UI
+```yaml
+    # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
     - script:
         name: echo python information
@@ -76,9 +76,36 @@ requiring **name** and **code** elements:
 ```
 
 This example echos back the **Python** and **pip** versions to us. Note
-that the result of these commands area available in the wercker ui and
+that the result of these commands are available in the wercker ui and
 will be exposed as a build step under the name `echo python
 information`.
+
+Caution: All code inside the code tag are sent line by line. This means that any bash
+commands (such as `if [ ... ]; then ....; fi;` need to be placed in a single
+line and you need to make that you add the trailing semicolons.
+
+```yaml
+    - script:
+        name: config status
+        code: |
+          if [ -e "config" ]; then echo "config exists"; else echo "config does not exist"; fi;
+```
+
+You can use the `>` folded operator in yaml to make it easier to work with large
+code tags. This operator will replace all new lines with spaces, thus creating a
+single line. One caveat: you cannot use indentation or add blank lines. This
+will cause yaml to add extra `\n` characters.
+
+```yaml
+    - script:
+        name: config status
+        code: >
+          if [ -e "config" ]; then
+          echo "config exists";
+          else
+          echo "config does not exist";
+          fi;
+```
 
 #### after-steps
 
@@ -90,7 +117,7 @@ Some tools need to be in a certain directory to work, `bundle-install` for examp
 
 To change the working directory of a step you need to add a **cwd** element to the step. You can specify a relative path (relative from `$WERCKER_ROOT`) or a absolute path. Use of environment variables is possible.
 
-``` yaml
+```yaml
 build:
   steps:
     - bundle-install:
