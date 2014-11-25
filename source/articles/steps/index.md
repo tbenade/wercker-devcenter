@@ -59,11 +59,11 @@ An example of a step with parameters:
 
 This will pass two options to the **npm install** step, `package` and `strict-ssl`.
 
-Apart from predefined steps there is also the notion of **custom**, or
-inline, steps
+#### script step
 
-Custom build steps, which are basically bash scripts defined via the 'script' clause,
-requiring **name** and **code** elements:
+Apart from predefined steps there is also the notion of **custom**, or
+inline steps. Custom build steps are basically bash scripts defined 
+via the `script` step, requiring **name** and **code** elements:
 
 ```yaml
     # A custom script step, name value is used in the UI
