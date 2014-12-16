@@ -75,6 +75,7 @@ To use the SSH key pairs in wercker, you have to do two things.
 2. create a variable
 
 
+<a id="key-pairs"></a>
 #### Generating SSH key pairs
 
 You can generate new pairs, via SSH Keys section in the settings tab of your
