@@ -229,10 +229,14 @@ build:
 
 deploy:
     steps:
-        - heroku-deploy
+        - heroku-deploy:
+            install-toolbelt: true
         - script:
-            name: Update database
+            name: Migrate DB
             code: heroku run rake db:migrate --app $HEROKU_APP_NAME
+        - script:
+            name: Update assets
+            code: heroku run rake add_static_assets --app $HEROKU_APP_NAME
 ```
 
 -------
