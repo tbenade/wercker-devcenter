@@ -43,10 +43,10 @@ At the top you see the 'box' definition that states we want the 'wercker/php' bo
 
 ## PHP versions
 
-There are three versions available on the wercker PHP box. The previous stable release PHP 5.3, the current stable release PHP 5.4 and the upcoming release PHP 5.5. By default the current stable release 5.4 is active.
+There are three versions available on the wercker PHP box. The previous stable release PHP 5.4, the current stable release PHP 5.5 and the upcoming release PHP 5.6. By default the current stable release 5.5 is active.
 
     $ php --version
-    PHP 5.4.16 ...
+    PHP 5.5.11 ...
 
 The wercker PHP box uses [phpenv](https://github.com/CHH/phpenv) to manage the versions. You can switch the PHP version with the `phpenv global` command:
 
@@ -54,7 +54,7 @@ The wercker PHP box uses [phpenv](https://github.com/CHH/phpenv) to manage the v
     PHP 5.4.16 ...
     $ phpenv global 5.5
     $ php --version
-    PHP 5.5.0 ...
+    PHP 5.5.11 ...
 
 Here is an example of a script step that activates PHP 5.3:
 
@@ -92,21 +92,15 @@ Here is an example of a script step that installs all the dependencies:
 	    name: install dependencies
 	    code: composer install
 
-If you have a `require-dev` section in your `composer.json` you must specify the `--dev` option to install the packages listed in `require-dev`:
+Composer will automatically install any packages you may have listed in the `require-dev` section of your `composer.json`. If these are not required for your build, things can be sped up by setting the `--no-dev` option to skip the development dependencies:
 
 	- script:
 	    name: install dependencies
-	    code: composer install --dev
-
-By default composer installed only stable packages. This behaviour can be changed by setting the `--stability` option:
-
-	- script:
-	    name: install dependencies
-	    code: composer install --dev
+	    code: composer install --no-dev
 
 #### Composer lock file
 
-After installing dependencies, Composer writes the list of the exact versions it installed into a `composer.lock` file. This locks the project to those specific versions. It is a best practise to commit this `composer.lock` along with `composer.json` into version control to ensure wercker uses the same versions of dependencies as in your local development environment. This also guarantees that the same versions of dependencies are used among the full development team.
+After installing dependencies using `composer update`, Composer writes the list of the exact versions it installed into a `composer.lock` file. This locks the project to those specific versions. It is a best practise to commit this `composer.lock` along with `composer.json` into version control to ensure wercker uses the same versions of dependencies as in your local development environment. This also guarantees that the same versions of dependencies are used among the full development team.
 
 This means that if any of the dependencies get a new version, you won't get the updates automatically. To update to the new version, use the `update` on your local development machine and commit the updated `composer.lock` file:
 
