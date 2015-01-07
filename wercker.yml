@@ -1,20 +1,16 @@
-# Build this in the wercker ruby box
 box: wercker/rvm
 build:
     steps:
-        # Execute the bundle install step, a step provided by wercker
+        - rvm-use:
+            version: 2.0.0
+
         - bundle-install
-        # Execute a custom script step.
+
         - script:
             name: middleman build
             code: bundle exec middleman build --verbose --no-clean
 deploy:
     steps:
-        # Execute the heroku-deploy, heroku details can be edited
-        # online at http://app.wercker.com/
-        #- heroku-deploy
-
-        # Execute the s3sync deploy step, a step provided by wercker
         - s3sync:
             key_id: $AWS_ACCESS_KEY_ID
             key_secret: $AWS_SECRET_ACCESS_KEY
