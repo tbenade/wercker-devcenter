@@ -161,6 +161,30 @@ There are also a number of generic environment variables which may be of interes
 </tr>
 </table>
 
+Generic environment variables available to after-steps:
+
+<table border="0">
+<tr>
+    <th>VARIABLE NAME</th>
+    <th>EXAMPLE</th>
+    <th>PURPOSE</th>
+</tr>
+<tr>
+    <td>WERCKER_RESULT</td>
+    <td>failed</td>
+    <td>Contains either passed or failed and shows the result of the build/deploy</td>
+</tr>
+<tr>
+    <td>WERCKER_FAILED_STEP_DISPLAY_NAME</td>
+    <td>jshint</td>
+    <td>Contains the name of the step as being displayed in the interface</td>
+</tr>
+<tr>
+    <td>WERCKER_FAILED_STEP_MESSAGE</td>
+    <td>3 errors found</td>
+    <td>Some steps set extra information (see writing output)</td>
+</tr>
+</table>
 
 ## Writing output
 
