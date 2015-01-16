@@ -276,6 +276,34 @@ or less an expanded version of the information available during a build.
 </tbody>
 </table>
 
+
+### After-step related variables
+
+The following variables are available to after-steps:
+
+<table border="0">
+<tr>
+    <th>VARIABLE NAME</th>
+    <th>EXAMPLE</th>
+    <th>PURPOSE</th>
+</tr>
+<tr>
+    <td>WERCKER_RESULT</td>
+    <td>failed</td>
+    <td>Contains either passed or failed and shows the result of the build/deploy</td>
+</tr>
+<tr>
+    <td>WERCKER_FAILED_STEP_DISPLAY_NAME</td>
+    <td>jshint</td>
+    <td>Contains the name of the step as being displayed in the interface</td>
+</tr>
+<tr>
+    <td>WERCKER_FAILED_STEP_MESSAGE</td>
+    <td>3 errors found</td>
+    <td>Some steps set extra information (see writing output)</td>
+</tr>
+</table>
+
 Once again, please remember that when you create your own steps, wercker also creates
 additional environment variables for you to use. They are outlined in the [A guide to steps](/articles/steps/guide.html).
 
