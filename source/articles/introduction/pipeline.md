@@ -24,7 +24,7 @@ In the following paragraphs we will describe the elements that make up the werck
 <a id="builds"></a>
 ## Builds
 
-Builds are the result of a run-through of the steps in the wercker pipeline. If builds are succesful they produce a deployable package. You can define the steps in the wercker pipeline through the
+Builds are the result of a run-through of the steps in the wercker pipeline. If builds are successful they produce a deployable package. You can define the steps in the wercker pipeline through the
 [wercker.yml](/articles/werckeryml) file.
 
 ![image](http://f.cl.ly/items/3S1e1Q2U462j0V0Z1e3V/wercker_pipeline_build.png)
